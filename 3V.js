@@ -216,6 +216,7 @@ function playgame(){
 	GameOver.style.display = 'none'
 	ship.style.display = 'block'
 	window.addEventListener("keydown", moving)
+	Music.loop = true
 	Music.play()
 	 Einterval = setInterval(() => {CreateEnemy()}, 2600)
 }
