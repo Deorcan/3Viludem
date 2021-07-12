@@ -1,0 +1,233 @@
+const ship = document.getElementById("player")
+const gamescreen = document.getElementById("game-screen")
+const enemyImgs = ['D:\\Pictures\\Ocean.png','D:\\Pictures\\Lava.png','D:\\Pictures\\Ice.png']
+const Score = document.querySelector('#score span')
+const HighScore = document.querySelector('#HighScore span')
+const text = document.getElementById("text")
+const text2 = document.getElementById("text2")
+const Para = document.getElementById("Paragraph")
+const GameOver = document.getElementById("gameover")
+
+let TF = false
+let Music = new Audio ('D:\\Downloads\\sounds-from-space-soundroll-main-version-01-28-1884.mp3')
+let EInterval
+let L = { x: 0, y: 0, width: 0, height: 0}
+let	E = { x: 0, y: 0, width: 0, height: 0}
+
+function gameover(){
+	window.removeEventListener("keydown", moving)
+	TF = true
+	clearInterval(EInterval)
+	ship.style.top ="180px"
+	ship.style.left ="20px"
+	text.style.display = 'block'
+	text2.style.display = 'block'
+	Para.style.display = 'block'
+	GameOver.style.display = 'block'
+	ship.style.display = 'none'
+	let Enemies = document.querySelectorAll(".enemy")
+	Enemies.forEach(e => e.remove())
+	Music.pause()
+	if (HighScore.innerText < Score.innerText) {
+		HighScore.innerText = Score.innerText
+	}
+	
+
+}
+
+function moveUp(){
+	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
+	if (ship.style.top === "0px"){
+		return
+	} else {
+		let pos = parseInt(TOP)
+		pos -= 6
+
+		ship.style.top = `${pos}px`
+	}
+}
+
+function moveDown(){
+	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
+	if (ship.style.top === "558px"){
+		return
+	} else {
+		let pos = parseInt(TOP)
+		pos += 6
+
+		ship.style.top = `${pos}px`
+	}
+}
+
+function moveLeft(){
+	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
+	if (ship.style.left === "2px"){
+		return
+	} else {
+		let pos = parseInt(LEFT)
+		pos -= 6
+	
+		ship.style.left = `${pos}px`
+	}
+}
+
+function moveRight(){
+	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
+	if (ship.style.left === "758px"){
+		return
+	} else {
+		let pos = parseInt(LEFT)
+		pos += 6
+	
+		ship.style.left = `${pos}px`
+	}
+}
+
+function IsCollision(laser,enemy){
+	
+	 L = { x: parseInt(laser.style.left) + 300
+	 	, y: parseInt(laser.style.top) + 30
+	 	, width: 20, height: 30}
+	 E = { x: parseInt(enemy.style.left), y: parseInt(enemy.style.top), width: 30, height: 30}
+
+	if (L.x < E.x + E.width &&
+   L.x + L.width > E.x &&
+   L.y < E.y + E.height &&
+   L.y + L.height > E.y) {
+    // collision detected!
+	
+return true
+}
+else {return false} 
+}
+
+function CreateLaser(){
+	let X = parseInt(window.getComputedStyle(ship).getPropertyValue('left'))
+	let Y = parseInt(window.getComputedStyle(ship).getPropertyValue('top'))
+	let newlaser = document.createElement('img')
+	newlaser.src = 'D:\\Pictures\\3viludem3dbeta11.png'
+	newlaser.classList.add('laser')
+	newlaser.style.left = `${X}px`
+	newlaser.style.top = `${Y - 15}px`
+	return newlaser
+}
+
+function movelaser(laser){
+	let interval = setInterval(() => {
+		let X = parseInt(laser.style.left)
+		let enemies = document.querySelectorAll(".enemy")
+		enemies.forEach(enemy => {
+			if (IsCollision(laser,enemy)){
+				enemy.src = "D:\\Pictures\\Helium.png"
+				laser.remove()
+				enemy.classList.add("dead")
+				clearInterval(interval)
+				Score.innerText= parseInt(Score.innerText) + 1
+			}
+		})
+		if (X >= 740){
+			laser.remove()
+			clearInterval(interval)
+		} else {
+			laser.style.left = `${X+4}px`
+			
+		}
+	}, 0)
+
+}
+
+function fire(){
+	let laser = CreateLaser()
+	gamescreen.appendChild(laser)
+	let Laser = new Audio ('D:\\Downloads\\Laser.mp3')
+	Laser.play()
+	movelaser(laser)
+
+}
+
+function moveEnemy(enemy){
+	let interval = setInterval(() => {
+		let X = parseInt(window.getComputedStyle(enemy).getPropertyValue('left'))
+		if (X <= 280){
+			if (Array.from(enemy.classList).includes("dead")){
+				let Whoosh = new Audio ('D:\\Downloads\\Whoosh.mp3')
+				Whoosh.play()
+				enemy.remove()
+				clearInterval(interval)
+				process.exit()
+			} else {
+				enemy.remove()
+				clearInterval(interval)
+				let Thunder = new Audio ('D:\\Downloads\\Thunder.mp3')
+				Thunder.play()
+				gameover()
+
+			}
+			
+		} else {
+			enemy.style.left = `${X - 4}px`
+		}
+	}, 30)
+
+}
+
+function CreateEnemy(){
+if (TF === false){
+	let newenemy = document.createElement('img')
+	let sprite = enemyImgs[Math.floor(Math.random()*enemyImgs.length)]
+	newenemy.src = sprite
+	newenemy.classList.add('enemy')
+	newenemy.classList.add('transition')
+	newenemy.style.left = '1000px'
+	newenemy.style.top = `${Math.floor(Math.random()* 530) + 50 }px`
+	gamescreen.appendChild(newenemy)
+	moveEnemy(newenemy)
+}
+	else{
+		process.exit()
+	}
+}
+
+function moving(event){
+	if (event.key === "ArrowUp"){
+		event.preventDefault()
+		moveUp()
+	} else if (event.key === "ArrowDown"){
+		event.preventDefault()
+		moveDown()
+	} else if (event.key === "ArrowLeft"){
+		event.preventDefault()
+		moveLeft()
+	} else if (event.key === "ArrowRight"){
+		event.preventDefault()
+		moveRight()
+	} else if (event.key === " "){
+		event.preventDefault()
+		fire()
+	}
+	
+}
+
+
+function playgame(){
+	text.style.display = 'none'
+	text2.style.display = 'none'
+	Para.style.display = 'none'
+	GameOver.style.display = 'none'
+	ship.style.display = 'block'
+	window.addEventListener("keydown", moving)
+	Music.play()
+	 Einterval = setInterval(() => {CreateEnemy()}, 2600)
+}
+
+window.addEventListener("keydown", (event) => {
+	
+	if (event.key === "Enter"){
+		Score.innerText = 0
+		
+		TF = false
+		playgame()
+	}
+})
+
+
