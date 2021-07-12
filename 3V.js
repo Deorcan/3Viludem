@@ -1,6 +1,6 @@
 const ship = document.getElementById("player")
 const gamescreen = document.getElementById("game-screen")
-const enemyImgs = ['D:\\Pictures\\Ocean.png','D:\\Pictures\\Lava.png','D:\\Pictures\\Ice.png']
+const enemyImgs = ['Ocean.png','Lava.png','Ice.png']
 const Score = document.querySelector('#score span')
 const HighScore = document.querySelector('#HighScore span')
 const text = document.getElementById("text")
@@ -9,7 +9,7 @@ const Para = document.getElementById("Paragraph")
 const GameOver = document.getElementById("gameover")
 
 let TF = false
-let Music = new Audio ('D:\\Downloads\\sounds-from-space-soundroll-main-version-01-28-1884.mp3')
+let Music = new Audio ('sounds-from-space-soundroll-main-version-01-28-1884.mp3')
 let EInterval
 let L = { x: 0, y: 0, width: 0, height: 0}
 let	E = { x: 0, y: 0, width: 0, height: 0}
@@ -105,7 +105,7 @@ function CreateLaser(){
 	let X = parseInt(window.getComputedStyle(ship).getPropertyValue('left'))
 	let Y = parseInt(window.getComputedStyle(ship).getPropertyValue('top'))
 	let newlaser = document.createElement('img')
-	newlaser.src = 'D:\\Pictures\\3viludem3dbeta11.png'
+	newlaser.src = '3viludem3dbeta11.png'
 	newlaser.classList.add('laser')
 	newlaser.style.left = `${X}px`
 	newlaser.style.top = `${Y - 15}px`
@@ -118,7 +118,7 @@ function movelaser(laser){
 		let enemies = document.querySelectorAll(".enemy")
 		enemies.forEach(enemy => {
 			if (IsCollision(laser,enemy)){
-				enemy.src = "D:\\Pictures\\Helium.png"
+				enemy.src = "Helium.png"
 				laser.remove()
 				enemy.classList.add("dead")
 				clearInterval(interval)
@@ -139,7 +139,7 @@ function movelaser(laser){
 function fire(){
 	let laser = CreateLaser()
 	gamescreen.appendChild(laser)
-	let Laser = new Audio ('D:\\Downloads\\Laser.mp3')
+	let Laser = new Audio ('Laser.mp3')
 	Laser.play()
 	movelaser(laser)
 
@@ -150,7 +150,7 @@ function moveEnemy(enemy){
 		let X = parseInt(window.getComputedStyle(enemy).getPropertyValue('left'))
 		if (X <= 280){
 			if (Array.from(enemy.classList).includes("dead")){
-				let Whoosh = new Audio ('D:\\Downloads\\Whoosh.mp3')
+				let Whoosh = new Audio ('Whoosh.mp3')
 				Whoosh.play()
 				enemy.remove()
 				clearInterval(interval)
@@ -158,7 +158,7 @@ function moveEnemy(enemy){
 			} else {
 				enemy.remove()
 				clearInterval(interval)
-				let Thunder = new Audio ('D:\\Downloads\\Thunder.mp3')
+				let Thunder = new Audio ('Thunder.mp3')
 				Thunder.play()
 				gameover()
 
