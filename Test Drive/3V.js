@@ -12,7 +12,21 @@ let TF = false
 let Music = new Audio ('Test Drive/sounds-from-space-soundroll-main-version-01-28-1884.mp3')
 let EInterval
 let L = { x: 0, y: 0, width: 0, height: 0}
-let	E = { x: 0, y: 0, width: 0, height: 0}
+let E = { x: 0, y: 0, width: 0, height: 0}
+let Z = 2600
+let z = 30
+
+if (typeof Music.loop == 'boolean')
+{
+    Music.loop = true;
+}
+else
+{
+    Music.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+    }, false);
+}
 
 function gameover(){
 	window.removeEventListener("keydown", moving)
@@ -31,7 +45,8 @@ function gameover(){
 	if (HighScore.innerText < Score.innerText) {
 		HighScore.innerText = Score.innerText
 	}
-	
+	Z = Z*2
+	z+=5
 
 }
 
@@ -167,7 +182,7 @@ function moveEnemy(enemy){
 		} else {
 			enemy.style.left = `${X - 4}px`
 		}
-	}, 30)
+	}, z)
 
 }
 
@@ -218,7 +233,7 @@ function playgame(){
 	window.addEventListener("keydown", moving)
 	Music.loop = true
 	Music.play()
-	 Einterval = setInterval(() => {CreateEnemy()}, 2600)
+	 Einterval = setInterval(() => {CreateEnemy()}, Z)
 }
 
 window.addEventListener("keydown", (event) => {
