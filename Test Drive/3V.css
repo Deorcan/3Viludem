@@ -1,7 +1,9 @@
 #game-screen {
 	background-image: url('Space.jpg');
-	width: 40%;
-	height: 90%;
+	max-width: 40%;
+	max-height: 90%;
+	width: 100%;
+	height: 100%;
 	
 	margin-left: 25vw;
 
@@ -9,8 +11,10 @@
 }
 
 #player {
-	width: 2.5%;
-	height: 2.5%;
+	max-width: 2.5%;
+	max-height: 2.5%;
+	width: 100%;
+	height: 100%;
 	position: relative;
 	left: 20px;
 	top: 180px;
@@ -18,8 +22,10 @@
 }
 
 .laser {
-	width: 20px;
-	height: 20px;
+	max-width: 20px;
+	max-height: 20px;
+	width: 100%;
+	height: 100%;
 	position: relative;
 	
 }
@@ -27,8 +33,10 @@
 
 
 .enemy {
-	width: 30px;
-	height: 30px;
+	max-width: 30px;
+	max-height: 30px;
+	width: 100%;
+	height: 100%;
 	position: absolute;
 	border-radius: 50%;
 	background-color: #fff;
@@ -46,8 +54,10 @@ transition: opacity 1.5s ease-out;
  }
 
  .dead {
- 	width: 30px;
- 	height: 30px;
+ 	max-width: 30px;
+ 	max-height: 30px;
+	width: 100%;
+	height: 100%;
  	position: absolute;
  	opacity: 0;
 	 
