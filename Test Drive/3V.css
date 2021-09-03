@@ -1,7 +1,7 @@
 #game-screen {
 	background-image: url('Space.jpg');
-	width: 800px;
-	height: 600px;
+	width: 80%;
+	height: 60%;
 	
 	margin-left: 10vw;
 
@@ -9,8 +9,8 @@
 }
 
 #player {
-	width: 20%;
-	height: 20%;
+	width: 5%;
+	height: 5%;
 	position: relative;
 	left: 20px;
 	top: 180px;
