@@ -1,7 +1,7 @@
 #game-screen {
 	background-image: url('Space.jpg');
-	max-width: 800%;
-	max-height: 600%;
+	max-width: 80%;
+	max-height: 60%;
 	position: absolute;
 	
 	margin-left: 25vw;
