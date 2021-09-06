@@ -57,23 +57,19 @@ transition: opacity 1.5s ease-out;
  #text {
  	text-align: center;
  	color: gold;
-  	left: 35px;
-  	top: 0px;
   	text-decoration: underline;
 	 
  }
   #text2 {
  	text-align: center;
  	color: gold;
-  	left: 35px;
-  	top: 0px;
   	
  }
 
 #Paragraph {
 
-	margin-left: 250px;
-	margin-right: 250px;
+	margin-left: 18vw;
+	margin-right: 18vw;
 	color: gold;
 
 }
@@ -91,7 +87,7 @@ transition: opacity 1.5s ease-out;
 #gameover {
 	text-align: center;
 	color: white;
-	font-size: 60px;
+	font-size: 375%;
 	display: none;
 
 }
