@@ -11,8 +11,8 @@ const GameOver = document.getElementById("gameover")
 let TF = false
 let Music = new Audio ('Test Drive/sounds-from-space-soundroll-main-version-01-28-1884.mp3')
 let EInterval
-let L = { x: 0%, y: 0%, width: 0%, height: 0%}
-let E = { x: 0%, y: 0%, width: 0%, height: 0%}
+let L = { x: 0, y: 0, width: 0, height: 0}
+let E = { x: 0, y: 0, width: 0, height: 0}
 let Z = 2600
 let z = 30
 
