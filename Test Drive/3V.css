@@ -85,9 +85,8 @@ transition: opacity 1.5s ease-out;
 }
 
 #gameover {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	text-align: center;
+	top-margin: 50%;
 	color: white;
 	font-size: 375%;
 	display: none;
