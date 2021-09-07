@@ -13,7 +13,7 @@
 	max-width: 6%;
 	max-height: 6%;
 	position: relative;
-	left: 3.9%;
+	left: 1%;
 	top: 30%;
 	
 }
@@ -85,7 +85,9 @@ transition: opacity 1.5s ease-out;
 }
 
 #gameover {
-	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	color: white;
 	font-size: 375%;
 	display: none;
