@@ -52,11 +52,11 @@ function gameover(){
 
 function moveUp(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top === "4px"){
+	if (ship.style.top === "0%"){
 		return
 	} else {
 		let pos = parseInt(TOP)
-		pos -= 8
+		pos -= 8%
 
 		ship.style.top = `${pos}px`
 	}
