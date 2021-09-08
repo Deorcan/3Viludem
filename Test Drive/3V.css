@@ -92,7 +92,7 @@ transition: opacity 1.5s ease-out;
 	display: none;
 
 }
-body{
- 		cursor: url("Pictures\\Cursor.png"), url("Pictures\\Cursor.cur"), default;
- 	}
+ .body{
+ 	cursor: url("Pictures\\Cursor.png"), url("Pictures\\Cursor.cur"), default;
+ }
 
