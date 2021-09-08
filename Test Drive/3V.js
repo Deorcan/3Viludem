@@ -120,7 +120,7 @@ function CreateLaser(){
 	let X = parseInt(window.getComputedStyle(ship).getPropertyValue('left'))
 	let Y = parseInt(window.getComputedStyle(ship).getPropertyValue('top'))
 	let newlaser = document.createElement('img')
-	newlaser.src = 'Test Drive/3viludem3dbeta11.png'
+	newlaser.src = 'Pictures//Laser.png'
 	newlaser.classList.add('laser')
 	newlaser.style.left = `${X}px`
 	newlaser.style.top = `${Y - 15}px`
