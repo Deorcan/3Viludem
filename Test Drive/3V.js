@@ -137,7 +137,8 @@ function movelaser(laser){
 				laser.remove()
 				enemy.classList.add("dead")
 				clearInterval(interval)
-				Score.innerText= parseInt(Score.innerText) + 1
+				//Score.innerText= parseInt(Score.innerText) + 1
+				Score.innerText= ship.style.top
 			}
 		})
 		if (X >= 740){
