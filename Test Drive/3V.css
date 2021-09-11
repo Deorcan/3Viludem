@@ -12,7 +12,7 @@
 #player {
 	max-width: 6%;
 	max-height: 6%;
-	position: relative;
+	position: absolute;
 	left: 2.5%;
 	top: 30%;
 	
