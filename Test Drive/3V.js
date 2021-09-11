@@ -52,7 +52,7 @@ function gameover(){
 }
 
 function moveUp(){
-	if (ship.style.top <= 0vw){
+	if (ship.style.top <= 0vh){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -63,7 +63,7 @@ function moveUp(){
 }
 
 function moveDown(){
-	if (ship.style.top >= "55vh"){
+	if (ship.style.top >= 55vh){
 		return
 	} else {
 		let pos = parseInt(TOP)
