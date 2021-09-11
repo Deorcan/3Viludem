@@ -55,7 +55,7 @@ function moveUp(){
 	if (ship.style.top <= 0vh){
 		return
 	} else {
-		let pos = parseInt(TOP)
+		let pos = ship.style.top
 		pos -=8
 
 		ship.style.top = `${pos}px`
@@ -66,7 +66,7 @@ function moveDown(){
 	if (ship.style.top >= 55vh){
 		return
 	} else {
-		let pos = parseInt(TOP)
+		let pos = ship.style.top
 		pos +=8
 
 		ship.style.top = `${pos}px`
@@ -77,7 +77,7 @@ function moveLeft(){
 	if (ship.style.left <= "0vw"){
 		return
 	} else {
-		let pos = parseInt(LEFT)
+		let pos = ship.style.left
 		pos -=8
 	
 		ship.style.left = `${pos}px`
@@ -88,7 +88,7 @@ function moveRight(){
 	if (ship.style.left >= "300vw"){
 		return
 	} else {
-		let pos = parseInt(LEFT)
+		let pos = ship.style.left
 		pos +=8
 	
 		ship.style.left = `${pos}px`
