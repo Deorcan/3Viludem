@@ -52,7 +52,7 @@ function gameover(){
 }
 
 function moveUp(){
-	if (ship.style.top <= "0vh"){
+	if (ship.style.top <= 0){
 		return
 	} else {
 		let pos = parseInt(TOP)
