@@ -15,7 +15,8 @@ let L = { x: 0, y: 0, width: 0, height: 0}
 let E = { x: 0, y: 0, width: 0, height: 0}
 let Z = 2600
 let z = 30
-
+let TOP = window.getComputedStyle(ship).getPropertyValue('top')
+let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
 if (typeof Music.loop == 'boolean')
 {
     Music.loop = true;
@@ -51,7 +52,6 @@ function gameover(){
 }
 
 function moveUp(){
-	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
 	if (ship.style.top <= "0vh"){
 		return
 	} else {
@@ -63,7 +63,6 @@ function moveUp(){
 }
 
 function moveDown(){
-	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
 	if (ship.style.top >= "55vh"){
 		return
 	} else {
@@ -75,7 +74,6 @@ function moveDown(){
 }
 
 function moveLeft(){
-	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
 	if (ship.style.left <= "0vw"){
 		return
 	} else {
@@ -87,8 +85,7 @@ function moveLeft(){
 }
 
 function moveRight(){
-	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left >= "300vh"){
+	if (ship.style.left >= "300vw"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
