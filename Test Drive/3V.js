@@ -58,7 +58,7 @@ function moveUp(){
 		let pos = ship.style.top
 		pos = pos - 1
 
-		ship.style.top = `${pos}px`
+		ship.style.top = `${pos}vh`
 	}
 }
 
@@ -69,7 +69,7 @@ function moveDown(){
 		let pos = ship.style.top
 		pos = pos + 1
 
-		ship.style.top = `${pos}px`
+		ship.style.top = `${pos}vh`
 	}
 }
 
@@ -80,7 +80,7 @@ function moveLeft(){
 		let pos = ship.style.left
 		pos = pos - 1
 	
-		ship.style.left = `${pos}px`
+		ship.style.left = `${pos}vw`
 	}
 }
 
@@ -91,7 +91,7 @@ function moveRight(){
 		let pos = ship.style.left
 		pos = pos + 1
 	
-		ship.style.left = `${pos}px`
+		ship.style.left = `${pos}vw`
 	}
 }
 
