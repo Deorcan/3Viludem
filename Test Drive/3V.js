@@ -56,7 +56,7 @@ function moveUp(){
 		return
 	} else {
 		let pos = ship.style.top
-		pos -=8
+		pos = pos - 8
 
 		ship.style.top = `${pos}px`
 	}
@@ -67,7 +67,7 @@ function moveDown(){
 		return
 	} else {
 		let pos = ship.style.top
-		pos +=8
+		pos = pos + 8
 
 		ship.style.top = `${pos}px`
 	}
@@ -78,7 +78,7 @@ function moveLeft(){
 		return
 	} else {
 		let pos = ship.style.left
-		pos -=8
+		pos = pos - 8
 	
 		ship.style.left = `${pos}px`
 	}
@@ -89,7 +89,7 @@ function moveRight(){
 		return
 	} else {
 		let pos = ship.style.left
-		pos +=8
+		pos = pos + 8
 	
 		ship.style.left = `${pos}px`
 	}
