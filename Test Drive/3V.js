@@ -55,7 +55,7 @@ function moveUp(){
 	if (ship.style.top === "0vh"){
 		return
 	} else {
-		let pos = ship.style.top
+		let pos = TOP
 		pos = pos - 1
 
 		ship.style.top = `${pos}vh`
@@ -66,7 +66,7 @@ function moveDown(){
 	if (ship.style.top === "55vh"){
 		return
 	} else {
-		let pos = ship.style.top
+		let pos = TOP
 		pos = pos + 1
 
 		ship.style.top = `${pos}vh`
@@ -77,7 +77,7 @@ function moveLeft(){
 	if (ship.style.left === "0vw"){
 		return
 	} else {
-		let pos = ship.style.left
+		let pos = LEFT
 		pos = pos - 1
 	
 		ship.style.left = `${pos}vw`
@@ -88,7 +88,7 @@ function moveRight(){
 	if (ship.style.left === "300vw"){
 		return
 	} else {
-		let pos = ship.style.left
+		let pos = LEFT
 		pos = pos + 1
 	
 		ship.style.left = `${pos}vw`
