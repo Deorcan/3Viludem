@@ -52,7 +52,7 @@ function gameover(){
 }
 
 function moveUp(){
-	if (ship.style.top >= "4px"){
+	if (ship.style.top === "4px"){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -63,7 +63,7 @@ function moveUp(){
 }
 
 function moveDown(){
-	if (ship.style.top <= "556px"){
+	if (ship.style.top === "556px"){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -74,7 +74,7 @@ function moveDown(){
 }
 
 function moveLeft(){
-	if (ship.style.left >= "0px"){
+	if (ship.style.left === "4px"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
@@ -85,7 +85,7 @@ function moveLeft(){
 }
 
 function moveRight(){
-	if (ship.style.left <= "300px"){
+	if (ship.style.left === "756px"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
