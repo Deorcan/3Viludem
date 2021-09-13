@@ -34,7 +34,7 @@ function gameover(){
 	TF = true
 	clearInterval(EInterval)
 	ship.style.top ="28.8%"
-	ship.style.left ="2.5%"
+	ship.style.left ="1.46%"
 	text.style.display = 'block'
 	text2.style.display = 'block'
 	Para.style.display = 'block'
