@@ -74,7 +74,7 @@ function moveDown(){
 }
 
 function moveLeft(){
-	if (ship.style.left === "4px"){
+	if (ship.style.left === "0.292vw"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
@@ -85,7 +85,7 @@ function moveLeft(){
 }
 
 function moveRight(){
-	if (ship.style.left === "756px"){
+	if (ship.style.left === "55.188vw"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
