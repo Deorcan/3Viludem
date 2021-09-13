@@ -52,46 +52,46 @@ function gameover(){
 }
 
 function moveUp(){
-	if (ship.style.top <= "0%"){
+	if (ship.style.top <= "4px"){
 		return
 	} else {
 		let pos = parseInt(TOP)
-		pos = pos - 1
+		pos -=8
 
-		ship.style.top = `${pos}%`
+		ship.style.top = `${pos}px`
 	}
 }
 
 function moveDown(){
-	if (ship.style.top === "55%"){
+	if (ship.style.top >= "556px"){
 		return
 	} else {
 		let pos = parseInt(TOP)
-		pos = pos + 1
+		pos +=8
 
-		ship.style.top = `${pos}%`
+		ship.style.top = `${pos}px`
 	}
 }
 
 function moveLeft(){
-	if (ship.style.left === "0%"){
+	if (ship.style.left >= "0px"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
-		pos = pos - 1
+		pos -=8
 	
-		ship.style.left = `${pos}%`
+		ship.style.left = `${pos}px`
 	}
 }
 
 function moveRight(){
-	if (ship.style.left === "300%"){
+	if (ship.style.left <= "300px"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
-		pos = pos + 1
+		pos +=8
 	
-		ship.style.left = `${pos}%`
+		ship.style.left = `${pos}px`
 	}
 }
 
