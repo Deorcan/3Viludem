@@ -77,7 +77,7 @@ function moveDown(){
 
 function moveLeft(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left === "0%"){
+	if (ship.style.left <= "0%"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
