@@ -59,7 +59,7 @@ function moveUp(){
 		let pos = parseInt(TOP)
 		pos -=0.01
 
-		ship.style.top = `${pos}%`
+		ship.style.top = `${pos}px`
 	}
 }
 
@@ -71,7 +71,7 @@ function moveDown(){
 		let pos = parseInt(TOP)
 		pos +=0.01
 
-		ship.style.top = `${pos}%`
+		ship.style.top = `${pos}px`
 	}
 }
 
@@ -83,7 +83,7 @@ function moveLeft(){
 		let pos = parseInt(LEFT)
 		pos -=0.01
 	
-		ship.style.left = `${pos}%`
+		ship.style.left = `${pos}px`
 	}
 }
 
@@ -95,7 +95,7 @@ function moveRight(){
 		let pos = parseInt(LEFT)
 		pos +=0.01
 	
-		ship.style.left = `${pos}%`
+		ship.style.left = `${pos}px`
 	}
 }
 
