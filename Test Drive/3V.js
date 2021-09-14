@@ -57,9 +57,9 @@ function moveUp(){
 		return
 	} else {
 		let pos = parseInt(TOP)
-		pos -=0.001
+		pos -=8
 
-		ship.style.top = `${pos}%`
+		ship.style.top = `${pos}px`
 	}
 }
 
@@ -69,9 +69,9 @@ function moveDown(){
 		return
 	} else {
 		let pos = parseInt(TOP)
-		pos +=0.001
+		pos +=8
 
-		ship.style.top = `${pos}%`
+		ship.style.top = `${pos}px`
 	}
 }
 
@@ -81,9 +81,9 @@ function moveLeft(){
 		return
 	} else {
 		let pos = parseInt(LEFT)
-		pos -=0.001
+		pos -=8
 	
-		ship.style.left = `${pos}%`
+		ship.style.left = `${pos}px`
 	}
 }
 
@@ -93,9 +93,9 @@ function moveRight(){
 		return
 	} else {
 		let pos = parseInt(LEFT)
-		pos +=0.001
+		pos +=8
 	
-		ship.style.left = `${pos}%`
+		ship.style.left = `${pos}px`
 	}
 }
 
