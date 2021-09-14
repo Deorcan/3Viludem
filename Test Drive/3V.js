@@ -53,49 +53,49 @@ function gameover(){
 
 function moveUp(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top === "0vh"){
+	if (ship.style.top === "0.64%"){
 		return
 	} else {
 		let pos = parseInt(TOP)
 		pos -=1.28
 
-		ship.style.top = `${pos}vh`
+		ship.style.top = `${pos}%`
 	}
 }
 
 function moveDown(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top === "88.96vh"){
+	if (ship.style.top === "88.96%"){
 		return
 	} else {
 		let pos = parseInt(TOP)
 		pos +=1.28
 
-		ship.style.top = `${pos}vh`
+		ship.style.top = `${pos}%`
 	}
 }
 
 function moveLeft(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left === "0vw"){
+	if (ship.style.left === "0.584%"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
 		pos -=0.584
 	
-		ship.style.left = `${pos}vw`
+		ship.style.left = `${pos}%`
 	}
 }
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left === "55.188vw"){
+	if (ship.style.left === "55.188%"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
 		pos +=0.584
 	
-		ship.style.left = `${pos}vw`
+		ship.style.left = `${pos}%`
 	}
 }
 
