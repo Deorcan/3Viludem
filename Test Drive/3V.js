@@ -89,7 +89,7 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left >= "500.188%"){
+	if (ship.style.left >= "600.188%"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
