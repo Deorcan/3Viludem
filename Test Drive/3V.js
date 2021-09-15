@@ -142,7 +142,7 @@ function movelaser(laser){
 				
 			}
 		})
-		if (X >= 740){
+		if (X >= 750){
 			laser.remove()
 			clearInterval(interval)
 		} else {
@@ -165,7 +165,7 @@ function fire(){
 function moveEnemy(enemy){
 	let interval = setInterval(() => {
 		let X = parseInt(window.getComputedStyle(enemy).getPropertyValue('left'))
-		if (X <= 280){
+		if (X <= 180){
 			if (Array.from(enemy.classList).includes("dead")){
 				let Whoosh = new Audio ('Test Drive/Whoosh.mp3')
 				Whoosh.play()
@@ -195,7 +195,7 @@ if (TF === false){
 	newenemy.src = sprite
 	newenemy.classList.add('enemy')
 	newenemy.classList.add('transition')
-	newenemy.style.left = '1000px'
+	newenemy.style.left = '500px'
 	newenemy.style.top = `${Math.floor(Math.random()* 530) + 50 }px`
 	gamescreen.appendChild(newenemy)
 	moveEnemy(newenemy)
