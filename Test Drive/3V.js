@@ -89,7 +89,7 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left >= "-50.188%"){
+	if (ship.style.left >= "-500.188%"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
@@ -101,7 +101,7 @@ function moveRight(){
 
 function IsCollision(laser,enemy){
 	
-	 L = { x: parseInt(laser.style.left) + 300
+	 L = { x: parseInt(laser.style.left) + 21.90%
 	 	, y: parseInt(laser.style.top) + 30
 	 	, width: 20, height: 30}
 	 E = { x: parseInt(enemy.style.left), y: parseInt(enemy.style.top), width: 30, height: 30}
