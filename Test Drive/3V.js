@@ -65,7 +65,7 @@ function moveUp(){
 
 function moveDown(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top >= "55.96%"){
+	if (ship.style.top >= gamescreen.height){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -89,7 +89,7 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left >= "99.188%"){
+	if (ship.style.left >= gamescreen.width){
 		return
 	} else {
 		let pos = parseInt(LEFT)
@@ -142,7 +142,7 @@ function movelaser(laser){
 				
 			}
 		})
-		if (X >= 750){
+		if (X >= gamescreen.width){
 			laser.remove()
 			clearInterval(interval)
 		} else {
@@ -195,7 +195,7 @@ if (TF === false){
 	newenemy.src = sprite
 	newenemy.classList.add('enemy')
 	newenemy.classList.add('transition')
-	newenemy.style.left = '64.24%'
+	newenemy.style.left = gamescreen.width
 	newenemy.style.top = `${Math.floor(Math.random()* 530) + 50 }px`
 	gamescreen.appendChild(newenemy)
 	moveEnemy(newenemy)
