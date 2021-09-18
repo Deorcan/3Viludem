@@ -89,7 +89,7 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left >= gamescreen.width-10){
+	if (ship.style.left >= gamescreen.width-100){
 		return
 	} else {
 		let pos = parseInt(LEFT)
