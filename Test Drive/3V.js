@@ -89,7 +89,7 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left >= gamescreen.width-100){
+	if (ship.style.left >= `${gamescreen.width}px`){
 		return
 	} else {
 		let pos = parseInt(LEFT)
@@ -142,7 +142,7 @@ function movelaser(laser){
 				
 			}
 		})
-		if (X >= gamescreen.width){
+		if (X >= `${gamescreen.width}px`){
 			laser.remove()
 			clearInterval(interval)
 		} else {
