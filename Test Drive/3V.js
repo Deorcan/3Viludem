@@ -65,7 +65,7 @@ function moveUp(){
 
 function moveDown(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top >= gamescreen.height){
+	if (ship.style.top >= "55%"){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -89,7 +89,7 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left >= gamescreen.width){
+	if (ship.style.left >= "94%"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
