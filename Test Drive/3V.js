@@ -7,7 +7,7 @@ const text = document.getElementById("text")
 const text2 = document.getElementById("text2")
 const Para = document.getElementById("Paragraph")
 const GameOver = document.getElementById("gameover")
-
+window.onload = function () {
 const imageSrc = document.getElementById('game-screen').style.backgroundImage.replace(/url\((['"])?(.*?)\1\)/gi, '$2').split(',')[0];
 
   // I just broke it up on newlines for readability
@@ -19,7 +19,8 @@ const imageSrc = document.getElementById('game-screen').style.backgroundImage.re
     var width = image.width,
       height = image.height;
     alert('width =' + width + ', height = ' + height);
-  }
+  };
+};
 let TF = false
 let Music = new Audio ('Test Drive/sounds-from-space-soundroll-main-version-01-28-1884.mp3')
 let EInterval
