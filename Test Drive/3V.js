@@ -19,7 +19,7 @@ const imageSrc = document.getElementById('game-screen').style.backgroundImage.re
     var width = image.width,
       height = image.height;
     alert('width =' + width + ', height = ' + height);
-
+  }
 let TF = false
 let Music = new Audio ('Test Drive/sounds-from-space-soundroll-main-version-01-28-1884.mp3')
 let EInterval
