@@ -241,7 +241,7 @@ function playgame(){
 window.addEventListener("keydown", (event) => {
 	
 	if (event.key === "Enter"){
-		Score.innerText = ship.width
+		Score.innerText = gamescreen.width
 		
 		TF = false
 		playgame()
