@@ -89,7 +89,7 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left === gamescreen.offsetWidth){
+	if (ship.style.left === 863){
 		return
 	} else {
 		let pos = parseInt(LEFT)
@@ -241,7 +241,7 @@ function playgame(){
 window.addEventListener("keydown", (event) => {
 	
 	if (event.key === "Enter"){
-		Score.innerText = gamescreen.offsetWidth
+		Score.innerText = gamescreen.offsetHeight
 		
 		TF = false
 		playgame()
