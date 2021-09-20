@@ -241,7 +241,7 @@ function playgame(){
 window.addEventListener("keydown", (event) => {
 	
 	if (event.key === "Enter"){
-		Score.innerText = gamescreen.offsetHeight
+		Score.innerText = 0
 		
 		TF = false
 		playgame()
