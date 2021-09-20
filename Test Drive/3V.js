@@ -53,7 +53,7 @@ function gameover(){
 
 function moveUp(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top <= "0%"){
+	if (ship.style.top === "0%"){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -65,7 +65,7 @@ function moveUp(){
 
 function moveDown(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top >= gamescreen.offsetHeight){
+	if (ship.style.top === gamescreen.offsetHeight){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -77,7 +77,7 @@ function moveDown(){
 
 function moveLeft(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left <= "0%"){
+	if (ship.style.left === "0%"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
@@ -89,7 +89,7 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left >= gamescreen.offsetWidth){
+	if (ship.style.left === gamescreen.offsetWidth){
 		return
 	} else {
 		let pos = parseInt(LEFT)
