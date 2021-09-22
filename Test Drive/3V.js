@@ -8,7 +8,7 @@ const text2 = document.getElementById("text2")
 const Para = document.getElementById("Paragraph")
 const GameOver = document.getElementById("gameover")
 
-const screen = gamescreen.currentstyle
+var screen = gamescreen.currentstyle
 
 let TF = false
 let Music = new Audio ('Test Drive/sounds-from-space-soundroll-main-version-01-28-1884.mp3')
