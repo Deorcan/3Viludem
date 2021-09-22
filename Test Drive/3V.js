@@ -18,7 +18,7 @@ let E = { x: 0, y: 0, width: 0, height: 0}
 let Z = 2600
 let z = 30
 
-
+alert(screen.width)
 if (typeof Music.loop == 'boolean')
 {
     Music.loop = true;
@@ -243,7 +243,7 @@ function playgame(){
 window.addEventListener("keydown", (event) => {
 	
 	if (event.key === "Enter"){
-		Score.innerText = screen.width
+		Score.innerText = 0
 		
 		TF = false
 		playgame()
