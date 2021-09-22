@@ -35,7 +35,7 @@ function gameover(){
 	window.removeEventListener("keydown", moving)
 	TF = true
 	clearInterval(EInterval)
-	ship.style.top ="58.8%"
+	ship.style.top ="158.8%"
 	ship.style.left ="18.46%"
 	text.style.display = 'block'
 	text2.style.display = 'block'
@@ -67,7 +67,7 @@ function moveUp(){
 
 function moveDown(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top >= "100%"){
+	if (ship.style.top >= "300%"){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -79,7 +79,7 @@ function moveDown(){
 
 function moveLeft(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left <= "18%"){
+	if (ship.style.left <= "28%"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
@@ -91,7 +91,7 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left >= "100%"){
+	if (ship.style.left >= "300%"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
