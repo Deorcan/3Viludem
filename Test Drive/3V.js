@@ -18,7 +18,7 @@ let E = { x: 0, y: 0, width: 0, height: 0}
 let Z = 2600
 let z = 30
 
-alert(screen.width)
+
 if (typeof Music.loop == 'boolean')
 {
     Music.loop = true;
@@ -67,7 +67,7 @@ function moveUp(){
 
 function moveDown(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top >= "55%"){
+	if (ship.style.top >= screen.height){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -91,7 +91,7 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left >= "92.9%"){
+	if (ship.style.left >= screen.width){
 		return
 	} else {
 		let pos = parseInt(LEFT)
