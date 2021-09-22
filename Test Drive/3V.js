@@ -8,7 +8,7 @@ const text2 = document.getElementById("text2")
 const Para = document.getElementById("Paragraph")
 const GameOver = document.getElementById("gameover")
 
-var screen = gamescreen.currentstyle
+var screen = window.getComputedStyle(gamescreen)
 
 let TF = false
 let Music = new Audio ('Test Drive/sounds-from-space-soundroll-main-version-01-28-1884.mp3')
@@ -18,7 +18,7 @@ let E = { x: 0, y: 0, width: 0, height: 0}
 let Z = 2600
 let z = 30
 
-alert(screen.width)
+alert(gamescreen.width)
 if (typeof Music.loop == 'boolean')
 {
     Music.loop = true;
