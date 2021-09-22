@@ -8,6 +8,8 @@ const text2 = document.getElementById("text2")
 const Para = document.getElementById("Paragraph")
 const GameOver = document.getElementById("gameover")
 
+const screen = gamescreen.currentstyle
+
 let TF = false
 let Music = new Audio ('Test Drive/sounds-from-space-soundroll-main-version-01-28-1884.mp3')
 let EInterval
@@ -241,7 +243,7 @@ function playgame(){
 window.addEventListener("keydown", (event) => {
 	
 	if (event.key === "Enter"){
-		Score.innerText = 0
+		Score.innerText = screen.width
 		
 		TF = false
 		playgame()
