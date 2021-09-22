@@ -35,8 +35,8 @@ function gameover(){
 	window.removeEventListener("keydown", moving)
 	TF = true
 	clearInterval(EInterval)
-	ship.style.top ="158.8%"
-	ship.style.left ="18.46%"
+	ship.style.top ="158.8vh"
+	ship.style.left ="18.46vw"
 	text.style.display = 'block'
 	text2.style.display = 'block'
 	Para.style.display = 'block'
