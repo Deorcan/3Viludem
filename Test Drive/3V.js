@@ -67,7 +67,7 @@ function moveUp(){
 
 function moveDown(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top >= "500vh"){
+	if (ship.style.top >= "550vh"){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -79,7 +79,7 @@ function moveDown(){
 
 function moveLeft(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left <= "23vw"){
+	if (ship.style.left <= "24vw"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
@@ -91,7 +91,7 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left >= "1900vw"){
+	if (ship.style.left >= "1090vw"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
