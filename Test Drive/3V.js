@@ -35,7 +35,7 @@ function gameover(){
 	window.removeEventListener("keydown", moving)
 	TF = true
 	clearInterval(EInterval)
-	ship.style.top ="68.8vh"
+	ship.style.top ="38.8vh"
 	ship.style.left ="18.46vw"
 	text.style.display = 'block'
 	text2.style.display = 'block'
@@ -67,7 +67,7 @@ function moveUp(){
 
 function moveDown(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top >= "200vh"){
+	if (ship.style.top >= "900vh"){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -91,7 +91,7 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left >= "800vw"){
+	if (ship.style.left >= "900vw"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
