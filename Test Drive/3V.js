@@ -79,7 +79,7 @@ function moveDown(){
 
 function moveLeft(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left <= "26vw"){
+	if (ship.style.left <= "18vw"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
@@ -91,7 +91,7 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left >= "900vw"){
+	if (ship.style.left >= "990vw"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
@@ -126,7 +126,7 @@ function CreateLaser(){
 	newlaser.src = 'Pictures//Laser.png'
 	newlaser.classList.add('laser')
 	newlaser.style.left = `${X}px`
-	newlaser.style.top = `${Y - 15}px`
+	newlaser.style.top = `${Y - 4}px`
 	return newlaser
 }
 
