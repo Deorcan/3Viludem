@@ -67,7 +67,7 @@ function moveUp(){
 
 function moveDown(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top >= "900vh"){
+	if (ship.style.top >= "700vh"){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -79,7 +79,7 @@ function moveDown(){
 
 function moveLeft(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left <= "18vw"){
+	if (ship.style.left <= "21vw"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
@@ -91,7 +91,7 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left >= "990vw"){
+	if (ship.style.left >= "1000vw"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
@@ -120,7 +120,7 @@ else {return false}
 }
 
 function CreateLaser(){
-	let X = parseInt(window.getComputedStyle(ship).getPropertyValue('left'))
+	let X = parseInt(ship.style.left)
 	let Y = parseInt(window.getComputedStyle(ship).getPropertyValue('top'))
 	let newlaser = document.createElement('img')
 	newlaser.src = 'Pictures//Laser.png'
