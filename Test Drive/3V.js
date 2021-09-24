@@ -91,7 +91,7 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left >= "110vw"){
+	if (ship.style.left >= "190vw"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
@@ -144,7 +144,7 @@ function movelaser(laser){
 				
 			}
 		})
-		if (X >= "99vw"){
+		if (X >= "50vw"){
 			laser.remove()
 			clearInterval(interval)
 		} else {
