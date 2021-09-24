@@ -125,7 +125,7 @@ function CreateLaser(){
 	let newlaser = document.createElement('img')
 	newlaser.src = 'Pictures//Laser.png'
 	newlaser.classList.add('laser')
-	newlaser.style.left = `${X-100}px`
+	newlaser.style.left = `${X-200}px`
 	newlaser.style.top = `${Y - 4}px`
 	return newlaser
 }
@@ -144,7 +144,7 @@ function movelaser(laser){
 				
 			}
 		})
-		if (X >= "5vw"){
+		if (X >= 900){
 			laser.remove()
 			clearInterval(interval)
 		} else {
