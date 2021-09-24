@@ -132,7 +132,7 @@ function CreateLaser(){
 
 function movelaser(laser){
 	let interval = setInterval(() => {
-		let X = parseInt(laser.style.left)
+		let X = parseInt(laser.style.left)-10
 		let enemies = document.querySelectorAll(".enemy")
 		enemies.forEach(enemy => {
 			if (IsCollision(laser,enemy)){
