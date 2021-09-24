@@ -120,7 +120,7 @@ else {return false}
 }
 
 function CreateLaser(){
-	let X = parseInt(window.getComputedStyle(ship).getPropertyValue('left'))
+	let X = parseInt(window.getComputedStyle(ship).getPropertyValue('left')-100)
 	let Y = parseInt(window.getComputedStyle(ship).getPropertyValue('top'))
 	let newlaser = document.createElement('img')
 	newlaser.src = 'Pictures//Laser.png'
