@@ -91,7 +91,7 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left >= "990vw"){
+	if (ship.style.left >= "900vw"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
@@ -198,7 +198,7 @@ if (TF === false){
 	newenemy.classList.add('enemy')
 	newenemy.classList.add('transition')
 	newenemy.style.left = "94%"
-	newenemy.style.top = `${Math.floor(Math.random()* 530) + 50 }px`
+	newenemy.style.top = `${Math.floor(Math.random()* 530) + 30 }px`
 	gamescreen.appendChild(newenemy)
 	moveEnemy(newenemy)
 }
