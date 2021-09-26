@@ -198,7 +198,7 @@ if (TF === false){
 	newenemy.classList.add('enemy')
 	newenemy.classList.add('transition')
 	newenemy.style.left = "94%"
-	newenemy.style.top = `${Math.floor(Math.random()* 530) + 20 }px`
+	newenemy.style.top = `${Math.floor(Math.random()* 530) + 50 }%`
 	gamescreen.appendChild(newenemy)
 	moveEnemy(newenemy)
 }
