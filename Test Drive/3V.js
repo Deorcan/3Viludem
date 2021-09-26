@@ -240,9 +240,9 @@ function playgame(){
 	 Einterval = setInterval(() => {CreateEnemy()}, Z)
 }
 
-window.addEventListener("keydown touchend", (event) => {
+window.addEventListener("keydown", (event) => {
 
-	if (event.key === "Enter"||event.key === "touchend"){
+	if (event.key === "Enter"){
 		Score.innerText = 0
 		
 		TF = false
