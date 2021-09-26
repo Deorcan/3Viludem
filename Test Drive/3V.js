@@ -198,7 +198,7 @@ if (TF === false){
 	newenemy.classList.add('enemy')
 	newenemy.classList.add('transition')
 	newenemy.style.left = "94%"
-	newenemy.style.top = `${Math.floor(Math.random()* 30) + 50 }%`
+	newenemy.style.top = `${Math.floor(Math.random()* 530) + 50 }px`
 	gamescreen.appendChild(newenemy)
 	moveEnemy(newenemy)
 }
@@ -240,14 +240,15 @@ function playgame(){
 	 Einterval = setInterval(() => {CreateEnemy()}, Z)
 }
 
-window.addEventListener("keydown", (event) => {
-	
-	if (event.key === "Enter"){
+window.addEventListener("keydown touchend", (event) => {
+
+	if (event.key === "Enter"||event.key === "touchend"){
 		Score.innerText = 0
 		
 		TF = false
 		playgame()
 	}
 })
+window.addEventListener("touchend", playgame);
 
 
