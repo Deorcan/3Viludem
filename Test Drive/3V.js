@@ -55,7 +55,7 @@ function gameover(){
 
 function moveUp(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top <= "0px"){
+	if (ship.style.top <= "0vh"){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -67,7 +67,7 @@ function moveUp(){
 
 function moveDown(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top >= 550){
+	if (ship.style.top >= "550vh"){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -91,7 +91,7 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left >= "900vw"){
+	if (ship.style.left >= "900px"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
