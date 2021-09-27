@@ -243,7 +243,7 @@ function playgame(){
 window.addEventListener("keydown", (event) => {
 
 	if (event.key === "Enter"){
-		Score.innerText = parseInt(ship.style.top)
+		Score.innerText = ship.style.bottom
 		
 		TF = false
 		playgame()
