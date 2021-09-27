@@ -140,8 +140,8 @@ function movelaser(laser){
 				laser.remove()
 				enemy.classList.add("dead")
 				clearInterval(interval)
-				//Score.innerText= parseInt(Score.innerText) + 1
-				Score.innerText = ship.style.left
+				Score.innerText= parseInt(Score.innerText) + 1
+				\
 			}
 		})
 		if (X >= 900){
@@ -243,7 +243,7 @@ function playgame(){
 window.addEventListener("keydown", (event) => {
 
 	if (event.key === "Enter"){
-		Score.innerText = 0
+		Score.innerText = ship.style.top
 		
 		TF = false
 		playgame()
