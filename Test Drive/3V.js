@@ -67,7 +67,7 @@ function moveUp(){
 
 function moveDown(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top >= "50px"){
+	if (ship.style.top === "550vh"){
 		return
 	} else {
 		let pos = parseInt(TOP)
