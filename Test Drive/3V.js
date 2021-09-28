@@ -67,7 +67,7 @@ function moveUp(){
 
 function moveDown(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top === "550vh"){
+	if (ship.style.top === "560vh"){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -243,7 +243,7 @@ function playgame(){
 window.addEventListener("keydown", (event) => {
 
 	if (event.key === "Enter"){
-		Score.innerText = ship.style.top
+		Score.innerText = ship.style.left
 		
 		TF = false
 		playgame()
