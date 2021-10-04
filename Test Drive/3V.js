@@ -244,7 +244,7 @@ function playgame(){
 window.addEventListener("keydown", (event) => {
 
 	if (event.key === "Enter"){
-		Score.innerText = ship.style.top
+		Score.innerText = Image.height
 		
 		TF = false
 		playgame()
