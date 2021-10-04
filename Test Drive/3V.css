@@ -1,10 +1,10 @@
 #space {
 	position: absolute;
+	max-width: 64%
+	max-height: 94%
 	border: 2px solid red;
 	margin-left: 18vw;
 	margin-top: 3vh;
-	margin-right: 64vw;
-	margin-bottom: 94vh;
 
 	
 }
