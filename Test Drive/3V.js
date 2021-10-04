@@ -56,7 +56,7 @@ function gameover(){
 
 function moveUp(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top <= Image.height-Image.height){
+	if (ship.style.top <= `${Image.height-Image.height}px`){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -68,7 +68,7 @@ function moveUp(){
 
 function moveDown(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top >= Image.height){
+	if (ship.style.top >= `${Image.height}px`){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -80,7 +80,7 @@ function moveDown(){
 
 function moveLeft(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left <= Image.width-Image.width){
+	if (ship.style.left <= `${Image.width-Image.width}px`){
 		return
 	} else {
 		let pos = parseInt(LEFT)
@@ -92,7 +92,7 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left >= Image.width){
+	if (ship.style.left >= `${Image.width}px`){
 		return
 	} else {
 		let pos = parseInt(LEFT)
@@ -244,7 +244,7 @@ function playgame(){
 window.addEventListener("keydown", (event) => {
 
 	if (event.key === "Enter"){
-		Score.innerText = Image.height
+		Score.innerText = 0
 		
 		TF = false
 		playgame()
