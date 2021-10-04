@@ -1,5 +1,5 @@
 const ship = document.getElementById("player")
-const gamescreen = document.getElementById("game-screen")
+//const gamescreen = document.getElementById("game-screen")
 const enemyImgs = ['Test Drive/Ocean.png','Test Drive/Lava.png','Test Drive/Ice.png']
 const Score = document.querySelector('#score span')
 const HighScore = document.querySelector('#HighScore span')
@@ -9,7 +9,7 @@ const Para = document.getElementById("Paragraph")
 const GameOver = document.getElementById("gameover")
 const Image = document.getElementById("space")
 
-var screen = window.getComputedStyle(gamescreen)
+//var screen = window.getComputedStyle(gamescreen)
 
 let TF = false
 let Music = new Audio ('Test Drive/sounds-from-space-soundroll-main-version-01-28-1884.mp3')
@@ -158,7 +158,7 @@ function movelaser(laser){
 
 function fire(){
 	let laser = CreateLaser()
-	gamescreen.appendChild(laser)
+	Image.appendChild(laser)
 	let Laser = new Audio ('Test Drive/Laser.mp3')
 	Laser.play()
 	movelaser(laser)
@@ -200,7 +200,7 @@ if (TF === false){
 	newenemy.classList.add('transition')
 	newenemy.style.left = "94%"
 	newenemy.style.top = `${Math.floor(Math.random()* 530) + 50 }px`
-	gamescreen.appendChild(newenemy)
+	Image.appendChild(newenemy)
 	moveEnemy(newenemy)
 }
 	else{
