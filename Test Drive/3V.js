@@ -7,6 +7,7 @@ const text = document.getElementById("text")
 const text2 = document.getElementById("text2")
 const Para = document.getElementById("Paragraph")
 const GameOver = document.getElementById("gameover")
+const Image = document.getElementById("Space")
 
 var screen = window.getComputedStyle(gamescreen)
 
