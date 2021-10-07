@@ -56,7 +56,7 @@ function gameover(){
 
 function moveUp(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top <= `${Image.height-Image.height}px`){
+	if (ship.style.top <= "3vh"){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -68,7 +68,7 @@ function moveUp(){
 
 function moveDown(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top >= `${Image.height}px`){
+	if (ship.style.top >= `${3+Image.height}vh`){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -80,7 +80,7 @@ function moveDown(){
 
 function moveLeft(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left <= `${Image.width-Image.width}px`){
+	if (ship.style.left <= "18vw"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
@@ -92,7 +92,7 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left >= `${Image.width}px`){
+	if (ship.style.left >= `${18+Image.width}vw`){
 		return
 	} else {
 		let pos = parseInt(LEFT)
