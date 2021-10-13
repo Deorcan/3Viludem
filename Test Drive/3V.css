@@ -2,7 +2,7 @@
 	position: absolute;
 	border: 2px solid red;
 	margin-left: 18vw;
-	margin-top: 3vh;
+	margin-top: 0vh;
 	max-width: 64%;
 	max-height: 94%;
 	
@@ -11,7 +11,7 @@
 #player {
 	max-width: 2.5%;
 	max-height: 2.5%;
-	position: absolute;
+	position: relative;
 	left: 21.46vw;
 	top: 30.8vh;
 	
