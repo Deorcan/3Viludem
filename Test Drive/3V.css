@@ -11,7 +11,7 @@
 #player {
 	max-width: 2.5%;
 	max-height: 2.5%;
-	position: relative;
+	position: absolute;
 	left: 21.46vw;
 	top: 30.8vh;
 	
