@@ -1,5 +1,5 @@
 const ship = document.getElementById("player")
-//const gamescreen = document.getElementById("game-screen")
+const Body = document.getElementById("body")
 const enemyImgs = ['Test Drive/Ocean.png','Test Drive/Lava.png','Test Drive/Ice.png']
 const Score = document.querySelector('#score span')
 const HighScore = document.querySelector('#HighScore span')
@@ -158,7 +158,7 @@ function movelaser(laser){
 
 function fire(){
 	let laser = CreateLaser()
-	Image.appendChild(laser)
+	Body.appendChild(laser)
 	let Laser = new Audio ('Test Drive/Laser.mp3')
 	Laser.play()
 	movelaser(laser)
@@ -200,7 +200,7 @@ if (TF === false){
 	newenemy.classList.add('transition')
 	newenemy.style.left = "94%"
 	newenemy.style.top = `${Math.floor(Math.random()* 530) + 50 }px`
-	Image.appendChild(newenemy)
+	Body.appendChild(newenemy)
 	moveEnemy(newenemy)
 }
 	else{
