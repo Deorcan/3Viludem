@@ -127,7 +127,7 @@ function CreateLaser(){
 	newlaser.src = 'Pictures//Laser.png'
 	newlaser.classList.add('laser')
 	newlaser.style.left = `${X}px`
-	newlaser.style.top = `${Y - 4}px`
+	newlaser.style.top = `${Y - 15}px`
 	return newlaser
 }
 
@@ -145,7 +145,7 @@ function movelaser(laser){
 				
 			}
 		})
-		if (X >= 900){
+		if (X >= 950){
 			laser.remove()
 			clearInterval(interval)
 		} else {
