@@ -36,7 +36,7 @@ function gameover(){
 	window.removeEventListener("keydown", moving)
 	TF = true
 	clearInterval(EInterval)
-	ship.style.left = "21.46vw;
+	ship.style.left = "21.46vw";
 	ship.style.top = "30.8vh";
 	Image.style.top = "15vh";
 	text.style.display = 'block'
