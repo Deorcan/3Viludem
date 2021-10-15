@@ -36,9 +36,9 @@ function gameover(){
 	window.removeEventListener("keydown", moving)
 	TF = true
 	clearInterval(EInterval)
-	ship.style.top ="38.8vh"
-	ship.style.left ="18.46vw"
-	Image.style.top = "15vh"
+	ship.style.left = "21.46vw;
+	ship.style.top = "30.8vh";
+	Image.style.top = "15vh";
 	text.style.display = 'block'
 	text2.style.display = 'block'
 	Para.style.display = 'block'
@@ -234,7 +234,7 @@ function playgame(){
 	text.style.display = 'none'
 	text2.style.display = 'none'
 	Para.style.display = 'none'
-	Image.style.top = "0vh"
+	Image.style.top = "0vh";
 	GameOver.style.display = 'none'
 	ship.style.display = 'block'
 	window.addEventListener("keydown", moving)
