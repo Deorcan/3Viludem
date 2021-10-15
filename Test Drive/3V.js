@@ -56,7 +56,7 @@ function gameover(){
 
 function moveUp(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top <= "0vh"){
+	if (ship.style.top <= "1vh"){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -145,7 +145,7 @@ function movelaser(laser){
 				
 			}
 		})
-		if (X >= 950){
+		if (X >= 1000){
 			laser.remove()
 			clearInterval(interval)
 		} else {
@@ -238,7 +238,7 @@ function playgame(){
 	window.addEventListener("keydown", moving)
 	Music.loop = true
 	Music.play()
-	// Einterval = setInterval(() => {CreateEnemy()}, Z)
+	 Einterval = setInterval(() => {CreateEnemy()}, Z)
 }
 
 window.addEventListener("keydown", (event) => {
