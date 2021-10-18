@@ -57,7 +57,7 @@ function gameover(){
 
 function moveUp(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top <= "2vh"){
+	if (ship.style.top <= "3vh"){
 		return
 	} else {
 		let pos = parseInt(TOP)
