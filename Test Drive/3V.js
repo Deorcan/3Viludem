@@ -128,7 +128,7 @@ function CreateLaser(){
 	newlaser.src = 'Pictures//Laser.png'
 	newlaser.classList.add('laser')
 	newlaser.style.left = `${X}px`
-	newlaser.style.top = `${Y - 15}px`
+	newlaser.style.top = `${Y}px`
 	return newlaser
 }
 
@@ -200,7 +200,7 @@ if (TF === false){
 	newenemy.classList.add('enemy')
 	newenemy.classList.add('transition')
 	newenemy.style.left = "94%"
-	newenemy.style.top = `${Math.floor(Math.random()* 830) + 50 }px`
+	newenemy.style.top = `${Math.floor(Math.random()* 530) + 50 }px`
 	Body.appendChild(newenemy)
 	moveEnemy(newenemy)
 }
