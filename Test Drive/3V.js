@@ -69,7 +69,7 @@ function moveUp(){
 
 function moveDown(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top > `${Image.height+15}vh`){
+	if (ship.style.top > `${Image.height+10}vh`){
 		return
 	} else {
 		let pos = parseInt(TOP)
