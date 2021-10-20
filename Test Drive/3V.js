@@ -128,7 +128,7 @@ function CreateLaser(){
 	newlaser.src = 'Pictures//Laser.png'
 	newlaser.classList.add('laser')
 	newlaser.style.left = `${X}px`
-	newlaser.style.top = `${Y}px`
+	newlaser.style.top = `${Y-20}px`
 	return newlaser
 }
 
