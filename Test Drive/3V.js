@@ -106,8 +106,8 @@ function moveRight(){
 function IsCollision(laser,enemy){
 	
 	 L = { x: parseInt(laser.style.left) 
-	 	, y: parseInt(laser.style.top) - 20
-	 	, width: 20, height: 30}
+	 	, y: parseInt(laser.style.top)
+	 	, width: 20, height: 50}
 	 E = { x: parseInt(enemy.style.left), y: parseInt(enemy.style.top), width: 30, height: 30}
 
 	if (L.x < E.x + E.width &&
