@@ -169,7 +169,7 @@ function fire(){
 function moveEnemy(enemy){
 	let interval = setInterval(() => {
 		let X = parseInt(window.getComputedStyle(enemy).getPropertyValue('left'))
-		if (X <= 0){
+		if (X <= 120){
 			if (Array.from(enemy.classList).includes("dead")){
 				let Whoosh = new Audio ('Test Drive/Whoosh.mp3')
 				Whoosh.play()
