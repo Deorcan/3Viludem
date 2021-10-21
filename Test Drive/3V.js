@@ -69,7 +69,7 @@ function moveUp(){
 
 function moveDown(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top > `${Image.height-15}vh`){
+	if (ship.style.top > `${Image.height-25}vh`){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -169,7 +169,7 @@ function fire(){
 function moveEnemy(enemy){
 	let interval = setInterval(() => {
 		let X = parseInt(window.getComputedStyle(enemy).getPropertyValue('left'))
-		if (X <= 120){
+		if (X <= 200){
 			if (Array.from(enemy.classList).includes("dead")){
 				let Whoosh = new Audio ('Test Drive/Whoosh.mp3')
 				Whoosh.play()
