@@ -69,7 +69,7 @@ function moveUp(){
 
 function moveDown(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top > `${Image.height-25}vh`){
+	if (ship.style.top > `${Image.height-35}vh`){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -81,7 +81,7 @@ function moveDown(){
 
 function moveLeft(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left <= "24vw"){
+	if (ship.style.left < "24vw"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
@@ -93,7 +93,7 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left >= `${121+Image.width}vw`){
+	if (ship.style.left > `${Image.width+121}vw`){
 		return
 	} else {
 		let pos = parseInt(LEFT)
@@ -169,7 +169,7 @@ function fire(){
 function moveEnemy(enemy){
 	let interval = setInterval(() => {
 		let X = parseInt(window.getComputedStyle(enemy).getPropertyValue('left'))
-		if (X <= 200){
+		if (X <= 218){
 			if (Array.from(enemy.classList).includes("dead")){
 				let Whoosh = new Audio ('Test Drive/Whoosh.mp3')
 				Whoosh.play()
