@@ -246,7 +246,7 @@ function playgame(){
 window.addEventListener("keydown", (event) => {
 
 	if (event.key === "Enter"){
-		Score.innerText = 0
+		Score.innerText = ship.style.top
 		
 		TF = false
 		playgame()
