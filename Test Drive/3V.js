@@ -69,7 +69,7 @@ function moveUp(){
 
 function moveDown(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top === `${Image.height/(45662096/3333333)}vh`){
+	if (ship.style.top === `${544/(45662096/3333333)}vh`){
 		return
 	} else {
 		let pos = parseInt(TOP)
