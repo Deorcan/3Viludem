@@ -93,7 +93,7 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left >= `${Image.width+121}pvw`){
+	if (ship.style.left === `${Image.width+121}vw`){
 		return
 	} else {
 		let pos = parseInt(LEFT)
