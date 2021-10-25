@@ -57,7 +57,7 @@ function gameover(){
 
 function moveUp(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top === "0px"){
+	if (ship.style.top <= "0px"){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -69,7 +69,7 @@ function moveUp(){
 
 function moveDown(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top > `${Image.height-40}px`){
+	if (ship.style.top === `${Image.height-40}px`){
 		return
 	} else {
 		let pos = parseInt(TOP)
