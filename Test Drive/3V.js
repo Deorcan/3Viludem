@@ -199,7 +199,7 @@ if (TF === false){
 	newenemy.src = sprite
 	newenemy.classList.add('enemy')
 	newenemy.classList.add('transition')
-	newenemy.style.left = "94%"
+	newenemy.style.left = "74%"
 	newenemy.style.top = `${Math.floor(Math.random()* 530) + 30 }px`
 	Body.appendChild(newenemy)
 	moveEnemy(newenemy)
@@ -246,7 +246,7 @@ function playgame(){
 window.addEventListener("keydown", (event) => {
 
 	if (event.key === "Enter"){
-		Score.innerText = ship.style.top
+		Score.innerText = ship.style.top/(45662096/3333333)
 		
 		TF = false
 		playgame()
