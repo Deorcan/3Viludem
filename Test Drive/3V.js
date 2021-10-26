@@ -246,7 +246,7 @@ function playgame(){
 window.addEventListener("keydown", (event) => {
 
 	if (event.key === "Enter"){
-		Score.innerText = parseInt(window.getComputedStyle(ship).getPropertyValue('top'))/(45662096/3333333)
+		Score.innerText = parseInt(window.getComputedStyle(ship).getPropertyValue('left'))/6.25
 		
 		TF = false
 		playgame()
