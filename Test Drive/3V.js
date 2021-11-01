@@ -69,7 +69,7 @@ function moveUp(){
 
 function moveDown(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top === "60.8vh"){
+	if (ship.style.top === "30.8vh"){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -93,7 +93,7 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left === "42.46vw"){
+	if (ship.style.left === "21.46vw"){
 		return
 	} else {
 		let pos = parseInt(LEFT)
