@@ -37,7 +37,7 @@ function gameover(){
 	TF = true
 	clearInterval(EInterval)
 	ship.style.left = "21.46vw";
-	ship.style.top = "30.8vh";
+	ship.style.top = "0.08vh";
 	Image.style.top = "15vh";
 	text.style.display = 'block'
 	text2.style.display = 'block'
@@ -169,7 +169,7 @@ function fire(){
 function moveEnemy(enemy){
 	let interval = setInterval(() => {
 		let X = parseInt(window.getComputedStyle(enemy).getPropertyValue('left'))
-		if (X <= 235){
+		if (X <= 240){
 			if (Array.from(enemy.classList).includes("dead")){
 				let Whoosh = new Audio ('Test Drive/Whoosh.mp3')
 				Whoosh.play()
