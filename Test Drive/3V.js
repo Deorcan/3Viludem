@@ -150,7 +150,7 @@ function movelaser(laser){
 			laser.remove()
 			clearInterval(interval)
 		} else {
-			laser.style.left = `${(100 * (X+4)) / window.innerHeight}vw`
+			laser.style.left = `${X+4}px`
 			
 		}
 	}, 0)
@@ -186,7 +186,7 @@ function moveEnemy(enemy){
 			}
 			
 		} else {
-			enemy.style.left = `${(100 * (X-4)) / window.innerHeight}vw`
+			enemy.style.left = `${X-4}px`
 		}
 	}, z)
 
