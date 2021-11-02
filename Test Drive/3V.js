@@ -81,7 +81,7 @@ function moveDown(){
 
 function moveLeft(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (`${(100 * ship.style.left) / window.innerWidth}vw` === `${(100 * 243) / window.innerWidth}vw`){
+	if (`${(100 * parseInt(ship.style.left)) / window.innerWidth}vw` === `${(100 * 243) / window.innerWidth}vw`){
 		return
 	} else {
 		let pos = parseInt(LEFT)
@@ -93,7 +93,7 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (`${(100 * ship.style.left) / window.innerWidth}vw` === `${(100 * 1083) / window.innerWidth}vw`){
+	if (`${(100 * parseInt(ship.style.left)) / window.innerWidth}vw` === `${(100 * 1083) / window.innerWidth}vw`){
 		return
 	} else {
 		let pos = parseInt(LEFT)
