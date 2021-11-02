@@ -36,8 +36,8 @@ function gameover(){
 	window.removeEventListener("keydown", moving)
 	TF = true
 	clearInterval(EInterval)
-	ship.style.left = "21.46vw";
-	ship.style.top = "0.08vh";
+	ship.style.left = "21.9vw";
+	ship.style.top = "28.8vh";
 	Image.style.top = "15vh";
 	text.style.display = 'block'
 	text2.style.display = 'block'
@@ -57,7 +57,7 @@ function gameover(){
 
 function moveUp(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top == "0.08vh"){
+	if (`${(100 * parseInt(ship.style.top)) / window.innerHeight}vh` === `${(100 * 4) / window.innerHeight}vh`){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -69,7 +69,7 @@ function moveUp(){
 
 function moveDown(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (ship.style.top === "123.2vh"){
+	if (`${(100 * parseInt(ship.style.top)) / window.innerHeight}vh` === `${(100 * 556) / window.innerHeight}vh`){
 		return
 	} else {
 		let pos = parseInt(TOP)
@@ -81,7 +81,7 @@ function moveDown(){
 
 function moveLeft(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left === "3.93999846vw"){
+	if (`${(100 * ship.style.left) / window.innerWidth}vw` === `${(100 * 243) / window.innerWidth}vw`){
 		return
 	} else {
 		let pos = parseInt(LEFT)
@@ -93,7 +93,7 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (ship.style.left === "64.38vw"){
+	if (`${(100 * ship.style.left) / window.innerWidth}vw` === `${(100 * 1083) / window.innerWidth}vw`){
 		return
 	} else {
 		let pos = parseInt(LEFT)
