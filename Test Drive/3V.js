@@ -63,7 +63,7 @@ function moveUp(){
 		let pos = parseInt(TOP)
 		pos -=8
 
-		ship.style.top = `${pos}px`
+		ship.style.top = `${(100 * pos) / window.innerHeight}vh`
 	}
 }
 
@@ -75,7 +75,7 @@ function moveDown(){
 		let pos = parseInt(TOP)
 		pos +=8
 
-		ship.style.top = `${pos}px`
+		ship.style.top = `${(100 * pos) / window.innerHeight}vh`
 	}
 }
 
@@ -87,7 +87,7 @@ function moveLeft(){
 		let pos = parseInt(LEFT)
 		pos -=8
 	
-		ship.style.left = `${pos}px`
+		ship.style.left = `${(100 * pos) / window.innerHeight}vw`
 	}
 }
 
@@ -99,7 +99,7 @@ function moveRight(){
 		let pos = parseInt(LEFT)
 		pos +=8
 	
-		ship.style.left = `${pos}px`
+		ship.style.left = `${(100 * pos) / window.innerHeight}vw`
 	}
 }
 
@@ -127,8 +127,8 @@ function CreateLaser(){
 	let newlaser = document.createElement('img')
 	newlaser.src = 'Pictures//Laser.png'
 	newlaser.classList.add('laser')
-	newlaser.style.left = `${X}px`
-	newlaser.style.top = `${Y-20}px`
+	newlaser.style.left = `${(100 * X) / window.innerHeight}vw`
+	newlaser.style.top = `${(100 * (Y-20)) / window.innerHeight}vh`
 	return newlaser
 }
 
@@ -146,11 +146,11 @@ function movelaser(laser){
 				
 			}
 		})
-		if (X >= 1000){
+		if (X >= 1083){
 			laser.remove()
 			clearInterval(interval)
 		} else {
-			laser.style.left = `${X+4}px`
+			laser.style.left = `${(100 * (X+4)) / window.innerHeight}vw`
 			
 		}
 	}, 0)
@@ -169,7 +169,7 @@ function fire(){
 function moveEnemy(enemy){
 	let interval = setInterval(() => {
 		let X = parseInt(window.getComputedStyle(enemy).getPropertyValue('left'))
-		if (X <= 240){
+		if (X <= 243){
 			if (Array.from(enemy.classList).includes("dead")){
 				let Whoosh = new Audio ('Test Drive/Whoosh.mp3')
 				Whoosh.play()
@@ -186,7 +186,7 @@ function moveEnemy(enemy){
 			}
 			
 		} else {
-			enemy.style.left = `${X - 4}px`
+			enemy.style.left = `${(100 * (X-4)) / window.innerHeight}vw`
 		}
 	}, z)
 
@@ -199,8 +199,8 @@ if (TF === false){
 	newenemy.src = sprite
 	newenemy.classList.add('enemy')
 	newenemy.classList.add('transition')
-	newenemy.style.left = "74%"
-	newenemy.style.top = `${Math.floor(Math.random()* 530) + 30 }px`
+	newenemy.style.left = `${(100 * 1083) / window.innerWidth}vw`
+	newenemy.style.top = `${(100 * (Math.floor(Math.random()* 530) + 30)) / window.innerHeight}vh`
 	Body.appendChild(newenemy)
 	moveEnemy(newenemy)
 }
