@@ -137,7 +137,7 @@ function movelaser(laser){
 		let X = parseInt(laser.style.left)
 		let enemies = document.querySelectorAll(".enemy")
 		enemies.forEach(enemy => {
-			if (IsCollision(laser,enemy)&& Array.from(enemy.classList).includes(!"dead")){
+			if (IsCollision(laser,enemy)&& !(Array.from(enemy.classList).includes("dead"))){
 				enemy.src = "Test Drive/Helium.png"
 				laser.remove()
 				enemy.classList.add("dead")
