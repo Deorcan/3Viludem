@@ -1,24 +1,32 @@
 const ship = document.getElementById("player")
 const Body = document.getElementById("body")
-const enemyImgs = ['Test Drive/Ocean.png','Test Drive/Lava.png','Test Drive/Ice.png']
+const enemyImgs = ['Test%20Drive/Ocean.png','Test%20Drive/Lava.png','Test%20Drive/Ice.png']
 const Score = document.querySelector('#score span')
 const HighScore = document.querySelector('#HighScore span')
 const text = document.getElementById("text")
 const text2 = document.getElementById("text2")
 const Para = document.getElementById("Paragraph")
 const GameOver = document.getElementById("gameover")
+const Pause = document.getElementById("pause")
 const Image = document.getElementById("space")
+const Start = document.getElementById("start")
+const Restart = document.getElementById("restart")
+const Control = document.getElementById("control")
+const Instructs = document.getElementById("instructions")
 
-//var screen = window.getComputedStyle(gamescreen)
+Image.onmousemove = function() {OnMouse()}
+Image.onmouseout = function() {MouseOff()}
 
-let TF = false
-let Music = new Audio ('Test Drive/sounds-from-space-soundroll-main-version-01-28-1884.mp3')
+let TF = true
+let FT = true
+let Music = new Audio ('Test%20Drive/sounds-from-space-soundroll-main-version-01-28-1884.mp3')
 let EInterval
 let L = { x: 0, y: 0, width: 0, height: 0}
 let E = { x: 0, y: 0, width: 0, height: 0}
 let Z = 2600
 let z = 30
-
+let Lasers
+let IfMouse = false
 
 if (typeof Music.loop == 'boolean')
 {
@@ -39,6 +47,8 @@ function gameover(){
 	ship.style.left = "21.9vw";
 	ship.style.top = "28.8vh";
 	Image.style.top = "15vh";
+	Control.style.top = "15vh";
+	Para.style.top = "20vh"
 	text.style.display = 'block'
 	text2.style.display = 'block'
 	Para.style.display = 'block'
@@ -50,17 +60,40 @@ function gameover(){
 	if (HighScore.innerText < Score.innerText) {
 		HighScore.innerText = Score.innerText
 	}
-	Z = Z*2
-	z+=5
+	Score.innerText = 0
 
+}
+
+function RESTART(){
+	window.removeEventListener("keydown", moving)
+	TF = true
+	FT = false
+	clearInterval(EInterval)
+	ship.style.left = "21.9vw";
+	ship.style.top = "28.8vh";
+	Image.style.top = "15vh";
+	Control.style.top = "15vh";
+	Para.style.top = "20vh"
+	text.style.display = 'block'
+	text2.style.display = 'block'
+	Para.style.display = 'block'
+	Pause.style.display = 'none'
+	Start.style.display = 'none'
+	Restart.style.display = 'none'
+	let Enemies = document.querySelectorAll(".enemy")
+	Enemies.forEach(e => e.remove())
+	Lasers.remove()
+	Music.pause()
+	Score.innerText = 0
 }
 
 function moveUp(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (`${(100 * parseInt(ship.style.top)) / window.innerHeight}vh` === `${(100 * 4) / window.innerHeight}vh`){
+	let TOP1 = window.getComputedStyle(Image).getPropertyValue('top')
+	if (parseFloat(TOP) < parseFloat(TOP1)){
 		return
 	} else {
-		let pos = parseInt(TOP)
+		let pos = parseFloat(TOP)
 		pos -=8
 
 		ship.style.top = `${pos}px`
@@ -69,10 +102,13 @@ function moveUp(){
 
 function moveDown(){
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
-	if (`${(100 * parseInt(ship.style.top)) / window.innerHeight}vh` === `${(100 * 556) / window.innerHeight}vh`){
+	let TOP1 = window.getComputedStyle(Image).getPropertyValue('top')
+	let HEIGHT = window.getComputedStyle(ship).getPropertyValue('height')
+	let HEIGHT1 = window.getComputedStyle(Image).getPropertyValue('height')
+	if (parseFloat(TOP)+parseFloat(HEIGHT) > parseFloat(TOP1)+parseFloat(HEIGHT1)){
 		return
 	} else {
-		let pos = parseInt(TOP)
+		let pos = parseFloat(TOP)
 		pos +=8
 
 		ship.style.top = `${pos}px`
@@ -81,10 +117,11 @@ function moveDown(){
 
 function moveLeft(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (`${(100 * parseInt(ship.style.left)) / window.innerWidth}vw` === `${(100 * 243) / window.innerWidth}vw`){
+	let LEFT1 = window.getComputedStyle(Image).getPropertyValue('left')
+	if (parseFloat(LEFT) < parseFloat(LEFT1)){
 		return
 	} else {
-		let pos = parseInt(LEFT)
+		let pos = parseFloat(LEFT)
 		pos -=8
 	
 		ship.style.left = `${pos}px`
@@ -93,10 +130,13 @@ function moveLeft(){
 
 function moveRight(){
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	if (`${(100 * parseInt(ship.style.left)) / window.innerWidth}vw` === `${(100 * 1083) / window.innerWidth}vw`){
+	let LEFT1 = window.getComputedStyle(Image).getPropertyValue('left')
+	let WIDTH = window.getComputedStyle(ship).getPropertyValue('width')
+	let WIDTH1 = window.getComputedStyle(Image).getPropertyValue('width')
+	if (parseFloat(LEFT)+parseFloat(WIDTH) > parseFloat(LEFT1)+parseFloat(WIDTH1)){
 		return
 	} else {
-		let pos = parseInt(LEFT)
+		let pos = parseFloat(LEFT)
 		pos +=8
 	
 		ship.style.left = `${pos}px`
@@ -105,16 +145,15 @@ function moveRight(){
 
 function IsCollision(laser,enemy){
 	
-	 L = { x: parseInt(laser.style.left) 
-	 	, y: parseInt(laser.style.top)
+	 L = { x: parseFloat(laser.style.left) 
+	 	, y: parseFloat(laser.style.top)
 	 	, width: 20, height: 50}
-	 E = { x: parseInt(enemy.style.left), y: parseInt(enemy.style.top), width: 30, height: 30}
+	 E = { x: parseFloat(enemy.style.left), y: parseFloat(enemy.style.top), width: 30, height: 30}
 
 	if (L.x < E.x + E.width &&
    L.x + L.width > E.x &&
    L.y < E.y + E.height &&
    L.y + L.height > E.y) {
-    // collision detected!
 	
 return true
 }
@@ -122,23 +161,35 @@ else {return false}
 }
 
 function CreateLaser(){
-	let X = parseInt(window.getComputedStyle(ship).getPropertyValue('left'))
-	let Y = parseInt(window.getComputedStyle(ship).getPropertyValue('top'))
+		
+	if (IfMouse === true){
+		var X = event.clientX
+		var Y = event.clientY
+	}else{
+		
+		var X = parseFloat(window.getComputedStyle(ship).getPropertyValue('left'))
+		var Y = parseFloat(window.getComputedStyle(ship).getPropertyValue('top'))
+		Y = Y - 20
+
+		
+	}
+	
 	let newlaser = document.createElement('img')
-	newlaser.src = 'Pictures//Laser.png'
+	newlaser.src = 'Pictures/Laser.png'
 	newlaser.classList.add('laser')
 	newlaser.style.left = `${X}px`
-	newlaser.style.top = `${Y-20}px`
+	newlaser.style.top = `${Y}px`
+	Lasers = newlaser
 	return newlaser
 }
 
 function movelaser(laser){
 	let interval = setInterval(() => {
-		let X = parseInt(laser.style.left)
+		let X = parseFloat(laser.style.left)
 		let enemies = document.querySelectorAll(".enemy")
 		enemies.forEach(enemy => {
 			if (IsCollision(laser,enemy)&& !(Array.from(enemy.classList).includes("dead"))){
-				enemy.src = "Test Drive/Helium.png"
+				enemy.src = "Test%20Drive/Helium.png"
 				laser.remove()
 				enemy.classList.add("dead")
 				clearInterval(interval)
@@ -146,12 +197,11 @@ function movelaser(laser){
 				
 			}
 		})
-		if (X >= 1083){
+		if (X >= parseFloat(window.getComputedStyle(Image).getPropertyValue('left'))+parseFloat(window.getComputedStyle(Image).getPropertyValue('width'))){
 			laser.remove()
 			clearInterval(interval)
 		} else {
-			laser.style.left = `${X+4}px`
-			
+			if (FT === true){laser.style.left = `${X+4}px`}else {laser.style.left = `${X}`}
 		}
 	}, 0)
 
@@ -160,7 +210,7 @@ function movelaser(laser){
 function fire(){
 	let laser = CreateLaser()
 	Body.appendChild(laser)
-	let Laser = new Audio ('Test Drive/Laser.mp3')
+	let Laser = new Audio ('Test%20Drive/Laser.mp3')
 	Laser.play()
 	movelaser(laser)
 
@@ -168,10 +218,10 @@ function fire(){
 
 function moveEnemy(enemy){
 	let interval = setInterval(() => {
-		let X = parseInt(window.getComputedStyle(enemy).getPropertyValue('left'))
-		if (X <= 243){
+		let X = parseFloat(window.getComputedStyle(enemy).getPropertyValue('left'))
+		if (X <= parseFloat(window.getComputedStyle(Image).getPropertyValue('left'))){
 			if (Array.from(enemy.classList).includes("dead")){
-				let Whoosh = new Audio ('Test Drive/Whoosh.mp3')
+				let Whoosh = new Audio ('Test%20Drive/Whoosh.mp3')
 				Whoosh.play()
 				enemy.remove()
 				clearInterval(interval)
@@ -179,37 +229,40 @@ function moveEnemy(enemy){
 			} else {
 				enemy.remove()
 				clearInterval(interval)
-				let Thunder = new Audio ('Test Drive/Thunder.mp3')
+				let Thunder = new Audio ('Test%20Drive/Thunder.mp3')
 				Thunder.play()
 				gameover()
 
 			}
 			
 		} else {
-			enemy.style.left = `${X-4}px`
+			if (FT === true){enemy.style.left = `${X-4}px`}else {enemy.style.left = `${X}`}
 		}
 	}, z)
 
 }
 
 function CreateEnemy(){
-if (TF === false){
+
+	let TOP1 = window.getComputedStyle(Image).getPropertyValue('top')
+	let HEIGHT1 = window.getComputedStyle(Image).getPropertyValue('height')
+	let LEFT1 = window.getComputedStyle(Image).getPropertyValue('left')
+	let WIDTH1 = window.getComputedStyle(Image).getPropertyValue('width')
 	let newenemy = document.createElement('img')
 	let sprite = enemyImgs[Math.floor(Math.random()*enemyImgs.length)]
+	newenemy.style.left = `${parseFloat(LEFT1)+parseFloat(WIDTH1)}px`
+	newenemy.style.top = `${Math.floor(Math.random()* parseFloat(HEIGHT1)-32) + 30}px`
 	newenemy.src = sprite
 	newenemy.classList.add('enemy')
 	newenemy.classList.add('transition')
-	newenemy.style.left = `${(100 * 1083) / window.innerWidth}vw`
-	newenemy.style.top = `${(100 * (Math.floor(Math.random()* 530) + 30)) / window.innerHeight}vh`
 	Body.appendChild(newenemy)
 	moveEnemy(newenemy)
-}
-	else{
-		process.exit()
-	}
+
+
 }
 
-function moving(event){
+function moving(){
+	
 	if (event.key === "ArrowUp"){
 		event.preventDefault()
 		moveUp()
@@ -230,28 +283,100 @@ function moving(event){
 }
 
 
+
+function OnMouse(){
+	Image.style.cursor = "url('https://deorcan.github.io/3Viludem/Pictures/Cursor.png'), default"
+	ship.style.display = 'none'
+	Para.style.top = "20vh"
+	IfMouse = true
+	Instructs.src = "Test%20Drive/Instructions2.png"
+	
+
+
+	window.addEventListener("contextmenu", (event) => {
+		event.preventDefault()
+		
+		if (TF === true){
+			TF = false
+			FT = true
+			playgame()
+		}
+		else if (TF === false){
+		  
+			TF = true
+			FT = false
+			Pause.style.display = 'block'
+			Start.style.display = 'block'
+			Restart.style.display = 'block'
+			clearInterval(EInterval)
+			Music.pause()
+			window.removeEventListener("click", fire)
+			Start.onclick = function(){START()}
+			Restart.onclick = function(){RESTART()}
+		}
+	})
+
+}
+function MouseOff(){
+	ship.style.display = 'block'
+	Para.style.top = "20vh"
+	Instructs.src = "Test%20Drive/Instructions1.png"
+	IfMouse = false
+
+}
+
 function playgame(){
 	text.style.display = 'none'
 	text2.style.display = 'none'
 	Para.style.display = 'none'
-	Image.style.top = "0vh";
+	Image.style.top = "0vh"
+	Control.style.top = "0vh"
 	GameOver.style.display = 'none'
-	ship.style.display = 'block'
-	window.addEventListener("keydown", moving)
+	Pause.style.display = 'none'
+	Start.style.display = 'none'
+	Restart.style.display = 'none'
+	if (IfMouse === true){
+		ship.style.display = 'none'
+		window.addEventListener("click", fire)
+	}
+	else {
+		ship.style.display = 'block'
+		window.addEventListener("keydown", moving)
+	}
+	
 	Music.loop = true
 	Music.play()
-	 Einterval = setInterval(() => {CreateEnemy()}, Z)
+	EInterval = setInterval(() => {CreateEnemy()}, Z)
 }
 
-window.addEventListener("keydown", (event) => {
+function START(){
+	FT = true
+	TF = false
+	playgame()
+}
 
-	if (event.key === "Enter"){
-		Score.innerText = 0
-		
-		TF = false
-		playgame()
-	}
-})
+if (IfMouse === false){
+
+	window.addEventListener("keydown", (event) => {
+
+		if (event.key === "Enter" && TF === true){ 
+			TF = false
+			FT = true
+			playgame()
+		}
+		else if (event.key === "Enter" && TF === false){
+		  
+			TF = true
+			FT = false
+			Pause.style.display = 'block'
+			Start.style.display = 'block'
+			Restart.style.display = 'block'
+			clearInterval(EInterval)
+			window.removeEventListener("keydown", moving)
+			Music.pause()
+			Start.onclick = function(){START()}
+			Restart.onclick = function(){RESTART()}
+		}
+	})
+}
 window.addEventListener("touchend", playgame);
-
-
