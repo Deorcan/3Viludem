@@ -379,4 +379,11 @@ if (IfMouse === false){
 		}
 	})
 }
+window.addEventListener("resize", (event) =>{
+	ship.style.left = "21.9vw";
+	ship.style.top = "28.8vh";
+	let Enemies = document.querySelectorAll(".enemy")
+	Enemies.forEach(e => e.remove())
+	Lasers.remove()
+})
 window.addEventListener("touchend", playgame);
