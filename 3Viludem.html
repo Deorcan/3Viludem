@@ -22,12 +22,18 @@
 	#TitleText2 {
 		 font-size: 550%;
 	}
+	#Title {
+		margin-left: 22vw;
+	}
 	@media only screen and (max-width: 630px) and (orientation: landscape) {
 		#TitleText {
 			font-size: 200%;
 		}
 		#TitleText2 {
 			 font-size: 250%;
+		}
+		#Title {
+			margin-left: 2vw;
 		}
 	}
 	@media only screen and (max-width: 630px) and (orientation: portrait) {
@@ -37,6 +43,9 @@
 		#TitleText2 {
 			 font-size: 350%;
 		}
+		#Title {
+			margin-left: 2vw;
+		}
 	}
 
 </style>
@@ -44,7 +53,7 @@
 <body style="background-color: #0b0b0b;">
 
 <a href="https://deorcan.github.io/main/Home"><img id="Clickable" style="height: 0.2%; width: 5%;" src="Pictures\\Homepagelink.PNG"></a>
-	<table style="margin-left: 22vw; pointer-events: none; user-select: none; user-drag: none; color: white;">
+	<table id = "Title" style="pointer-events: none; user-select: none; user-drag: none; color: white;">
 		<tr>
 			
 			<td><p id = "TitleText">Welcome to</p></td>
@@ -55,7 +64,7 @@
 	</table>
 	
 	
-	<table style="margin-left: 22vw;">
+	<table id = "Products" style="margin-left: 22vw;">
 		<tr>
 			
 			<td style = "width: 50%;"><p class = "ProductTitle" style="color:white; font-size: 125%;">Click to play Launch Game!</p>
