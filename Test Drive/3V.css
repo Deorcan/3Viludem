@@ -176,7 +176,7 @@
 	#control {
 		display: none;
 	}
-	#touchscreen {
+	#touchstart {
 		display: block;
 	}
 
@@ -199,7 +199,7 @@
 	#text2 {
 		margin-top: 5vh;
 	}
-	#touchscreen {
+	#touchstart {
 		display: block;
 	}
 
