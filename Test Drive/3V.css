@@ -176,5 +176,8 @@
 	#control {
 		display: none;
 	}
+	#text2 {
+		margin-top: 5vh;
+	}
 
 }
