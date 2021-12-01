@@ -144,6 +144,7 @@
 
 #control {
 	top: 15vh;
+	display: block;
 }
 
 #instructions {
@@ -157,6 +158,9 @@
 	}
 	#Paragraph {
 		 margin-top: 85vh;
+	}
+	#control {
+		display: none;
 	}
 
 }
