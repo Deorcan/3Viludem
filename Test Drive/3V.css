@@ -154,8 +154,8 @@
 
 @media only screen and (max-width: 630px) and (orientation: landscape) {
 	#space {
-		left: 0vw;
-		right: 0vw;
+		left: 1vw;
+		right: 1vw;
 		top: 25vh;
 		max-width: 100%;
 	}
@@ -171,8 +171,8 @@
 }
 @media only screen and (max-width: 630px) and (orientation: portrait) {
 	#space {
-		left: 0vw;
-		right: 0vw;
+		left: 1vw;
+		right: 1vw;
 		top: 25vh;
 		max-width: 100%;
 	}
