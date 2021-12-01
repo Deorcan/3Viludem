@@ -108,6 +108,15 @@
 	transform: translate(-50%, -50%);
 
 }
+#touchstart {
+	text-align: center;
+	margin-top: 5%;
+	margin-left: 50%;
+	color: white;
+	font-size: 275%;
+	display: none;
+	transform: translate(-50%, -50%);
+}
 
 #start {
 	margin-top: 1%;
@@ -167,6 +176,9 @@
 	#control {
 		display: none;
 	}
+	#touchscreen {
+		display: block;
+	}
 
 }
 @media only screen and (max-width: 630px) and (orientation: portrait) {
@@ -186,6 +198,9 @@
 	}
 	#text2 {
 		margin-top: 5vh;
+	}
+	#touchscreen {
+		display: block;
 	}
 
 }
