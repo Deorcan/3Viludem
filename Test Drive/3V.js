@@ -17,6 +17,12 @@ const Instructs = document.getElementById("instructions")
 Image.onmousemove = function() {OnMouse()}
 Image.onmouseout = function() {MouseOff()}
 
+function IsTouch() {
+    return ( 'ontouchstart' in window ) || 
+           ( navigator.maxTouchPoints > 0 ) || 
+           ( navigator.msMaxTouchPoints > 0 );
+}
+
 let TF = true
 let FT = true
 let Music = new Audio ('Test%20Drive/sounds-from-space-soundroll-main-version-01-28-1884.mp3')
