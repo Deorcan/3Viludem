@@ -161,6 +161,8 @@
 	}
 	#Paragraph {
 		 margin-top: 85vh;
+		 margin-left: 0vw;
+		 margin-right: 0vw;
 	}
 	#control {
 		display: none;
@@ -176,6 +178,8 @@
 	}
 	#Paragraph {
 		 margin-top: 80vh;
+		 margin-left: 0vw;
+		 margin-right: 0vw;
 	}
 	#control {
 		display: none;
