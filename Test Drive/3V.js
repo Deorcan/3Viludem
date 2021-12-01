@@ -23,6 +23,10 @@ function IsTouch() {
            ( navigator.msMaxTouchPoints > 0 );
 }
 
+//if (IsTouch()){
+	Image.ontouchstart = function() {OnTouch()}
+//}
+
 let TF = true
 let FT = true
 let Music = new Audio ('Test%20Drive/sounds-from-space-soundroll-main-version-01-28-1884.mp3')
@@ -33,6 +37,7 @@ let Z = 2600
 let z = 30
 let Lasers
 let IfMouse = false
+let IfTouch = false
 
 if (typeof Music.loop == 'boolean')
 {
@@ -323,12 +328,17 @@ function OnMouse(){
 	})
 
 }
+
 function MouseOff(){
 	ship.style.display = 'block'
 	Para.style.top = "20vh"
 	Instructs.src = "Test%20Drive/Instructions1.png"
 	IfMouse = false
 
+}
+
+function OnTouch(){
+	
 }
 
 function playgame(){
