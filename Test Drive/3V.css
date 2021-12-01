@@ -166,10 +166,12 @@
 }
 @media only screen and (max-width: 630px) and (orientation: portrait) {
 	#space {
+		left: 5vw;
+		right: 5vw;
 		top: 25vh;
 	}
 	#Paragraph {
-		 margin-top: 85vh;
+		 margin-top: 80vh;
 	}
 	#control {
 		display: none;
