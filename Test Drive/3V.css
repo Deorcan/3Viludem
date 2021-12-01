@@ -71,7 +71,7 @@
  }
 
 #Paragraph {
-
+ 	margin-top: 90vh;
 	margin-left: 18vw;
 	margin-right: 18vw;
 	color: gold;
@@ -158,9 +158,7 @@
 		right: 18vw;
 	}
 	#Paragraph {
-
-		
-
+		 margin-top: 70vh;
 }
 
 }
