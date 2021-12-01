@@ -154,6 +154,8 @@
 
 @media only screen and (max-width: 630px) and (orientation: landscape) {
 	#space {
+		left: 8vw;
+		right: 8vw;
 		top: 25vh;
 	}
 	#Paragraph {
