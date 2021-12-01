@@ -386,4 +386,3 @@ window.addEventListener("resize", (event) =>{
 	Enemies.forEach(e => e.remove())
 	Lasers.remove()
 })
-window.addEventListener("touchend", playgame);
