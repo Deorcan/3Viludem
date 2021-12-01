@@ -157,6 +157,7 @@
 		left: 8vw;
 		right: 8vw;
 		top: 25vh;
+		max-width: 94%;
 	}
 	#Paragraph {
 		 margin-top: 85vh;
@@ -171,6 +172,7 @@
 		left: 5vw;
 		right: 5vw;
 		top: 25vh;
+		max-width: 94%;
 	}
 	#Paragraph {
 		 margin-top: 80vh;
