@@ -110,10 +110,10 @@
 }
 #touchstart {
 	text-align: center;
-	margin-top: 5%;
+	margin-top: 25%;
 	margin-left: 50%;
 	color: white;
-	font-size: 275%;
+	font-size: 475%;
 	display: none;
 	transform: translate(-50%, -50%);
 }
