@@ -163,10 +163,10 @@
 
 @media only screen and (max-width: 630px) and (orientation: landscape) {
 	#space {
-		left: 1vw;
-		right: 1vw;
+		left: 3vw;
+		right: 3vw;
 		top: 25vh;
-		max-width: 100%;
+		max-width: 94%;
 	}
 	#Paragraph {
 		 margin-top: 85vh;
@@ -183,10 +183,10 @@
 }
 @media only screen and (max-width: 630px) and (orientation: portrait) {
 	#space {
-		left: 1vw;
-		right: 1vw;
+		left: 3vw;
+		right: 3vw;
 		top: 25vh;
-		max-width: 100%;
+		max-width: 94%;
 	}
 	#Paragraph {
 		 margin-top: 80vh;
