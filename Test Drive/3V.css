@@ -111,7 +111,6 @@
 #touchstart {
 	position: absolute;
 	text-align: center;
-	margin-top: 50%;
 	margin-left: 50%;
 	color: white;
 	font-size: 350%;
@@ -179,6 +178,7 @@
 	}
 	#touchstart {
 		display: block;
+		margin-top: 30%;
 	}
 
 }
@@ -202,6 +202,7 @@
 	}
 	#touchstart {
 		display: block;
+		margin-top: 50%;
 	}
 
 }
