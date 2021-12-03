@@ -161,48 +161,11 @@
 	height: 100%;
 }
 
-@media only screen and (max-width: 630px) and (orientation: landscape) {
-	#space {
-		left: 3vw;
-		right: 3vw;
-		top: 25vh;
-		max-width: 94%;
-	}
-	#Paragraph {
-		 margin-top: 85vh;
-		 margin-left: 0vw;
-		 margin-right: 0vw;
-	}
-	#control {
-		display: none;
-	}
+@media only screen and (max-width: 630px) {
+	
 	#touchstart {
 		display: block;
-		margin-top: 15%;
-	}
-
-}
-@media only screen and (max-width: 630px) and (orientation: portrait) {
-	#space {
-		left: 3vw;
-		right: 3vw;
-		top: 25vh;
-		max-width: 94%;
-	}
-	#Paragraph {
-		 margin-top: 80vh;
-		 margin-left: 0vw;
-		 margin-right: 0vw;
-	}
-	#control {
-		display: none;
-	}
-	#text2 {
-		margin-top: 5vh;
-	}
-	#touchstart {
-		display: block;
-		margin-top: 50%;
+		
 	}
 
 }
