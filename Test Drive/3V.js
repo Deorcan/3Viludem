@@ -42,7 +42,7 @@ function isTabletOrMobile(){
 	
 		if (window.matchMedia("(orientation: landscape)").matches) {
 			Para.style.marginTop = "85vh"
-			TouchStart.style.marginTop = "30%"
+			TouchStart.style.marginTop = "15%"
  
 		} else if (window.matchMedia("(orientation: portrait)").matches) {
 			Para.style.marginTop = "80vh"
