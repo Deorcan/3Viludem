@@ -29,7 +29,7 @@ function IsTouch() {
            ( navigator.msMaxTouchPoints > 0 );
 }
 
-window.addEventListener("orientationchange",  isTabletOrMobile)
+
 function isTabletOrMobile(){
 	if (isMobile||isTablet){
 		Image.style.left = "3vw"
