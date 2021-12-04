@@ -53,9 +53,11 @@ function isTabletOrMobile(){
 }
 	
 	
-//if (IsTouch()){
+if (IsTouch()){
+	Image.appendChild(TouchStart)
+	TouchStart.style.display = "block"
 	Image.ontouchstart = function() {OnTouch()}
-//}
+}
 
 let TF = true
 let FT = true
