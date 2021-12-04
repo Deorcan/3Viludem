@@ -46,7 +46,7 @@ function isTabletOrMobile(){
 	
 //window.addEventListener("orientationchange",  isTabletOrMobile)	
 if (IsTouch()){
-	Image.appendChild(TouchStart)
+	Image.innnerHTML +=TouchStart
 	TouchStart.style.display = "block"
 	Image.ontouchstart = function() {OnTouch()}
 }else {
