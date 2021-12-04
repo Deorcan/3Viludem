@@ -39,14 +39,14 @@ function isTabletOrMobile(){
 		Para.style.marginLeft = "0vw"
 		Para.style.marginRight = "0vw"
 		Control.style.display = "none"
-	
+		text2.style.marginTop = "5vh"
 		if (window.matchMedia("(orientation: landscape)").matches) {
 			Para.style.marginTop = "85vh"
 			TouchStart.style.marginTop = "15%"
  
 		} else if (window.matchMedia("(orientation: portrait)").matches) {
 			Para.style.marginTop = "80vh"
-			text2.style.marginTop = "5vh"
+			
 			TouchStart.style.marginTop = "50%"
 		}
 	}
