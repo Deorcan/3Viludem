@@ -21,31 +21,25 @@ Image.onmouseout = function() {MouseOff()}
 const userAgent = navigator.userAgent.toLowerCase();
 var isMobile = /iPhone|Android|BlackBerry|BB|Nokia/i.test(navigator.userAgent);
 const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
-  
+isTabletOrMobile()
+
 function IsTouch() {
     return ( 'ontouchstart' in window ) || 
            ( navigator.maxTouchPoints > 0 ) || 
            ( navigator.msMaxTouchPoints > 0 );
 }
-if (isMobile||isTablet){
-	Image.style.left = "3vw"
-	Image.style.right = "3vw"
-	Image.style.top = "25vh"
-	Image.style.maxWidth = "94%"
-	Para.style.marginLeft = "0vw"
-	Para.style.marginRight = "0vw"
-	Control.style.display = "none"
+
+window.addEventListener("orientationchange",  isTabletOrMobile)
+function isTabletOrMobile(){
+	if (isMobile||isTablet){
+		Image.style.left = "3vw"
+		Image.style.right = "3vw"
+		Image.style.top = "25vh"
+		Image.style.maxWidth = "94%"
+		Para.style.marginLeft = "0vw"
+		Para.style.marginRight = "0vw"
+		Control.style.display = "none"
 	
-	if (window.matchMedia("(orientation: landscape)").matches) {
-		Para.style.marginTop = "85vh"
-		TouchStart.style.marginTop = "30%"
- 
-	} else if (window.matchMedia("(orientation: portrait)").matches) {
-		Para.style.marginTop = "80vh"
-		text2.style.marginTop = "5vh"
-		TouchStart.style.marginTop = "50%"
-	}
-	window.addEventListener("orientationchange",  (event) =>){
 		if (window.matchMedia("(orientation: landscape)").matches) {
 			Para.style.marginTop = "85vh"
 			TouchStart.style.marginTop = "30%"
