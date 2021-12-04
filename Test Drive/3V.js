@@ -40,15 +40,7 @@ function isTabletOrMobile(){
 		Para.style.marginRight = "0vw"
 		Control.style.display = "none"
 		text2.style.marginTop = "5vh"
-		if (window.matchMedia("(orientation: landscape)").matches) {
-			Para.style.marginTop = "85vh"
-			TouchStart.style.marginTop = "15%"
- 
-		} else if (window.matchMedia("(orientation: portrait)").matches) {
-			Para.style.marginTop = "80vh"
-			
-			TouchStart.style.marginTop = "50%"
-		}
+		Para.style.MarginTop = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + 30}px`
 	}
 }
 	
