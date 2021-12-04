@@ -50,7 +50,8 @@ if (IsTouch()){
 	TouchStart.style.display = "block"
 	Image.ontouchstart = function() {OnTouch()}
 }else {
-	
+	Image.removeChild(TouchStart)
+	TouchStart.style.display = "none"
 }
 
 let TF = true
