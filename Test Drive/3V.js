@@ -40,7 +40,7 @@ function isTabletOrMobile(){
 		Para.style.marginRight = "0vw"
 		Control.style.display = "none"
 		text2.style.marginTop = "5vh"
-		Para.style.MarginTop = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height')) + 10}px`
+		Para.style.MarginTop = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height'))}px`
 	}
 }
 	
