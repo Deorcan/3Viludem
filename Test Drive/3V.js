@@ -35,14 +35,16 @@ if (isMobile||isTablet){
 	Para.style.marginLeft = "0vw"
 	Para.style.marginRight = "0vw"
 	Control.style.display = "none"
-	if (window.matchMedia("(orientation: landscape)").matches) {
-		Para.style.marginTop = "85vh"
-		TouchStart.style.marginTop = "30%"
+	window.addEventListener("orientationchange",  (event) =>){
+		if (window.matchMedia("(orientation: landscape)").matches) {
+			Para.style.marginTop = "85vh"
+			TouchStart.style.marginTop = "30%"
  
-	} else if (window.matchMedia("(orientation: portrait)").matches) {
-		Para.style.marginTop = "80vh"
-		text2.style.marginTop = "5vh"
-		TouchStart.style.marginTop = "50%"
+		} else if (window.matchMedia("(orientation: portrait)").matches) {
+			Para.style.marginTop = "80vh"
+			text2.style.marginTop = "5vh"
+			TouchStart.style.marginTop = "50%"
+		}
 	}
 }
 	
