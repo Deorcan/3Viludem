@@ -37,7 +37,7 @@ if (isMobile||isTablet){
 	Control.style.display = "none"
 	if (window.matchMedia("(orientation: landscape)").matches) {
 		Para.style.marginTop = "85vh"
-		TouchStart.style.marginTop = "15%"
+		TouchStart.style.marginTop = "30%"
  
 	} else if (window.matchMedia("(orientation: portrait)").matches) {
 		Para.style.marginTop = "80vh"
