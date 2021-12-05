@@ -44,14 +44,11 @@ function isTabletOrMobile(){
 	}
 }
 	
-//window.addEventListener("orientationchange",  isTabletOrMobile)	
+	
 if (IsTouch()){
 	Image.innerHTML += TouchStart
 	TouchStart.style.display = "block"
 	Image.ontouchstart = function() {OnTouch()}
-}else {
-	Image.innerHTML -= TouchStart
-	TouchStart.style.display = "none"
 }
 
 let TF = true
@@ -365,6 +362,7 @@ function MouseOff(){
 }
 
 function OnTouch(){
+	TouchStart.style.display = "none"
 	
 }
 
