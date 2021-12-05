@@ -376,6 +376,7 @@ function playgame(){
 	Pause.style.display = 'none'
 	Start.style.display = 'none'
 	Restart.style.display = 'none'
+	TouchStart.style.display = "none"
 	if (IfMouse === true){
 		ship.style.display = 'none'
 		window.addEventListener("click", fire)
