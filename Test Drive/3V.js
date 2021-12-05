@@ -115,6 +115,9 @@ function RESTART(){
 	Pause.style.display = 'none'
 	Start.style.display = 'none'
 	Restart.style.display = 'none'
+	if(IsTouch()){
+		TouchStart.style.display = 'block'
+	}
 	let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
 	Lasers.remove()
