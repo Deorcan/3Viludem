@@ -164,6 +164,9 @@
 }
 
 @media only screen and (orientation: portrait) {
+	#touchstart{
+		top: 70%;
+	}
 	#plsrotate {
 		position: absolute;
 		display: none;
