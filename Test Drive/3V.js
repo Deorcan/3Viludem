@@ -14,6 +14,7 @@ const Restart = document.getElementById("restart")
 const Control = document.getElementById("control")
 const Instructs = document.getElementById("instructions")
 const TouchStart = document.getElementById("touchstart")
+const PlsRotate = document.getElementById("plsrotate")
 
 Image.onmousemove = function() {OnMouse()}
 Image.onmouseout = function() {MouseOff()}
@@ -367,7 +368,15 @@ function MouseOff(){
 function OnTouch(){
 	event.preventDefault()
 	TouchStart.style.display = "none"
-	
+	if (window.matchMedia("(orientation: portrait)").matches) {
+		PlsRotate.style.display = 'block'
+   
+	}
+
+	if (window.matchMedia("(orientation: landscape)").matches) {
+		PlsRotate.style.display = 'none'
+   
+	}
 	
 }
 
