@@ -365,7 +365,9 @@ function MouseOff(){
 }
 
 function OnTouch(){
+	event.preventDefault()
 	TouchStart.style.display = "none"
+	
 	
 }
 
