@@ -183,10 +183,23 @@
 		padding: 5%;
 		text-align: center;
 	}
+	#menu {
+		display: none;
+	}
 }
 
 @media only screen and (orientation: landscape) {
 	#plsrotate {
 		display: none;
+	}
+	#menu {
+		position: absolute;
+		display: none;
+		background-color: white;
+		opacity: 0.5;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 15px;
 	}
 }
