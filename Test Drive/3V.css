@@ -203,6 +203,7 @@
 		border-radius: 15px;
 	}
 	#menu h1, #menu h3, #menu p {
+		text-align: center;
 		opacity: 1.0;
 	}
 	#tilt, #pen, #d-pad, #touch {
