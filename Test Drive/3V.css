@@ -202,4 +202,16 @@
 		transform: translate(-50%, -50%);
 		border-radius: 15px;
 	}
+	#menu h1, #menu h3, #menu p {
+		opacity: 1.0;
+	}
+	#tilt, #pen, #d-pad, #touch {
+		max-width: 25%;
+		max-height: 25%;
+		opacity: 1.0;
+	}
+	li {
+		float: left;
+		
+	}
 }
