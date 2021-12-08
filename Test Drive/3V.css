@@ -206,7 +206,11 @@
 		text-align: center;
 		opacity: 1.0;
 	}
-	
+	#tilt, #pen, #d-pad, #touch {
+		max-width: 25%;
+		max-height: 25%;
+		opacity: 1.0;
+	}
 	li {
 		float: left;
 	}
