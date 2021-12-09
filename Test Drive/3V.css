@@ -193,7 +193,6 @@
 		display: none;
 	}
 	#menu {
-		
 		display: none;
 		background-color: white;
 		opacity: 0.5;
@@ -207,12 +206,13 @@
 		opacity: 1.0;
 	}
 	#tilt, #pen, #d-pad, #touch {
-		max-width: 25%;
-		max-height: 25%;
+		max-width: 75%;
+		max-height: 75%;
 		opacity: 1.0;
 	}
 	li {
 		float: left;
+		width: 20%;
 	}
 	ul {
 		 list-style-type: none;
