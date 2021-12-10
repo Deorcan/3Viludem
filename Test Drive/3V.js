@@ -51,6 +51,19 @@ if (IsTouch()){
 	Image.innerHTML += TouchStart
 	TouchStart.style.display = "block"
 	Image.ontouchstart = function() {OnTouch()}
+	if (window.matchMedia("(orientation: portrait)").matches) {
+		PlsRotate.style.display = 'block'
+		Menu.style.display = 'none'
+		Image.innerHTML += PlsRotate
+   
+	}
+
+	if (window.matchMedia("(orientation: landscape)").matches) {
+		PlsRotate.style.display = 'none'
+		Menu.style.display = 'block'
+		Image.innerHTML += Menu
+   
+	}
 }
 
 let TF = true
