@@ -48,7 +48,7 @@ function isTabletOrMobile(){
 	
 	
 if (IsTouch()){
-	if(ifTouch === false){
+	if(IfTouch === false){
 		Image.innerHTML += TouchStart
 		TouchStart.style.display = "block"
 	}else{
