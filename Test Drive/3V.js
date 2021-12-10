@@ -376,7 +376,7 @@ function OnTouch(){
    
 	}
 
-	if (window.matchMedia("(orientation: landscape)").matches) {
+	else if (window.matchMedia("(orientation: landscape)").matches) {
 		PlsRotate.style.display = 'none'
 		Menu.style.display = 'block'
 		Image.innerHTML += Menu
