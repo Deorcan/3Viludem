@@ -17,6 +17,18 @@ const TouchStart = document.getElementById("touchstart")
 const PlsRotate = document.getElementById("plsrotate")
 const Menu = document.getElementById("menu")
 
+let TF = true
+let FT = true
+let Music = new Audio ('Test%20Drive/sounds-from-space-soundroll-main-version-01-28-1884.mp3')
+let EInterval
+let L = { x: 0, y: 0, width: 0, height: 0}
+let E = { x: 0, y: 0, width: 0, height: 0}
+let Z = 2600
+let z = 30
+let Lasers
+let IfMouse = false
+let IfTouch = false
+
 Image.onmousemove = function() {OnMouse()}
 Image.onmouseout = function() {MouseOff()}
 
@@ -69,17 +81,6 @@ if (IsTouch()){
 	Image.ontouchstart = function() {OnTouch()}
 }
 
-let TF = true
-let FT = true
-let Music = new Audio ('Test%20Drive/sounds-from-space-soundroll-main-version-01-28-1884.mp3')
-let EInterval
-let L = { x: 0, y: 0, width: 0, height: 0}
-let E = { x: 0, y: 0, width: 0, height: 0}
-let Z = 2600
-let z = 30
-let Lasers
-let IfMouse = false
-let IfTouch = false
 
 if (typeof Music.loop == 'boolean')
 {
