@@ -213,8 +213,8 @@
 		max-width: 50%;
 		max-height: 50%;
 		opacity: 1.0;
-		margin-left: auto;
-  		margin-right: auto;
+		margin-left: 50%;
+  		
 	}
 	li {
 		float: left;
