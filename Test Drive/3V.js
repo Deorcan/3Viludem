@@ -385,6 +385,7 @@ function MouseOff(){
 function OnTouch(){
 	event.preventDefault()
 	TouchStart.style.display = "none"
+	IfTouch = true
 	if (window.matchMedia("(orientation: portrait)").matches) {
 		PlsRotate.style.display = 'block'
 		Menu.style.display = 'none'
@@ -392,7 +393,7 @@ function OnTouch(){
    
 	}
 
-	else if (window.matchMedia("(orientation: landscape)").matches) {
+	if (window.matchMedia("(orientation: landscape)").matches) {
 		PlsRotate.style.display = 'none'
 		Menu.style.display = 'block'
 		Image.innerHTML += Menu
