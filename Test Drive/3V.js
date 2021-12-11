@@ -59,18 +59,25 @@ function isTabletOrMobile(){
 }
 	
 if (window.matchMedia("(orientation: portrait)").matches) {
-			PlsRotate.style.display = 'block'
-			Menu.style.display = 'none'
+			//PlsRotate.style.display = 'block'
+			//Menu.style.display = 'none'
 			
    
 		}
 
 		else if (window.matchMedia("(orientation: landscape)").matches) {
-			PlsRotate.style.display = 'none'
-			Menu.style.display = 'block'
+			//PlsRotate.style.display = 'none'
+			//Menu.style.display = 'block'
 			
 		}	
-
+@media screen and (orientation:portrait) {
+	PlsRotate.style.display = 'block'
+	Menu.style.display = 'none'
+}
+@media screen and (orientation:landscape) {
+	PlsRotate.style.display = 'none'
+	Menu.style.display = 'block'
+}
 if (IsTouch()){
 	if(IfTouch === false){
 		Image.innerHTML += TouchStart
