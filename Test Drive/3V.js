@@ -64,17 +64,11 @@ function isTabletOrMobile(){
 
 
 if (IsTouch()){
-	//if(IfTouch === false){
-		Image.innerHTML += TouchStart
-		Image.innerHTML += PlsRotate
-		Image.innerHTML += Menu
-		TouchStart.style.display = "block"
-	//}else{
-		
-		
-	//}
 	
-  
+	Image.innerHTML += TouchStart
+	Image.innerHTML += PlsRotate
+	Image.innerHTML += Menu
+	TouchStart.style.display = "block"
 	Image.ontouchstart = function() {OnTouch()}
 }
 
