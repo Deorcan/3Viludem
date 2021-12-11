@@ -29,6 +29,9 @@ let Lasers
 let IfMouse = false
 let IfTouch = false
 
+var port = window.matchMedia("(orientation: portrait)")
+var land = window.matchMedia("(orientation: landscape)")
+
 Image.onmousemove = function() {OnMouse()}
 Image.onmouseout = function() {MouseOff()}
 
@@ -58,26 +61,28 @@ function isTabletOrMobile(){
 	}
 }
 	
-if (window.matchMedia("(orientation: portrait)").matches) {
-			//PlsRotate.style.display = 'block'
-			//Menu.style.display = 'none'
-			
-   
-		}
-
-		else if (window.matchMedia("(orientation: landscape)").matches) {
-			//PlsRotate.style.display = 'none'
-			//Menu.style.display = 'block'
-			
-		}	
-@media screen and (orientation:portrait) {
+if (port.matches) {
 	PlsRotate.style.display = 'block'
 	Menu.style.display = 'none'
+			
+   
 }
-@media screen and (orientation:landscape) {
+
+if (land.matches) {
 	PlsRotate.style.display = 'none'
 	Menu.style.display = 'block'
-}
+			
+}	
+
+port.addListener(function(p) {if (p.matches) {
+	PlsRotate.style.display = 'block'
+	Menu.style.display = 'none'
+}})
+land.addListener(function(l) {if (l.matches) {
+	PlsRotate.style.display = 'none'
+	Menu.style.display = 'block'
+}})
+
 if (IsTouch()){
 	if(IfTouch === false){
 		Image.innerHTML += TouchStart
