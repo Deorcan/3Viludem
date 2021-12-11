@@ -83,7 +83,7 @@ if (IsTouch()){
 	}
 	
   
-	Image.ontouchstart = function() {OnTouch()
+	Image.ontouchstart = function() {OnTouch()}
 }
 
 
