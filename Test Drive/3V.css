@@ -215,8 +215,7 @@
 		max-width: 50%;
 		max-height: 50%;
 		opacity: 1.0;
-		margin-left: auto;
-		margin-right: auto;
+		text-align: center;
 	}
 	li {
 		float: left;
