@@ -61,38 +61,18 @@ function isTabletOrMobile(){
 	}
 }
 	
-if (port.matches) {
-	PlsRotate.style.display = 'block'
-	Menu.style.display = 'none'
-			
-   
-}
 
-if (land.matches) {
-	PlsRotate.style.display = 'none'
-	Menu.style.display = 'block'
-			
-}	
-
-port.addListener(function(p) {if (p.matches) {
-	PlsRotate.style.display = 'block'
-	Menu.style.display = 'none'
-}})
-land.addListener(function(l) {if (l.matches) {
-	PlsRotate.style.display = 'none'
-	Menu.style.display = 'block'
-}})
 
 if (IsTouch()){
-	if(IfTouch === false){
+	//if(IfTouch === false){
 		Image.innerHTML += TouchStart
 		Image.innerHTML += PlsRotate
 		Image.innerHTML += Menu
 		TouchStart.style.display = "block"
-	}else{
+	//}else{
 		
 		
-	}
+	//}
 	
   
 	Image.ontouchstart = function() {OnTouch()}
@@ -404,19 +384,25 @@ function OnTouch(){
 	event.preventDefault()
 	TouchStart.style.display = "none"
 	IfTouch = true
-	if (window.matchMedia("(orientation: portrait)").matches) {
+	
+	if (port.matches) {
 		PlsRotate.style.display = 'block'
 		Menu.style.display = 'none'
-		Image.innerHTML += PlsRotate
-   
 	}
 
-	if (window.matchMedia("(orientation: landscape)").matches) {
+	if (land.matches) {
+		PlsRotate.style.display = 'none'
+		Menu.style.display = 'block'			
+	}	
+
+	port.addListener(function(p) {if (p.matches) {
+		PlsRotate.style.display = 'block'
+		Menu.style.display = 'none'
+	}})
+	land.addListener(function(l) {if (l.matches) {
 		PlsRotate.style.display = 'none'
 		Menu.style.display = 'block'
-		Image.innerHTML += Menu
-   
-	}
+	}})
 	
 }
 
