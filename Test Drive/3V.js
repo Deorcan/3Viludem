@@ -70,7 +70,7 @@ if (window.matchMedia("(orientation: portrait)").matches) {
 			Menu.style.display = 'block'
 			
 		}	
-}
+
 if (IsTouch()){
 	if(IfTouch === false){
 		Image.innerHTML += TouchStart
