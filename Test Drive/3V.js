@@ -65,19 +65,28 @@ if (IsTouch()){
 		TouchStart.style.display = "block"
 	}else{
 		if (window.matchMedia("(orientation: portrait)").matches) {
-			PlsRotate.style.display = 'block'
-			Menu.style.display = 'none'
-			Image.innerHTML += PlsRotate
+			
    
 		}
 
 		if (window.matchMedia("(orientation: landscape)").matches) {
-			PlsRotate.style.display = 'none'
-			Menu.style.display = 'block'
-			Image.innerHTML += Menu
-   
+			
 		}
+		screen.orientation.addEventListener('change', function(e) {
+			if (e.currentTarget.type === 'landscape-primary') {
+    				PlsRotate.style.display = 'block'
+				Menu.style.display = 'none'
+				Image.innerHTML += PlsRotate
+ 			 } else if (e.currentTarget.type === 'portrait-primary') {
+  				PlsRotate.style.display = 'none'
+				Menu.style.display = 'block'
+				Image.innerHTML += Menu
+   
+ 			 }
+		})
 	}
+	
+  
 	Image.ontouchstart = function() {OnTouch()}
 }
 
