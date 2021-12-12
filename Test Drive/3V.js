@@ -16,6 +16,13 @@ const Instructs = document.getElementById("instructions")
 const TouchStart = document.getElementById("touchstart")
 const PlsRotate = document.getElementById("plsrotate")
 const Menu = document.getElementById("menu")
+const CloseButton = document.getElementById("close")
+const TiltMode = document.getElementById("tilt")
+const PenMode = document.getElementById("pen")
+const DPadMode = document.getElementById("d-pad")
+const TouchMode = document.getElementById("touch")
+const Descript = document.getElementById("descript")
+const PlayButton = document.getElementById("play")
 
 let TF = true
 let FT = true
