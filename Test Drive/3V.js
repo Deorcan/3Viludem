@@ -404,7 +404,9 @@ function OnTouch(){
 		PlsRotate.style.display = 'none'
 		Menu.style.display = 'block'
 	}})
-	
+	CloseButton.ontouchstart = function (){ Menu.style.display = 'none'}
+	if(!Menu.ontouchstart){ Menu.style.display = 'none'}
+	else if (Menu.ontouchstart){Menu.style.display = 'block'}
 }
 
 function playgame(){
