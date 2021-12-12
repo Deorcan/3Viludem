@@ -224,4 +224,9 @@
 	ul {
 		 list-style-type: none;
 	}
+	#close {
+		opacity: 1.0;
+		text-align: right;
+		
+	}
 }
