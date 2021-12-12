@@ -226,8 +226,10 @@
 		 list-style-type: none;
 	}
 	#close {
+		position: absolute;
 		opacity: 1.0;
-		margin-left: 90%;
+		left: 80%;
+		top: 80%;
 		max-width: 10%;
 		max-height: 10%;
 		
