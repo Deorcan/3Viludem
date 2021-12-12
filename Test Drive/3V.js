@@ -407,9 +407,11 @@ function OnTouch(){
 	if(IfTouch === true && Menu.style.display === 'block'){
 		CloseButton.ontouchstart = function (){ Menu.style.display = 'none'}
 		if(!Menu.ontouchstart){ Menu.style.display = 'none'}
+		Para.style.MarginTop = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height'))}px`
 		
 	}else if (IfTouch === true && Menu.style.display === 'none'){
 		if(!Menu.ontouchstart){ Menu.style.display = 'block'}
+		Para.style.MarginTop = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height'))}px`
 	}
 }
 
