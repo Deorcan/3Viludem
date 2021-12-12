@@ -227,9 +227,9 @@
 	}
 	#close {
 		opacity: 1.0;
-		text-align: right;
-		max-width: 50%;
-		max-height: 50%;
+		margin-left: 90%;
+		max-width: 10%;
+		max-height: 10%;
 		
 	}
 }
