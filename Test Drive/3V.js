@@ -404,10 +404,12 @@ function OnTouch(){
 		PlsRotate.style.display = 'none'
 		Menu.style.display = 'block'
 	}})
-	if(IfTouch === true){
+	if(IfTouch === true && Menu.style.display === 'block'){
 		CloseButton.ontouchstart = function (){ Menu.style.display = 'none'}
-		//if(!Menu.ontouchstart){ Menu.style.display = 'none'}
-		//else if (Menu.ontouchstart){Menu.style.display = 'block'}
+		if(!Menu.ontouchstart){ Menu.style.display = 'none'}
+		
+	}else if (IfTouch === true && Menu.style.display === 'none'){
+		if(!Menu.ontouchstart){ Menu.style.display = 'block'}
 	}
 }
 
