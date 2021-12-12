@@ -199,6 +199,7 @@
 		margin-top: 20%;
 		transform: translate(-50%, -50%);
 		border-radius: 15px;
+		text-align: center;
 	}
 	#menu h1, #menu h3, #menu p {
 		text-align: center;
