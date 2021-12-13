@@ -385,6 +385,7 @@ function OnTouch(){
 	event.preventDefault()
 	TouchStart.style.display = "none"
 	IfTouch = true
+	let Display =  window.getComputedStyle(Menu).getPropertyValue('display')
 	
 	if (port.matches) {
 		PlsRotate.style.display = 'block'
@@ -404,21 +405,16 @@ function OnTouch(){
 		PlsRotate.style.display = 'none'
 		Menu.style.display = 'block'
 	}})
-	Menu.addListener(function(){
-		if (Menu.style.display == 'block'){
-			CloseButton.ontouchstart = function (){ Menu.style.display = 'none'}
-			if(!Menu.ontouchstart){ Menu.style.display = 'none'}
-			Para.style.MarginTop = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height'))}px`
+	
+	if (Display === 'block'){
+		CloseButton.ontouchstart = function (){ Menu.style.display = 'none'}
+		if(!Menu.ontouchstart){ Menu.style.display = 'none'}
+		Para.style.MarginTop = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height'))}px`
 		
-		}else if (Menu.style.display == 'none'){
-			if(!Menu.ontouchstart){ Menu.style.display = 'block'}
-			Para.style.MarginTop = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height'))}px`
-		}
+	}else if (Display === 'none'){
+		if(!Menu.ontouchstart){ Menu.style.display = 'block'}
+		Para.style.MarginTop = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height'))}px`
 	}
-	if(IfTouch === true && Menu.style.display === 'block'){
-		
-	}else if (IfTouch === true && Menu.style.display === 'none'){
-		}
 }
 
 function playgame(){
