@@ -406,12 +406,12 @@ function OnTouch(){
 		Menu.style.display = 'block'
 	}})
 	
-	if (Display === 'block'){
+	if (Display === 'block' && land.matches){
 		CloseButton.ontouchstart = function (){ Menu.style.display = 'none'}
 		if(!Menu.ontouchstart){ Menu.style.display = 'none'}
 		Para.style.MarginTop = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height'))}px`
 		
-	}else if (Display === 'none'){
+	}else if (Display === 'none' && land.matches){
 		if(!Menu.ontouchstart){ Menu.style.display = 'block'}
 		Para.style.MarginTop = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height'))}px`
 	}
