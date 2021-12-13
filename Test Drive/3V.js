@@ -100,7 +100,7 @@ function gameover(){
 	ship.style.top = "28.8vh";
 	Image.style.top = "15vh";
 	Control.style.top = "15vh";
-	Para.style.top = "20vh"
+	Para.style.MarginTop = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height'))}px`
 	text.style.display = 'block'
 	text2.style.display = 'block'
 	Para.style.display = 'block'
@@ -125,7 +125,7 @@ function RESTART(){
 	ship.style.top = "28.8vh";
 	Image.style.top = "15vh";
 	Control.style.top = "15vh";
-	Para.style.top = "20vh"
+	Para.style.MarginTop = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height'))}px`
 	text.style.display = 'block'
 	text2.style.display = 'block'
 	Para.style.display = 'block'
