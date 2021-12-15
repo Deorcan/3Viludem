@@ -413,7 +413,7 @@ function OnTouch(){
 		
 	}else if (Display === 'none' && land.matches){
 		if(!Menu.ontouchstart){ Menu.style.display = 'block'}
-		Para.style.top = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height')) + 100}px`
+		Para.style.top = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height')) + 1000}px`
 	}
 }
 
