@@ -409,6 +409,34 @@ function OnTouch(){
 	if (Display === 'block' && land.matches){
 		CloseButton.ontouchstart = function (){ Menu.style.display = 'none'}
 		if(!Menu.ontouchstart){ Menu.style.display = 'none'}
+		TiltMode.ontouchstart = function (){ 
+			TiltMode.style.border = "solid yellow 2px"
+			PenMode.style.border = "none"
+			DPadMode.style.border = "none"
+			TouchMode.style.border = "none"
+			Descript.innerHTML = "In this mode, you tilt the screen to move the cursor and shoot via the fire button"
+		}
+		PenMode.ontouchstart = function (){ 
+			TiltMode.style.border = "none"
+			PenMode.style.border = "solid yellow 2px"
+			DPadMode.style.border = "none"
+			TouchMode.style.border = "none"
+			Descript.innerHTML = "In this mode, you drag the cursor around screen and shoot via the fire button"
+		}
+		DPadMode.ontouchstart = function (){ 
+			TiltMode.style.border = "none"
+			PenMode.style.border = "none"
+			DPadMode.style.border = "solid yellow 2px"
+			TouchMode.style.border = "none"
+			Descript.innerHTML = "In this mode, you move cursor via a D-Pad and shoot via the fire button"
+		}
+		TouchMode.ontouchstart = function (){ 
+			TiltMode.style.border = "none"
+			PenMode.style.border = "none"
+			DPadMode.style.border = "none"
+			TouchMode.style.border = "solid yellow 2px"
+			Descript.innerHTML = "In this mode, you touch the screen and a laser shoots"
+		}
 		Para.style.top = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height'))}px`
 		
 	}else if (Display === 'none' && land.matches){
