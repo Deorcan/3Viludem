@@ -438,6 +438,7 @@ function OnTouch(){
 			Descript.innerHTML = "In this mode, you touch the screen and a laser shoots"
 		}
 		PlayButton.ontouchstart = function (){
+			Menu.style.display = 'none'
 			Image.requestFullscreen()
 			Score.style.display = 'block'
 			Score.style.color = 'white'
