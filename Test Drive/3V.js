@@ -446,7 +446,7 @@ function OnTouch(){
 			Score.style.display = 'block'
 			Score.style.color = 'white'
 			Score.style.top =  '5%'
-			Score.style.left: '30%'
+			Score.style.left = '30%'
 			
 			HighScore.style.display = 'block'
 			HighScore.style.color = 'white'
