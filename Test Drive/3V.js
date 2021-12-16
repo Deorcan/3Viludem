@@ -451,7 +451,7 @@ function OnTouch(){
  				 } else if (Image.webkitRequestFullscreen) {
    					Image.webkitRequestFullscreen()
   				 } else if (Image.msRequestFullscreen) {
-   					Image.msRequestFullscreen();
+   					Image.msRequestFullscreen()
   				 }
 				PauseButton.style.display = 'block'
 			
