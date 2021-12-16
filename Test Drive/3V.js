@@ -450,8 +450,8 @@ function OnTouch(){
 			
 			HighScore.style.display = 'block'
 			HighScore.style.color = 'white'
-			HighScore.style.top: '5%'
-			HighScore.style.left: '60%'
+			HighScore.style.top = '5%'
+			HighScore.style.left = '60%'
 	
 		}
 		Para.style.top = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height')) - 280}px`
