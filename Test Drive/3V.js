@@ -36,6 +36,7 @@ let z = 30
 let Lasers
 let IfMouse = false
 let IfTouch = false
+var Mode = 0
 
 var port = window.matchMedia("(orientation: portrait)")
 var land = window.matchMedia("(orientation: landscape)")
@@ -416,6 +417,7 @@ function OnTouch(){
 			DPadMode.style.border = "none"
 			TouchMode.style.border = "none"
 			Descript.innerHTML = "In this mode, you tilt the screen to move the cursor and shoot via the fire button"
+			Mode = 1
 		}
 		PenMode.ontouchstart = function (){ 
 			TiltMode.style.border = "none"
@@ -423,6 +425,7 @@ function OnTouch(){
 			DPadMode.style.border = "none"
 			TouchMode.style.border = "none"
 			Descript.innerHTML = "In this mode, you drag the cursor around screen and shoot via the fire button"
+			Mode = 2
 		}
 		DPadMode.ontouchstart = function (){ 
 			TiltMode.style.border = "none"
@@ -430,6 +433,7 @@ function OnTouch(){
 			DPadMode.style.border = "solid yellow 2px"
 			TouchMode.style.border = "none"
 			Descript.innerHTML = "In this mode, you move cursor via a D-Pad and shoot via the fire button"
+			Mode = 3
 		}
 		TouchMode.ontouchstart = function (){ 
 			TiltMode.style.border = "none"
@@ -437,21 +441,24 @@ function OnTouch(){
 			DPadMode.style.border = "none"
 			TouchMode.style.border = "solid yellow 2px"
 			Descript.innerHTML = "In this mode, you touch the screen and a laser shoots"
+			Mode = 4
 		}
 		PlayButton.ontouchstart = function (){
-			Menu.style.display = 'none'
-			Image.requestFullscreen()
-			PauseButton.style.display = 'block'
+			if (Mode === 1|| Mode === 2 || Mode === 3 || Mode === 4){
+				Menu.style.display = 'none'
+				Image.requestFullscreen()
+				PauseButton.style.display = 'block'
 			
-			Score.style.display = 'block'
-			Score.style.color = 'white'
-			Score.style.top =  '5%'
-			Score.style.left = '30%'
+				Score.style.display = 'block'
+				Score.style.color = 'white'
+				Score.style.top =  '5%'
+				Score.style.left = '30%'
 			
-			HighScore.style.display = 'block'
-			HighScore.style.color = 'white'
-			HighScore.style.top = '5%'
-			HighScore.style.left = '60%'
+				HighScore.style.display = 'block'
+				HighScore.style.color = 'white'
+				HighScore.style.top = '5%'
+				HighScore.style.left = '60%'
+			}
 	
 		}
 		Para.style.top = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height')) - 280}px`
