@@ -23,6 +23,7 @@ const DPadMode = document.getElementById("d-pad")
 const TouchMode = document.getElementById("touch")
 const Descript = document.getElementById("descript")
 const PlayButton = document.getElementById("play")
+const PauseButton = document.getElementById("pausebutton")
 
 let TF = true
 let FT = true
@@ -440,14 +441,7 @@ function OnTouch(){
 		PlayButton.ontouchstart = function (){
 			Menu.style.display = 'none'
 			Image.requestFullscreen()
-			Score.style.display = 'block'
-			Score.style.color = 'white'
-			Score.style.top = '5vh'
-			Score.style.left = '30vw'
-			HighScore.style.display = 'block'
-			HighScore.style.color = 'white'
-			HighScore.style.top = '5vh'
-			HighScore.style.left = '90vw'
+			PauseButton.style.display = 'block'
 		}
 		Para.style.top = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height')) - 280}px`
 		
