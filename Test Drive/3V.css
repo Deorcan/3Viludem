@@ -238,4 +238,21 @@
 		max-height: 10%;
 		
 	}
+	#Score {
+		color: white;
+		top: 5%;
+		left: 30%;
+	}
+	#HighScore {
+		color: white;
+		top: 5%;
+		left: 60%;
+	}
+	#pausebutton {
+		position: absolute;
+		left: 85%;
+		top: 5%;
+		max-width: 10%;
+		max-height: 10%;
+	}
 }
