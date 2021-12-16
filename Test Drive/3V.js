@@ -437,7 +437,18 @@ function OnTouch(){
 			TouchMode.style.border = "solid yellow 2px"
 			Descript.innerHTML = "In this mode, you touch the screen and a laser shoots"
 		}
-		Para.style.top = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height'))}px`
+		PlayButton.ontouchstart = function (){
+			Image.requestFullscreen()
+			Score.style.display = 'block'
+			Score.style.color = 'white'
+			Score.style.top = '5vh'
+			Score.style.left = '30vw'
+			HighScore.style.display = 'block'
+			HighScore.style.color = 'white'
+			HighScore.style.top = '5vh'
+			HighScore.style.left = '90vw'
+		}
+		Para.style.top = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height')) - 280}px`
 		
 	}else if (Display === 'none' && land.matches){
 		if(!Menu.ontouchstart){ Menu.style.display = 'block'}
