@@ -446,10 +446,13 @@ function OnTouch(){
 		PlayButton.ontouchstart = function (){
 			if (Mode === 1|| Mode === 2 || Mode === 3 || Mode === 4){
 				Menu.style.display = 'none'
-				Image.style.width = 'auto !important'
-				Image.style.height = 'auto !important'
-				Image.style.margin = 'auto !important'
-				Image.requestFullscreen()
+				if (Image.requestFullscreen) {
+   					Image.requestFullscreen()
+ 				 } else if (Image.webkitRequestFullscreen) {
+   					Image.webkitRequestFullscreen()
+  				 } else if (Image.msRequestFullscreen) {
+   					Image.msRequestFullscreen();
+  				 }
 				PauseButton.style.display = 'block'
 			
 				Score.style.display = 'block'
