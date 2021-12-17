@@ -447,7 +447,10 @@ function OnTouch(){
 			if (Mode === 1|| Mode === 2 || Mode === 3 || Mode === 4){
 				Menu.style.display = 'none'
 				
-				
+				Image.style.top = "0vh"
+				Image.style.left = "0vw"
+				Image.style.maxWidth = `${window.innerWidth}px`
+				Image.style.maxHeight = `${window.innerHeight}px`
 				
 				if (Image.requestFullscreen) {
    					Image.requestFullscreen()
@@ -456,6 +459,7 @@ function OnTouch(){
   				 } else if (Image.msRequestFullscreen) {
    					Image.msRequestFullscreen()
   				 }
+				
 				PauseButton.style.display = 'block'
 			
 				Score.style.display = 'block'
