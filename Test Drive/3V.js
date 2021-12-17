@@ -446,6 +446,9 @@ function OnTouch(){
 		PlayButton.ontouchstart = function (){
 			if (Mode === 1|| Mode === 2 || Mode === 3 || Mode === 4){
 				Menu.style.display = 'none'
+				Image.style.maxWidth = '100%'
+				Image.style.maxHeight = '100%'
+				
 				if (Image.requestFullscreen) {
    					Image.requestFullscreen()
  				 } else if (Image.webkitRequestFullscreen) {
