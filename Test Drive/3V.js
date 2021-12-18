@@ -408,74 +408,77 @@ function OnTouch(){
 		Menu.style.display = 'block'
 	}})
 	TiltMode.ontouchstart = function (){ 
-			TiltMode.style.border = "solid yellow 2px"
-			PenMode.style.border = "none"
-			DPadMode.style.border = "none"
-			TouchMode.style.border = "none"
-			Descript.innerHTML = "In this mode, you tilt the screen to move the cursor and shoot via the fire button"
-			Mode = 1
+		TiltMode.style.border = "solid yellow 2px"
+		PenMode.style.border = "none"
+		DPadMode.style.border = "none"
+		TouchMode.style.border = "none"
+		Descript.innerHTML = "In this mode, you tilt the screen to move the cursor and shoot via the fire button"
+		Mode = 1
 		}
-		PenMode.ontouchstart = function (){ 
-			TiltMode.style.border = "none"
-			PenMode.style.border = "solid yellow 2px"
-			DPadMode.style.border = "none"
-			TouchMode.style.border = "none"
-			Descript.innerHTML = "In this mode, you drag the cursor around screen and shoot via the fire button"
-			Mode = 2
+	PenMode.ontouchstart = function (){ 
+		TiltMode.style.border = "none"
+		PenMode.style.border = "solid yellow 2px"
+		DPadMode.style.border = "none"
+		TouchMode.style.border = "none"
+		Descript.innerHTML = "In this mode, you drag the cursor around screen and shoot via the fire button"
+		Mode = 2
 		}
-		DPadMode.ontouchstart = function (){ 
-			TiltMode.style.border = "none"
-			PenMode.style.border = "none"
-			DPadMode.style.border = "solid yellow 2px"
-			TouchMode.style.border = "none"
-			Descript.innerHTML = "In this mode, you move cursor via a D-Pad and shoot via the fire button"
-			Mode = 3
+	DPadMode.ontouchstart = function (){ 
+		TiltMode.style.border = "none"
+		PenMode.style.border = "none"
+		DPadMode.style.border = "solid yellow 2px"
+		TouchMode.style.border = "none"
+		Descript.innerHTML = "In this mode, you move cursor via a D-Pad and shoot via the fire button"
+		Mode = 3
 		}
-		TouchMode.ontouchstart = function (){ 
-			TiltMode.style.border = "none"
-			PenMode.style.border = "none"
-			DPadMode.style.border = "none"
-			TouchMode.style.border = "solid yellow 2px"
-			Descript.innerHTML = "In this mode, you touch the screen and a laser shoots"
-			Mode = 4
+	TouchMode.ontouchstart = function (){ 
+		TiltMode.style.border = "none"
+		PenMode.style.border = "none"
+		DPadMode.style.border = "none"
+		TouchMode.style.border = "solid yellow 2px"
+		Descript.innerHTML = "In this mode, you touch the screen and a laser shoots"
+		Mode = 4
 		}
-		PlayButton.ontouchstart = function (){
-			if (Mode === 1|| Mode === 2 || Mode === 3 || Mode === 4){
-				Menu.style.display = 'none'
+	PlayButton.ontouchstart = function (){
+		if (Mode === 1|| Mode === 2 || Mode === 3 || Mode === 4){
+			Menu.style.display = 'none'
 				
-				Image.style.top = "0vh"
-				Image.style.left = "0vw"
-				Image.style.maxWidth = `${window.innerWidth}px`
-				Image.style.maxHeight = `${window.innerHeight}px`
+			Image.style.top = "0vh"
+			Image.style.left = "0vw"
+			Image.style.maxWidth = `${window.innerWidth}px`
+			Image.style.maxHeight = `${window.innerHeight}px`
 				
-				if (Image.requestFullscreen) {
-   					Image.requestFullscreen()
- 				 } else if (Image.webkitRequestFullscreen) {
-   					Image.webkitRequestFullscreen()
-  				 } else if (Image.msRequestFullscreen) {
-   					Image.msRequestFullscreen()
-  				 }
+			if (Image.requestFullscreen) {
+   				Image.requestFullscreen()
+ 			 } else if (Image.webkitRequestFullscreen) {
+				 Image.webkitRequestFullscreen()
+  			 } else if (Image.msRequestFullscreen) {
+   				Image.msRequestFullscreen()
+  			 }
 				
-				PauseButton.style.display = 'block'
+			PauseButton.style.display = 'block'
 				
-				var score = document.createElement("p")
-				var highscore = document.createElement("p")
-				score.append(Score)
-				highscore.append(HighScore)
+			var score = document.createElement("p")
+			var highscore = document.createElement("p")
+			score.append(Score)
+			highscore.append(HighScore)
 				
-				score.style.position = 'absolute'
-				score.style.display = 'block'
-				score.style.color = 'white'
-				score.style.top =  '5%'
-				score.style.left = '30%'
+			score.style.position = 'absolute'
+			score.style.display = 'block'
+			score.style.color = 'white'
+			score.style.top =  '5%'
+			score.style.left = '30%'
 			
-				highscore.style.position = 'absolute'
-				highscore.style.display = 'block'
-				highscore.style.color = 'white'
-				highscore.style.top = '5%'
-				highscore.style.left = '60%'
-			}
-			CloseButton.ontouchstart = function (){ Menu.style.display = 'none'}
+			highscore.style.position = 'absolute'
+			highscore.style.display = 'block'
+			highscore.style.color = 'white'
+			highscore.style.top = '5%'
+			highscore.style.left = '60%'
+		}
+	}
+			
+				
+	CloseButton.ontouchstart = function (){ Menu.style.display = 'none'}
 	if (Display === 'block' && land.matches){
 		
 		if(!Menu.ontouchstart){ Menu.style.display = 'none'}
