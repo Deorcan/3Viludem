@@ -457,16 +457,23 @@ function OnTouch(){
   				 }
 				
 				PauseButton.style.display = 'block'
+				
+				var score = document.createElement("p")
+				var highscore = document.createElement("p")
+				score.append(Score)
+				highscore.append(HighScore)
+				
+				score.style.position = 'absolute'
+				score.style.display = 'block'
+				score.style.color = 'white'
+				score.style.top =  '5%'
+				score.style.left = '30%'
 			
-				Score.style.display = 'block'
-				Score.style.color = 'white'
-				Score.style.top =  '5%'
-				Score.style.left = '30%'
-			
-				HighScore.style.display = 'block'
-				HighScore.style.color = 'white'
-				HighScore.style.top = '5%'
-				HighScore.style.left = '60%'
+				highscore.style.position = 'absolute'
+				highscore.style.display = 'block'
+				highscore.style.color = 'white'
+				highscore.style.top = '5%'
+				highscore.style.left = '60%'
 			}
 			CloseButton.ontouchstart = function (){ Menu.style.display = 'none'}
 	if (Display === 'block' && land.matches){
