@@ -468,12 +468,14 @@ function OnTouch(){
 			score.style.color = 'white'
 			score.style.top =  '5%'
 			score.style.left = '30%'
+			score.style.transform = 'translate(-50%, -50%)'
 			
 			highscore.style.position = 'absolute'
 			highscore.style.display = 'block'
 			highscore.style.color = 'white'
 			highscore.style.top = '5%'
 			highscore.style.left = '60%'
+			highscore.style.transform = 'translate(-50%, -50%)'
 		}
 	}
 			
