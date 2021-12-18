@@ -48,6 +48,8 @@ var land = window.matchMedia("(orientation: landscape)")
 Image.onmousemove = function() {OnMouse()}
 Image.onmouseout = function() {MouseOff()}
 
+Para.style.top = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height'))}px`
+
 const userAgent = navigator.userAgent.toLowerCase();
 var isMobile = /iPhone|Android|BlackBerry|BB|Nokia/i.test(navigator.userAgent);
 const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
