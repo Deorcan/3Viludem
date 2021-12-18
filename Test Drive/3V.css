@@ -246,4 +246,18 @@
 		max-width: 10%;
 		max-height: 10%;
 	}
+	#score2 {
+		position: absolute;
+		color: white;
+		left: 30%;
+		top: 5%;
+		transform: translate(-50%, -50%);
+	}
+	#HighScore2 {
+		position: absolute;
+		color: white;
+		left: 60%;
+		top: 5%;
+		transform: translate(-50%, -50%);
+	}
 }
