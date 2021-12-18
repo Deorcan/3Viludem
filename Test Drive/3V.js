@@ -407,11 +407,7 @@ function OnTouch(){
 		PlsRotate.style.display = 'none'
 		Menu.style.display = 'block'
 	}})
-	
-	if (Display === 'block' && land.matches){
-		CloseButton.ontouchstart = function (){ Menu.style.display = 'none'}
-		if(!Menu.ontouchstart){ Menu.style.display = 'none'}
-		TiltMode.ontouchstart = function (){ 
+	TiltMode.ontouchstart = function (){ 
 			TiltMode.style.border = "solid yellow 2px"
 			PenMode.style.border = "none"
 			DPadMode.style.border = "none"
@@ -472,6 +468,11 @@ function OnTouch(){
 				HighScore.style.top = '5%'
 				HighScore.style.left = '60%'
 			}
+			CloseButton.ontouchstart = function (){ Menu.style.display = 'none'}
+	if (Display === 'block' && land.matches){
+		
+		if(!Menu.ontouchstart){ Menu.style.display = 'none'}
+		
 	
 		}
 		Para.style.top = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height')) - 280}px`
