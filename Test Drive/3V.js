@@ -24,6 +24,10 @@ const TouchMode = document.getElementById("touch")
 const Descript = document.getElementById("descript")
 const PlayButton = document.getElementById("play")
 const PauseButton = document.getElementById("pausebutton")
+const ScoreT2 = document.getElementById("score2")
+const HighScoreT2 = document.getElementById("HighScore2")
+const Score2 = document.querySelector('#score2 span')
+const HighScore2 = document.querySelector('#HighScore2 span')
 
 let TF = true
 let FT = true
@@ -457,30 +461,9 @@ function OnTouch(){
   			 }
 				
 			PauseButton.style.display = 'block'
+			ScoreT2.style.display = 'block'
+			HighScoreT2.style.display = 'block'
 				
-			var score = document.createElement("p")
-			var highscore = document.createElement("p")
-			var node = document.createTextNode("Score: ")
-			var node2 = document.createTextNode("High Score: ")
-			
-			score.append(node)
-			highscore.append(node2)
-			Image.append(score)
-			Image.append(highscore)
-				
-			score.style.position = 'absolute'
-			score.style.display = 'block'
-			score.style.color = 'white'
-			score.style.top =  '5%'
-			score.style.left = '30%'
-			score.style.transform = 'translate(-50%, -50%)'
-			
-			highscore.style.position = 'absolute'
-			highscore.style.display = 'block'
-			highscore.style.color = 'white'
-			highscore.style.top = '5%'
-			highscore.style.left = '60%'
-			highscore.style.transform = 'translate(-50%, -50%)'
 		}
 	}
 			
