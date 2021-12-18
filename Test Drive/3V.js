@@ -484,7 +484,7 @@ function OnTouch(){
 		if(!Menu.ontouchstart){ Menu.style.display = 'none'}
 		
 	
-		}
+		
 		Para.style.top = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height')) - 280}px`
 		
 	}else if (Display === 'none' && land.matches){
