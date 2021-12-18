@@ -465,8 +465,8 @@ function OnTouch(){
 			
 			score.append(node)
 			highscore.append(node2)
-			//score.append(Score)
-			//highscore.append(HighScore)
+			Image.append(score)
+			Image.append(highscore)
 				
 			score.style.position = 'absolute'
 			score.style.display = 'block'
