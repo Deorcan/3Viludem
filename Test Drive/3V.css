@@ -72,8 +72,8 @@
 
 #Paragraph {
 	position: absolute;
-	margin-left: 18vw;
-	margin-right: 18vw;
+	left: 18vw;
+	right: 18vw;
 	color: gold;
 
 }
