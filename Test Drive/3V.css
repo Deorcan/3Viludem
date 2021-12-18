@@ -241,22 +241,22 @@
 	
 	#pausebutton {
 		position: absolute;
-		left: 85%;
+		left: 90%;
 		top: 5%;
-		max-width: 10%;
-		max-height: 10%;
+		max-width: 5%;
+		max-height: 5%;
 	}
 	#score2 {
 		position: absolute;
 		color: white;
-		left: 30%;
+		left: 5%;
 		top: 5%;
 		transform: translate(-50%, -50%);
 	}
 	#HighScore2 {
 		position: absolute;
 		color: white;
-		left: 60%;
+		left: 80%;
 		top: 5%;
 		transform: translate(-50%, -50%);
 	}
