@@ -460,6 +460,11 @@ function OnTouch(){
 				
 			var score = document.createElement("p")
 			var highscore = document.createElement("p")
+			var node = document.createTextNode("Score: ")
+			var node2 = document.createTextNode("High Score: ")
+			
+			score.append(node)
+			highscore.append(node2)
 			score.append(Score)
 			highscore.append(HighScore)
 				
