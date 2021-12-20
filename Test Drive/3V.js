@@ -42,7 +42,7 @@ let IfMouse = false
 let IfTouch = false
 var Mode = 0
 
-var PG = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height'))}px`
+var PG = '90vh' //`${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height'))}px`
 
 var port = window.matchMedia("(orientation: portrait)")
 var land = window.matchMedia("(orientation: landscape)")
