@@ -50,7 +50,7 @@ var land = window.matchMedia("(orientation: landscape)")
 Image.onmousemove = function() {OnMouse()}
 Image.onmouseout = function() {MouseOff()}
 
-Para.addListener(function(p) {if (parseFloat(p.style.top) === !PG) { Para.style.top = PG }})
+Para.addListener(function(p) {if (parseFloat(p.style.top) === !parseFloat(PG)) { Para.style.top = PG }})
 
 const userAgent = navigator.userAgent.toLowerCase();
 var isMobile = /iPhone|Android|BlackBerry|BB|Nokia/i.test(navigator.userAgent);
