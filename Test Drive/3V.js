@@ -51,7 +51,7 @@ Image.onmousemove = function() {OnMouse()}
 Image.onmouseout = function() {MouseOff()}
 
 //Para.addListener(function(p) {if (p.style.marginTop === !PG) {  }})
-Para.style.marginTop = PG
+Para.style.top = PG
 const userAgent = navigator.userAgent.toLowerCase();
 var isMobile = /iPhone|Android|BlackBerry|BB|Nokia/i.test(navigator.userAgent);
 const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
