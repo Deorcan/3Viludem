@@ -43,15 +43,12 @@ let IfTouch = false
 var Mode = 0
 
 Para.style.top = '110vh'
-var PG = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height')) + 200}px`
 
 var port = window.matchMedia("(orientation: portrait)")
 var land = window.matchMedia("(orientation: landscape)")
 
 Image.onmousemove = function() {OnMouse()}
 Image.onmouseout = function() {MouseOff()}
-
-Para.addListener(function(p) {if () { p.style.top = PG }})
 
 const userAgent = navigator.userAgent.toLowerCase();
 var isMobile = /iPhone|Android|BlackBerry|BB|Nokia/i.test(navigator.userAgent);
