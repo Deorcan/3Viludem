@@ -42,7 +42,7 @@ let IfMouse = false
 let IfTouch = false
 var Mode = 0
 
-Para.style.marginTop = '110vh'
+Para.style.top = '110vh'
 
 var port = window.matchMedia("(orientation: portrait)")
 var land = window.matchMedia("(orientation: landscape)")
@@ -68,9 +68,9 @@ function isTabletOrMobile(){
 		Image.style.right = "3vw"
 		Image.style.top = "25vh"
 		Image.style.maxWidth = "94%"
-		Para.style.marginLeft = "0vw"
-		Para.style.marginRight = "0vw"
-		//Para.addListener(function(p) {if ((land.matches && isMobile) || (land.matches && isTablet)) { p.style.top = '120vh' }else{p.style.top = '110vh'}})
+		Para.style.left = "0vw"
+		Para.style.right = "0vw"
+		Para.addListener(function(p) {if ((land.matches && isMobile) || (land.matches && isTablet)) { p.style.top = '120vh' }else{p.style.top = '110vh'}})
 		Control.style.display = "none"
 		text2.style.marginTop = "5vh"
 		
