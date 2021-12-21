@@ -42,7 +42,7 @@ let IfMouse = false
 let IfTouch = false
 var Mode = 0
 
-//Para.style.top = '110vh'
+Para.style.marginTop = '110vh'
 
 var port = window.matchMedia("(orientation: portrait)")
 var land = window.matchMedia("(orientation: landscape)")
