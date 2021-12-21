@@ -43,7 +43,7 @@ let IfTouch = false
 var Mode = 0
 
 Para.style.top = '90vh'
-var PG = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height'))}px`
+var PG = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height')) + 20}px`
 
 var port = window.matchMedia("(orientation: portrait)")
 var land = window.matchMedia("(orientation: landscape)")
