@@ -42,7 +42,7 @@ let IfMouse = false
 let IfTouch = false
 var Mode = 0
 
-Para.style.top = '120vh'
+Para.style.top = '110vh'
 var PG = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height')) + 200}px`
 
 var port = window.matchMedia("(orientation: portrait)")
@@ -51,7 +51,7 @@ var land = window.matchMedia("(orientation: landscape)")
 Image.onmousemove = function() {OnMouse()}
 Image.onmouseout = function() {MouseOff()}
 
-//Para.addListener(function(p) {if (parseFloat(p.style.top) != parseFloat(PG)) { Para.style.top = PG }})
+Para.addListener(function(p) {if () { p.style.top = PG }})
 
 const userAgent = navigator.userAgent.toLowerCase();
 var isMobile = /iPhone|Android|BlackBerry|BB|Nokia/i.test(navigator.userAgent);
@@ -73,6 +73,7 @@ function isTabletOrMobile(){
 		Image.style.maxWidth = "94%"
 		Para.style.marginLeft = "0vw"
 		Para.style.marginRight = "0vw"
+		Para.addListener(function(p) {if (land.matches && isMobile || land.matches && isTablet) { p.style.top = '120vh' }else{p.style.top = '110vh'}})
 		Control.style.display = "none"
 		text2.style.marginTop = "5vh"
 		
@@ -476,12 +477,11 @@ function OnTouch(){
 		
 	
 		
-		Para.style.top = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height')) - 280}px`
+		
 		
 	}else if (Display === 'none' && land.matches){
 		if(!Menu.ontouchstart){ Menu.style.display = 'block'}
-		Para.style.top = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height')) - 280}px`
-	}
+		
 }
 
 function playgame(){
