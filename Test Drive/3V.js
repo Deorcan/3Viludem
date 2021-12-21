@@ -42,7 +42,7 @@ let IfMouse = false
 let IfTouch = false
 var Mode = 0
 
-Para.style.top = '90vh'
+Para.style.top = '120vh'
 var PG = `${parseFloat(window.getComputedStyle(Image).getPropertyValue('top')) + parseFloat(window.getComputedStyle(Image).getPropertyValue('height')) + 200}px`
 
 var port = window.matchMedia("(orientation: portrait)")
