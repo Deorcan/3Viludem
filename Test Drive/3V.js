@@ -351,7 +351,6 @@ function moving(){
 function OnMouse(){
 	Image.style.cursor = "url('https://deorcan.github.io/3Viludem/Pictures/Cursor.png'), default"
 	ship.style.display = 'none'
-	Para.style.top = "20vh"
 	IfMouse = true
 	Instructs.src = "Test%20Drive/Instructions2.png"
 	
@@ -384,7 +383,6 @@ function OnMouse(){
 
 function MouseOff(){
 	ship.style.display = 'block'
-	Para.style.top = "20vh"
 	Instructs.src = "Test%20Drive/Instructions1.png"
 	IfMouse = false
 
