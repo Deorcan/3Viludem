@@ -71,10 +71,10 @@
  }
 
 #Paragraph {
-	
-	margin-left: 18vw;
-	margin-right: 18vw;
-	margin-top: 110vh;
+	position: absolute;
+	left: 18vw;
+	right: 18vw;
+	top: 110vh;
 	color: gold;
 
 }
