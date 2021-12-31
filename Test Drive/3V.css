@@ -72,9 +72,9 @@
 
 #Paragraph {
 	
-	left: 18vw;
-	right: 18vw;
-	top: 110vh;
+	margin-left: 18vw;
+	margin-right: 18vw;
+	margin-top: 110vh;
 	color: gold;
 
 }
