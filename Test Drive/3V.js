@@ -451,17 +451,10 @@ function OnTouch(){
 			Image.style.maxWidth = `${window.innerWidth}px`
 			Image.style.maxHeight = `${window.innerHeight}px`
 				
-			if (Image.requestFullscreen) {
-   				Image.requestFullscreen()
- 			 } else if (Image.webkitRequestFullscreen) {
-				 Image.webkitRequestFullscreen()
-  			 } else if (Image.msRequestFullscreen) {
-   				Image.msRequestFullscreen()
-  			 }
-				
-			PauseButton.style.display = 'block'
-			ScoreT2.style.display = 'block'
-			HighScoreT2.style.display = 'block'
+	
+			//PauseButton.style.display = 'block'
+			//ScoreT2.style.display = 'block'
+			//HighScoreT2.style.display = 'block'
 				
 		}
 	}
