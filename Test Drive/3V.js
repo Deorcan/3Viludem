@@ -42,12 +42,8 @@ let IfMouse = false
 let IfTouch = false
 var Mode = 0
 
-//Para.style.top = '110vh'
-
 var port = window.matchMedia("(orientation: portrait)")
 var land = window.matchMedia("(orientation: landscape)")
-
-//Para.addListener(function(PP) { if (land.matches) { PP.style.top = '120vh' } else {PP.style.top = '110vh'}})
 
 Image.onmousemove = function() {OnMouse()}
 Image.onmouseout = function() {MouseOff()}
@@ -70,10 +66,8 @@ function isTabletOrMobile(){
 		Image.style.right = "3vw"
 		Image.style.top = "25vh"
 		Image.style.maxWidth = "94%"
-		Para.style.left = "0vw"
-		Para.style.right = "0vw"
-		//Para.addListener(function(p) {
-		//	if (land.matches) { p.style.top = '120vh' } else {p.style.top = '110vh'}})
+		Para.style.left = "3vw"
+		Para.style.right = "3vw"
 		Control.style.display = "none"
 		text2.style.marginTop = "5vh"
 		
