@@ -408,8 +408,10 @@ function OnTouch(){
 	land.addListener(function(l) {if (l.matches) {
 		PlsRotate.style.display = 'none'
 		Menu.style.display = 'block'
+		Menu.style.marginTop = '20%'
 	}})
-	TiltMode.ontouchstart = function (){ 
+	TiltMode.ontouchstart = function (){
+		Menu.style.marginTop = '10%'
 		TiltMode.style.border = "solid yellow 2px"
 		PenMode.style.border = "none"
 		DPadMode.style.border = "none"
@@ -417,7 +419,8 @@ function OnTouch(){
 		Descript.innerHTML = "In this mode, you tilt the screen to move the cursor and shoot via the fire button"
 		Mode = 1
 		}
-	PenMode.ontouchstart = function (){ 
+	PenMode.ontouchstart = function (){
+		Menu.style.marginTop = '10%'
 		TiltMode.style.border = "none"
 		PenMode.style.border = "solid yellow 2px"
 		DPadMode.style.border = "none"
@@ -425,7 +428,8 @@ function OnTouch(){
 		Descript.innerHTML = "In this mode, you drag the cursor around screen and shoot via the fire button"
 		Mode = 2
 		}
-	DPadMode.ontouchstart = function (){ 
+	DPadMode.ontouchstart = function (){
+		Menu.style.marginTop = '10%'
 		TiltMode.style.border = "none"
 		PenMode.style.border = "none"
 		DPadMode.style.border = "solid yellow 2px"
@@ -433,7 +437,8 @@ function OnTouch(){
 		Descript.innerHTML = "In this mode, you move cursor via a D-Pad and shoot via the fire button"
 		Mode = 3
 		}
-	TouchMode.ontouchstart = function (){ 
+	TouchMode.ontouchstart = function (){
+		Menu.style.marginTop = '10%'
 		TiltMode.style.border = "none"
 		PenMode.style.border = "none"
 		DPadMode.style.border = "none"
@@ -469,7 +474,7 @@ function OnTouch(){
 		
 		
 	}else if (Display === 'none' && land.matches){
-		if(!Menu.ontouchstart){ Menu.style.display = 'block'}
+		if(!Menu.ontouchstart){ Menu.style.display = 'block' Menu.style.marginTop = '20%'}
 	}	
 }
 
