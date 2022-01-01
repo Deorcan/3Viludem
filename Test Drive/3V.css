@@ -210,15 +210,15 @@
 		opacity: 1.0;
 	}
 	#tilt, #pen, #d-pad, #touch {
-		max-width: 75%;
-		max-height: 75%;
+		max-width: 70%;
+		max-height: 70%;
 		opacity: 1.0;
 		margin-left: auto;
 		margin-right: auto;
 	}
 	#play {
-		max-width: 50%;
-		max-height: 50%;
+		max-width: 45%;
+		max-height: 45%;
 		opacity: 1.0;
 		text-align: center;
 	}
@@ -234,8 +234,8 @@
 		opacity: 1.0;
 		left: 85%;
 		top: 5%;
-		max-width: 10%;
-		max-height: 10%;
+		max-width: 5%;
+		max-height: 5%;
 		
 	}
 	
