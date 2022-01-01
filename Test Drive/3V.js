@@ -406,7 +406,7 @@ function OnTouch(){
 	land.addListener(function(l) {if (l.matches) {
 		PlsRotate.style.display = 'none'
 		Menu.style.display = 'block'
-		if(isTablet||isMobile) {Para.style.top = "130vh"} else {Para.style.top = "110vh"}
+		if(isTablet||isMobile) {Para.style.top = "140vh"} else {Para.style.top = "110vh"}
 	}})
 	TiltMode.ontouchstart = function (){ 
 		TiltMode.style.border = "solid yellow 2px"
