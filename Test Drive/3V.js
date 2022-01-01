@@ -408,10 +408,10 @@ function OnTouch(){
 	land.addListener(function(l) {if (l.matches) {
 		PlsRotate.style.display = 'none'
 		Menu.style.display = 'block'
-		Menu.style.marginTop = '20%'
+		Menu.style.marginTop = '15%'
 	}})
 	TiltMode.ontouchstart = function (){
-		Menu.style.marginTop = '10%'
+		Menu.style.marginTop = '15%'
 		TiltMode.style.border = "solid yellow 2px"
 		PenMode.style.border = "none"
 		DPadMode.style.border = "none"
@@ -420,7 +420,7 @@ function OnTouch(){
 		Mode = 1
 		}
 	PenMode.ontouchstart = function (){
-		Menu.style.marginTop = '10%'
+		Menu.style.marginTop = '15%'
 		TiltMode.style.border = "none"
 		PenMode.style.border = "solid yellow 2px"
 		DPadMode.style.border = "none"
@@ -429,7 +429,7 @@ function OnTouch(){
 		Mode = 2
 		}
 	DPadMode.ontouchstart = function (){
-		Menu.style.marginTop = '10%'
+		Menu.style.marginTop = '15%'
 		TiltMode.style.border = "none"
 		PenMode.style.border = "none"
 		DPadMode.style.border = "solid yellow 2px"
@@ -438,7 +438,7 @@ function OnTouch(){
 		Mode = 3
 		}
 	TouchMode.ontouchstart = function (){
-		Menu.style.marginTop = '10%'
+		Menu.style.marginTop = '15%'
 		TiltMode.style.border = "none"
 		PenMode.style.border = "none"
 		DPadMode.style.border = "none"
@@ -475,7 +475,7 @@ function OnTouch(){
 		
 	}else if (Display === 'none' && land.matches){
 		if(!Menu.ontouchstart){Menu.style.display = 'block'
-				       Menu.style.marginTop = '20%'}
+				       Menu.style.marginTop = '15%'}
 	}	
 }
 
