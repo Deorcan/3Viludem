@@ -43,10 +43,11 @@ let IfTouch = false
 var Mode = 0
 
 //Para.style.top = '110vh'
-Para.addListener(function(p) { if (land.matches) { p.style.top = '120vh' } else {p.style.top = '110vh'}})
 
 var port = window.matchMedia("(orientation: portrait)")
 var land = window.matchMedia("(orientation: landscape)")
+
+Para.addListener(function(p) { if (land.matches) { p.style.top = '120vh' } else {p.style.top = '110vh'}})
 
 Image.onmousemove = function() {OnMouse()}
 Image.onmouseout = function() {MouseOff()}
