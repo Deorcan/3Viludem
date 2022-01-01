@@ -72,8 +72,8 @@ function isTabletOrMobile(){
 		Image.style.maxWidth = "94%"
 		Para.style.left = "0vw"
 		Para.style.right = "0vw"
-		Para.addListener(function(p) {
-			if (land.matches) { p.style.top = '120vh' } else {p.style.top = '110vh'}})
+		//Para.addListener(function(p) {
+		//	if (land.matches) { p.style.top = '120vh' } else {p.style.top = '110vh'}})
 		Control.style.display = "none"
 		text2.style.marginTop = "5vh"
 		
