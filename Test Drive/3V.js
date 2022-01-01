@@ -45,7 +45,7 @@ var Mode = 0
 var port = window.matchMedia("(orientation: portrait)")
 var land = window.matchMedia("(orientation: landscape)")
 
-land.addListener(function(l) {if (l.matches) { if(isTablet||isMobile) {Para.style.top = "120vh"}}else { Para.style.top = "110vh"}})
+land.addListener(function(l) {if (l.matches) {if (isTablet||isMobile) {Para.style.top = "120vh"}}else {Para.style.top = "100vh"}})
 
 Image.onmousemove = function() {OnMouse()}
 Image.onmouseout = function() {MouseOff()}
@@ -408,7 +408,6 @@ function OnTouch(){
 	land.addListener(function(l) {if (l.matches) {
 		PlsRotate.style.display = 'none'
 		Menu.style.display = 'block'
-		if(isTablet||isMobile) {Para.style.top = "140vh"} else {Para.style.top = "110vh"}
 	}})
 	TiltMode.ontouchstart = function (){ 
 		TiltMode.style.border = "solid yellow 2px"
