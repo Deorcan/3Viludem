@@ -474,7 +474,8 @@ function OnTouch(){
 		
 		
 	}else if (Display === 'none' && land.matches){
-		if(!Menu.ontouchstart){ Menu.style.display = 'block' Menu.style.marginTop = '20%'}
+		if(!Menu.ontouchstart){Menu.style.display = 'block'
+				       Menu.style.marginTop = '20%'}
 	}	
 }
 
