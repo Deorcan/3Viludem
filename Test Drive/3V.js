@@ -443,7 +443,7 @@ function OnTouch(){
 		Mode = 4
 		}
 	PlayButton.ontouchstart = function (){
-		if (Mode === 1|| Mode === 2 || Mode === 3 || Mode === 4){
+		if ((Mode === 1|| Mode === 2 || Mode === 3 || Mode === 4) && land.match){
 			Menu.style.display = 'none'
 				
 			Image.style.top = "0vh"
@@ -455,6 +455,29 @@ function OnTouch(){
 			PauseButton.style.display = 'block'
 			ScoreT2.style.display = 'block'
 			HighScoreT2.style.display = 'block'
+			
+			port.addListener(function(p) {if (p.matches) {
+				Image.style.top = "25vh"
+				Image.style.left = "3vw"
+				Image.style.maxWidth = "94%"
+				Image.style.maxHeight = "94%"
+				
+	
+				PauseButton.style.display = 'none'
+				ScoreT2.style.display = 'none'
+				HighScoreT2.style.display = 'none'
+			}})
+			land.addListener(function(l) {if (l.matches) {
+				Image.style.top = "0vh"
+				Image.style.left = "0vw"
+				Image.style.maxWidth = `${window.innerWidth}px`
+				Image.style.maxHeight = `${window.innerHeight}px`
+				
+	
+				PauseButton.style.display = 'block'
+				ScoreT2.style.display = 'block'
+				HighScoreT2.style.display = 'block'
+			}})
 				
 		}
 	}
