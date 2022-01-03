@@ -243,20 +243,20 @@
 		position: absolute;
 		left: 90%;
 		top: 5%;
-		max-width: 5%;
-		max-height: 5%;
+		max-width: 10%;
+		max-height: 10%;
 	}
 	#score2 {
 		position: absolute;
 		color: white;
-		left: 5%;
+		left: 20%;
 		top: 5%;
 		transform: translate(-50%, -50%);
 	}
 	#HighScore2 {
 		position: absolute;
 		color: white;
-		left: 80%;
+		left: 60%;
 		top: 5%;
 		transform: translate(-50%, -50%);
 	}
