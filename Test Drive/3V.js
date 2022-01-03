@@ -452,9 +452,9 @@ function OnTouch(){
 			Image.style.maxHeight = `${window.innerHeight}px`
 				
 	
-			//PauseButton.style.display = 'block'
-			//ScoreT2.style.display = 'block'
-			//HighScoreT2.style.display = 'block'
+			PauseButton.style.display = 'block'
+			ScoreT2.style.display = 'block'
+			HighScoreT2.style.display = 'block'
 				
 		}
 	}
