@@ -443,9 +443,11 @@ function OnTouch(){
 		Mode = 4
 		}
 	PlayButton.ontouchstart = function (){
-		if ((Mode === 1|| Mode === 2 || Mode === 3 || Mode === 4) && land.match){
+		if (Mode === 1|| Mode === 2 || Mode === 3 || Mode === 4){
 			Menu.style.display = 'none'
-				
+			port.removeEventListener(function)
+			land.removeEventListener(function)
+			
 			Image.style.top = "0vh"
 			Image.style.left = "0vw"
 			Image.style.maxWidth = `${window.innerWidth}px`
