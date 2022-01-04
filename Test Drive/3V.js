@@ -445,8 +445,8 @@ function OnTouch(){
 	PlayButton.ontouchstart = function (){
 		if (Mode === 1|| Mode === 2 || Mode === 3 || Mode === 4){
 			Menu.style.display = 'none'
-			port.removeEventListener()
-			land.removeEventListener()
+			port.removeEventListener(p)
+			land.removeEventListener(l)
 			
 			Image.style.top = "0vh"
 			Image.style.left = "0vw"
@@ -458,7 +458,7 @@ function OnTouch(){
 			ScoreT2.style.display = 'block'
 			HighScoreT2.style.display = 'block'
 			
-			port.addListener(function(p) {if (p.matches) {
+			port.addListener(function(P) {if (P.matches) {
 				Image.style.top = "25vh"
 				Image.style.left = "3vw"
 				Image.style.maxWidth = "94%"
@@ -469,7 +469,7 @@ function OnTouch(){
 				ScoreT2.style.display = 'none'
 				HighScoreT2.style.display = 'none'
 			}})
-			land.addListener(function(l) {if (l.matches) {
+			land.addListener(function(L) {if (L.matches) {
 				Image.style.top = "0vh"
 				Image.style.left = "0vw"
 				Image.style.maxWidth = `${window.innerWidth}px`
