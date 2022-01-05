@@ -441,8 +441,8 @@ function OnTouch(){
 		Menu.style.display = 'block'			
 	}	
 
-	port.addListener(PortRotate)
-	land.addListener(LandRotate)
+	port.addEventListener(PortRotate)
+	land.addEventListener(LandRotate)
 	
 	TiltMode.ontouchstart = function (){
 		TiltMode.style.border = "solid yellow 2px"
@@ -479,8 +479,8 @@ function OnTouch(){
 	PlayButton.ontouchstart = function (){
 		if (Mode === 1|| Mode === 2 || Mode === 3 || Mode === 4){
 			Menu.style.display = 'none'
-			port.removeListener(PortRotate)
-			land.removeListener(LandRotate)
+			port.removeEventListener(PortRotate)
+			land.removeEventListener(LandRotate)
 			
 			Image.style.top = "0vh"
 			Image.style.left = "0vw"
@@ -492,8 +492,8 @@ function OnTouch(){
 			ScoreT2.style.display = 'block'
 			HighScoreT2.style.display = 'block'
 			
-			port.addListener(PortScreen)
-			land.addListener(LandScreen)
+			port.addEventListener(PortScreen)
+			land.addEventListener(LandScreen)
 				
 		}
 	}
