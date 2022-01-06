@@ -430,7 +430,7 @@ function OnTouch(){
 	TouchStart.style.display = "none"
 	IfTouch = true
 	let Display =  window.getComputedStyle(Menu).getPropertyValue('display')
-	if (Mode === 0){
+	
 		if (port.matches) {
 			PlsRotate.style.display = 'block'
 			Menu.style.display = 'none'
@@ -440,10 +440,10 @@ function OnTouch(){
 			PlsRotate.style.display = 'none'
 			Menu.style.display = 'block'			
 		}
-	}
+	
 
-	//port.addEventListener('change', PortRotate)
-	//land.addEventListener('change', LandRotate)
+	port.addListener('change', PortRotate)
+	land.addListener('change', LandRotate)
 	
 	TiltMode.ontouchstart = function (){
 		TiltMode.style.border = "solid yellow 2px"
