@@ -480,8 +480,8 @@ function OnTouch(){
 	PlayButton.ontouchstart = function (){
 		if (Mode === 1|| Mode === 2 || Mode === 3 || Mode === 4){
 			Menu.style.display = 'none'
-			port.removeEventListener('change', PortRotate)
-			land.removeEventListener('change', LandRotate)
+			//port.removeEventListener('change', PortRotate)
+			//land.removeEventListener('change', LandRotate)
 			
 			Image.style.top = "0vh"
 			Image.style.left = "0vw"
