@@ -492,8 +492,8 @@ function OnTouch(){
 			ScoreT2.style.display = 'block'
 			HighScoreT2.style.display = 'block'
 			
-			port.addEventListener('change', PortScreen)
-			land.addEventListener('change', LandScreen)
+			//port.addEventListener('change', PortScreen)
+			//land.addEventListener('change', LandScreen)
 				
 		}
 	}
