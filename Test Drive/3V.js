@@ -430,16 +430,17 @@ function OnTouch(){
 	TouchStart.style.display = "none"
 	IfTouch = true
 	let Display =  window.getComputedStyle(Menu).getPropertyValue('display')
-	
-	if (port.matches) {
-		PlsRotate.style.display = 'block'
-		Menu.style.display = 'none'
-	}
+	if (Mode === 0){
+		if (port.matches) {
+			PlsRotate.style.display = 'block'
+			Menu.style.display = 'none'
+		}
 
-	if (land.matches) {
-		PlsRotate.style.display = 'none'
-		Menu.style.display = 'block'			
-	}	
+		if (land.matches) {
+			PlsRotate.style.display = 'none'
+			Menu.style.display = 'block'			
+		}
+	}
 
 	port.addEventListener('change', PortRotate)
 	land.addEventListener('change', LandRotate)
