@@ -424,7 +424,8 @@ LandScreen = function (){
 		PlsRotate.style.display = 'none'
 	}
 }
-
+port.addEventListener('change', PortRotate)
+	land.addEventListener('change', LandRotate)
 function OnTouch(){
 	event.preventDefault()
 	TouchStart.style.display = "none"
@@ -441,8 +442,8 @@ function OnTouch(){
 	}
 	
 
-	window.addEventListener('change', PortRotate)
-	window.addEventListener('change', LandRotate)
+	//port.addEventListener('change', PortRotate)
+	//land.addEventListener('change', LandRotate)
 	
 	TiltMode.ontouchstart = function (){
 		TiltMode.style.border = "solid yellow 2px"
