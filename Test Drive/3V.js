@@ -386,14 +386,7 @@ function MouseOff(){
 
 }
 
-
-
-function OnTouch(){
-	event.preventDefault()
-	TouchStart.style.display = "none"
-	IfTouch = true
-	let Display =  window.getComputedStyle(Menu).getPropertyValue('display')
-	PortRotate = function (){
+PortRotate = function (){
 	if (port.matches){
 		PlsRotate.style.display = 'block'
 		Menu.style.display = 'none'
@@ -431,19 +424,25 @@ LandScreen = function (){
 		PlsRotate.style.display = 'none'
 	}
 }
-		if (port.matches) {
-			PlsRotate.style.display = 'block'
-			Menu.style.display = 'none'
-		}
 
-		if (land.matches) {
-			PlsRotate.style.display = 'none'
-			Menu.style.display = 'block'			
-		}
+function OnTouch(){
+	event.preventDefault()
+	TouchStart.style.display = "none"
+	IfTouch = true
+	let Display =  window.getComputedStyle(Menu).getPropertyValue('display')
+	if (port.matches) {
+		PlsRotate.style.display = 'block'
+		Menu.style.display = 'none'
+	}
+
+	if (land.matches) {
+		PlsRotate.style.display = 'none'
+		Menu.style.display = 'block'			
+	}
 	
 
-	port.addListener('change', PortRotate)
-	land.addListener('change', LandRotate)
+	document.addListener('change', PortRotate)
+	document.addListener('change', LandRotate)
 	
 	TiltMode.ontouchstart = function (){
 		TiltMode.style.border = "solid yellow 2px"
