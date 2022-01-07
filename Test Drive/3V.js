@@ -424,8 +424,6 @@ LandScreen = function (){
 		PlsRotate.style.display = 'none'
 	}
 }
-port.addEventListener('change', PortRotate)
-	land.addEventListener('change', LandRotate)
 function OnTouch(){
 	event.preventDefault()
 	TouchStart.style.display = "none"
