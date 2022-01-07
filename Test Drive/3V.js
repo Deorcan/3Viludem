@@ -386,7 +386,14 @@ function MouseOff(){
 
 }
 
-PortRotate = function (){
+
+
+function OnTouch(){
+	event.preventDefault()
+	TouchStart.style.display = "none"
+	IfTouch = true
+	let Display =  window.getComputedStyle(Menu).getPropertyValue('display')
+	PortRotate = function (){
 	if (port.matches){
 		PlsRotate.style.display = 'block'
 		Menu.style.display = 'none'
@@ -424,13 +431,6 @@ LandScreen = function (){
 		PlsRotate.style.display = 'none'
 	}
 }
-
-function OnTouch(){
-	event.preventDefault()
-	TouchStart.style.display = "none"
-	IfTouch = true
-	let Display =  window.getComputedStyle(Menu).getPropertyValue('display')
-	
 		if (port.matches) {
 			PlsRotate.style.display = 'block'
 			Menu.style.display = 'none'
