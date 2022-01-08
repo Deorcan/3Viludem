@@ -480,8 +480,8 @@ function OnTouch(){
 			Menu.style.display = 'none'
 			//port.removeListener(function(){ PortRotate() })
 			//land.removeListener(function(){ LandRotate() })
-			PortRotate.remove()
-			LandRotate.remove()
+			port.removeAllListeners()
+			land.removeAllListeners()
 			Image.style.top = "0vh"
 			Image.style.left = "0vw"
 			Image.style.maxWidth = `${window.innerWidth}px`
