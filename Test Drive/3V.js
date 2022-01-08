@@ -478,9 +478,10 @@ function OnTouch(){
 	PlayButton.ontouchstart = function (){
 		if (Mode === 1|| Mode === 2 || Mode === 3 || Mode === 4){
 			Menu.style.display = 'none'
-			port.removeListener(function(){ PortRotate() })
-			land.removeListener(function(){ LandRotate() })
-			
+			//port.removeListener(function(){ PortRotate() })
+			//land.removeListener(function(){ LandRotate() })
+			port.remove()
+			land.remove()
 			Image.style.top = "0vh"
 			Image.style.left = "0vw"
 			Image.style.maxWidth = `${window.innerWidth}px`
