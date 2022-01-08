@@ -440,8 +440,8 @@ function OnTouch(){
 	}
 	
 
-	document.addListener('change', PortRotate)
-	document.addListener('change', LandRotate)
+	screen.addListener('change', PortRotate)
+	screen.addListener('change', LandRotate)
 	
 	TiltMode.ontouchstart = function (){
 		TiltMode.style.border = "solid yellow 2px"
