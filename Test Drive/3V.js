@@ -481,7 +481,7 @@ function OnTouch(){
 			//port.removeListener(function(){ PortRotate() })
 			//land.removeListener(function(){ LandRotate() })
 			port.removeListener('event', function(){ PortRotate() })
-			land.removeListener'event', (function(){ LandRotate() })
+			land.removeListener('event', function(){ LandRotate() })
 			Image.style.top = "0vh"
 			Image.style.left = "0vw"
 			Image.style.maxWidth = `${window.innerWidth}px`
