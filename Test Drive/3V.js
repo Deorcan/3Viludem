@@ -440,8 +440,8 @@ function OnTouch(){
 	}
 	
 
-	port.addListener('event', function(){ PortRotate() })
-	land.addListener('event', function(){ LandRotate() })
+	port.addListener(PR = function(){ PortRotate() })
+	land.addListener(LR = function(){ LandRotate() })
 	
 	TiltMode.ontouchstart = function (){
 		TiltMode.style.border = "solid yellow 2px"
@@ -480,8 +480,8 @@ function OnTouch(){
 			Menu.style.display = 'none'
 			//port.removeListener(function(){ PortRotate() })
 			//land.removeListener(function(){ LandRotate() })
-			port.removeListener('event', function(){ PortRotate() })
-			land.removeListener('event', function(){ LandRotate() })
+			//port.removeListener('event', function(){ PortRotate() })
+			//land.removeListener('event', function(){ LandRotate() })
 			Image.style.top = "0vh"
 			Image.style.left = "0vw"
 			Image.style.maxWidth = `${window.innerWidth}px`
