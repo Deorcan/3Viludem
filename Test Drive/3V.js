@@ -504,9 +504,9 @@ function OnTouch(){
 			
 				
 	CloseButton.ontouchstart = function (){ Menu.style.display = 'none'}
-	if (Display === 'block' && land.matches){
+	if (Display === 'block' && land.matches && Mode === 0){
 		if(!Menu.ontouchstart){ Menu.style.display = 'none'}	
-	}else if (Display === 'none' && land.matches){
+	}else if (Display === 'none' && land.matches && Mode === 0){
 		if(!Menu.ontouchstart){Menu.style.display = 'block'}
 	}	
 }
