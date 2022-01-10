@@ -438,8 +438,8 @@ function OnTouch(){
 		Menu.style.display = 'block'			
 	}
 	
-	port.addListener(PortRotate)
-	land.addListener(LandRotate)
+	port.addListener(Porting)
+	land.addListener(Landing)
 
 	TiltMode.ontouchstart = function (){
 		TiltMode.style.border = "solid yellow 2px"
@@ -447,46 +447,54 @@ function OnTouch(){
 		DPadMode.style.border = "none"
 		TouchMode.style.border = "none"
 		Descript.innerHTML = "In this mode, you tilt the screen to move the cursor and shoot via the fire button"
-		Mode = 1
+		PlayButton.ontouchstart = function (){
+			Mode = 1
 		}
+	}
 	PenMode.ontouchstart = function (){
 		TiltMode.style.border = "none"
 		PenMode.style.border = "solid yellow 2px"
 		DPadMode.style.border = "none"
 		TouchMode.style.border = "none"
 		Descript.innerHTML = "In this mode, you drag the cursor around screen and shoot via the fire button"
-		Mode = 2
+		PlayButton.ontouchstart = function (){
+			Mode = 2
 		}
+	}
 	DPadMode.ontouchstart = function (){
 		TiltMode.style.border = "none"
 		PenMode.style.border = "none"
 		DPadMode.style.border = "solid yellow 2px"
 		TouchMode.style.border = "none"
 		Descript.innerHTML = "In this mode, you move cursor via a D-Pad and shoot via the fire button"
-		Mode = 3
+		PlayButton.ontouchstart = function (){
+			Mode = 3
 		}
+	}
 	TouchMode.ontouchstart = function (){
 		TiltMode.style.border = "none"
 		PenMode.style.border = "none"
 		DPadMode.style.border = "none"
 		TouchMode.style.border = "solid yellow 2px"
 		Descript.innerHTML = "In this mode, you touch the screen and a laser shoots"
-		Mode = 4
-		}
-	PlayButton.ontouchstart = function (){
-		if (Mode === 1|| Mode === 2 || Mode === 3 || Mode === 4){
-			Menu.style.display = 'none'
-			
-			Image.style.top = "0vh"
-			Image.style.left = "0vw"
-			Image.style.maxWidth = `${window.innerWidth}px`
-			Image.style.maxHeight = `${window.innerHeight}px`			
-	
-			PauseButton.style.display = 'block'
-			ScoreT2.style.display = 'block'
-			HighScoreT2.style.display = 'block'
+		PlayButton.ontouchstart = function (){
+			Mode = 4
 		}
 	}
+	
+	if (Mode === 1|| Mode === 2 || Mode === 3 || Mode === 4){
+		Menu.style.display = 'none'
+			
+		Image.style.top = "0vh"
+		Image.style.left = "0vw"
+		Image.style.maxWidth = `${window.innerWidth}px`
+		Image.style.maxHeight = `${window.innerHeight}px`			
+	
+		PauseButton.style.display = 'block'
+		ScoreT2.style.display = 'block'
+		HighScoreT2.style.display = 'block'
+	}
+
 			
 				
 	CloseButton.ontouchstart = function (){ Menu.style.display = 'none'}
