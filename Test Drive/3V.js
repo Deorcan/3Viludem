@@ -399,6 +399,7 @@ LandRotate = function (){
 	}
 }
 PortScreen = function (){
+	port.removeListener(PortRotate)
 	if (port.matches){
 		Image.style.top = "25vh"
 		Image.style.left = "3vw"
@@ -412,6 +413,7 @@ PortScreen = function (){
 	}
 }
 LandScreen = function (){
+	land.removeListener(LandRotate)
 	if (land.matches){
 		Image.style.top = "0vh"
 		Image.style.left = "0vw"
@@ -444,8 +446,8 @@ function OnTouch(){
 	//land.addListener(LR = function(){ LandRotate() })
 	port.addListener(PortRotate)
 	land.addListener(LandRotate)
-	port.removeListener(PortRotate)
-	land.removeListener(LandRotate)
+	//port.removeListener(PortRotate)
+	//land.removeListener(LandRotate)
 	TiltMode.ontouchstart = function (){
 		TiltMode.style.border = "solid yellow 2px"
 		PenMode.style.border = "none"
