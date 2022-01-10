@@ -386,44 +386,41 @@ function MouseOff(){
 
 }
 
-PortRotate = function (){
+Porting = function (){
 	if (port.matches){
-		PlsRotate.style.display = 'block'
-		Menu.style.display = 'none'
-	}
-}
-LandRotate = function (){
-	if (land.matches){
-		PlsRotate.style.display = 'none'
-		Menu.style.display = 'block'
-	}
-}
-PortScreen = function (){
-	port.removeListener(PortRotate)
-	if (port.matches){
-		Image.style.top = "25vh"
-		Image.style.left = "3vw"
-		Image.style.maxWidth = "94%"
-		Image.style.maxHeight = "94%"
+		if (Mode === 0){
+			PlsRotate.style.display = 'block'
+			Menu.style.display = 'none'
+		}else{
+			Image.style.top = "25vh"
+			Image.style.left = "3vw"
+			Image.style.maxWidth = "94%"
+			Image.style.maxHeight = "94%"
 				
-		PauseButton.style.display = 'none'
-		ScoreT2.style.display = 'none'
-		HighScoreT2.style.display = 'none'
-		PlsRotate.style.display = 'block'
+			PauseButton.style.display = 'none'
+			ScoreT2.style.display = 'none'
+			HighScoreT2.style.display = 'none'
+			PlsRotate.style.display = 'block'
+		}
 	}
 }
-LandScreen = function (){
-	land.removeListener(LandRotate)
+Landing = function (){
 	if (land.matches){
-		Image.style.top = "0vh"
-		Image.style.left = "0vw"
-		Image.style.maxWidth = `${window.innerWidth}px`
-		Image.style.maxHeight = `${window.innerHeight}px`			
+		if (Mode === 0){
+			PlsRotate.style.display = 'none'
+			Menu.style.display = 'block'
+		}else{
+			Image.style.top = "0vh"
+			Image.style.left = "0vw"
+			Image.style.maxWidth = `${window.innerWidth}px`
+			Image.style.maxHeight = `${window.innerHeight}px`			
 
-		PauseButton.style.display = 'block'
-		ScoreT2.style.display = 'block'
-		HighScoreT2.style.display = 'block'
-		PlsRotate.style.display = 'none'
+			PauseButton.style.display = 'block'
+			ScoreT2.style.display = 'block'
+			HighScoreT2.style.display = 'block'
+			PlsRotate.style.display = 'none'
+			Menu.style.display = 'none'
+		}
 	}
 }
 function OnTouch(){
@@ -441,13 +438,9 @@ function OnTouch(){
 		Menu.style.display = 'block'			
 	}
 	
-
-	//port.addListener(PR = function(){ PortRotate() })
-	//land.addListener(LR = function(){ LandRotate() })
 	port.addListener(PortRotate)
 	land.addListener(LandRotate)
-	//port.removeListener(PortRotate)
-	//land.removeListener(LandRotate)
+
 	TiltMode.ontouchstart = function (){
 		TiltMode.style.border = "solid yellow 2px"
 		PenMode.style.border = "none"
@@ -483,24 +476,15 @@ function OnTouch(){
 	PlayButton.ontouchstart = function (){
 		if (Mode === 1|| Mode === 2 || Mode === 3 || Mode === 4){
 			Menu.style.display = 'none'
-			//port.removeListener(function(){ PortRotate() })
-			//land.removeListener(function(){ LandRotate() })
-			//port.removeListener('event', function(){ PortRotate() })
-			//land.removeListener('event', function(){ LandRotate() })
 			
 			Image.style.top = "0vh"
 			Image.style.left = "0vw"
 			Image.style.maxWidth = `${window.innerWidth}px`
-			Image.style.maxHeight = `${window.innerHeight}px`
-				
+			Image.style.maxHeight = `${window.innerHeight}px`			
 	
 			PauseButton.style.display = 'block'
 			ScoreT2.style.display = 'block'
 			HighScoreT2.style.display = 'block'
-			
-			//port.addEventListener('change', PortScreen)
-			//land.addEventListener('change', LandScreen)
-				
 		}
 	}
 			
