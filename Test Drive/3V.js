@@ -444,6 +444,8 @@ function OnTouch(){
 	//land.addListener(LR = function(){ LandRotate() })
 	port.addListener(PortRotate)
 	land.addListener(LandRotate)
+	port.removeListener(PortRotate)
+	land.removeListener(LandRotate)
 	TiltMode.ontouchstart = function (){
 		TiltMode.style.border = "solid yellow 2px"
 		PenMode.style.border = "none"
@@ -483,8 +485,7 @@ function OnTouch(){
 			//land.removeListener(function(){ LandRotate() })
 			//port.removeListener('event', function(){ PortRotate() })
 			//land.removeListener('event', function(){ LandRotate() })
-			port.removeListener(PortRotate)
-			land.removeListener(LandRotate)
+			
 			Image.style.top = "0vh"
 			Image.style.left = "0vw"
 			Image.style.maxWidth = `${window.innerWidth}px`
