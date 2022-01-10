@@ -448,6 +448,7 @@ function OnTouch(){
 		TouchMode.style.border = "none"
 		Descript.innerHTML = "In this mode, you tilt the screen to move the cursor and shoot via the fire button"
 		PlayButton.ontouchstart = function (){
+			Menu.style.display = 'none'
 			Mode = 1
 		}
 	}
@@ -458,6 +459,7 @@ function OnTouch(){
 		TouchMode.style.border = "none"
 		Descript.innerHTML = "In this mode, you drag the cursor around screen and shoot via the fire button"
 		PlayButton.ontouchstart = function (){
+			Menu.style.display = 'none'
 			Mode = 2
 		}
 	}
@@ -468,6 +470,7 @@ function OnTouch(){
 		TouchMode.style.border = "none"
 		Descript.innerHTML = "In this mode, you move cursor via a D-Pad and shoot via the fire button"
 		PlayButton.ontouchstart = function (){
+			Menu.style.display = 'none'
 			Mode = 3
 		}
 	}
@@ -478,6 +481,7 @@ function OnTouch(){
 		TouchMode.style.border = "solid yellow 2px"
 		Descript.innerHTML = "In this mode, you touch the screen and a laser shoots"
 		PlayButton.ontouchstart = function (){
+			Menu.style.display = 'none'
 			Mode = 4
 		}
 	}
