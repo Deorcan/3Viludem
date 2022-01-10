@@ -451,6 +451,14 @@ function OnTouch(){
 		Descript.innerHTML = "In this mode, you tilt the screen to move the cursor and shoot via the fire button"
 		PlayButton.ontouchstart = function (){
 			Menu.style.display = 'none'
+			Image.style.top = "0vh"
+			Image.style.left = "0vw"
+			Image.style.maxWidth = `${window.innerWidth}px`
+			Image.style.maxHeight = `${window.innerHeight}px`			
+	
+			PauseButton.style.display = 'block'
+			ScoreT2.style.display = 'block'
+			HighScoreT2.style.display = 'block'
 			Mode = 1
 		}
 	}
@@ -462,6 +470,14 @@ function OnTouch(){
 		Descript.innerHTML = "In this mode, you drag the cursor around screen and shoot via the fire button"
 		PlayButton.ontouchstart = function (){
 			Menu.style.display = 'none'
+			Image.style.top = "0vh"
+			Image.style.left = "0vw"
+			Image.style.maxWidth = `${window.innerWidth}px`
+			Image.style.maxHeight = `${window.innerHeight}px`			
+	
+			PauseButton.style.display = 'block'
+			ScoreT2.style.display = 'block'
+			HighScoreT2.style.display = 'block'
 			Mode = 2
 		}
 	}
@@ -473,6 +489,14 @@ function OnTouch(){
 		Descript.innerHTML = "In this mode, you move cursor via a D-Pad and shoot via the fire button"
 		PlayButton.ontouchstart = function (){
 			Menu.style.display = 'none'
+			Image.style.top = "0vh"
+			Image.style.left = "0vw"
+			Image.style.maxWidth = `${window.innerWidth}px`
+			Image.style.maxHeight = `${window.innerHeight}px`			
+	
+			PauseButton.style.display = 'block'
+			ScoreT2.style.display = 'block'
+			HighScoreT2.style.display = 'block'
 			Mode = 3
 		}
 	}
@@ -484,24 +508,17 @@ function OnTouch(){
 		Descript.innerHTML = "In this mode, you touch the screen and a laser shoots"
 		PlayButton.ontouchstart = function (){
 			Menu.style.display = 'none'
+			Image.style.top = "0vh"
+			Image.style.left = "0vw"
+			Image.style.maxWidth = `${window.innerWidth}px`
+			Image.style.maxHeight = `${window.innerHeight}px`			
+	
+			PauseButton.style.display = 'block'
+			ScoreT2.style.display = 'block'
+			HighScoreT2.style.display = 'block'
 			Mode = 4
 		}
 	}
-	
-	if (Mode === 1|| Mode === 2 || Mode === 3 || Mode === 4){
-		Menu.style.display = 'none'
-			
-		Image.style.top = "0vh"
-		Image.style.left = "0vw"
-		Image.style.maxWidth = `${window.innerWidth}px`
-		Image.style.maxHeight = `${window.innerHeight}px`			
-	
-		PauseButton.style.display = 'block'
-		ScoreT2.style.display = 'block'
-		HighScoreT2.style.display = 'block'
-	}
-
-			
 				
 	CloseButton.ontouchstart = function (){ Menu.style.display = 'none'}
 	if (Display === 'block' && land.matches && Mode === 0){
