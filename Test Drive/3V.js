@@ -41,7 +41,8 @@ let Lasers
 let IfMouse = false
 let IfTouch = false
 var Mode = 0
-
+var landX
+var landY
 var port = window.matchMedia("(orientation: portrait)")
 var land = window.matchMedia("(orientation: landscape)")
 
@@ -412,8 +413,8 @@ Landing = function (){
 		}else{
 			Image.style.top = "0vh"
 			Image.style.left = "0vw"
-			Image.style.maxWidth = `${window.innerWidth}px`
-			Image.style.maxHeight = `${window.innerHeight}px`			
+			Image.style.maxWidth = landX
+			Image.style.maxHeight = landY			
 
 			PauseButton.style.display = 'block'
 			ScoreT2.style.display = 'block'
@@ -454,7 +455,9 @@ function OnTouch(){
 			Image.style.top = "0vh"
 			Image.style.left = "0vw"
 			Image.style.maxWidth = `${window.innerWidth}px`
-			Image.style.maxHeight = `${window.innerHeight}px`			
+			Image.style.maxHeight = `${window.innerHeight}px`
+			landX = `${window.innerWidth}px`
+			landY = `${window.innerHeight}px`
 	
 			PauseButton.style.display = 'block'
 			ScoreT2.style.display = 'block'
@@ -473,7 +476,9 @@ function OnTouch(){
 			Image.style.top = "0vh"
 			Image.style.left = "0vw"
 			Image.style.maxWidth = `${window.innerWidth}px`
-			Image.style.maxHeight = `${window.innerHeight}px`			
+			Image.style.maxHeight = `${window.innerHeight}px`
+			landX = `${window.innerWidth}px`
+			landY = `${window.innerHeight}px`
 	
 			PauseButton.style.display = 'block'
 			ScoreT2.style.display = 'block'
@@ -492,7 +497,9 @@ function OnTouch(){
 			Image.style.top = "0vh"
 			Image.style.left = "0vw"
 			Image.style.maxWidth = `${window.innerWidth}px`
-			Image.style.maxHeight = `${window.innerHeight}px`			
+			Image.style.maxHeight = `${window.innerHeight}px`
+			landX = `${window.innerWidth}px`
+			landY = `${window.innerHeight}px`
 	
 			PauseButton.style.display = 'block'
 			ScoreT2.style.display = 'block'
@@ -511,7 +518,9 @@ function OnTouch(){
 			Image.style.top = "0vh"
 			Image.style.left = "0vw"
 			Image.style.maxWidth = `${window.innerWidth}px`
-			Image.style.maxHeight = `${window.innerHeight}px`			
+			Image.style.maxHeight = `${window.innerHeight}px`
+			landX = `${window.innerWidth}px`
+			landY = `${window.innerHeight}px`
 	
 			PauseButton.style.display = 'block'
 			ScoreT2.style.display = 'block'
