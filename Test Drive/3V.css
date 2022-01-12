@@ -209,7 +209,7 @@
 		text-align: center;
 		opacity: 1.0;
 	}
-	#tilt, #pen, #d-pad, #touch {
+	#tilt, #pen, #d-pad, #touch, #keyboard, #mouse {
 		max-width: 70%;
 		max-height: 70%;
 		opacity: 1.0;
