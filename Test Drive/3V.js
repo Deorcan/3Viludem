@@ -455,7 +455,10 @@ function OnTouch(){
 			DPadMode.style.border = "none"
 			TouchMode.style.border = "none"
 			Descript.innerHTML = "In this mode, you move cursor via arrowkeys and shoot via the spacebar"
-			PlayButton.onclick = function (){}
+			PlayButton.onclick = function (){
+				Menu.style.display = 'none'
+				Mode = 5
+			}
 		}
 		MouseMode.onclick = function (){
 			KeyboardMode.style.border = "none"
@@ -465,7 +468,10 @@ function OnTouch(){
 			DPadMode.style.border = "none"
 			TouchMode.style.border = "none"
 			Descript.innerHTML = "In this mode, you drag the cursor around screen and shoot via the left button"
-			PlayButton.onclick = function (){}
+			PlayButton.onclick = function (){
+				Menu.style.display = 'none'
+				Mode = 6
+			}
 		}
 	}else{ 
 		KeyboardMode.style.display = "none"
