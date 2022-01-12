@@ -446,7 +446,7 @@ function OnTouch(){
 	port.addListener(Porting)
 	land.addListener(Landing)
 	
-	if (!isMobile || !isTablet){
+	if ((!isMobile && !isTablet) || (!isMobile && isTablet)){
 		KeyboardMode.onclick = function (){
 			KeyboardMode.style.border = "solid yellow 2px"
 			MouseMode.style.border = "none"
