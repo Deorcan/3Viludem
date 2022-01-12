@@ -17,6 +17,8 @@ const TouchStart = document.getElementById("touchstart")
 const PlsRotate = document.getElementById("plsrotate")
 const Menu = document.getElementById("menu")
 const CloseButton = document.getElementById("close")
+const KeyboardMode = document.getElementById("keyboard")
+const MouseMode = document.getElementById("mouse")
 const TiltMode = document.getElementById("tilt")
 const PenMode = document.getElementById("pen")
 const DPadMode = document.getElementById("d-pad")
@@ -443,8 +445,35 @@ function OnTouch(){
 	
 	port.addListener(Porting)
 	land.addListener(Landing)
-
+	
+	if (!isMobile || !isTablet){
+		KeyboardMode.onclick = function (){
+			KeyboardMode.style.border = "solid yellow 2px"
+			MouseMode.style.border = "none"
+			TiltMode.style.border = "none"
+			PenMode.style.border = "none"
+			DPadMode.style.border = "none"
+			TouchMode.style.border = "none"
+			Descript.innerHTML = "In this mode, you move cursor via arrowkeys and shoot via the spacebar"
+			PlayButton.onclick = function (){}
+		}
+		MouseMode.onclick = function (){
+			KeyboardMode.style.border = "none"
+			MouseMode.style.border = "solid yellow 2px"
+			TiltMode.style.border = "none"
+			PenMode.style.border = "none"
+			DPadMode.style.border = "none"
+			TouchMode.style.border = "none"
+			Descript.innerHTML = "In this mode, you drag the cursor around screen and shoot via the left button"
+			PlayButton.onclick = function (){}
+		}
+	}else{ 
+		KeyboardMode.style.display = "none"
+		MouseMode.style.display = "none"
+	     }
 	TiltMode.ontouchstart = function (){
+		KeyboardMode.style.border = "none"
+		MouseMode.style.border = "none"
 		TiltMode.style.border = "solid yellow 2px"
 		PenMode.style.border = "none"
 		DPadMode.style.border = "none"
@@ -466,6 +495,8 @@ function OnTouch(){
 		}
 	}
 	PenMode.ontouchstart = function (){
+		KeyboardMode.style.border = "none"
+		MouseMode.style.border = "none"
 		TiltMode.style.border = "none"
 		PenMode.style.border = "solid yellow 2px"
 		DPadMode.style.border = "none"
@@ -487,6 +518,8 @@ function OnTouch(){
 		}
 	}
 	DPadMode.ontouchstart = function (){
+		KeyboardMode.style.border = "none"
+		MouseMode.style.border = "none"
 		TiltMode.style.border = "none"
 		PenMode.style.border = "none"
 		DPadMode.style.border = "solid yellow 2px"
@@ -508,6 +541,8 @@ function OnTouch(){
 		}
 	}
 	TouchMode.ontouchstart = function (){
+		KeyboardMode.style.border = "none"
+		MouseMode.style.border = "none"
 		TiltMode.style.border = "none"
 		PenMode.style.border = "none"
 		DPadMode.style.border = "none"
@@ -528,7 +563,8 @@ function OnTouch(){
 			Mode = 4
 		}
 	}
-				
+	
+	
 	CloseButton.ontouchstart = function (){ Menu.style.display = 'none'}
 	if (Display === 'block' && land.matches && Mode === 0){
 		if(!Menu.ontouchstart){ Menu.style.display = 'none'}	
