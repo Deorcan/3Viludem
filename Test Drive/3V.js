@@ -446,7 +446,7 @@ function OnTouch(){
 	port.addListener(Porting)
 	land.addListener(Landing)
 	
-	if ((!isMobile && !isTablet) || (!isMobile && isTablet)){
+	if (!isMobile && !isTablet){
 		KeyboardMode.onclick = function (){
 			KeyboardMode.style.border = "solid yellow 2px"
 			MouseMode.style.border = "none"
@@ -576,7 +576,9 @@ function OnTouch(){
 		if(!Menu.ontouchstart){ Menu.style.display = 'none'}	
 	}else if (Display === 'none' && land.matches && Mode === 0){
 		if(!Menu.ontouchstart){Menu.style.display = 'block'}
-	}	
+	}
+	
+	
 }
 
 function playgame(){
