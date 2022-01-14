@@ -229,6 +229,9 @@
 	ul {
 		 list-style-type: none;
 	}
+	#keyboard, #mouse {
+		margin-left: 70%;
+	}
 	#close {
 		position: absolute;
 		opacity: 1.0;
