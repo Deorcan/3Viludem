@@ -229,9 +229,11 @@
 	ul {
 		 list-style-type: none;
 	}
+	
 	#keyboard, #mouse {
-		margin-left: 70%;
+		margin-left: 80%;
 	}
+	
 	#close {
 		position: absolute;
 		opacity: 1.0;
