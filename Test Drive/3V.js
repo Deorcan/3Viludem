@@ -79,7 +79,7 @@ function isTabletOrMobile(){
 		Control.style.display = "none"
 		text2.style.marginTop = "5vh"
 		Desktop.style.display = 'none'
-		Touchscreen.style.marginLeft = 'auto'
+		Touchscreen.style.marginLeft = '-50%'
 		
 	}
 }
