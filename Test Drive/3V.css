@@ -223,7 +223,7 @@
 		text-align: center;
 	}
 	li {
-		float: none;
+		float: left;
 		width: 20%;
 	}
 	ul {
