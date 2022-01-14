@@ -81,7 +81,10 @@ function isTabletOrMobile(){
 		Desktop.style.display = 'none'
 		//Touchscreen.style.marginLeft = '-50%'
 		
+	}else {
+		Touchscreen.style.marginLeft = "50%"
 	}
+	
 }
 	
 
