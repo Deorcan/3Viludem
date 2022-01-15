@@ -82,10 +82,6 @@ function isTabletOrMobile(){
 		
 	}else {
 		Touchscreen.style.marginLeft = "12%"
-		var NewLine = document.createElement('br')
-		Desktop.appendChild(NewLine)
-		Desktop.appendChild(NewLine)
-		
 	}
 	
 }
