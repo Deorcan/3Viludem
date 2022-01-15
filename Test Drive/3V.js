@@ -82,7 +82,7 @@ function isTabletOrMobile(){
 		//Touchscreen.style.marginLeft = '-50%'
 		
 	}else {
-		Touchscreen.style.marginLeft = "-5%"
+		Touchscreen.style.marginLeft = "25%"
 	}
 	
 }
