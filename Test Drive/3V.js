@@ -435,7 +435,7 @@ Landing = function (){
 	}
 }
 function OnTouch(){
-	event.preventDefault()
+	//event.preventDefault()
 	TouchStart.style.display = "none"
 	IfTouch = true
 	let Display =  window.getComputedStyle(Menu).getPropertyValue('display')
