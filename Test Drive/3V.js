@@ -83,6 +83,7 @@ function isTabletOrMobile(){
 		
 	}else {
 		Touchscreen.style.marginLeft = "12%"
+		OnTouch()
 	}
 	
 }
@@ -484,7 +485,7 @@ function OnTouch(){
 		KeyboardMode.style.display = "none"
 		MouseMode.style.display = "none"
 	     }
-	TiltMode.ontouchstart = function (){
+	TiltMode.onclick = function (){
 		KeyboardMode.style.border = "none"
 		MouseMode.style.border = "none"
 		TiltMode.style.border = "solid yellow 2px"
@@ -507,7 +508,7 @@ function OnTouch(){
 			Mode = 1
 		}
 	}
-	PenMode.ontouchstart = function (){
+	PenMode.onclick = function (){
 		KeyboardMode.style.border = "none"
 		MouseMode.style.border = "none"
 		TiltMode.style.border = "none"
@@ -530,7 +531,7 @@ function OnTouch(){
 			Mode = 2
 		}
 	}
-	DPadMode.ontouchstart = function (){
+	DPadMode.onclick = function (){
 		KeyboardMode.style.border = "none"
 		MouseMode.style.border = "none"
 		TiltMode.style.border = "none"
@@ -553,7 +554,7 @@ function OnTouch(){
 			Mode = 3
 		}
 	}
-	TouchMode.ontouchstart = function (){
+	TouchMode.onclick = function (){
 		KeyboardMode.style.border = "none"
 		MouseMode.style.border = "none"
 		TiltMode.style.border = "none"
