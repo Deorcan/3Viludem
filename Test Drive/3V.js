@@ -82,6 +82,10 @@ function isTabletOrMobile(){
 		
 	}else {
 		Touchscreen.style.marginLeft = "12%"
+		var NewLine = document.createElement('br')
+		Desktop.appendChild(NewLine)
+		Desktop.appendChild(NewLine)
+		
 	}
 	
 }
@@ -453,7 +457,6 @@ function OnTouch(){
 	land.addListener(Landing)
 	
 	if (!isMobile && !isTablet){
-		Descript.innerHTML = "<br><br>" + Descript.innerHTML
 		
 		KeyboardMode.onclick = function (){
 			KeyboardMode.style.border = "solid yellow 2px"
