@@ -79,11 +79,9 @@ function isTabletOrMobile(){
 		Control.style.display = "none"
 		text2.style.marginTop = "5vh"
 		Desktop.style.display = 'none'
-		//Touchscreen.style.marginLeft = '-50%'
 		
 	}else {
 		Touchscreen.style.marginLeft = "12%"
-		OnTouch()
 	}
 	
 }
@@ -96,7 +94,7 @@ if (IsTouch()){
 	Image.innerHTML += PlsRotate
 	Image.innerHTML += Menu
 	TouchStart.style.display = "block"
-	Image.ontouchstart = function() {OnTouch()}
+	Image.onclick = function() {OnTouch()}
 }
 
 
@@ -435,7 +433,7 @@ Landing = function (){
 	}
 }
 function OnTouch(){
-	//event.preventDefault()
+	event.preventDefault()
 	TouchStart.style.display = "none"
 	IfTouch = true
 	let Display =  window.getComputedStyle(Menu).getPropertyValue('display')
