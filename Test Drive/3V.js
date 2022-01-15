@@ -445,7 +445,7 @@ function OnTouch(){
 
 		if (land.matches) {
 			PlsRotate.style.display = 'none'
-			Menu.style.display = 'block'			
+			Menu.style.display = 'block'
 		}
 	}
 	
@@ -453,6 +453,8 @@ function OnTouch(){
 	land.addListener(Landing)
 	
 	if (!isMobile && !isTablet){
+		Descript.innerHTML = "<br><br>" + Descript.innerHTML
+		
 		KeyboardMode.onclick = function (){
 			KeyboardMode.style.border = "solid yellow 2px"
 			MouseMode.style.border = "none"
