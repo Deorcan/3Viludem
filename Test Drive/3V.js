@@ -431,6 +431,20 @@ Landing = function (){
 		}
 	}
 }
+PlayTouch = function(){
+	Menu.style.display = 'none'
+	Image.style.top = "0vh"
+	Image.style.left = "0vw"
+	Image.style.maxWidth = `${window.innerWidth}px`
+	Image.style.maxHeight = `${window.innerHeight}px`
+	landX = `${window.innerWidth}px`
+	landY = `${window.innerHeight}px`
+	
+	PauseButton.style.display = 'block'
+	ScoreT2.style.display = 'block'
+	HighScoreT2.style.display = 'block'
+}
+
 function OnTouch(){
 //	event.preventDefault()
 	TouchStart.style.display = "none"
@@ -492,17 +506,7 @@ function OnTouch(){
 		TouchMode.style.border = "none"
 		Descript.innerHTML = "In this mode, you tilt the screen to move the cursor and shoot via the fire button"
 		PlayButton.ontouchstart = function (){
-			Menu.style.display = 'none'
-			Image.style.top = "0vh"
-			Image.style.left = "0vw"
-			Image.style.maxWidth = `${window.innerWidth}px`
-			Image.style.maxHeight = `${window.innerHeight}px`
-			landX = `${window.innerWidth}px`
-			landY = `${window.innerHeight}px`
-	
-			PauseButton.style.display = 'block'
-			ScoreT2.style.display = 'block'
-			HighScoreT2.style.display = 'block'
+			PlayTouch()
 			Mode = 1
 		}
 	}
@@ -515,17 +519,7 @@ function OnTouch(){
 		TouchMode.style.border = "none"
 		Descript.innerHTML = "In this mode, you drag the cursor around screen and shoot via the fire button"
 		PlayButton.ontouchstart = function (){
-			Menu.style.display = 'none'
-			Image.style.top = "0vh"
-			Image.style.left = "0vw"
-			Image.style.maxWidth = `${window.innerWidth}px`
-			Image.style.maxHeight = `${window.innerHeight}px`
-			landX = `${window.innerWidth}px`
-			landY = `${window.innerHeight}px`
-	
-			PauseButton.style.display = 'block'
-			ScoreT2.style.display = 'block'
-			HighScoreT2.style.display = 'block'
+			PlayTouch()
 			Mode = 2
 		}
 	}
@@ -538,17 +532,7 @@ function OnTouch(){
 		TouchMode.style.border = "none"
 		Descript.innerHTML = "In this mode, you move cursor via a D-Pad and shoot via the fire button"
 		PlayButton.ontouchstart = function (){
-			Menu.style.display = 'none'
-			Image.style.top = "0vh"
-			Image.style.left = "0vw"
-			Image.style.maxWidth = `${window.innerWidth}px`
-			Image.style.maxHeight = `${window.innerHeight}px`
-			landX = `${window.innerWidth}px`
-			landY = `${window.innerHeight}px`
-	
-			PauseButton.style.display = 'block'
-			ScoreT2.style.display = 'block'
-			HighScoreT2.style.display = 'block'
+			PlayTouch()
 			Mode = 3
 		}
 	}
@@ -561,17 +545,7 @@ function OnTouch(){
 		TouchMode.style.border = "solid yellow 2px"
 		Descript.innerHTML = "In this mode, you touch the screen and a laser shoots"
 		PlayButton.ontouchstart = function (){
-			Menu.style.display = 'none'
-			Image.style.top = "0vh"
-			Image.style.left = "0vw"
-			Image.style.maxWidth = `${window.innerWidth}px`
-			Image.style.maxHeight = `${window.innerHeight}px`
-			landX = `${window.innerWidth}px`
-			landY = `${window.innerHeight}px`
-	
-			PauseButton.style.display = 'block'
-			ScoreT2.style.display = 'block'
-			HighScoreT2.style.display = 'block'
+			PlayTouch()
 			Mode = 4
 		}
 	}
