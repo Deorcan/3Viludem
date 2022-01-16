@@ -92,7 +92,7 @@ if (IsTouch()){
 	Image.innerHTML += PlsRotate
 	Image.innerHTML += Menu
 	TouchStart.style.display = "block"
-	Image.onclick = function() {OnTouch()}
+	Image.ontouchstart = function() {OnTouch()}
 }
 
 
@@ -431,7 +431,7 @@ Landing = function (){
 	}
 }
 function OnTouch(){
-	//event.preventDefault()
+	event.preventDefault()
 	TouchStart.style.display = "none"
 	IfTouch = true
 	let Display =  window.getComputedStyle(Menu).getPropertyValue('display')
@@ -452,7 +452,7 @@ function OnTouch(){
 	
 	if (!isMobile && !isTablet){
 		
-		KeyboardMode.onclick = function (){
+		KeyboardMode.ontouchstart = function (){
 			KeyboardMode.style.border = "solid yellow 2px"
 			MouseMode.style.border = "none"
 			TiltMode.style.border = "none"
@@ -465,7 +465,7 @@ function OnTouch(){
 				Mode = 5
 			}
 		}
-		MouseMode.onclick = function (){
+		MouseMode.ontouchstart = function (){
 			KeyboardMode.style.border = "none"
 			MouseMode.style.border = "solid yellow 2px"
 			TiltMode.style.border = "none"
@@ -482,7 +482,7 @@ function OnTouch(){
 		KeyboardMode.style.display = "none"
 		MouseMode.style.display = "none"
 	     }
-	TiltMode.onclick = function (){
+	TiltMode.ontouchstart = function (){
 		KeyboardMode.style.border = "none"
 		MouseMode.style.border = "none"
 		TiltMode.style.border = "solid yellow 2px"
@@ -505,7 +505,7 @@ function OnTouch(){
 			Mode = 1
 		}
 	}
-	PenMode.onclick = function (){
+	PenMode.ontouchstart = function (){
 		KeyboardMode.style.border = "none"
 		MouseMode.style.border = "none"
 		TiltMode.style.border = "none"
@@ -528,7 +528,7 @@ function OnTouch(){
 			Mode = 2
 		}
 	}
-	DPadMode.onclick = function (){
+	DPadMode.ontouchstart = function (){
 		KeyboardMode.style.border = "none"
 		MouseMode.style.border = "none"
 		TiltMode.style.border = "none"
@@ -551,7 +551,7 @@ function OnTouch(){
 			Mode = 3
 		}
 	}
-	TouchMode.onclick = function (){
+	TouchMode.ontouchstart = function (){
 		KeyboardMode.style.border = "none"
 		MouseMode.style.border = "none"
 		TiltMode.style.border = "none"
@@ -576,11 +576,11 @@ function OnTouch(){
 	}
 	
 	
-	CloseButton.onclick = function (){ Menu.style.display = 'none'}
+	CloseButton.ontouchstart = function (){ Menu.style.display = 'none'}
 	if (Display === 'block' && land.matches && Mode === 0){
-		if(!Menu.onclick){ Menu.style.display = 'none'}	
+		if(!Menu.ontouchstart){ Menu.style.display = 'none'}	
 	}else if (Display === 'none' && land.matches && Mode === 0){
-		if(!Menu.onclick){Menu.style.display = 'block'}
+		if(!Menu.ontouchstart){Menu.style.display = 'block'}
 	}
 	
 	
