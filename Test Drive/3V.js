@@ -23,7 +23,7 @@ const TiltMode = document.getElementById("tilt")
 const PenMode = document.getElementById("pen")
 const DPadMode = document.getElementById("d-pad")
 const TouchMode = document.getElementById("touch")
-const Desktop = document.getElementsByClassName("desktop")
+const Desktop = document.querySelectorAll(".desktop")
 const Touchscreen = document.getElementById("touchscreen")
 const Descript = document.getElementById("descript")
 const PlayButton = document.getElementById("play")
@@ -78,11 +78,9 @@ function isTabletOrMobile(){
 		Para.style.right = "3vw"
 		Control.style.display = "none"
 		text2.style.marginTop = "5vh"
-		Desktop.style.display = 'none'
+		for (var i = 0; i < Desktop.length; i++) {Desktop[i].style.display = "none"}
 		
-	}else {
-		Touchscreen.style.marginLeft = "12%"
-	}
+	}else {	Touchscreen.style.marginLeft = "12%"}
 	
 }
 	
