@@ -93,6 +93,7 @@ if (IsTouch()){
 	Image.innerHTML += Menu
 	TouchStart.style.display = "block"
 	//Image.ontouchstart = function() {OnTouch()}
+	Menu.style.display = 'block'
 	OnTouch()
 }
 
