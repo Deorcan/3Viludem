@@ -452,7 +452,7 @@ function OnTouch(){
 	
 	if (!isMobile && !isTablet){
 		
-		KeyboardMode.ontouchstart = function (){
+		KeyboardMode.onclick = function (){
 			KeyboardMode.style.border = "solid yellow 2px"
 			MouseMode.style.border = "none"
 			TiltMode.style.border = "none"
@@ -465,7 +465,7 @@ function OnTouch(){
 				Mode = 5
 			}
 		}
-		MouseMode.ontouchstart = function (){
+		MouseMode.onclick = function (){
 			KeyboardMode.style.border = "none"
 			MouseMode.style.border = "solid yellow 2px"
 			TiltMode.style.border = "none"
@@ -482,7 +482,7 @@ function OnTouch(){
 		KeyboardMode.style.display = "none"
 		MouseMode.style.display = "none"
 	     }
-	TiltMode.ontouchstart = function (){
+	TiltMode.onclick = function (){
 		KeyboardMode.style.border = "none"
 		MouseMode.style.border = "none"
 		TiltMode.style.border = "solid yellow 2px"
@@ -505,7 +505,7 @@ function OnTouch(){
 			Mode = 1
 		}
 	}
-	PenMode.ontouchstart = function (){
+	PenMode.onclick = function (){
 		KeyboardMode.style.border = "none"
 		MouseMode.style.border = "none"
 		TiltMode.style.border = "none"
@@ -528,7 +528,7 @@ function OnTouch(){
 			Mode = 2
 		}
 	}
-	DPadMode.ontouchstart = function (){
+	DPadMode.onclick = function (){
 		KeyboardMode.style.border = "none"
 		MouseMode.style.border = "none"
 		TiltMode.style.border = "none"
@@ -551,7 +551,7 @@ function OnTouch(){
 			Mode = 3
 		}
 	}
-	TouchMode.ontouchstart = function (){
+	TouchMode.onclick = function (){
 		KeyboardMode.style.border = "none"
 		MouseMode.style.border = "none"
 		TiltMode.style.border = "none"
@@ -576,11 +576,11 @@ function OnTouch(){
 	}
 	
 	
-	CloseButton.ontouchstart = function (){ Menu.style.display = 'none'}
+	CloseButton.onclick = function (){ Menu.style.display = 'none'}
 	if (Display === 'block' && land.matches && Mode === 0){
-		if(!Menu.ontouchstart){ Menu.style.display = 'none'}	
+		if(!Menu.onclick){ Menu.style.display = 'none'}	
 	}else if (Display === 'none' && land.matches && Mode === 0){
-		if(!Menu.ontouchstart){Menu.style.display = 'block'}
+		if(!Menu.onclick){Menu.style.display = 'block'}
 	}
 	
 	
