@@ -443,6 +443,7 @@ PlayTouch = function(){
 	PauseButton.style.display = 'block'
 	ScoreT2.style.display = 'block'
 	HighScoreT2.style.display = 'block'
+	window.scrollTo(0,1)
 }
 
 function OnTouch(){
