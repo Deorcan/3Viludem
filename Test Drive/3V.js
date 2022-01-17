@@ -92,7 +92,7 @@ if (IsTouch()){
 	Image.innerHTML += PlsRotate
 	Image.innerHTML += Menu
 	TouchStart.style.display = "block"
-	Image.onclick = function() {OnTouch()}
+	Image.ontouchstart = function() {OnTouch()}
 	
 }
 
