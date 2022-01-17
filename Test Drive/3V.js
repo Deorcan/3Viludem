@@ -94,7 +94,7 @@ if (IsTouch()){
 	TouchStart.style.display = "block"
 	Image.onclick = function() {OnTouch()}
 	Menu.style.display = 'block'
-	OnTouch()
+	
 }
 
 
@@ -447,7 +447,7 @@ PlayTouch = function(){
 }
 
 function OnTouch(){
-	//event.preventDefault()
+	event.preventDefault()
 	TouchStart.style.display = "none"
 	IfTouch = true
 	let Display =  window.getComputedStyle(Menu).getPropertyValue('display')
