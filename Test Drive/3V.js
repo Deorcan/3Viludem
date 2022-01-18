@@ -436,10 +436,10 @@ PlayTouch = function(){
 	Menu.style.display = 'none'
 	Image.style.top = "0vh"
 	Image.style.left = "0vw"
-	Image.style.maxWidth = `${window.innerWidth}px`
-	Image.style.maxHeight = `${window.innerHeight}px`
-	landX = `${window.innerWidth}px`
-	landY = `${window.innerHeight}px`
+	Image.style.maxWidth = `${window.innerWidth-1}px`
+	Image.style.maxHeight = `${window.innerHeight-1}px`
+	landX = `${window.innerWidth-1}px`
+	landY = `${window.innerHeight-1}px`
 	
 	PauseButton.style.display = 'block'
 	ScoreT2.style.display = 'block'
