@@ -428,7 +428,7 @@ Landing = function (){
 			HighScoreT2.style.display = 'block'
 			PlsRotate.style.display = 'none'
 			Menu.style.display = 'none'
-			PauseButton.src = "PauseButton1.png"
+			PauseButton.src = "Test%20Drive/PauseButton1.png"
 			setTimeout(function(){ window.scrollTo(0,1), 0})
 		}
 	}
@@ -437,10 +437,10 @@ PlayTouch = function(){
 	Menu.style.display = 'none'
 	Image.style.top = "0vh"
 	Image.style.left = "0vw"
-	Image.style.maxWidth = `${window.innerWidth-10}px`
-	Image.style.maxHeight = `${window.innerHeight-10}px`
-	landX = `${window.innerWidth-10}px`
-	landY = `${window.innerHeight-10}px`
+	Image.style.maxWidth = `${window.innerWidth-5}px`
+	Image.style.maxHeight = `${window.innerHeight-5}px`
+	landX = `${window.innerWidth-5}px`
+	landY = `${window.innerHeight-5}px`
 	
 	PauseButton.style.display = 'block'
 	ScoreT2.style.display = 'block'
