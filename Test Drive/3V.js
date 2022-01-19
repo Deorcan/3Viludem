@@ -562,7 +562,7 @@ function OnTouch(){
 	}
 	
 	PauseButton.onclick = function (){
-		if (PauseButton.src.indexOf('Test%20Drive/PauseButto.png') != -1 && TF === false){
+		if (PauseButton.src.indexOf('Test%20Drive/PauseButton.png') != -1){
 			PauseButton.src = 'Test%20Drive/PauseButton1.png'
 			TF = true
 			FT = false
@@ -570,7 +570,7 @@ function OnTouch(){
 			Start.style.display = 'block'
 			Restart.style.display = 'block'
 			
-		}else if (PauseButton.src.indexOf('Test%20Drive/PauseButton1.png') != -1 && TF === true){
+		}else if (PauseButton.src.indexOf('Test%20Drive/PauseButton1.png') != -1){
 			PauseButton.src = 'Test%20Drive/PauseButton.png'
 			TF = false
 			FT = true
