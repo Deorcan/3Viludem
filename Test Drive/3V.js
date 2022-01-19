@@ -562,10 +562,18 @@ function OnTouch(){
 	}
 	
 	PauseButton.onclick = function (){
-		if (PauseButton.src.indexOf('Test%20Drive/PauseButton.png') != -1){
+		if (PauseButton.src.indexOf('Test%20Drive/PauseButto.png') != -1 && TF === false){
 			PauseButton.src = 'Test%20Drive/PauseButton1.png'
-		}else if (PauseButton.src.indexOf('Test%20Drive/PauseButton1.png') != -1){
+			TF = true
+			FT = false
+			Pause.style.display = 'block'
+			Start.style.display = 'block'
+			Restart.style.display = 'block'
+			
+		}else if (PauseButton.src.indexOf('Test%20Drive/PauseButton1.png') != -1 && TF === true){
 			PauseButton.src = 'Test%20Drive/PauseButton.png'
+			TF = false
+			FT = true
 		}
 	}
 }
