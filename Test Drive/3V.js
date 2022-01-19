@@ -428,6 +428,7 @@ Landing = function (){
 			HighScoreT2.style.display = 'block'
 			PlsRotate.style.display = 'none'
 			Menu.style.display = 'none'
+			PauseButton.src = "PauseButton1.png"
 			setTimeout(function(){ window.scrollTo(0,1), 0})
 		}
 	}
