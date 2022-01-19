@@ -561,9 +561,9 @@ function OnTouch(){
 		if(!Menu.onclick){Menu.style.display = 'block'}
 	}
 	PauseButton.onclick = function (){
-		if (PauseButton.src == 'Test%20Drive/PauseButton.png'){
+		if (PauseButton.src === 'Test%20Drive/PauseButton.png'){
 			PauseButton.src = 'Test%20Drive/PauseButton1.png'
-		}else if (PauseButton.src == 'Test%20Drive/PauseButton1.png'){
+		}else if (PauseButton.src === 'Test%20Drive/PauseButton1.png'){
 			PauseButton.src = 'Test%20Drive/PauseButton.png'
 		}
 	}
