@@ -555,11 +555,6 @@ function OnTouch(){
 	
 	CloseButton.onclick = function (){ Menu.style.display = 'none'}
 	
-	if (Display === 'block' && land.matches && Mode === 0){
-		if(!Menu.onclick){ Menu.style.display = 'none'}	
-	}else if (Display === 'none' && land.matches && Mode === 0){
-		if(!Menu.onclick){Menu.style.display = 'block'}
-	}
 	PauseButton.onclick = function (){
 		if (PauseButton.src === 'Test%20Drive/PauseButton.png'){
 			PauseButton.src = 'Test%20Drive/PauseButton1.png'
@@ -567,6 +562,13 @@ function OnTouch(){
 			PauseButton.src = 'Test%20Drive/PauseButton.png'
 		}
 	}
+	
+	if (Display === 'block' && land.matches && Mode === 0){
+		if(!Menu.onclick){ Menu.style.display = 'none'}	
+	}else if (Display === 'none' && land.matches && Mode === 0){
+		if(!Menu.onclick){Menu.style.display = 'block'}
+	}
+	
 	
 }
 
