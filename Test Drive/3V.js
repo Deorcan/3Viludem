@@ -442,6 +442,7 @@ PlayTouch = function(){
 	landX = `${window.innerWidth-5}px`
 	landY = `${window.innerHeight-5}px`
 	Pause.style.fontSize = '225%'
+	Pause.style.marginTop = '0%'
 	
 	PauseButton.style.display = 'block'
 	ScoreT2.style.display = 'block'
