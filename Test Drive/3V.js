@@ -11,6 +11,7 @@ const Pause = document.getElementById("pause")
 const Image = document.getElementById("space")
 const Start = document.getElementById("start")
 const Restart = document.getElementById("restart")
+const ControlMenu = document.getElementById("controlmenu")
 const Control = document.getElementById("control")
 const Instructs = document.getElementById("instructions")
 const TouchStart = document.getElementById("touchstart")
@@ -443,13 +444,10 @@ PlayTouch = function(){
 	landY = `${window.innerHeight-5}px`
 	Pause.style.fontSize = '225%'
 	Pause.style.marginTop = '-10%'
-	Pause.style.marginLeft = '45%'
 	Start.style.fontSize = '160%'
 	Start.style.backgroundColor = 'white'
-	Start.style.marginLeft = '45%'
 	Restart.style.fontSize = '160%'
 	Restart.style.backgroundColor = 'white'
-	Restart.style.marginLeft = '45%'
 	
 	PauseButton.style.display = 'block'
 	ScoreT2.style.display = 'block'
@@ -578,6 +576,7 @@ function OnTouch(){
 			Pause.style.display = 'block'
 			Start.style.display = 'block'
 			Restart.style.display = 'block'
+			ControlMenu.style.display = 'block'
 			
 		}else if (PauseButton.src.indexOf('Test%20Drive/PauseButton1.png') != -1){
 			PauseButton.src = 'Test%20Drive/PauseButton.png'
