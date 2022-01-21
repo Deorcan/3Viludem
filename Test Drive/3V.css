@@ -147,18 +147,14 @@
 	display: none;
 }
 #start:hover {
-	margin-top: 1%;
-	margin-left: 50%;
-	font-size: 325%;
-	transform: translate(-50%, -50%);
 	border: solid gold 2px;
 	display: none;
 }
 #restart:hover {
-	margin-top: 5%;
-	margin-left: 50%;
-	font-size: 275%;
-	transform: translate(-50%, -50%);
+	border: solid gold 2px;
+	display: none;
+}
+#controlmenu:hover {
 	border: solid gold 2px;
 	display: none;
 }
