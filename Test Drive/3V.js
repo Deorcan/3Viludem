@@ -444,10 +444,12 @@ PlayTouch = function(){
 	Pause.style.fontSize = '225%'
 	Pause.style.marginTop = '-10%'
 	Pause.style.marginLeft = '45%'
+	Start.style.fontSize = '160%'
 	Start.style.backgroundColor = 'white'
 	Start.style.marginLeft = '45%'
+	Restart.style.fontSize = '160%'
 	Restart.style.backgroundColor = 'white'
-	Start.style.marginLeft = '45%'
+	Restart.style.marginLeft = '45%'
 	
 	PauseButton.style.display = 'block'
 	ScoreT2.style.display = 'block'
