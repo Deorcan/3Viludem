@@ -130,6 +130,7 @@ function gameover(){
 		HighScore.innerText = Score.innerText
 	}
 	Score.innerText = 0
+	Score2.innerText = 0
 
 }
 
@@ -156,6 +157,7 @@ function RESTART(){
 	Lasers.remove()
 	Music.pause()
 	Score.innerText = 0
+	Score2.innerText = 0
 }
 
 function moveUp(){
