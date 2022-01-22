@@ -452,8 +452,9 @@ Landing = function (){
 	}
 }
 PlayTouch = function(){
+	isTabletOrMobile()
 	Menu.style.display = 'none'
-	Menu.style.marginTop = '5%'
+	Menu.style.marginTop = '-15%'
 	Image.style.top = "0vh"
 	Image.style.left = "0vw"
 	Image.style.maxWidth = `${window.innerWidth-5}px`
@@ -471,7 +472,7 @@ PlayTouch = function(){
 	ScoreT2.style.display = 'block'
 	HighScoreT2.style.display = 'block'
 	setTimeout(function(){ window.scrollTo(0,1), 0})
-	isTabletOrMobile()
+	
 	//playgame()
 }
 
