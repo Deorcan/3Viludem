@@ -642,8 +642,19 @@ function OnTouch(){
 			//Start.onclick = function(){START()}
 			//Restart.onclick = function(){RESTART()}
 			window.removeEventListener("touchstart", fire)
-			ControlMenu.onclick = function(){Menu.style.display = 'block'}
-			PlayButton.onclick = function(){Menu.style.display = 'none'}
+			ControlMenu.onclick = function(){
+				Menu.style.display = 'block'
+				Pause.style.display = 'none'
+				Start.style.display = 'none'
+				Restart.style.display = 'none'
+				ControlMenu.style.display = 'none'
+							}
+			PlayButton.onclick = function(){
+				Menu.style.display = 'none'
+				Pause.style.display = 'block'
+				Start.style.display = 'block'
+				Restart.style.display = 'block'
+				ControlMenu.style.display = 'block'}
 			
 		}else if (PauseButton.src.indexOf('Test%20Drive/PauseButton1.png') != -1){
 			PauseButton.src = 'Test%20Drive/PauseButton.png'
