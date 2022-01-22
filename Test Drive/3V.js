@@ -454,7 +454,7 @@ Landing = function (){
 PlayTouch = function(){
 	isTabletOrMobile()
 	Menu.style.display = 'none'
-	Menu.style.marginTop = '-15%'
+	Menu.style.marginTop = '-50%'
 	Image.style.top = "0vh"
 	Image.style.left = "0vw"
 	Image.style.maxWidth = `${window.innerWidth-5}px`
