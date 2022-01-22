@@ -409,6 +409,10 @@ Porting = function (){
 			PauseButton.style.display = 'none'
 			ScoreT2.style.display = 'none'
 			HighScoreT2.style.display = 'none'
+			Pause.style.display = 'none'
+			Start.style.display = 'none'
+			Restart.style.display = 'none'
+			ControlMenu.style.display = 'none'
 			PlsRotate.style.display = 'block'
 		}
 	}
@@ -430,6 +434,10 @@ Landing = function (){
 			PlsRotate.style.display = 'none'
 			Menu.style.display = 'none'
 			PauseButton.src = "Test%20Drive/PauseButton1.png"
+			Pause.style.display = 'block'
+			Start.style.display = 'block'
+			Restart.style.display = 'block'
+			ControlMenu.style.display = 'block'
 			setTimeout(function(){ window.scrollTo(0,1), 0})
 		}
 	}
