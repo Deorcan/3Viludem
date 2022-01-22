@@ -526,7 +526,6 @@ function OnTouch(){
 				Restart.style.display = 'none'
 				ControlMenu.style.display = 'none'
 				IfTouch = false
-				PlayButton.src = 'Test%20Drive/Playbutton.PNG'
 				playgame()
 			}
 		}
@@ -557,7 +556,6 @@ function OnTouch(){
 				Restart.style.display = 'none'
 				ControlMenu.style.display = 'none'
 				IfTouch = false
-				PlayButton.src = 'Test%20Drive/Playbutton.PNG'
 				OnMouse()
 				
 			}
