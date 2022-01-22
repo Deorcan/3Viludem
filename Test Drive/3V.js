@@ -526,6 +526,7 @@ function OnTouch(){
 				Restart.style.display = 'none'
 				ControlMenu.style.display = 'none'
 				IfTouch = false
+				PlayButton.src = 'Test%20Drive/Playbutton.PNG'
 				playgame()
 			}
 		}
@@ -556,7 +557,9 @@ function OnTouch(){
 				Restart.style.display = 'none'
 				ControlMenu.style.display = 'none'
 				IfTouch = false
+				PlayButton.src = 'Test%20Drive/Playbutton.PNG'
 				OnMouse()
+				
 			}
 		}
 	}else{ 
@@ -620,7 +623,15 @@ function OnTouch(){
 		}
 	}
 	
-	CloseButton.onclick = function (){ Menu.style.display = 'none'}
+	CloseButton.onclick = function (){ 
+		Menu.style.display = 'none'
+		if (Mode != 0){
+				Pause.style.display = 'block'
+				Start.style.display = 'block'
+				Restart.style.display = 'block'
+				ControlMenu.style.display = 'block'
+			}
+	}
 	
 	if (Display === 'block' && land.matches){
 		if(!Menu.onclick){ 
