@@ -513,7 +513,15 @@ function OnTouch(){
 				Para.style.right = "18vw"
 				Control.style.display = "block"
 				text2.style.marginTop = "0vh"
-				Mode = 5
+				PauseButton.style.display = 'none'
+				ScoreT2.style.display = 'none'
+				HighScoreT2.style.display = 'none'
+				Pause.style.display = 'none'
+				Start.style.display = 'none'
+				Restart.style.display = 'none'
+				ControlMenu.style.display = 'none'
+				IfTouch = false
+				playgame()
 			}
 		}
 		MouseMode.onclick = function (){
@@ -535,7 +543,15 @@ function OnTouch(){
 				Para.style.right = "18vw"
 				Control.style.display = "block"
 				text2.style.marginTop = "0vh"
-				Mode = 6
+				PauseButton.style.display = 'none'
+				ScoreT2.style.display = 'none'
+				HighScoreT2.style.display = 'none'
+				Pause.style.display = 'none'
+				Start.style.display = 'none'
+				Restart.style.display = 'none'
+				ControlMenu.style.display = 'none'
+				IfTouch = false
+				OnMouse()
 			}
 		}
 	}else{ 
@@ -649,8 +665,9 @@ function playgame(){
 	if (IfMouse === true){
 		ship.style.display = 'none'
 		window.addEventListener("click", fire)
-	}
-	else {
+	}else if (IfTouch === true){
+		if (Mode === 4){}
+	}else {
 		ship.style.display = 'block'
 		window.addEventListener("keydown", moving)
 	}
