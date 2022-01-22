@@ -241,7 +241,7 @@ function CreateLaser(){
 	if (IfMouse === true){
 		var X = event.clientX
 		var Y = event.clientY
-	}if else (IfTouch === true){
+	}else if (IfTouch === true){
 		var X = event.clientX
 		var Y = event.clientY
 	}else{
