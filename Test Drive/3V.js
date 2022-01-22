@@ -590,6 +590,10 @@ function OnTouch(){
 			PauseButton.src = 'Test%20Drive/PauseButton.png'
 			TF = false
 			FT = true
+			Pause.style.display = 'none'
+			Start.style.display = 'none'
+			Restart.style.display = 'none'
+			ControlMenu.style.display = 'none'
 		}
 	}
 }
