@@ -461,6 +461,7 @@ PlayTouch = function(){
 	ScoreT2.style.display = 'block'
 	HighScoreT2.style.display = 'block'
 	setTimeout(function(){ window.scrollTo(0,1), 0})
+	//playgame()
 }
 
 function OnTouch(){
@@ -524,8 +525,9 @@ function OnTouch(){
 		TouchMode.style.border = "none"
 		Descript.innerHTML = "In this mode, you tilt the screen to move the cursor and shoot via the fire button"
 		PlayButton.ontouchstart = function (){
-			PlayTouch()
+			
 			Mode = 1
+			PlayTouch()
 		}
 	}
 	PenMode.onclick = function (){
@@ -537,8 +539,9 @@ function OnTouch(){
 		TouchMode.style.border = "none"
 		Descript.innerHTML = "In this mode, you drag the cursor around screen and shoot via the fire button"
 		PlayButton.ontouchstart = function (){
-			PlayTouch()
+			
 			Mode = 2
+			PlayTouch()
 		}
 	}
 	DPadMode.onclick = function (){
@@ -550,8 +553,9 @@ function OnTouch(){
 		TouchMode.style.border = "none"
 		Descript.innerHTML = "In this mode, you move cursor via a D-Pad and shoot via the fire button"
 		PlayButton.ontouchstart = function (){
-			PlayTouch()
+			
 			Mode = 3
+			PlayTouch()
 		}
 	}
 	TouchMode.onclick = function (){
@@ -563,14 +567,15 @@ function OnTouch(){
 		TouchMode.style.border = "solid yellow 2px"
 		Descript.innerHTML = "In this mode, you touch the screen and a laser shoots"
 		PlayButton.ontouchstart = function (){
-			PlayTouch()
+			
 			Mode = 4
+			PlayTouch()
 		}
 	}
 	
 	CloseButton.onclick = function (){ Menu.style.display = 'none'}
 	
-	if (Display === 'block' && land.matches && Mode === 0){
+	if (Display === 'block' && land.matches){
 		if(!Menu.onclick){ Menu.style.display = 'none'}	
 	}else if (Display === 'none' && land.matches && Mode === 0){
 		if(!Menu.onclick){Menu.style.display = 'block'}
@@ -585,6 +590,11 @@ function OnTouch(){
 			Start.style.display = 'block'
 			Restart.style.display = 'block'
 			ControlMenu.style.display = 'block'
+			clearInterval(EInterval)
+			Music.pause()
+			//Start.onclick = function(){START()}
+			//Restart.onclick = function(){RESTART()}
+			ControlMenu.onclick = function(){Menu.style.display = 'block'}
 			
 		}else if (PauseButton.src.indexOf('Test%20Drive/PauseButton1.png') != -1){
 			PauseButton.src = 'Test%20Drive/PauseButton.png'
@@ -594,6 +604,7 @@ function OnTouch(){
 			Start.style.display = 'none'
 			Restart.style.display = 'none'
 			ControlMenu.style.display = 'none'
+			//playgame()
 		}
 	}
 }
