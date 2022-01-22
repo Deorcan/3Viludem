@@ -636,6 +636,7 @@ function OnTouch(){
 			Music.pause()
 			//Start.onclick = function(){START()}
 			//Restart.onclick = function(){RESTART()}
+			window.removeEventListener("touchstart", fire)
 			ControlMenu.onclick = function(){Menu.style.display = 'block'}
 			
 		}else if (PauseButton.src.indexOf('Test%20Drive/PauseButton1.png') != -1){
@@ -666,7 +667,7 @@ function playgame(){
 		ship.style.display = 'none'
 		window.addEventListener("click", fire)
 	}else if (IfTouch === true){
-		if (Mode === 4){}
+		if (Mode === 4){ window.addEventListener("touchstart", fire)}
 	}else {
 		ship.style.display = 'block'
 		window.addEventListener("keydown", moving)
