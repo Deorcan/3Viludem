@@ -454,7 +454,7 @@ Landing = function (){
 PlayTouch = function(){
 	isTabletOrMobile()
 	Menu.style.display = 'none'
-	Menu.style.marginTop = '-25%'
+	//Menu.style.marginTop = '-25%'
 	PlayButton.src = 'Test%20Drive/Donebutton.PNG'
 	Image.style.top = "0vh"
 	Image.style.left = "0vw"
@@ -623,7 +623,12 @@ function OnTouch(){
 	CloseButton.onclick = function (){ Menu.style.display = 'none'}
 	
 	if (Display === 'block' && land.matches){
-		if(!Menu.onclick){ Menu.style.display = 'none'}	
+		if(!Menu.onclick){ 
+			Menu.style.display = 'none'
+			Pause.style.display = 'block'
+			Start.style.display = 'block'
+			Restart.style.display = 'block'
+			ControlMenu.style.display = 'block'}	
 	}else if (Display === 'none' && land.matches && Mode === 0){
 		if(!Menu.onclick){Menu.style.display = 'block'}
 	}
