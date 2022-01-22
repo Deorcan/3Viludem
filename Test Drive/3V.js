@@ -129,6 +129,9 @@ function gameover(){
 	if (HighScore.innerText < Score.innerText) {
 		HighScore.innerText = Score.innerText
 	}
+	if (HighScore2.innerText < Score2.innerText) {
+		HighScore2.innerText = Score2.innerText
+	}
 	Score.innerText = 0
 	Score2.innerText = 0
 
