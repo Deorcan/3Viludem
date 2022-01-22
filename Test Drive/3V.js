@@ -624,11 +624,14 @@ function OnTouch(){
 	
 	if (Display === 'block' && land.matches){
 		if(!Menu.onclick){ 
+			
 			Menu.style.display = 'none'
-			Pause.style.display = 'block'
-			Start.style.display = 'block'
-			Restart.style.display = 'block'
-			ControlMenu.style.display = 'block'}	
+			if (Mode != 0){
+				Pause.style.display = 'block'
+				Start.style.display = 'block'
+				Restart.style.display = 'block'
+				ControlMenu.style.display = 'block'
+			}}	
 	}else if (Display === 'none' && land.matches && Mode === 0){
 		if(!Menu.onclick){Menu.style.display = 'block'}
 	}
