@@ -265,6 +265,7 @@ function movelaser(laser){
 				enemy.classList.add("dead")
 				clearInterval(interval)
 				Score.innerText= parseInt(Score.innerText) + 1
+				Score2.innerText= parseInt(Score2.innerText) + 1
 				
 			}
 		})
