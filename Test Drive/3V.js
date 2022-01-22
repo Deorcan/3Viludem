@@ -454,7 +454,7 @@ Landing = function (){
 PlayTouch = function(){
 	isTabletOrMobile()
 	Menu.style.display = 'none'
-	Menu.style.marginTop = '-15%'
+	//Menu.style.marginTop = '-15%'
 	PlayButton.src = 'Test%20Drive/Donebutton.PNG'
 	Image.style.top = "0vh"
 	Image.style.left = "0vw"
@@ -473,7 +473,12 @@ PlayTouch = function(){
 	ScoreT2.style.display = 'block'
 	HighScoreT2.style.display = 'block'
 	setTimeout(function(){ window.scrollTo(0,1), 0})
-	
+	if (PauseButton.src.indexOf('Test%20Drive/PauseButton1.png') != -1){
+		Pause.style.display = 'block'
+		Start.style.display = 'block'
+		Restart.style.display = 'block'
+		ControlMenu.style.display = 'block'
+	}
 	//playgame()
 }
 
