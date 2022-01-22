@@ -455,6 +455,7 @@ PlayTouch = function(){
 	isTabletOrMobile()
 	Menu.style.display = 'none'
 	Menu.style.marginTop = '-50%'
+	PlayButton.src = 'Test%20Drive/DoneButton.PNG'
 	Image.style.top = "0vh"
 	Image.style.left = "0vw"
 	Image.style.maxWidth = `${window.innerWidth-5}px`
@@ -642,6 +643,7 @@ function OnTouch(){
 			//Restart.onclick = function(){RESTART()}
 			window.removeEventListener("touchstart", fire)
 			ControlMenu.onclick = function(){Menu.style.display = 'block'}
+			PlayButton.onclick = function(){Menu.style.display = 'none'}
 			
 		}else if (PauseButton.src.indexOf('Test%20Drive/PauseButton1.png') != -1){
 			PauseButton.src = 'Test%20Drive/PauseButton.png'
