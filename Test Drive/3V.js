@@ -454,8 +454,8 @@ Landing = function (){
 PlayTouch = function(){
 	isTabletOrMobile()
 	Menu.style.display = 'none'
-	Menu.style.marginTop = '-50%'
-	PlayButton.src = 'Test%20Drive/DoneButton.PNG'
+	Menu.style.marginTop = '-40%'
+	PlayButton.src = 'Test%20Drive/Donebutton.PNG'
 	Image.style.top = "0vh"
 	Image.style.left = "0vw"
 	Image.style.maxWidth = `${window.innerWidth-5}px`
