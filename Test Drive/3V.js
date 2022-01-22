@@ -467,6 +467,7 @@ PlayTouch = function(){
 	ScoreT2.style.display = 'block'
 	HighScoreT2.style.display = 'block'
 	setTimeout(function(){ window.scrollTo(0,1), 0})
+	isTabletOrMobile()
 	//playgame()
 }
 
@@ -502,6 +503,14 @@ function OnTouch(){
 			Descript.innerHTML = "In this mode, you move cursor via arrowkeys and shoot via the spacebar"
 			PlayButton.onclick = function (){
 				Menu.style.display = 'none'
+				Image.style.left = "18vw"
+				Image.style.right = "18vw"
+				Image.style.top = "15vh"
+				Image.style.maxWidth = "64%"
+				Para.style.left = "18vw"
+				Para.style.right = "18vw"
+				Control.style.display = "block"
+				text2.style.marginTop = "0vh"
 				Mode = 5
 			}
 		}
@@ -515,6 +524,14 @@ function OnTouch(){
 			Descript.innerHTML = "In this mode, you drag the cursor around screen and shoot via the left button"
 			PlayButton.onclick = function (){
 				Menu.style.display = 'none'
+				Image.style.left = "18vw"
+				Image.style.right = "18vw"
+				Image.style.top = "15vh"
+				Image.style.maxWidth = "64%"
+				Para.style.left = "18vw"
+				Para.style.right = "18vw"
+				Control.style.display = "block"
+				text2.style.marginTop = "0vh"
 				Mode = 6
 			}
 		}
