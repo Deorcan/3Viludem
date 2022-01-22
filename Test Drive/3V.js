@@ -450,6 +450,7 @@ Landing = function (){
 }
 PlayTouch = function(){
 	Menu.style.display = 'none'
+	Menu.style.marginTop = '5%'
 	Image.style.top = "0vh"
 	Image.style.left = "0vw"
 	Image.style.maxWidth = `${window.innerWidth-5}px`
@@ -503,6 +504,7 @@ function OnTouch(){
 			Descript.innerHTML = "In this mode, you move cursor via arrowkeys and shoot via the spacebar"
 			PlayButton.onclick = function (){
 				Menu.style.display = 'none'
+				Menu.style.marginTop = '18%'
 				Image.style.left = "18vw"
 				Image.style.right = "18vw"
 				Image.style.top = "15vh"
@@ -524,6 +526,7 @@ function OnTouch(){
 			Descript.innerHTML = "In this mode, you drag the cursor around screen and shoot via the left button"
 			PlayButton.onclick = function (){
 				Menu.style.display = 'none'
+				Menu.style.marginTop = '18%'
 				Image.style.left = "18vw"
 				Image.style.right = "18vw"
 				Image.style.top = "15vh"
