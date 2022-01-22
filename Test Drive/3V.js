@@ -241,6 +241,9 @@ function CreateLaser(){
 	if (IfMouse === true){
 		var X = event.clientX
 		var Y = event.clientY
+	}if else (IfTouch === true){
+		var X = event.clientX
+		var Y = event.clientY
 	}else{
 		
 		var X = parseFloat(window.getComputedStyle(ship).getPropertyValue('left'))
