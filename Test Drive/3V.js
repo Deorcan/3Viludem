@@ -406,10 +406,9 @@ function MouseOff(){
 
 Porting = function (){
 	if (port.matches){
-		if (Mode === 0){
-			PlsRotate.style.display = 'block'
-			Menu.style.display = 'none'
-		}else{
+		PlsRotate.style.display = 'block'
+		Menu.style.display = 'none'
+		if (Mode != 0 ){
 			Image.style.top = "25vh"
 			Image.style.left = "3vw"
 			Image.style.maxWidth = "94%"
@@ -424,6 +423,7 @@ Porting = function (){
 			ControlMenu.style.display = 'none'
 			PlsRotate.style.display = 'block'
 		}
+		
 	}
 }
 Landing = function (){
