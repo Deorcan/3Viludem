@@ -577,7 +577,7 @@ function OnTouch(){
 		DPadMode.style.border = "none"
 		TouchMode.style.border = "none"
 		Descript.innerHTML = "In this mode, you tilt the screen to move the cursor and shoot via the fire button"
-		PlayButton.ontouchstart = function (){
+		PlayButton.onclick = function (){
 			
 			Mode = 1
 			PlayTouch()
@@ -591,7 +591,7 @@ function OnTouch(){
 		DPadMode.style.border = "none"
 		TouchMode.style.border = "none"
 		Descript.innerHTML = "In this mode, you drag the cursor around screen and shoot via the fire button"
-		PlayButton.ontouchstart = function (){
+		PlayButton.onclick = function (){
 			
 			Mode = 2
 			PlayTouch()
@@ -605,7 +605,7 @@ function OnTouch(){
 		DPadMode.style.border = "solid yellow 2px"
 		TouchMode.style.border = "none"
 		Descript.innerHTML = "In this mode, you move cursor via a D-Pad and shoot via the fire button"
-		PlayButton.ontouchstart = function (){
+		PlayButton.onclick = function (){
 			
 			Mode = 3
 			PlayTouch()
@@ -619,7 +619,7 @@ function OnTouch(){
 		DPadMode.style.border = "none"
 		TouchMode.style.border = "solid yellow 2px"
 		Descript.innerHTML = "In this mode, you touch the screen and a laser shoots"
-		PlayButton.ontouchstart = function (){
+		PlayButton.onclick = function (){
 			
 			Mode = 4
 			PlayTouch()
@@ -650,12 +650,7 @@ function OnTouch(){
 			//Restart.onclick = function(){RESTART()}
 			window.removeEventListener("touchstart", fire)
 			ControlMenu.onclick = function(){Menu.style.display = 'block'}
-			PlayButton.onclick = function(){
-				Menu.style.display = 'none'
-				Pause.style.display = 'block'
-				Start.style.display = 'block'
-				Restart.style.display = 'block'
-				ControlMenu.style.display = 'block'}
+			
 			
 		}else if (PauseButton.src.indexOf('Test%20Drive/PauseButton1.png') != -1){
 			PauseButton.src = 'Test%20Drive/PauseButton.png'
