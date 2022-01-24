@@ -454,7 +454,7 @@ Landing = function (){
 PlayTouch = function(){
 	isTabletOrMobile()
 	Menu.style.display = 'none'
-	Menu.style.marginTop = '-25%'
+	Menu.style.marginTop = '-30%'
 	PlayButton.src = 'Test%20Drive/Donebutton.PNG'
 	Image.style.top = "0vh"
 	Image.style.left = "0vw"
@@ -660,6 +660,7 @@ function OnTouch(){
 			Start.style.display = 'none'
 			Restart.style.display = 'none'
 			ControlMenu.style.display = 'none'
+			Menu.style.display = 'none'
 			//playgame()
 		}
 	}
