@@ -626,8 +626,7 @@ function OnTouch(){
 		}
 	}
 	
-	CloseButton.onclick = function (){ 
-		Menu.style.display = 'none'}
+	CloseButton.onclick = function (){ Menu.style.display = 'none'}
 	
 	if (Display === 'block' && land.matches){
 		if(!Menu.onclick){ Menu.style.display = 'none'}	
@@ -644,6 +643,7 @@ function OnTouch(){
 			Start.style.display = 'block'
 			Restart.style.display = 'block'
 			ControlMenu.style.display = 'block'
+			CloseButton.style.display = 'block'
 			clearInterval(EInterval)
 			Music.pause()
 			//Start.onclick = function(){START()}
