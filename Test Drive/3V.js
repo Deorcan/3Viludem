@@ -643,7 +643,6 @@ function OnTouch(){
 			Start.style.display = 'block'
 			Restart.style.display = 'block'
 			ControlMenu.style.display = 'block'
-			CloseButton.style.display = 'block'
 			clearInterval(EInterval)
 			Music.pause()
 			//Start.onclick = function(){START()}
