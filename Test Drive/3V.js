@@ -530,6 +530,13 @@ Buttons = function(){
 		PenMode.style.border = "none"
 		DPadMode.style.border = "none"
 		TouchMode.style.border = "solid yellow 2px"
+	}else{
+		KeyboardMode.style.border = "none"
+		MouseMode.style.border =  "none"
+		TiltMode.style.border = "none"
+		PenMode.style.border = "none"
+		DPadMode.style.border = "none"
+		TouchMode.style.border = "none"
 	}
 }
 
