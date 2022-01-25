@@ -482,6 +482,57 @@ PlayTouch = function(){
 	//playgame()
 }
 
+Buttons = function(){
+	if (IfTouch === false && IfMouse === false){
+		KeyboardMode.style.border = "solid yellow 2px"
+		MouseMode.style.border = "none"
+		TiltMode.style.border = "none"
+		PenMode.style.border = "none"
+		DPadMode.style.border = "none"
+		TouchMode.style.border = "none"
+		
+	}else if (IfTouch === false && IfMouse === true){
+		KeyboardMode.style.border = "none"
+		MouseMode.style.border =  "solid yellow 2px"
+		TiltMode.style.border = "none"
+		PenMode.style.border = "none"
+		DPadMode.style.border = "none"
+		TouchMode.style.border = "none"
+	
+	}else if (IfTouch === true && Mode === 1){
+		KeyboardMode.style.border = "none"
+		MouseMode.style.border =  "none"
+		TiltMode.style.border = "solid yellow 2px"
+		PenMode.style.border = "none"
+		DPadMode.style.border = "none"
+		TouchMode.style.border = "none"
+		
+	}else if (IfTouch === true && Mode === 2){
+		KeyboardMode.style.border = "none"
+		MouseMode.style.border =  "none"
+		TiltMode.style.border = "none"
+		PenMode.style.border = "solid yellow 2px"
+		DPadMode.style.border = "none"
+		TouchMode.style.border = "none"
+		
+	}else if (IfTouch === true && Mode === 3){
+		KeyboardMode.style.border = "none"
+		MouseMode.style.border =  "none"
+		TiltMode.style.border = "none"
+		PenMode.style.border = "none"
+		DPadMode.style.border = "solid yellow 2px"
+		TouchMode.style.border = "none"
+		
+	}else if (IfTouch === true && Mode === 4){
+		KeyboardMode.style.border = "none"
+		MouseMode.style.border =  "none"
+		TiltMode.style.border = "none"
+		PenMode.style.border = "none"
+		DPadMode.style.border = "none"
+		TouchMode.style.border = "solid yellow 2px"
+	}
+}
+
 function OnTouch(){
 	event.preventDefault()
 	TouchStart.style.display = "none"
@@ -530,9 +581,6 @@ function OnTouch(){
 				Start.style.display = 'none'
 				Restart.style.display = 'none'
 				ControlMenu.style.display = 'none'
-				
-				KeyboardMode.style.border = "solid red 2px"
-				
 				IfTouch = false
 				playgame()
 			}
@@ -563,9 +611,6 @@ function OnTouch(){
 				Start.style.display = 'none'
 				Restart.style.display = 'none'
 				ControlMenu.style.display = 'none'
-				
-				MouseMode.style.border = "solid red 2px"
-				
 				IfTouch = false
 				OnMouse()
 				
@@ -584,8 +629,7 @@ function OnTouch(){
 		TouchMode.style.border = "none"
 		Descript.innerHTML = "In this mode, you tilt the screen to move the cursor and shoot via the fire button"
 		PlayButton.onclick = function (){
-			
-			TiltMode.style.border = "solid red 2px"
+		
 			Mode = 1
 			PlayTouch()
 		}
@@ -599,8 +643,7 @@ function OnTouch(){
 		TouchMode.style.border = "none"
 		Descript.innerHTML = "In this mode, you drag the cursor around screen and shoot via the fire button"
 		PlayButton.onclick = function (){
-			
-			PenMode.style.border = "solid red 2px"
+		
 			Mode = 2
 			PlayTouch()
 		}
@@ -614,8 +657,7 @@ function OnTouch(){
 		TouchMode.style.border = "none"
 		Descript.innerHTML = "In this mode, you move cursor via a D-Pad and shoot via the fire button"
 		PlayButton.onclick = function (){
-			
-			DPadMode.style.border = "solid red 2px"
+		
 			Mode = 3
 			PlayTouch()
 		}
@@ -629,17 +671,20 @@ function OnTouch(){
 		TouchMode.style.border = "solid yellow 2px"
 		Descript.innerHTML = "In this mode, you touch the screen and a laser shoots"
 		PlayButton.onclick = function (){
-			
-			TouchMode.style.border = "solid red 2px"
+		
 			Mode = 4
 			PlayTouch()
 		}
 	}
 	
-	CloseButton.onclick = function (){ Menu.style.display = 'none'}
+	CloseButton.onclick = function (){ 
+		Menu.style.display = 'none'
+		Buttons()}
 	
 	if (Display === 'block' && land.matches){
-		if(!Menu.onclick){ Menu.style.display = 'none'}	
+		if(!Menu.onclick){ 
+			Menu.style.display = 'none'
+			Buttons()}	
 	}else if (Display === 'none' && land.matches && Mode === 0){
 		if(!Menu.onclick){Menu.style.display = 'block'}
 	}
