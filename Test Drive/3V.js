@@ -175,11 +175,12 @@ function RESTART(){
 		TouchStart.style.display = 'block'
 		isTabletOrMobile()
 		Landing()
-		IfTouch = false
+		//IfTouch = false
 		Pause.style.display = 'none'
 		Start.style.display = 'none'
 		Restart.style.display = 'none'
 		ControlMenu.style.display = 'none'
+		Menu.style.marginTop = '0%'
 	}
 	let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
