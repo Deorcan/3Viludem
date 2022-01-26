@@ -112,7 +112,10 @@ else
 
 function gameover(){
 	window.removeEventListener("keydown", moving)
+	window.removeEventListener("click", fire)
+	window.removeEventListener("touchstart", fire)
 	TF = true
+	IfMouse = false
 	clearInterval(EInterval)
 	ship.style.left = "21.9vw";
 	ship.style.top = "28.8vh";
@@ -123,6 +126,10 @@ function gameover(){
 	Para.style.display = 'block'
 	GameOver.style.display = 'block'
 	ship.style.display = 'none'
+	if(IsTouch()){
+		isTabletOrMobile()
+		IfTouch = false
+	}
 	let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
 	Music.pause()
@@ -139,8 +146,11 @@ function gameover(){
 
 function RESTART(){
 	window.removeEventListener("keydown", moving)
+	window.removeEventListener("click", fire)
+	window.removeEventListener("touchstart", fire)
 	TF = true
 	FT = false
+	IfMouse = false
 	clearInterval(EInterval)
 	ship.style.left = "21.9vw";
 	ship.style.top = "28.8vh";
@@ -154,6 +164,8 @@ function RESTART(){
 	Restart.style.display = 'none'
 	if(IsTouch()){
 		TouchStart.style.display = 'block'
+		isTabletOrMobile()
+		IfTouch = false
 	}
 	let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
@@ -241,9 +253,12 @@ function CreateLaser(){
 	if (IfMouse === true){
 		var X = event.clientX
 		var Y = event.clientY
-	}else if (IfTouch === true){
+	}else if (IfTouch === true && Mode === 4){
 		var X = event.clientX
 		var Y = event.clientY
+		ship.style.left = `${X}px`
+		ship.style.top = `${Y}px`
+		
 	}else{
 		
 		var X = parseFloat(window.getComputedStyle(ship).getPropertyValue('left'))
@@ -707,7 +722,7 @@ function OnTouch(){
 			ControlMenu.style.display = 'block'
 			clearInterval(EInterval)
 			Music.pause()
-			//Start.onclick = function(){START()}
+			Start.onclick = function(){START()}
 			//Restart.onclick = function(){RESTART()}
 			window.removeEventListener("touchstart", fire)
 			ControlMenu.onclick = function(){Menu.style.display = 'block'}
