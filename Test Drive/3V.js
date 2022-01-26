@@ -129,6 +129,7 @@ function gameover(){
 	if(IsTouch()){
 		isTabletOrMobile()
 		IfTouch = false
+		Mode = 0
 	}
 	let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
@@ -166,6 +167,7 @@ function RESTART(){
 		TouchStart.style.display = 'block'
 		isTabletOrMobile()
 		IfTouch = false
+		Mode = 0
 	}
 	let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
