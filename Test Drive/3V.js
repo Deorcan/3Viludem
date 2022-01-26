@@ -127,7 +127,11 @@ function gameover(){
 	GameOver.style.display = 'block'
 	ship.style.display = 'none'
 	if(IsTouch()){
+		text.style.display = 'none'
+		text2.style.display = 'none'
+		Para.style.display = 'none'
 		isTabletOrMobile()
+		Landing()
 		IfTouch = false
 		Mode = 0
 	}
@@ -163,9 +167,11 @@ function RESTART(){
 	Pause.style.display = 'none'
 	Start.style.display = 'none'
 	Restart.style.display = 'none'
+	ControlMenu.style.display = 'none'
 	if(IsTouch()){
 		TouchStart.style.display = 'block'
 		isTabletOrMobile()
+		Landing()
 		IfTouch = false
 		Mode = 0
 	}
@@ -256,8 +262,8 @@ function CreateLaser(){
 		var X = event.clientX
 		var Y = event.clientY
 	}else if (IfTouch === true && Mode === 4){
-		var X = event.clientX
-		var Y = event.clientY
+		var X = event.touches[0].clientX
+		var Y = event.touches[0].clientY
 		ship.style.left = `${X}px`
 		ship.style.top = `${Y}px`
 		
@@ -754,7 +760,9 @@ function playgame(){
 	Pause.style.display = 'none'
 	Start.style.display = 'none'
 	Restart.style.display = 'none'
+	ControlMenu.style.display = 'none'
 	TouchStart.style.display = "none"
+	PauseButton.src = 'Test%20Drive/PauseButton.png'
 	if (IfMouse === true){
 		ship.style.display = 'none'
 		window.addEventListener("click", fire)
