@@ -274,6 +274,8 @@ function CreateLaser(){
 		var Y = event.touches[0].clientY
 		ship.style.left = `${X}px`
 		ship.style.top = `${Y}px`
+		Image.style.maxWidth = `${window.innerWidth-5}px`
+		Image.style.maxHeight = `${window.innerHeight-5}px`
 		setTimeout(function(){ window.scrollTo(0,1), 0})
 		
 	}else{
