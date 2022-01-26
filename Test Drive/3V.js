@@ -725,7 +725,7 @@ function OnTouch(){
 			clearInterval(EInterval)
 			Music.pause()
 			Start.onclick = function(){START()}
-			//Restart.onclick = function(){RESTART()}
+			Restart.onclick = function(){RESTART()}
 			window.removeEventListener("touchstart", fire)
 			ControlMenu.onclick = function(){Menu.style.display = 'block'}
 			
@@ -739,7 +739,7 @@ function OnTouch(){
 			Restart.style.display = 'none'
 			ControlMenu.style.display = 'none'
 			Menu.style.display = 'none'
-			//playgame()
+			playgame()
 		}
 	}
 }
