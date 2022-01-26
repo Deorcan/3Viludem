@@ -134,6 +134,10 @@ function gameover(){
 		Landing()
 		IfTouch = false
 		Mode = 0
+		Pause.style.display = 'none'
+		Start.style.display = 'none'
+		Restart.style.display = 'none'
+		ControlMenu.style.display = 'none'
 	}
 	let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
@@ -174,6 +178,10 @@ function RESTART(){
 		Landing()
 		IfTouch = false
 		Mode = 0
+		Pause.style.display = 'none'
+		Start.style.display = 'none'
+		Restart.style.display = 'none'
+		ControlMenu.style.display = 'none'
 	}
 	let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
@@ -266,6 +274,7 @@ function CreateLaser(){
 		var Y = event.touches[0].clientY
 		ship.style.left = `${X}px`
 		ship.style.top = `${Y}px`
+		setTimeout(function(){ window.scrollTo(0,1), 0})
 		
 	}else{
 		
@@ -502,7 +511,7 @@ PlayTouch = function(){
 		Restart.style.display = 'block'
 		ControlMenu.style.display = 'block'
 	}
-	//playgame()
+	playgame()
 }
 
 Buttons = function(){
