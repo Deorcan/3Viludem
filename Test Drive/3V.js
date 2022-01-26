@@ -133,7 +133,6 @@ function gameover(){
 		isTabletOrMobile()
 		Landing()
 		IfTouch = false
-		Mode = 0
 		Pause.style.display = 'none'
 		Start.style.display = 'none'
 		Restart.style.display = 'none'
@@ -177,7 +176,6 @@ function RESTART(){
 		isTabletOrMobile()
 		Landing()
 		IfTouch = false
-		Mode = 0
 		Pause.style.display = 'none'
 		Start.style.display = 'none'
 		Restart.style.display = 'none'
