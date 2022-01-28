@@ -180,7 +180,7 @@ function RESTART(){
 		Start.style.display = 'none'
 		Restart.style.display = 'none'
 		ControlMenu.style.display = 'none'
-		Menu.style.marginTop = '50%'
+		Menu.style.marginTop = '1%'
 	}
 	let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
