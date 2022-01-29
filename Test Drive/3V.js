@@ -46,6 +46,7 @@ let Lasers
 let IfMouse = false
 let IfTouch = false
 var Mode = 0
+var starting = 0
 var landX
 var landY
 var port = window.matchMedia("(orientation: portrait)")
@@ -180,7 +181,7 @@ function RESTART(){
 		Start.style.display = 'none'
 		Restart.style.display = 'none'
 		ControlMenu.style.display = 'none'
-		Image.ontouchstart = function() {OnTouch()}
+		starting = 0
 	}
 	let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
@@ -512,7 +513,7 @@ PlayTouch = function(){
 		Restart.style.display = 'block'
 		ControlMenu.style.display = 'block'
 	}
-	START()
+	starting = -1
 }
 
 Buttons = function(){
@@ -725,7 +726,7 @@ function OnTouch(){
 		if(!Menu.onclick){ 
 			Menu.style.display = 'none'
 			Buttons()}	
-	}else if (Display === 'none' && land.matches && Mode === 0){
+	}else if (Display === 'none' && land.matches && starting === 0){
 		if(!Menu.onclick){Menu.style.display = 'block'}
 	}
 	
@@ -755,6 +756,7 @@ function OnTouch(){
 			Restart.style.display = 'none'
 			ControlMenu.style.display = 'none'
 			Menu.style.display = 'none'
+			starting = -1
 			playgame()
 		}
 	}
