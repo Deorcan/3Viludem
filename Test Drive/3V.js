@@ -181,6 +181,7 @@ function RESTART(){
 		Restart.style.display = 'none'
 		ControlMenu.style.display = 'none'
 		Menu.style.marginTop = '1%'
+		Menu.style.display = 'block'
 	}
 	let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
