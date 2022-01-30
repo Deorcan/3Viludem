@@ -183,8 +183,11 @@ function RESTART(){
 		ControlMenu.style.display = 'none'
 		starting = 0
 		PlayButton.src = 'Test%20Drive/Playbutton.PNG'
-		Menu.style.marginTop = '20%'
+		Menu.style.marginTop = '5%'
 		TouchStart.style.top = '40%'
+		Para.style.display = 'none'
+		TF = false
+		FT = true
 	}
 	let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
