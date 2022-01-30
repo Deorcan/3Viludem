@@ -176,14 +176,15 @@ function RESTART(){
 		TouchStart.style.display = 'block'
 		isTabletOrMobile()
 		Landing()
-		IfTouch = false
+		//IfTouch = false
 		Pause.style.display = 'none'
 		Start.style.display = 'none'
 		Restart.style.display = 'none'
 		ControlMenu.style.display = 'none'
 		starting = 0
 		PlayButton.src = 'Test%20Drive/Playbutton.PNG'
-		Menu.style.marginTop = '27%'
+		Menu.style.marginTop = '20%'
+		TouchStart.style.top = '40%'
 	}
 	let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
