@@ -172,7 +172,7 @@ function RESTART(){
 	Start.style.display = 'none'
 	Restart.style.display = 'none'
 	ControlMenu.style.display = 'none'
-	if(IsTouch()){
+	if(starting === -1){
 		TouchStart.style.display = 'block'
 		isTabletOrMobile()
 		Landing()
@@ -183,7 +183,7 @@ function RESTART(){
 		ControlMenu.style.display = 'none'
 		starting = 0
 		PlayButton.src = 'Test%20Drive/Playbutton.PNG'
-		Menu.style.marginTop = '5%'
+		Menu.style.marginTop = '-15%'
 		TouchStart.style.top = '40%'
 		Para.style.display = 'none'
 		TF = false
