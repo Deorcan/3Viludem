@@ -514,6 +514,7 @@ PlayTouch = function(){
 		ControlMenu.style.display = 'block'
 	}
 	starting = -1
+	playgame()
 }
 
 Buttons = function(){
