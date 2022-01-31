@@ -587,6 +587,7 @@ Buttons = function(){
 function OnTouch(){
 	event.preventDefault()
 	TouchStart.style.display = "none"
+	GameOver.style.display = 'none'
 	IfTouch = true
 	let Display =  window.getComputedStyle(Menu).getPropertyValue('display')
 	if (Mode === 0){
