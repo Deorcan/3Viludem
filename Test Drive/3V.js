@@ -507,11 +507,12 @@ PlayTouch = function(){
 	Image.style.maxHeight = `${window.innerHeight-5}px`
 	landX = `${window.innerWidth-5}px`
 	landY = `${window.innerHeight-5}px`
-	Menu.style.marginBottom = `${window.innerHeight-15}px`
+	Menu.style.marginBottom = `${window.innerHeight + 27}px`
 	Pause.style.fontSize = '225%'
 	Pause.style.marginBottom = `${window.innerHeight-15}px`
 	Start.style.fontSize = '160%'
 	Start.style.backgroundColor = 'white'
+	//Start.style.marginTop = 
 	Restart.style.fontSize = '160%'
 	Restart.style.backgroundColor = 'white'
 	
