@@ -140,7 +140,7 @@ function gameover(){
 		ControlMenu.style.display = 'none'
 		starting = 0
 		PlayButton.src = 'Test%20Drive/Playbutton.PNG'
-		Menu.style.marginTop = '5%'
+		Menu.style.marginTop = '10%'
 	}
 	let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
