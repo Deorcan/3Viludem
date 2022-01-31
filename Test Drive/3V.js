@@ -127,7 +127,7 @@ function gameover(){
 	Para.style.display = 'block'
 	GameOver.style.display = 'block'
 	ship.style.display = 'none'
-	if(IsTouch()){
+	if(starting === -1){
 		text.style.display = 'none'
 		text2.style.display = 'none'
 		Para.style.display = 'none'
@@ -138,6 +138,9 @@ function gameover(){
 		Start.style.display = 'none'
 		Restart.style.display = 'none'
 		ControlMenu.style.display = 'none'
+		starting = 0
+		PlayButton.src = 'Test%20Drive/Playbutton.PNG'
+		Menu.style.marginTop = '5%'
 	}
 	let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
