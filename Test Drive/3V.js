@@ -183,7 +183,7 @@ function RESTART(){
 		ControlMenu.style.display = 'none'
 		starting = 0
 		PlayButton.src = 'Test%20Drive/Playbutton.PNG'
-		Menu.style.marginTop = '-10%'
+		Menu.style.marginTop = '10%'
 		TouchStart.style.top = '40%'
 		Para.style.display = 'none'
 		TF = false
