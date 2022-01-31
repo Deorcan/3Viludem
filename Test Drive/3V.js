@@ -140,7 +140,7 @@ function gameover(){
 		ControlMenu.style.display = 'none'
 		starting = 0
 		PlayButton.src = 'Test%20Drive/Playbutton.PNG'
-		Menu.style.marginTop = '10%'
+		//Menu.style.marginTop = '10%'
 		TF = false
 		FT = true
 	}
@@ -188,7 +188,7 @@ function RESTART(){
 		ControlMenu.style.display = 'none'
 		starting = 0
 		PlayButton.src = 'Test%20Drive/Playbutton.PNG'
-		Menu.style.marginTop = '5%'
+		//Menu.style.marginTop = '5%'
 		TouchStart.style.top = '40%'
 		Para.style.display = 'none'
 		TF = false
@@ -499,7 +499,7 @@ Landing = function (){
 PlayTouch = function(){
 	isTabletOrMobile()
 	Menu.style.display = 'none'
-	Menu.style.marginTop = '-27%'
+	
 	PlayButton.src = 'Test%20Drive/Donebutton.PNG'
 	Image.style.top = "0vh"
 	Image.style.left = "0vw"
@@ -507,8 +507,9 @@ PlayTouch = function(){
 	Image.style.maxHeight = `${window.innerHeight-5}px`
 	landX = `${window.innerWidth-5}px`
 	landY = `${window.innerHeight-5}px`
+	Menu.style.marginBottom = `${window.innerHeight-15}px`
 	Pause.style.fontSize = '225%'
-	Pause.style.marginTop = '-10%'
+	Pause.style.marginBottom = `${window.innerHeight-15}px`
 	Start.style.fontSize = '160%'
 	Start.style.backgroundColor = 'white'
 	Restart.style.fontSize = '160%'
