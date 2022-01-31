@@ -101,7 +101,7 @@
 }
 #pause {
 	text-align: center;
-	margin-top: 5%;
+	top: 5%;
 	margin-left: 50%;
 	color: white;
 	font-size: 475%;
@@ -122,7 +122,7 @@
 }
 
 #start {
-	margin-top: 1%;
+	top: 1%;
 	margin-left: 50%;
 	font-size: 325%;
 	transform: translate(-50%, -50%);
@@ -130,7 +130,7 @@
 	display: none;
 }
 #restart {
-	margin-top: 5%;
+	top: 5%;
 	margin-left: 50%;
 	font-size: 275%;
 	transform: translate(-50%, -50%);
@@ -138,7 +138,7 @@
 	display: none;
 }
 #controlmenu {
-	margin-top: 5%;
+	top: 5%;
 	margin-left: 50%;
 	font-size: 160%;
 	transform: translate(-50%, -50%);
