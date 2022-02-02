@@ -102,7 +102,7 @@
 #pause {
 	position: absolute;
 	text-align: center;
-	top: 7%;
+	top: 9%;
 	left: 50%;
 	color: white;
 	font-size: 475%;
@@ -124,7 +124,7 @@
 
 #start {
 	position: absolute;
-	top: 27%;
+	top: 29%;
 	left: 50%;
 	font-size: 325%;
 	transform: translate(-50%, -50%);
@@ -133,7 +133,7 @@
 }
 #restart {
 	position: absolute;
-	top: 40%;
+	top: 42%;
 	left: 50%;
 	font-size: 275%;
 	transform: translate(-50%, -50%);
@@ -142,7 +142,7 @@
 }
 #controlmenu {
 	position: absolute;
-	top: 60%;
+	top: 55%;
 	left: 50%;
 	font-size: 160%;
 	transform: translate(-50%, -50%);
