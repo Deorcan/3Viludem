@@ -139,7 +139,7 @@ function gameover(){
 		Restart.style.display = 'none'
 		ControlMenu.style.display = 'none'
 		PlayButton.src = 'Test%20Drive/Playbutton.PNG'
-		Menu.style.marginTop = '10%'
+		Menu.style.marginTop = '20%'
 		starting = 0
 		TF = false
 		FT = true
@@ -188,7 +188,7 @@ function RESTART(){
 		ControlMenu.style.display = 'none'
 		starting = 0
 		PlayButton.src = 'Test%20Drive/Playbutton.PNG'
-		Menu.style.marginTop = '15%'
+		Menu.style.marginTop = '-5%'
 		TouchStart.style.top = '40%'
 		Para.style.display = 'none'
 		TF = false
