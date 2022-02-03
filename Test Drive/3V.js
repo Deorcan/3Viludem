@@ -467,6 +467,9 @@ Porting = function (){
 			Restart.style.display = 'none'
 			ControlMenu.style.display = 'none'
 			PlsRotate.style.display = 'block'
+			text.style.display = 'block'
+			text2.style.display = 'block'
+			Para.style.display = 'block'
 			TF = true
 			FT = false
 			let Enemies = document.querySelectorAll(".enemy")
@@ -474,6 +477,7 @@ Porting = function (){
 			Lasers.style.display = 'none'
 			clearInterval(EInterval)
 			Music.pause()
+			window.removeEventListener("touchstart", fire)
 		}
 		
 	}
@@ -493,6 +497,9 @@ Landing = function (){
 			ScoreT2.style.display = 'block'
 			HighScoreT2.style.display = 'block'
 			PlsRotate.style.display = 'none'
+			text.style.display = 'none'
+			text2.style.display = 'none'
+			Para.style.display = 'none'
 			Menu.style.display = 'none'
 			PauseButton.src = "Test%20Drive/PauseButton1.png"
 			Pause.style.display = 'block'
