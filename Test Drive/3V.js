@@ -467,6 +467,13 @@ Porting = function (){
 			Restart.style.display = 'none'
 			ControlMenu.style.display = 'none'
 			PlsRotate.style.display = 'block'
+			TF = true
+			FT = false
+			let Enemies = document.querySelectorAll(".enemy")
+			Enemies.forEach(e => e.style.display = 'none')
+			Lasers.style.display = 'none'
+			clearInterval(EInterval)
+			Music.pause()
 		}
 		
 	}
@@ -493,6 +500,9 @@ Landing = function (){
 			Restart.style.display = 'block'
 			ControlMenu.style.display = 'block'
 			setTimeout(function(){ window.scrollTo(0,1), 0})
+			let Enemies = document.querySelectorAll(".enemy")
+			Enemies.forEach(e => e.style.display = 'block')
+			Lasers.style.display = 'block'
 		}
 	}
 }
@@ -506,12 +516,9 @@ PlayTouch = function(){
 	Image.style.maxHeight = `${window.innerHeight-5}px`
 	landX = `${window.innerWidth-5}px`
 	landY = `${window.innerHeight-5}px`
-	//Menu.style.marginTop = '-27%'
 	Pause.style.fontSize = '225%'
-	//Pause.style.marginTop = `${window.innerHeight-15}px`
 	Start.style.fontSize = '160%'
 	Start.style.backgroundColor = 'white'
-	//Start.style.marginTop = 
 	Restart.style.fontSize = '160%'
 	Restart.style.backgroundColor = 'white'
 	
