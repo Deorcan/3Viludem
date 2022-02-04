@@ -453,7 +453,7 @@ Porting = function (){
 	if (port.matches){
 		PlsRotate.style.display = 'block'
 		Menu.style.display = 'none'
-		if (Mode != 0 ){
+		//if (Mode != 0 ){
 			Image.style.top = "25vh"
 			Image.style.left = "3vw"
 			Image.style.maxWidth = "94%"
@@ -478,7 +478,9 @@ Porting = function (){
 			clearInterval(EInterval)
 			Music.pause()
 			window.removeEventListener("touchstart", fire)
-		}
+			window.removeEventListener("keydown", moving)
+			window.removeEventListener("click", fire)
+		//}
 		
 	}
 }
