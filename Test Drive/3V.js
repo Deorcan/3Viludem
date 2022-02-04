@@ -189,7 +189,7 @@ function RESTART(){
 		starting = 0
 		PlayButton.src = 'Test%20Drive/Playbutton.PNG'
 		Menu.style.marginTop = '5%'
-		TouchStart.style.top = '40%'
+		TouchStart.style.top = '20%'
 		Para.style.display = 'none'
 		TF = false
 		FT = true
@@ -454,6 +454,7 @@ Porting = function (){
 		let Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
 		PlsRotate.style.display = 'block'
 		if (Displaytouch === 'block'){PlsRotate.style.display = 'none'}
+		else if (Displaytouch === 'none'){PlsRotate.style.display = 'block'}
 		
 		Menu.style.display = 'none'
 		//if (Mode != 0 ){
