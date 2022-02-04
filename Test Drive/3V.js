@@ -512,7 +512,8 @@ Landing = function (){
 				Start.style.display = 'block'
 				Restart.style.display = 'block'
 				ControlMenu.style.display = 'block'
-			}
+			}else { Menu.style.display = 'block'
+			       Menu.style.marginTop = '20%'}
 			setTimeout(function(){ window.scrollTo(0,1), 0})
 			let Enemies = document.querySelectorAll(".enemy")
 			Enemies.forEach(e => e.style.display = 'block')
