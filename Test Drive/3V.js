@@ -189,7 +189,7 @@ function RESTART(){
 		starting = 0
 		PlayButton.src = 'Test%20Drive/Playbutton.PNG'
 		Menu.style.marginTop = '5%'
-		TouchStart.style.top = '20%'
+		TouchStart.style.top = '60%'
 		Para.style.display = 'none'
 		TF = false
 		FT = true
@@ -454,7 +454,6 @@ Porting = function (){
 		let Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
 		PlsRotate.style.display = 'block'
 		if (Displaytouch === 'block'){PlsRotate.style.display = 'none'}
-		else if (Displaytouch === 'none'){PlsRotate.style.display = 'block'}
 		
 		Menu.style.display = 'none'
 		//if (Mode != 0 ){
@@ -615,17 +614,16 @@ function OnTouch(){
 	IfTouch = true
 	let Display =  window.getComputedStyle(Menu).getPropertyValue('display')
 	if (Mode === 0){
-		if (port.matches) {
-			PlsRotate.style.display = 'block'
-			Menu.style.display = 'none'
-		}
-
 		if (land.matches) {
 			PlsRotate.style.display = 'none'
 			Menu.style.display = 'block'
 		}
 	}
 	
+	if (port.matches) {
+			PlsRotate.style.display = 'block'
+			Menu.style.display = 'none'
+		}
 	port.addListener(Porting)
 	land.addListener(Landing)
 	
