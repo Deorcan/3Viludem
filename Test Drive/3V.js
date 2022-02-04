@@ -193,6 +193,7 @@ function RESTART(){
 		Para.style.display = 'none'
 		TF = false
 		FT = true
+		
 	}
 	let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
@@ -506,10 +507,12 @@ Landing = function (){
 			Para.style.display = 'none'
 			Menu.style.display = 'none'
 			PauseButton.src = "Test%20Drive/PauseButton1.png"
-			Pause.style.display = 'block'
-			Start.style.display = 'block'
-			Restart.style.display = 'block'
-			ControlMenu.style.display = 'block'
+			if (starting === -1){
+				Pause.style.display = 'block'
+				Start.style.display = 'block'
+				Restart.style.display = 'block'
+				ControlMenu.style.display = 'block'
+			}
 			setTimeout(function(){ window.scrollTo(0,1), 0})
 			let Enemies = document.querySelectorAll(".enemy")
 			Enemies.forEach(e => e.style.display = 'block')
