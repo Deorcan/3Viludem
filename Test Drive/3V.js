@@ -451,7 +451,10 @@ function MouseOff(){
 
 Porting = function (){
 	if (port.matches){
+		let Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
 		PlsRotate.style.display = 'block'
+		if (Displaytouch === 'block'){PlsRotate.style.display = 'none'}
+		
 		Menu.style.display = 'none'
 		//if (Mode != 0 ){
 			Image.style.top = "25vh"
@@ -466,7 +469,6 @@ Porting = function (){
 			Start.style.display = 'none'
 			Restart.style.display = 'none'
 			ControlMenu.style.display = 'none'
-			PlsRotate.style.display = 'block'
 			text.style.display = 'block'
 			text2.style.display = 'block'
 			Para.style.display = 'block'
