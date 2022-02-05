@@ -452,8 +452,8 @@ function MouseOff(){
 
 Porting = function (){
 	if (port.matches){
-		let Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
-		let Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
+		var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
+		var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
 		PlsRotate.style.display = 'block'
 		if (Displaytouch === 'block' || Displaygo === 'block'){PlsRotate.style.display = 'none'}
 		
