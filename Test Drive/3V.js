@@ -515,8 +515,9 @@ Landing = function (){
 				ControlMenu.style.display = 'block'
 			}else { Menu.style.display = 'block'
 			       Menu.style.marginTop = '27%'}
-			let Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
-			if (Displaygo === 'block'){Menu.style.display = 'none'}
+			var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
+			var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
+			if (Displaytouch === 'block' || Displaygo === 'block'){Menu.style.display = 'none'}
 			setTimeout(function(){ window.scrollTo(0,1), 0})
 			let Enemies = document.querySelectorAll(".enemy")
 			Enemies.forEach(e => e.style.display = 'block')
