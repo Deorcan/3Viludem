@@ -188,7 +188,7 @@ function RESTART(){
 		ControlMenu.style.display = 'none'
 		starting = 0
 		PlayButton.src = 'Test%20Drive/Playbutton.PNG'
-		Menu.style.marginTop = '25%'
+		Menu.style.marginTop = '27%'
 		TouchStart.style.top = '60%'
 		Para.style.display = 'none'
 		TF = false
@@ -474,6 +474,7 @@ Porting = function (){
 			text.style.display = 'block'
 			text2.style.display = 'block'
 			Para.style.display = 'block'
+			GameOver.style.marginTop = '50%'
 			TF = true
 			FT = false
 			let Enemies = document.querySelectorAll(".enemy")
@@ -518,6 +519,7 @@ Landing = function (){
 			var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
 			var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
 			if (Displaytouch === 'block' || Displaygo === 'block'){Menu.style.display = 'none'}
+			GameOver.style.marginTop = '25%'
 			setTimeout(function(){ window.scrollTo(0,1), 0})
 			let Enemies = document.querySelectorAll(".enemy")
 			Enemies.forEach(e => e.style.display = 'block')
