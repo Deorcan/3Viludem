@@ -452,8 +452,8 @@ function MouseOff(){
 
 Porting = function (){
 	if (port.matches){
-		var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
-		var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
+		let Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
+		let Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
 		PlsRotate.style.display = 'block'
 		if (Displaytouch === 'block' || Displaygo === 'block'){PlsRotate.style.display = 'none'}
 		
@@ -477,7 +477,7 @@ Porting = function (){
 			GameOver.style.marginTop = '50%'
 			TF = true
 			FT = false
-			var Enemies = document.querySelectorAll(".enemy")
+			let Enemies = document.querySelectorAll(".enemy")
 			Enemies.forEach(e => e.style.display = 'none')
 			Lasers.style.display = 'none'
 			clearInterval(EInterval)
@@ -516,8 +516,8 @@ Landing = function (){
 				ControlMenu.style.display = 'block'
 			}else { Menu.style.display = 'block'
 			       Menu.style.marginTop = '27%'}
-			var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
-			var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
+			let Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
+			let Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
 			if (Displaytouch === 'block' || Displaygo === 'block'){Menu.style.display = 'none'}
 			GameOver.style.marginTop = '25%'
 			setTimeout(function(){ window.scrollTo(0,1), 0})
