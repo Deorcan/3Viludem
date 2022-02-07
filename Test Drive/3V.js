@@ -477,7 +477,7 @@ Porting = function (){
 			GameOver.style.marginTop = '50%'
 			TF = true
 			FT = false
-			var Enemies = document.querySelectorAll(".enemy")
+			let Enemies = document.querySelectorAll(".enemy")
 			Enemies.forEach(e => e.style.display = 'none')
 			Lasers.style.display = 'none'
 			clearInterval(EInterval)
@@ -514,6 +514,9 @@ Landing = function (){
 				Start.style.display = 'block'
 				Restart.style.display = 'block'
 				ControlMenu.style.display = 'block'
+				Start.onclick = function(){START()}
+				Restart.onclick = function(){RESTART()}
+				ControlMenu.onclick = function(){Menu.style.display = 'block'}
 			}else { Menu.style.display = 'block'
 			       Menu.style.marginTop = '27%'}
 			var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
@@ -521,7 +524,7 @@ Landing = function (){
 			if (Displaytouch === 'block' || Displaygo === 'block'){Menu.style.display = 'none'}
 			GameOver.style.marginTop = '25%'
 			setTimeout(function(){ window.scrollTo(0,1), 0})
-			var Enemies = document.querySelectorAll(".enemy")
+			let Enemies = document.querySelectorAll(".enemy")
 			Enemies.forEach(e => e.style.display = 'block')
 			Lasers.style.display = 'block'
 		}
@@ -786,8 +789,8 @@ function OnTouch(){
 			Music.pause()
 			Start.onclick = function(){START()}
 			Restart.onclick = function(){RESTART()}
-			window.removeEventListener("touchstart", fire)
 			ControlMenu.onclick = function(){Menu.style.display = 'block'}
+			window.removeEventListener("touchstart", fire)
 			
 			
 		}else if (PauseButton.src.indexOf('Test%20Drive/PauseButton1.png') != -1){
