@@ -477,7 +477,7 @@ Porting = function (){
 			GameOver.style.marginTop = '50%'
 			TF = true
 			FT = false
-			let Enemies = document.querySelectorAll(".enemy")
+			var Enemies = document.querySelectorAll(".enemy")
 			Enemies.forEach(e => e.style.display = 'none')
 			Lasers.style.display = 'none'
 			clearInterval(EInterval)
@@ -521,7 +521,7 @@ Landing = function (){
 			if (Displaytouch === 'block' || Displaygo === 'block'){Menu.style.display = 'none'}
 			GameOver.style.marginTop = '25%'
 			setTimeout(function(){ window.scrollTo(0,1), 0})
-			let Enemies = document.querySelectorAll(".enemy")
+			var Enemies = document.querySelectorAll(".enemy")
 			Enemies.forEach(e => e.style.display = 'block')
 			Lasers.style.display = 'block'
 		}
