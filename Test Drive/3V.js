@@ -42,7 +42,7 @@ let L = { x: 0, y: 0, width: 0, height: 0}
 let E = { x: 0, y: 0, width: 0, height: 0}
 let Z = 2600
 let z = 30
-let Lasers
+var Lasers
 let IfMouse = false
 let IfTouch = false
 var Mode = 0
