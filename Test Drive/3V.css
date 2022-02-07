@@ -196,7 +196,7 @@
 		padding: 5%;
 		text-align: center;
 	}
-	#menu {
+	#menu, #fire {
 		display: none;
 	}
 }
@@ -273,5 +273,12 @@
 		left: 65%;
 		top: 9%;
 		transform: translate(-50%, -50%);
+	}
+	#fire {
+		position: absolute;
+		max-width: 70%;
+		max-height: 70%;
+		top: 60%;
+		left: 60%;
 	}
 }
