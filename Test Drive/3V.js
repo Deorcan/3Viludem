@@ -284,6 +284,7 @@ function CreateLaser(){
 	}else if (IfTouch === true && Mode === 4){
 		var X = event.touches[0].clientX
 		var Y = event.touches[0].clientY
+		ship.style.display = 'block'
 		ship.style.left = `${X}px`
 		ship.style.top = `${Y}px`
 		Image.style.maxWidth = `${window.innerWidth-5}px`
