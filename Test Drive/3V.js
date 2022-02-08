@@ -33,6 +33,7 @@ const ScoreT2 = document.getElementById("score2")
 const HighScoreT2 = document.getElementById("HighScore2")
 const Score2 = document.querySelector('#score2 span')
 const HighScore2 = document.querySelector('#HighScore2 span')
+const FireButton = document.getElementById("fire")
 
 let TF = true
 let FT = true
@@ -550,6 +551,8 @@ PlayTouch = function(){
 	PauseButton.style.display = 'block'
 	ScoreT2.style.display = 'block'
 	HighScoreT2.style.display = 'block'
+	if(Mode === 1 || Mode === 2 || Mode === 3){FireButton.style.display = 'block'}
+	else{FireButton.style.display = 'none'}
 	setTimeout(function(){ window.scrollTo(0,1), 0})
 	if (PauseButton.src.indexOf('Test%20Drive/PauseButton1.png') != -1){
 		Pause.style.display = 'block'
