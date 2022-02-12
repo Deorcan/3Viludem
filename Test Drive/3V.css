@@ -290,9 +290,9 @@
 	}
 	#fire {
 		position: absolute;
-		max-width: 8%;
-		max-height: 10%;
+		max-width: 10%;
+		max-height: 14%;
 		top: 60%;
-		left: 60%;
+		left: 85%;
 	}
 }
