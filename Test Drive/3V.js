@@ -520,7 +520,8 @@ Landing = function (){
 				ControlMenu.style.display = 'block'
 				Start.onclick = function(){START()}
 				Restart.onclick = function(){RESTART()}
-				ControlMenu.onclick = function(){Menu.style.display = 'block'
+				ControlMenu.onclick = function(){
+				Menu.style.display = 'block'
 				FireButton.style.display = 'none'}
 			}else { Menu.style.display = 'block'
 			       Menu.style.marginTop = '27%'}
@@ -812,7 +813,6 @@ function OnTouch(){
 			ControlMenu.style.display = 'none'
 			Menu.style.display = 'none'
 			starting = -1
-			FireButton.onclick = function(){fire()}
 			playgame()
 		}
 	}
@@ -836,7 +836,10 @@ function playgame(){
 		window.addEventListener("click", fire)
 	}else if (IfTouch === true){
 		if (Mode === 4){ window.addEventListener("touchstart", fire)}
-		else if (Mode === 1 || Mode === 2 || Mode === 3){FireButton.style.display = 'block'}
+		else if (Mode === 1 || Mode === 2 || Mode === 3){
+			FireButton.style.display = 'block'
+			FireButton.onclick = function(){fire()}
+								}
 	}else {
 		ship.style.display = 'block'
 		window.addEventListener("keydown", moving)
