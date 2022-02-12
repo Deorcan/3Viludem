@@ -839,6 +839,17 @@ function playgame(){
 		else if (Mode === 1 || Mode === 2 || Mode === 3){
 			FireButton.style.display = 'block'
 			FireButton.onclick = function(){fire()}
+			if (Mode === 1){}
+			else if(Mode === 2){
+				Image.onmousemove = function(){
+					var X = event.touches[0].clientX
+					var Y = event.touches[0].clientY
+					ship.style.display = 'block'
+					ship.style.left = `${X}px`
+					ship.style.top = `${Y}px`
+				}
+			}
+			else if(Mode === 3){}
 								}
 	}else {
 		ship.style.display = 'block'
