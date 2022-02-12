@@ -138,7 +138,7 @@
 
 #start {
 	position: absolute;
-	top: 29%;
+	top: 39%;
 	left: 50%;
 	font-size: 325%;
 	transform: translate(-50%, -50%);
@@ -147,7 +147,7 @@
 }
 #restart {
 	position: absolute;
-	top: 42%;
+	top: 52%;
 	left: 50%;
 	font-size: 275%;
 	transform: translate(-50%, -50%);
