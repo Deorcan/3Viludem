@@ -128,6 +128,7 @@ function gameover(){
 	Para.style.display = 'block'
 	GameOver.style.display = 'block'
 	ship.style.display = 'none'
+	FireButton.style.display = 'none'
 	if(starting === -1){
 		text.style.display = 'none'
 		text2.style.display = 'none'
@@ -140,7 +141,6 @@ function gameover(){
 		Restart.style.display = 'none'
 		ControlMenu.style.display = 'none'
 		PlayButton.src = 'Test%20Drive/Playbutton.PNG'
-		//Menu.style.marginTop = '60%'
 		starting = 0
 		TF = false
 		FT = true
@@ -178,6 +178,7 @@ function RESTART(){
 	Start.style.display = 'none'
 	Restart.style.display = 'none'
 	ControlMenu.style.display = 'none'
+	FireButton.style.display = 'none'
 	if(IsTouch()){TouchStart.style.display = 'block'}
 	if(starting === -1){
 		isTabletOrMobile()
@@ -510,6 +511,8 @@ Landing = function (){
 			Para.style.display = 'none'
 			Menu.style.display = 'none'
 			PauseButton.src = "Test%20Drive/PauseButton1.png"
+			if(Mode === 1 || Mode === 2 || Mode === 3){FireButton.style.display = 'block'}
+			else{FireButton.style.display = 'none'}
 			if (starting === -1){
 				Pause.style.display = 'block'
 				Start.style.display = 'block'
@@ -517,15 +520,14 @@ Landing = function (){
 				ControlMenu.style.display = 'block'
 				Start.onclick = function(){START()}
 				Restart.onclick = function(){RESTART()}
-				ControlMenu.onclick = function(){Menu.style.display = 'block'}
+				ControlMenu.onclick = function(){Menu.style.display = 'block'
+				FireButton.style.display = 'none'}
 			}else { Menu.style.display = 'block'
 			       Menu.style.marginTop = '27%'}
 			var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
 			var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
 			if (Displaytouch === 'block' || Displaygo === 'block'){Menu.style.display = 'none'}
 			GameOver.style.marginTop = '25%'
-			if(Mode === 1 || Mode === 2 || Mode === 3){FireButton.style.display = 'block'}
-			else{FireButton.style.display = 'none'}
 			setTimeout(function(){ window.scrollTo(0,1), 0})
 			let Enemies = document.querySelectorAll(".enemy")
 			Enemies.forEach(e => e.style.display = 'block')
@@ -560,6 +562,7 @@ PlayTouch = function(){
 		Start.style.display = 'block'
 		Restart.style.display = 'block'
 		ControlMenu.style.display = 'block'
+		FireButton.style.display = 'none'
 	}
 	starting = -1
 	TF = false
@@ -796,6 +799,7 @@ function OnTouch(){
 			Restart.onclick = function(){RESTART()}
 			ControlMenu.onclick = function(){Menu.style.display = 'block'}
 			window.removeEventListener("touchstart", fire)
+			FireButton.style.display = 'none'
 			
 			
 		}else if (PauseButton.src.indexOf('Test%20Drive/PauseButton1.png') != -1){
@@ -808,6 +812,7 @@ function OnTouch(){
 			ControlMenu.style.display = 'none'
 			Menu.style.display = 'none'
 			starting = -1
+			FireButton.onclick = function(){fire()}
 			playgame()
 		}
 	}
@@ -831,6 +836,7 @@ function playgame(){
 		window.addEventListener("click", fire)
 	}else if (IfTouch === true){
 		if (Mode === 4){ window.addEventListener("touchstart", fire)}
+		else if (Mode === 1 || Mode === 2 || Mode === 3){FireButton.style.display = 'block'}
 	}else {
 		ship.style.display = 'block'
 		window.addEventListener("keydown", moving)
