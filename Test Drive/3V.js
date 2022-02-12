@@ -460,7 +460,6 @@ Porting = function (){
 		if (Displaytouch === 'block' || Displaygo === 'block'){PlsRotate.style.display = 'none'}
 		
 		Menu.style.display = 'none'
-		//if (Mode != 0 ){
 			Image.style.top = "25vh"
 			Image.style.left = "3vw"
 			Image.style.maxWidth = "94%"
@@ -477,6 +476,7 @@ Porting = function (){
 			text2.style.display = 'block'
 			Para.style.display = 'block'
 			GameOver.style.marginTop = '50%'
+			FireButton.style.display = 'none'
 			TF = true
 			FT = false
 			let Enemies = document.querySelectorAll(".enemy")
@@ -487,7 +487,6 @@ Porting = function (){
 			window.removeEventListener("touchstart", fire)
 			window.removeEventListener("keydown", moving)
 			window.removeEventListener("click", fire)
-		//}
 		
 	}
 }
@@ -525,6 +524,8 @@ Landing = function (){
 			var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
 			if (Displaytouch === 'block' || Displaygo === 'block'){Menu.style.display = 'none'}
 			GameOver.style.marginTop = '25%'
+			if(Mode === 1 || Mode === 2 || Mode === 3){FireButton.style.display = 'block'}
+			else{FireButton.style.display = 'none'}
 			setTimeout(function(){ window.scrollTo(0,1), 0})
 			let Enemies = document.querySelectorAll(".enemy")
 			Enemies.forEach(e => e.style.display = 'block')
