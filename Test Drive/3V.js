@@ -839,7 +839,7 @@ function playgame(){
 			FireButton.onclick = function(){fire()}
 			if (Mode === 1){}
 			else if(Mode === 2){
-				Image.onpointmove = function(){
+				Image.onpointermove = function(){
 					var X = event.touches[0].clientX
 					var Y = event.touches[0].clientY
 					ship.style.display = 'block'
