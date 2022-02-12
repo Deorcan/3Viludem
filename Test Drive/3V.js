@@ -178,8 +178,8 @@ function RESTART(){
 	Start.style.display = 'none'
 	Restart.style.display = 'none'
 	ControlMenu.style.display = 'none'
+	if(IsTouch()){TouchStart.style.display = 'block'}
 	if(starting === -1){
-		TouchStart.style.display = 'block'
 		isTabletOrMobile()
 		Landing()
 		IfTouch = false
