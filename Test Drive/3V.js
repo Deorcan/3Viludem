@@ -845,6 +845,7 @@ function playgame(){
 					ship.style.display = 'block'
 					ship.style.left = `${X}px`
 					ship.style.top = `${Y}px`
+					setTimeout(function(){ window.scrollTo(0,1), 0})
 				}
 			}
 			else if(Mode === 3){}
