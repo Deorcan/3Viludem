@@ -485,6 +485,7 @@ Porting = function (){
 			Para.style.display = 'block'
 			GameOver.style.marginTop = '50%'
 			FireButton.style.display = 'none'
+			DPadButton.style.display = 'none'
 			TF = true
 			FT = false
 			let Enemies = document.querySelectorAll(".enemy")
@@ -527,7 +528,8 @@ Landing = function (){
 				Restart.onclick = function(){RESTART()}
 				ControlMenu.onclick = function(){
 				Menu.style.display = 'block'
-				FireButton.style.display = 'none'}
+				FireButton.style.display = 'none'
+				DPadButton.style.display = 'none'}
 			}else { Menu.style.display = 'block'
 			       Menu.style.marginTop = '27%'}
 			var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
@@ -569,6 +571,7 @@ PlayTouch = function(){
 		Restart.style.display = 'block'
 		ControlMenu.style.display = 'block'
 		FireButton.style.display = 'none'
+		DPadButton.style.display = 'none'
 	}
 	starting = -1
 	TF = false
@@ -806,6 +809,7 @@ function OnTouch(){
 			ControlMenu.onclick = function(){Menu.style.display = 'block'}
 			window.removeEventListener("touchstart", fire)
 			FireButton.style.display = 'none'
+			DPadButton.style.display = 'none'
 			
 			
 		}else if (PauseButton.src.indexOf('Test%20Drive/PauseButton1.png') != -1){
@@ -855,7 +859,9 @@ function playgame(){
 					setTimeout(function(){ window.scrollTo(0,1), 0})
 				}
 			}
-			else if(Mode === 3){}
+			else if(Mode === 3){
+				DPadButton.style.display = 'block'
+			}
 								}
 	}else {
 		ship.style.display = 'block'
