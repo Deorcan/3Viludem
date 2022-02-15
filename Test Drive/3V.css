@@ -1,5 +1,3 @@
-
-
 #space {
 	position: absolute;
 	border: 2px solid white;
@@ -186,7 +184,7 @@
 	width: 100%;
 	height: 100%;
 }
-#pausebutton, #score2, #HighScore2, #fire {
+#pausebutton, #score2, #HighScore2, #fire, .DPad {
 	display: none;
 }
 
@@ -210,7 +208,7 @@
 		padding: 5%;
 		text-align: center;
 	}
-	#menu, #fire {
+	#menu, #fire, .DPad {
 		display: none;
 	}
 }
@@ -294,5 +292,30 @@
 		max-height: 14%;
 		top: 60%;
 		left: 85%;
+	}
+	.DPad {
+		position: absolute;
+		max-width: 10%;
+		max-height: 14%;
+	}
+	#DPadN {
+		top: 60%;
+		left: 10%;
+	}
+	#DPadU {
+		top: 65%;
+		left: 10%;
+	}
+	#DPadL {
+		top: 60%;
+		left: 5%;
+	}
+	#DPadD {
+		top: 75%;
+		left: 10%;
+	}
+	#DPadN {
+		top: 60%;
+		left: 25%;
 	}
 }
