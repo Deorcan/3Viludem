@@ -863,7 +863,7 @@ function playgame(){
 			}
 			else if(Mode === 3){
 				DPadButton.style.display = 'block'
-				DPadLeft.style.display = 'block'
+				DPadDown.style.display = 'block'
 			}
 								}
 	}else {
