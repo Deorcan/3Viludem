@@ -564,6 +564,8 @@ PlayTouch = function(){
 	HighScoreT2.style.display = 'block'
 	if(Mode === 1 || Mode === 2 || Mode === 3){FireButton.style.display = 'block'}
 	else{FireButton.style.display = 'none'}
+	if(Mode === 3){DPadButton.style.display = 'block'}
+	else{DPadButton.style.display = 'none'}
 	setTimeout(function(){ window.scrollTo(0,1), 0})
 	if (PauseButton.src.indexOf('Test%20Drive/PauseButton1.png') != -1){
 		Pause.style.display = 'block'
