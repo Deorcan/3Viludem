@@ -861,6 +861,7 @@ function playgame(){
 			}
 			else if(Mode === 3){
 				DPadButton.style.display = 'block'
+				DPadUp.style.display = 'block'
 			}
 								}
 	}else {
