@@ -34,11 +34,11 @@ const HighScoreT2 = document.getElementById("HighScore2")
 const Score2 = document.querySelector('#score2 span')
 const HighScore2 = document.querySelector('#HighScore2 span')
 const FireButton = document.getElementById("fire")
-const DPadButtonNull = document.getElementById("DPadN")
-const DPadButtonUp = document.getElementById("DPadU")
-const DPadButtonLeft = document.getElementById("DPadL")
-const DPadButtonDown = document.getElementById("DPadD")
-const DPadButtonRight = document.getElementById("DPadR")
+const DPadButton = document.getElementById("DPadN")
+const DPadUp = document.getElementById("DPadU")
+const DPadLeft = document.getElementById("DPadL")
+const DPadDown = document.getElementById("DPadD")
+const DPadRight = document.getElementById("DPadR")
 
 let TF = true
 let FT = true
@@ -134,6 +134,7 @@ function gameover(){
 	GameOver.style.display = 'block'
 	ship.style.display = 'none'
 	FireButton.style.display = 'none'
+	DPadButton.style.display = 'none'
 	if(starting === -1){
 		text.style.display = 'none'
 		text2.style.display = 'none'
@@ -184,6 +185,7 @@ function RESTART(){
 	Restart.style.display = 'none'
 	ControlMenu.style.display = 'none'
 	FireButton.style.display = 'none'
+	DPadButton.style.display = 'none'
 	if(IsTouch()){TouchStart.style.display = 'block'}
 	if(starting === -1){
 		isTabletOrMobile()
