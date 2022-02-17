@@ -418,7 +418,58 @@ function moving(){
 	
 }
 
-
+function movingtouch(){
+	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
+	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
+	let TOP1 = window.getComputedStyle(DPadButton).getPropertyValue('top')
+	let HEIGHT = window.getComputedStyle(DPadButton).getPropertyValue('height')
+	let LEFT1 = window.getComputedStyle(DPadButton).getPropertyValue('left')
+	let WIDTH = window.getComputedStyle(DPadButton).getPropertyValue('width')
+	var X = event.touches[0].clientX
+	var Y = event.touches[0].clientY
+	ship.style.display = 'block'
+	
+	if(Y >= parseFloat(TOP1)){
+		let pos = parseFloat(TOP)
+		pos++
+		ship.style.top = `${pos}px`
+		
+		DPadUp.style.display = 'block'
+		DPadLeft.style.display = 'none'
+		DPadDown.style.display = 'none'
+		DPadRight.style.display = 'none'
+		
+	}else if(X <= parseFloat(LEFT1)){
+		let pos = parseFloat(LEFT)
+		pos--
+		ship.style.left = `${pos}px`
+		
+		DPadUp.style.display = 'none'
+		DPadLeft.style.display = 'block'
+		DPadDown.style.display = 'none'
+		DPadRight.style.display = 'none'
+		
+	}else if(Y <= parseFloat(TOP1)){
+		let pos = parseFloat(TOP)
+		pos--
+		ship.style.top = `${pos}px`
+		
+		DPadUp.style.display = 'none'
+		DPadLeft.style.display = 'none'
+		DPadDown.style.display = 'block'
+		DPadRight.style.display = 'none'
+	
+	}else if(X >= parseFloat(LEFT1)){
+		let pos = parseFloat(LEFT)
+		pos++
+		ship.style.left = `${pos}px`
+		
+		DPadUp.style.display = 'none'
+		DPadLeft.style.display = 'none'
+		DPadDown.style.display = 'none'
+		DPadRight.style.display = 'block'
+	}
+}
 
 function OnMouse(){
 	Image.style.cursor = "url('https://deorcan.github.io/3Viludem/Pictures/Cursor.png'), default"
@@ -863,7 +914,12 @@ function playgame(){
 			}
 			else if(Mode === 3){
 				DPadButton.style.display = 'block'
-				DPadRight.style.display = 'block'
+				DPadButton.ontouchmove = function(){movingtouch()}
+				DPadButton.ontouchend = function(){
+					DPadUp.style.display = 'none'
+					DPadLeft.style.display = 'none'
+					DPadDown.style.display = 'none'
+					DPadRight.style.display = 'none'}
 			}
 								}
 	}else {
