@@ -419,6 +419,7 @@ function moving(){
 }
 
 function movingtouch(){
+	event.preventDefault()
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
 	let TOP1 = window.getComputedStyle(DPadButton).getPropertyValue('top')
