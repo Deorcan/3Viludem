@@ -432,7 +432,7 @@ function movingtouch(){
 	
 	if(Y >= parseFloat(TOP1)){
 		let pos = parseFloat(TOP)
-		pos++
+		pos--
 		ship.style.top = `${pos}px`
 		
 		DPadUp.style.display = 'block'
@@ -442,7 +442,7 @@ function movingtouch(){
 		
 	}else if(X <= parseFloat(LEFT1)){
 		let pos = parseFloat(LEFT)
-		pos--
+		pos++
 		ship.style.left = `${pos}px`
 		
 		DPadUp.style.display = 'none'
@@ -452,7 +452,7 @@ function movingtouch(){
 		
 	}else if(Y <= parseFloat(TOP1)){
 		let pos = parseFloat(TOP)
-		pos--
+		pos++
 		ship.style.top = `${pos}px`
 		
 		DPadUp.style.display = 'none'
@@ -462,7 +462,7 @@ function movingtouch(){
 	
 	}else if(X >= parseFloat(LEFT1)){
 		let pos = parseFloat(LEFT)
-		pos++
+		pos--
 		ship.style.left = `${pos}px`
 		
 		DPadUp.style.display = 'none'
@@ -470,6 +470,7 @@ function movingtouch(){
 		DPadDown.style.display = 'none'
 		DPadRight.style.display = 'block'
 	}
+	setTimeout(function(){ window.scrollTo(0,1), 0})
 }
 
 function OnMouse(){
