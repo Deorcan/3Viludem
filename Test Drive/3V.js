@@ -442,7 +442,7 @@ function movingtouch(){
 		
 	}if(X <= parseFloat(LEFTleft)){
 		let pos = parseFloat(LEFT)
-		pos++
+		pos--
 		ship.style.left = `${pos}px`
 		
 		DPadUp.style.display = 'none'
@@ -462,7 +462,7 @@ function movingtouch(){
 	
 	}if(X >= parseFloat(LEFTright)){
 		let pos = parseFloat(LEFT)
-		pos--
+		pos++
 		ship.style.left = `${pos}px`
 		
 		DPadUp.style.display = 'none'
