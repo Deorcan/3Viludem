@@ -422,15 +422,15 @@ function movingtouch(){
 	event.preventDefault()
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	let TOP1 = window.getComputedStyle(DPadButton).getPropertyValue('top')
-	let HEIGHT = window.getComputedStyle(DPadButton).getPropertyValue('height')
-	let LEFT1 = window.getComputedStyle(DPadButton).getPropertyValue('left')
-	let WIDTH = window.getComputedStyle(DPadButton).getPropertyValue('width')
+	let TOPup = window.getComputedStyle(DPadUp).getPropertyValue('top')
+	let TOPdown = window.getComputedStyle(DPadDown).getPropertyValue('top')
+	let LEFTleft = window.getComputedStyle(DPadLeft).getPropertyValue('left')
+	let LEFTright = window.getComputedStyle(DPadRight).getPropertyValue('left')
 	var X = event.touches[0].clientX
 	var Y = event.touches[0].clientY
 	ship.style.display = 'block'
 	
-	if(Y >= parseFloat(TOP1)){
+	if(Y >= parseFloat(TOPup)){
 		let pos = parseFloat(TOP)
 		pos--
 		ship.style.top = `${pos}px`
@@ -440,7 +440,7 @@ function movingtouch(){
 		DPadDown.style.display = 'none'
 		DPadRight.style.display = 'none'
 		
-	}else if(X <= parseFloat(LEFT1)){
+	}else if(X <= parseFloat(LEFTleft)){
 		let pos = parseFloat(LEFT)
 		pos++
 		ship.style.left = `${pos}px`
@@ -450,7 +450,7 @@ function movingtouch(){
 		DPadDown.style.display = 'none'
 		DPadRight.style.display = 'none'
 		
-	}else if(Y <= parseFloat(TOP1)){
+	}else if(Y <= parseFloat(TOPdown)){
 		let pos = parseFloat(TOP)
 		pos++
 		ship.style.top = `${pos}px`
@@ -460,7 +460,7 @@ function movingtouch(){
 		DPadDown.style.display = 'block'
 		DPadRight.style.display = 'none'
 	
-	}else if(X >= parseFloat(LEFT1)){
+	}else if(X >= parseFloat(LEFTright)){
 		let pos = parseFloat(LEFT)
 		pos--
 		ship.style.left = `${pos}px`
