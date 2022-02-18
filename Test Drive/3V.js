@@ -402,16 +402,16 @@ function moving(){
 	if (event.key === "ArrowUp"){
 		event.preventDefault()
 		moveUp()
-	} else if (event.key === "ArrowDown"){
+	} if (event.key === "ArrowDown"){
 		event.preventDefault()
 		moveDown()
-	} else if (event.key === "ArrowLeft"){
+	} if (event.key === "ArrowLeft"){
 		event.preventDefault()
 		moveLeft()
-	} else if (event.key === "ArrowRight"){
+	} if (event.key === "ArrowRight"){
 		event.preventDefault()
 		moveRight()
-	} else if (event.key === " "){
+	} if (event.key === " "){
 		event.preventDefault()
 		fire()
 	}
