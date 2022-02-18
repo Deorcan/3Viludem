@@ -430,7 +430,7 @@ function movingtouch(){
 	var Y = event.touches[0].clientY
 	ship.style.display = 'block'
 	
-	if(Y >= parseFloat(TOPup)){
+	if(Y > parseFloat(TOPup)){
 		let pos = parseFloat(TOP)
 		pos--
 		ship.style.top = `${pos}px`
@@ -440,7 +440,7 @@ function movingtouch(){
 		DPadDown.style.display = 'none'
 		DPadRight.style.display = 'none'
 		
-	}if(X <= parseFloat(LEFTleft)){
+	}if(X < parseFloat(LEFTleft)){
 		let pos = parseFloat(LEFT)
 		pos--
 		ship.style.left = `${pos}px`
@@ -450,7 +450,7 @@ function movingtouch(){
 		DPadDown.style.display = 'none'
 		DPadRight.style.display = 'none'
 		
-	}if(Y <= parseFloat(TOPdown)){
+	}if(Y < parseFloat(TOPdown)){
 		let pos = parseFloat(TOP)
 		pos++
 		ship.style.top = `${pos}px`
@@ -460,7 +460,7 @@ function movingtouch(){
 		DPadDown.style.display = 'block'
 		DPadRight.style.display = 'none'
 	
-	}if(X >= parseFloat(LEFTright)){
+	}if(X > parseFloat(LEFTright)){
 		let pos = parseFloat(LEFT)
 		pos++
 		ship.style.left = `${pos}px`
