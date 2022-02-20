@@ -432,7 +432,7 @@ function movingtouch(){
 	
 	if(Y > parseFloat(TOPup)){
 		let pos = parseFloat(TOP)
-		pos--
+		pos++
 		ship.style.top = `${pos}px`
 		
 		DPadUp.style.display = 'block'
@@ -452,7 +452,7 @@ function movingtouch(){
 		
 	}if(Y < parseFloat(TOPdown)){
 		let pos = parseFloat(TOP)
-		pos++
+		pos--
 		ship.style.top = `${pos}px`
 		
 		DPadUp.style.display = 'none'
