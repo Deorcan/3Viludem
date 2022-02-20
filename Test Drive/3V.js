@@ -422,7 +422,8 @@ function movingtouch(){
 	event.preventDefault()
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	let TOPup = window.getComputedStyle(DPadUp).getPropertyValue('bottom')
+	let TOPup = window.getComputedStyle(DPadUp).getPropertyValue('top')
+	let TOPheight = window.getComputedStyle(DPadUp).getPropertyValue('height')
 	let TOPdown = window.getComputedStyle(DPadDown).getPropertyValue('top')
 	let LEFTleft = window.getComputedStyle(DPadLeft).getPropertyValue('left')
 	let LEFTright = window.getComputedStyle(DPadRight).getPropertyValue('left')
@@ -430,7 +431,7 @@ function movingtouch(){
 	var Y = event.touches[0].clientY
 	ship.style.display = 'block'
 	
-	if(Y > parseFloat(TOPup)){
+	if(Y > parseFloat(TOPup) + parseFloat(TOPheight)){
 		let pos = parseFloat(TOP)
 		pos--
 		ship.style.top = `${pos}px`
