@@ -422,7 +422,7 @@ function movingtouch(){
 	event.preventDefault()
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
-	let TOPup = window.getComputedStyle(DPadUp).getPropertyValue('top')
+	let TOPup = window.getComputedStyle(DPadUp).getPropertyValue('bottom')
 	let TOPdown = window.getComputedStyle(DPadDown).getPropertyValue('top')
 	let LEFTleft = window.getComputedStyle(DPadLeft).getPropertyValue('left')
 	let LEFTright = window.getComputedStyle(DPadRight).getPropertyValue('left')
