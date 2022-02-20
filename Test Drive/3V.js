@@ -431,7 +431,7 @@ function movingtouch(){
 	var Y = event.touches[0].clientY
 	ship.style.display = 'block'
 	
-	if(Y > parseFloat(TOPup) + parseFloat(TOPheight)){
+	if(Y < parseFloat(TOPup) + parseFloat(TOPheight)){
 		let pos = parseFloat(TOP)
 		pos--
 		ship.style.top = `${pos}px`
