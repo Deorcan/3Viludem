@@ -426,6 +426,7 @@ function movingtouch(){
 	let TOPheight = window.getComputedStyle(DPadUp).getPropertyValue('height')
 	let TOPdown = window.getComputedStyle(DPadDown).getPropertyValue('top')
 	let LEFTleft = window.getComputedStyle(DPadLeft).getPropertyValue('left')
+	let LEFTwidth = window.getComputedStyle(DPadLeft).getPropertyValue('width')
 	let LEFTright = window.getComputedStyle(DPadRight).getPropertyValue('left')
 	var X = event.touches[0].clientX
 	var Y = event.touches[0].clientY
@@ -441,7 +442,7 @@ function movingtouch(){
 		DPadDown.style.display = 'none'
 		DPadRight.style.display = 'none'
 		
-	}if(X > parseFloat(LEFTleft)){
+	}if(X < parseFloat(LEFTleft) + parseFloat(LEFTwidth)){
 		let pos = parseFloat(LEFT)
 		pos--
 		ship.style.left = `${pos}px`
