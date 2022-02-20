@@ -440,7 +440,7 @@ function movingtouch(){
 		DPadDown.style.display = 'none'
 		DPadRight.style.display = 'none'
 		
-	}if(X < parseFloat(LEFTleft)){
+	}/*if(X < parseFloat(LEFTleft)){
 		let pos = parseFloat(LEFT)
 		pos--
 		ship.style.left = `${pos}px`
@@ -469,7 +469,7 @@ function movingtouch(){
 		DPadLeft.style.display = 'none'
 		DPadDown.style.display = 'none'
 		DPadRight.style.display = 'block'
-	}
+	}*/
 	setTimeout(function(){ window.scrollTo(0,1), 0})
 }
 
