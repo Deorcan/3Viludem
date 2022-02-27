@@ -442,7 +442,7 @@ function movingtouch(){
 		DPadDown.style.display = 'none'
 		DPadRight.style.display = 'none'
 		
-	}if(X < parseFloat(LEFTleft) + parseFloat(LEFTwidth) - 10){
+	}else if(X < parseFloat(LEFTleft) + parseFloat(LEFTwidth) - 10){
 		let pos = parseFloat(LEFT)
 		pos--
 		ship.style.left = `${pos}px`
@@ -452,7 +452,7 @@ function movingtouch(){
 		DPadDown.style.display = 'none'
 		DPadRight.style.display = 'none'
 		
-	}if(Y > parseFloat(TOPdown) - 10){
+	} else if(Y > parseFloat(TOPdown) - 10){
 		let pos = parseFloat(TOP)
 		pos++
 		ship.style.top = `${pos}px`
@@ -462,7 +462,7 @@ function movingtouch(){
 		DPadDown.style.display = 'block'
 		DPadRight.style.display = 'none'
 	
-	}if(X > parseFloat(LEFTright) - 10){
+	} else if(X > parseFloat(LEFTright) - 10){
 		let pos = parseFloat(LEFT)
 		pos++
 		ship.style.left = `${pos}px`
