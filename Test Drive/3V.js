@@ -438,9 +438,9 @@ function movingtouch(){
 		ship.style.top = `${pos}px`
 		
 		DPadUp.style.display = 'block'
-		DPadLeft.style.display = 'none'
+		//DPadLeft.style.display = 'none'
 		DPadDown.style.display = 'none'
-		DPadRight.style.display = 'none'
+		//DPadRight.style.display = 'none'
 		
 	} else if(Y > parseFloat(TOPdown) - 10){
 		let pos = parseFloat(TOP)
@@ -448,18 +448,25 @@ function movingtouch(){
 		ship.style.top = `${pos}px`
 		
 		DPadUp.style.display = 'none'
-		DPadLeft.style.display = 'none'
+		//DPadLeft.style.display = 'none'
 		DPadDown.style.display = 'block'
-		DPadRight.style.display = 'none'
+		//DPadRight.style.display = 'none'
 	
-	} else if(X < parseFloat(LEFTleft) + parseFloat(LEFTwidth) - 10){
+	}else {
+		DPadUp.style.display = 'none'
+		//DPadLeft.style.display = 'none'
+		//DPadDown.style.display = 'none'
+		DPadRight.style.display = 'none'
+	}
+	
+	if(X < parseFloat(LEFTleft) + parseFloat(LEFTwidth) - 10){
 		let pos = parseFloat(LEFT)
 		pos--
 		ship.style.left = `${pos}px`
 		
-		DPadUp.style.display = 'none'
+		//DPadUp.style.display = 'none'
 		DPadLeft.style.display = 'block'
-		DPadDown.style.display = 'none'
+		//DPadDown.style.display = 'none'
 		DPadRight.style.display = 'none'
 	
 	} else if(X > parseFloat(LEFTright) - 10){
@@ -467,12 +474,18 @@ function movingtouch(){
 		pos++
 		ship.style.left = `${pos}px`
 		
-		DPadUp.style.display = 'none'
+		//DPadUp.style.display = 'none'
 		DPadLeft.style.display = 'none'
-		DPadDown.style.display = 'none'
+		//DPadDown.style.display = 'none'
 		DPadRight.style.display = 'block'
 		
-	} else if((Y < parseFloat(TOPup) + parseFloat(TOPheight) - 10) && (X < parseFloat(LEFTleft) + parseFloat(LEFTwidth) - 10)){
+	}else {
+		//DPadUp.style.display = 'none'
+		DPadLeft.style.display = 'none'
+		//DPadDown.style.display = 'none'
+		DPadRight.style.display = 'none'
+	}
+	/* else if((Y < parseFloat(TOPup) + parseFloat(TOPheight) - 10) && (X < parseFloat(LEFTleft) + parseFloat(LEFTwidth) - 10)){
 		let posu = parseFloat(TOP)
 		posu--
 		ship.style.top = `${posu}px`
@@ -535,7 +548,7 @@ function movingtouch(){
 		DPadRight.style.display = 'none'
 	}
 	
-	
+	*/
 	
 	/*if(X < parseFloat(LEFTleft) + parseFloat(LEFTwidth) - 10){
 		let pos = parseFloat(LEFT)
