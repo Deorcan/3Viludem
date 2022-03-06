@@ -446,14 +446,14 @@ function movingtouch(){
 	let LEFTwidth = window.getComputedStyle(DPadLeft).getPropertyValue('width')
 	let LEFTright = window.getComputedStyle(DPadRight).getPropertyValue('left')
 	
-	if (XTouch === X2Touch){
+	/*if (XTouch === X2Touch){
 		if (XTouch === event.touches[0].clientX){ XTouch = event.touches[1].clientX}
 		else if (XTouch === event.touches[1].clientX){ XTouch = event.touches[0].clientX}
 	}
 	if (YTouch === Y2Touch){
 		if (YTouch === event.touches[0].clientY){ YTouch = event.touches[1].clientY}
 		else if (YTouch === event.touches[1].clientY){ YTouch = event.touches[0].clientY}
-	}
+	}*/
 	var X = XTouch
 	var Y = YTouch
 	
