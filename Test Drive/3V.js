@@ -135,6 +135,10 @@ function gameover(){
 	ship.style.display = 'none'
 	FireButton.style.display = 'none'
 	DPadButton.style.display = 'none'
+	DPadUp.style.display = 'none'
+	DPadLeft.style.display = 'none'
+	DPadDown.style.display = 'none'
+	DPadRight.style.display = 'none'
 	if(starting === -1){
 		text.style.display = 'none'
 		text2.style.display = 'none'
@@ -186,6 +190,10 @@ function RESTART(){
 	ControlMenu.style.display = 'none'
 	FireButton.style.display = 'none'
 	DPadButton.style.display = 'none'
+	DPadUp.style.display = 'none'
+	DPadLeft.style.display = 'none'
+	DPadDown.style.display = 'none'
+	DPadRight.style.display = 'none'
 	if(IsTouch()){TouchStart.style.display = 'block'}
 	if(starting === -1){
 		isTabletOrMobile()
@@ -291,8 +299,13 @@ function CreateLaser(){
 		var X = event.clientX
 		var Y = event.clientY
 	}else if (IfTouch === true && Mode === 4){
-		var X = event.touches[0].clientX
-		var Y = event.touches[0].clientY
+		if (event.touches.length === 0){
+			var X = event.touches[0].clientX
+			var Y = event.touches[0].clientY
+	}else if (event.touches.length === 1){
+			var X = event.touches[1].clientX
+			var Y = event.touches[1].clientY
+	}
 		ship.style.display = 'block'
 		ship.style.left = `${X}px`
 		ship.style.top = `${Y}px`
@@ -428,8 +441,17 @@ function movingtouch(){
 	let LEFTleft = window.getComputedStyle(DPadLeft).getPropertyValue('left')
 	let LEFTwidth = window.getComputedStyle(DPadLeft).getPropertyValue('width')
 	let LEFTright = window.getComputedStyle(DPadRight).getPropertyValue('left')
-	var X = event.touches[0].clientX
-	var Y = event.touches[0].clientY
+	
+	if (event.touches.length === 0){
+		var X = event.touches[0].clientX
+		var Y = event.touches[0].clientY
+	}else if (event.touches.length === 1){
+		var X = event.touches[1].clientX
+		var Y = event.touches[1].clientY
+	}
+	
+	
+	
 	ship.style.display = 'block'
 	
 	if(Y < parseFloat(TOPup) + parseFloat(TOPheight) - 10){
@@ -438,9 +460,7 @@ function movingtouch(){
 		ship.style.top = `${pos}px`
 		
 		DPadUp.style.display = 'block'
-		//DPadLeft.style.display = 'none'
 		DPadDown.style.display = 'none'
-		//DPadRight.style.display = 'none'
 		
 	} else if(Y > parseFloat(TOPdown) - 10){
 		let pos = parseFloat(TOP)
@@ -448,14 +468,10 @@ function movingtouch(){
 		ship.style.top = `${pos}px`
 		
 		DPadUp.style.display = 'none'
-		//DPadLeft.style.display = 'none'
 		DPadDown.style.display = 'block'
-		//DPadRight.style.display = 'none'
 	
 	}else {
 		DPadUp.style.display = 'none'
-		//DPadLeft.style.display = 'none'
-		//DPadDown.style.display = 'none'
 		DPadRight.style.display = 'none'
 	}
 	
@@ -464,9 +480,7 @@ function movingtouch(){
 		pos--
 		ship.style.left = `${pos}px`
 		
-		//DPadUp.style.display = 'none'
 		DPadLeft.style.display = 'block'
-		//DPadDown.style.display = 'none'
 		DPadRight.style.display = 'none'
 	
 	} else if(X > parseFloat(LEFTright) - 10){
@@ -474,164 +488,13 @@ function movingtouch(){
 		pos++
 		ship.style.left = `${pos}px`
 		
-		//DPadUp.style.display = 'none'
 		DPadLeft.style.display = 'none'
-		//DPadDown.style.display = 'none'
 		DPadRight.style.display = 'block'
 		
 	}else {
-		//DPadUp.style.display = 'none'
 		DPadLeft.style.display = 'none'
-		//DPadDown.style.display = 'none'
 		DPadRight.style.display = 'none'
 	}
-	/* else if((Y < parseFloat(TOPup) + parseFloat(TOPheight) - 10) && (X < parseFloat(LEFTleft) + parseFloat(LEFTwidth) - 10)){
-		let posu = parseFloat(TOP)
-		posu--
-		ship.style.top = `${posu}px`
-		
-		let posl = parseFloat(LEFT)
-		posl--
-		ship.style.left = `${posl}px`
-		
-		DPadUp.style.display = 'block'
-		DPadLeft.style.display = 'block'
-		DPadDown.style.display = 'none'
-		DPadRight.style.display = 'none'
-		
-	} else if((Y < parseFloat(TOPup) + parseFloat(TOPheight) - 10) && (X > parseFloat(LEFTright) - 10)){
-		let posu = parseFloat(TOP)
-		posu--
-		ship.style.top = `${posu}px`
-		
-		let posr = parseFloat(LEFT)
-		posr++
-		ship.style.left = `${posr}px`
-		
-		DPadUp.style.display = 'block'
-		DPadLeft.style.display = 'none'
-		DPadDown.style.display = 'none'
-		DPadRight.style.display = 'block'
-		
-	} else if((Y > parseFloat(TOPdown) - 10) && (X < parseFloat(LEFTleft) + parseFloat(LEFTwidth) - 10)){
-		let posd = parseFloat(TOP)
-		posd++
-		ship.style.top = `${posd}px`
-		
-		let posl = parseFloat(LEFT)
-		posl--
-		ship.style.left = `${posl}px`
-		
-		DPadUp.style.display = 'none'
-		DPadLeft.style.display = 'block'
-		DPadDown.style.display = 'block'
-		DPadRight.style.display = 'none'
-		
-	} else if((Y > parseFloat(TOPdown) - 10) && (X > parseFloat(LEFTright) - 10)){
-		let posd = parseFloat(TOP)
-		posd++
-		ship.style.top = `${posd}px`
-		
-		let posr = parseFloat(LEFT)
-		posr++
-		ship.style.left = `${posr}px`
-		
-		DPadUp.style.display = 'none'
-		DPadLeft.style.display = 'none'
-		DPadDown.style.display = 'block'
-		DPadRight.style.display = 'block'
-		
-	}else {
-		DPadUp.style.display = 'none'
-		DPadLeft.style.display = 'none'
-		DPadDown.style.display = 'none'
-		DPadRight.style.display = 'none'
-	}
-	
-	*/
-	
-	/*if(X < parseFloat(LEFTleft) + parseFloat(LEFTwidth) - 10){
-		let pos = parseFloat(LEFT)
-		pos--
-		ship.style.left = `${pos}px`
-		
-		DPadUp.style.display = 'none'
-		DPadLeft.style.display = 'block'
-		DPadDown.style.display = 'none'
-		DPadRight.style.display = 'none'
-	
-	} else if(X > parseFloat(LEFTright) - 10){
-		let pos = parseFloat(LEFT)
-		pos++
-		ship.style.left = `${pos}px`
-		
-		DPadUp.style.display = 'none'
-		DPadLeft.style.display = 'none'
-		DPadDown.style.display = 'none'
-		DPadRight.style.display = 'block'
-		
-	} else if((Y < parseFloat(TOPup) + parseFloat(TOPheight) - 10) && (X < parseFloat(LEFTleft) + parseFloat(LEFTwidth) - 10)){
-		let posu = parseFloat(TOP)
-		posu--
-		ship.style.top = `${posu}px`
-		
-		let posl = parseFloat(LEFT)
-		posl--
-		ship.style.left = `${posl}px`
-		
-		DPadUp.style.display = 'block'
-		DPadLeft.style.display = 'block'
-		DPadDown.style.display = 'none'
-		DPadRight.style.display = 'none'
-		
-	} else if((Y < parseFloat(TOPup) + parseFloat(TOPheight) - 10) && (X > parseFloat(LEFTright) - 10)){
-		let posu = parseFloat(TOP)
-		posu--
-		ship.style.top = `${posu}px`
-		
-		let posr = parseFloat(LEFT)
-		posr++
-		ship.style.left = `${posr}px`
-		
-		DPadUp.style.display = 'block'
-		DPadLeft.style.display = 'none'
-		DPadDown.style.display = 'none'
-		DPadRight.style.display = 'block'
-		
-	} else if((Y > parseFloat(TOPdown) - 10) && (X < parseFloat(LEFTleft) + parseFloat(LEFTwidth) - 10)){
-		let posd = parseFloat(TOP)
-		posd++
-		ship.style.top = `${posd}px`
-		
-		let posl = parseFloat(LEFT)
-		posl--
-		ship.style.left = `${posl}px`
-		
-		DPadUp.style.display = 'none'
-		DPadLeft.style.display = 'block'
-		DPadDown.style.display = 'block'
-		DPadRight.style.display = 'none'
-		
-	} else if((Y > parseFloat(TOPdown) - 10) && (X > parseFloat(LEFTright) - 10)){
-		let posd = parseFloat(TOP)
-		posd++
-		ship.style.top = `${posd}px`
-		
-		let posr = parseFloat(LEFT)
-		posr++
-		ship.style.left = `${posr}px`
-		
-		DPadUp.style.display = 'none'
-		DPadLeft.style.display = 'none'
-		DPadDown.style.display = 'block'
-		DPadRight.style.display = 'block'
-		
-	}else {
-		DPadUp.style.display = 'none'
-		DPadLeft.style.display = 'none'
-		DPadDown.style.display = 'none'
-		DPadRight.style.display = 'none'
-	}*/
 		
 	setTimeout(function(){ window.scrollTo(0,1), 0})
 }
@@ -702,6 +565,10 @@ Porting = function (){
 			GameOver.style.marginTop = '50%'
 			FireButton.style.display = 'none'
 			DPadButton.style.display = 'none'
+			DPadUp.style.display = 'none'
+			DPadLeft.style.display = 'none'
+			DPadDown.style.display = 'none'
+			DPadRight.style.display = 'none'
 			TF = true
 			FT = false
 			let Enemies = document.querySelectorAll(".enemy")
@@ -745,7 +612,11 @@ Landing = function (){
 				ControlMenu.onclick = function(){
 				Menu.style.display = 'block'
 				FireButton.style.display = 'none'
-				DPadButton.style.display = 'none'}
+				DPadButton.style.display = 'none'
+				DPadUp.style.display = 'none'
+				DPadLeft.style.display = 'none'
+				DPadDown.style.display = 'none'
+				DPadRight.style.display = 'none'}
 			}else { Menu.style.display = 'block'
 			       Menu.style.marginTop = '27%'}
 			var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
@@ -790,6 +661,10 @@ PlayTouch = function(){
 		ControlMenu.style.display = 'block'
 		FireButton.style.display = 'none'
 		DPadButton.style.display = 'none'
+		DPadUp.style.display = 'none'
+		DPadLeft.style.display = 'none'
+		DPadDown.style.display = 'none'
+		DPadRight.style.display = 'none'
 	}
 	starting = -1
 	TF = false
@@ -1028,6 +903,10 @@ function OnTouch(){
 			window.removeEventListener("touchstart", fire)
 			FireButton.style.display = 'none'
 			DPadButton.style.display = 'none'
+			DPadUp.style.display = 'none'
+			DPadLeft.style.display = 'none'
+			DPadDown.style.display = 'none'
+			DPadRight.style.display = 'none'
 			
 			
 		}else if (PauseButton.src.indexOf('Test%20Drive/PauseButton1.png') != -1){
