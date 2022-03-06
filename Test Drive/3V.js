@@ -57,10 +57,10 @@ var landX
 var landY
 var port = window.matchMedia("(orientation: portrait)")
 var land = window.matchMedia("(orientation: landscape)")
-var XTouch = event.touches[0].clientX
-var X2Touch = event.touches[0].clientX
-var YTouch = event.touches[0].clientY
-var Y2Touch = event.touches[0].clientY
+//var XTouch = event.touches[0].clientX
+//var X2Touch = event.touches[0].clientX
+//var YTouch = event.touches[0].clientY
+//var Y2Touch = event.touches[0].clientY
 
 Image.onmousemove = function() {OnMouse()}
 Image.onmouseout = function() {MouseOff()}
@@ -143,8 +143,8 @@ function gameover(){
 	DPadLeft.style.display = 'none'
 	DPadDown.style.display = 'none'
 	DPadRight.style.display = 'none'
-	XTouch = event.touches[0].clientX
-	YTouch = event.touches[0].clientY
+	//XTouch = event.touches[0].clientX
+	//YTouch = event.touches[0].clientY
 	if(starting === -1){
 		text.style.display = 'none'
 		text2.style.display = 'none'
@@ -200,8 +200,8 @@ function RESTART(){
 	DPadLeft.style.display = 'none'
 	DPadDown.style.display = 'none'
 	DPadRight.style.display = 'none'
-	XTouch = event.touches[0].clientX
-	YTouch = event.touches[0].clientY
+	//XTouch = event.touches[0].clientX
+	//YTouch = event.touches[0].clientY
 	if(IsTouch()){TouchStart.style.display = 'block'}
 	if(starting === -1){
 		isTabletOrMobile()
@@ -307,8 +307,8 @@ function CreateLaser(){
 		var X = event.clientX
 		var Y = event.clientY
 	}else if (IfTouch === true && Mode === 4){
-		var X = event.touches[0].clientX
-		var Y = event.touches[0].clientY
+		//var X = event.touches[0].clientX
+		//var Y = event.touches[0].clientY
 		
 		ship.style.display = 'block'
 		ship.style.left = `${X}px`
@@ -454,8 +454,8 @@ function movingtouch(){
 		if (YTouch === event.touches[0].clientY){ YTouch = event.touches[1].clientY}
 		else if (YTouch === event.touches[1].clientY){ YTouch = event.touches[0].clientY}
 	}*/
-	var X = XTouch
-	var Y = YTouch
+	//var X = XTouch
+	//var Y = YTouch
 	
 	ship.style.display = 'block'
 	
@@ -574,8 +574,8 @@ Porting = function (){
 			DPadLeft.style.display = 'none'
 			DPadDown.style.display = 'none'
 			DPadRight.style.display = 'none'
-			XTouch = event.touches[0].clientX
-			YTouch = event.touches[0].clientY
+			//XTouch = event.touches[0].clientX
+			//YTouch = event.touches[0].clientY
 			TF = true
 			FT = false
 			let Enemies = document.querySelectorAll(".enemy")
@@ -624,8 +624,9 @@ Landing = function (){
 				DPadLeft.style.display = 'none'
 				DPadDown.style.display = 'none'
 				DPadRight.style.display = 'none'
-				XTouch = event.touches[0].clientX
-				YTouch = event.touches[0].clientY}
+				//XTouch = event.touches[0].clientX
+				//YTouch = event.touches[0].clientY
+				}
 			}else { Menu.style.display = 'block'
 			       Menu.style.marginTop = '27%'}
 			var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
@@ -674,8 +675,8 @@ PlayTouch = function(){
 		DPadLeft.style.display = 'none'
 		DPadDown.style.display = 'none'
 		DPadRight.style.display = 'none'
-		XTouch = event.touches[0].clientX
-		YTouch = event.touches[0].clientY
+		//XTouch = event.touches[0].clientX
+		//YTouch = event.touches[0].clientY
 	}
 	starting = -1
 	TF = false
@@ -918,8 +919,8 @@ function OnTouch(){
 			DPadLeft.style.display = 'none'
 			DPadDown.style.display = 'none'
 			DPadRight.style.display = 'none'
-			XTouch = event.touches[0].clientX
-			YTouch = event.touches[0].clientY
+			//XTouch = event.touches[0].clientX
+			//YTouch = event.touches[0].clientY
 			
 			
 		}else if (PauseButton.src.indexOf('Test%20Drive/PauseButton1.png') != -1){
@@ -977,8 +978,8 @@ function playgame(){
 					DPadLeft.style.display = 'none'
 					DPadDown.style.display = 'none'
 					DPadRight.style.display = 'none'
-					XTouch = event.touches[1].clientX
-					YTouch = event.touches[1].clientY
+					//XTouch = event.touches[1].clientX
+					//YTouch = event.touches[1].clientY
 				}
 			}
 		}
