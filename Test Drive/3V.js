@@ -57,6 +57,10 @@ var landX
 var landY
 var port = window.matchMedia("(orientation: portrait)")
 var land = window.matchMedia("(orientation: landscape)")
+var XTouch = event.touches[0].clientX
+var X2Touch = event.touches[0].clientX
+var YTouch = event.touches[0].clientY
+var Y2Touch = event.touches[0].clientY
 
 Image.onmousemove = function() {OnMouse()}
 Image.onmouseout = function() {MouseOff()}
@@ -139,6 +143,8 @@ function gameover(){
 	DPadLeft.style.display = 'none'
 	DPadDown.style.display = 'none'
 	DPadRight.style.display = 'none'
+	XTouch = event.touches[0].clientX
+	YTouch = event.touches[0].clientY
 	if(starting === -1){
 		text.style.display = 'none'
 		text2.style.display = 'none'
@@ -194,6 +200,8 @@ function RESTART(){
 	DPadLeft.style.display = 'none'
 	DPadDown.style.display = 'none'
 	DPadRight.style.display = 'none'
+	XTouch = event.touches[0].clientX
+	YTouch = event.touches[0].clientY
 	if(IsTouch()){TouchStart.style.display = 'block'}
 	if(starting === -1){
 		isTabletOrMobile()
@@ -299,13 +307,9 @@ function CreateLaser(){
 		var X = event.clientX
 		var Y = event.clientY
 	}else if (IfTouch === true && Mode === 4){
-		if (event.touchList.length === 0){
-			var X = event.touches[0].clientX
-			var Y = event.touches[0].clientY
-	}else if (event.touchList.length === 1){
-			var X = event.touches[1].clientX
-			var Y = event.touches[1].clientY
-	}
+		var X = event.touches[0].clientX
+		var Y = event.touches[0].clientY
+		
 		ship.style.display = 'block'
 		ship.style.left = `${X}px`
 		ship.style.top = `${Y}px`
@@ -442,15 +446,16 @@ function movingtouch(){
 	let LEFTwidth = window.getComputedStyle(DPadLeft).getPropertyValue('width')
 	let LEFTright = window.getComputedStyle(DPadRight).getPropertyValue('left')
 	
-	if (event.touchList.length === 0){
-		var X = event.touches[0].clientX
-		var Y = event.touches[0].clientY
-	}else if (event.touchList.length === 1){
-		var X = event.touches[1].clientX
-		var Y = event.touches[1].clientY
+	if (XTouch === X2Touch){
+		if (XTouch === event.touches[0].clientX){ XTouch = event.touches[1].clientX}
+		else if (XTouch === event.touches[1].clientX){ XTouch = event.touches[0].clientX}
 	}
-	
-	
+	if (YTouch === Y2Touch){
+		if (YTouch === event.touches[0].clientY){ YTouch = event.touches[1].clientY}
+		else if (YTouch === event.touches[1].clientY){ YTouch = event.touches[0].clientY}
+	}
+	var X = XTouch
+	var Y = YTouch
 	
 	ship.style.display = 'block'
 	
@@ -569,6 +574,8 @@ Porting = function (){
 			DPadLeft.style.display = 'none'
 			DPadDown.style.display = 'none'
 			DPadRight.style.display = 'none'
+			XTouch = event.touches[0].clientX
+			YTouch = event.touches[0].clientY
 			TF = true
 			FT = false
 			let Enemies = document.querySelectorAll(".enemy")
@@ -616,7 +623,9 @@ Landing = function (){
 				DPadUp.style.display = 'none'
 				DPadLeft.style.display = 'none'
 				DPadDown.style.display = 'none'
-				DPadRight.style.display = 'none'}
+				DPadRight.style.display = 'none'
+				XTouch = event.touches[0].clientX
+				YTouch = event.touches[0].clientY}
 			}else { Menu.style.display = 'block'
 			       Menu.style.marginTop = '27%'}
 			var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
@@ -665,6 +674,8 @@ PlayTouch = function(){
 		DPadLeft.style.display = 'none'
 		DPadDown.style.display = 'none'
 		DPadRight.style.display = 'none'
+		XTouch = event.touches[0].clientX
+		YTouch = event.touches[0].clientY
 	}
 	starting = -1
 	TF = false
@@ -907,6 +918,8 @@ function OnTouch(){
 			DPadLeft.style.display = 'none'
 			DPadDown.style.display = 'none'
 			DPadRight.style.display = 'none'
+			XTouch = event.touches[0].clientX
+			YTouch = event.touches[0].clientY
 			
 			
 		}else if (PauseButton.src.indexOf('Test%20Drive/PauseButton1.png') != -1){
@@ -963,7 +976,9 @@ function playgame(){
 					DPadUp.style.display = 'none'
 					DPadLeft.style.display = 'none'
 					DPadDown.style.display = 'none'
-					DPadRight.style.display = 'none'}
+					DPadRight.style.display = 'none'
+					XTouch = event.touches[1].clientX
+					YTouch = event.touches[1].clientY}
 			}
 								}
 	}else {
