@@ -978,9 +978,11 @@ function playgame(){
 					DPadDown.style.display = 'none'
 					DPadRight.style.display = 'none'
 					XTouch = event.touches[1].clientX
-					YTouch = event.touches[1].clientY}
+					YTouch = event.touches[1].clientY
+				}
 			}
-								}
+		}
+								
 	}else {
 		ship.style.display = 'block'
 		window.addEventListener("keydown", moving)
