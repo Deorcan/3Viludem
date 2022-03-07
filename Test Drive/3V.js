@@ -57,10 +57,10 @@ var landX
 var landY
 var port = window.matchMedia("(orientation: portrait)")
 var land = window.matchMedia("(orientation: landscape)")
-//var XTouch = event.touches[0].clientX
-//var X2Touch = event.touches[0].clientX
-//var YTouch = event.touches[0].clientY
-//var Y2Touch = event.touches[0].clientY
+var XTouch = event.touches[0].clientX
+var X2Touch = event.touches[0].clientX
+var YTouch = event.touches[0].clientY
+var Y2Touch = event.touches[0].clientY
 
 Image.onmousemove = function() {OnMouse()}
 Image.onmouseout = function() {MouseOff()}
