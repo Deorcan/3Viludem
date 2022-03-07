@@ -58,9 +58,9 @@ var landY
 var port = window.matchMedia("(orientation: portrait)")
 var land = window.matchMedia("(orientation: landscape)")
 var XTouch = event.touches[0].clientX
-var X2Touch = event.touches[0].clientX
+var X2Touch = event.touches[1].clientX
 var YTouch = event.touches[0].clientY
-var Y2Touch = event.touches[0].clientY
+var Y2Touch = event.touches[1].clientY
 
 Image.onmousemove = function() {OnMouse()}
 Image.onmouseout = function() {MouseOff()}
@@ -307,8 +307,8 @@ function CreateLaser(){
 		var X = event.clientX
 		var Y = event.clientY
 	}else if (IfTouch === true && Mode === 4){
-		//var X = event.touches[0].clientX
-		//var Y = event.touches[0].clientY
+		var X = event.touches[0].clientX
+		var Y = event.touches[0].clientY
 		
 		ship.style.display = 'block'
 		ship.style.left = `${X}px`
