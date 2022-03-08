@@ -946,6 +946,7 @@ function playgame(){
 		else if (Mode === 1 || Mode === 2 || Mode === 3){
 			FireButton.style.display = 'block'
 			FireButton.onclick = function(){fire()}
+			FireButton.ontouchend = function (){Touches = 0}
 			if (Mode === 1){}
 			else if(Mode === 2){
 				Image.ontouchmove = function(){
