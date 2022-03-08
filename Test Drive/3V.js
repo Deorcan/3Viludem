@@ -442,16 +442,6 @@ function movingtouch(){
 	
 	var X = event.touches[Touches].clientX
 	var Y = event.touches[Touches].clientY
-	/*if (XTouch === X2Touch){
-		if (XTouch === event.touches[0].clientX){ XTouch = event.touches[1].clientX}
-		else if (XTouch === event.touches[1].clientX){ XTouch = event.touches[0].clientX}
-	}
-	if (YTouch === Y2Touch){
-		if (YTouch === event.touches[0].clientY){ YTouch = event.touches[1].clientY}
-		else if (YTouch === event.touches[1].clientY){ YTouch = event.touches[0].clientY}
-	}*/
-	//var X = XTouch
-	//var Y = YTouch
 	
 	ship.style.display = 'block'
 	
@@ -945,7 +935,7 @@ function playgame(){
 		if (Mode === 4){ window.addEventListener("touchstart", fire)}
 		else if (Mode === 1 || Mode === 2 || Mode === 3){
 			FireButton.style.display = 'block'
-			FireButton.onclick = function(){fire()}
+			FireButton.ontouchstart = function(){fire()}
 			FireButton.ontouchend = function (){Touches = 0}
 			if (Mode === 1){}
 			else if(Mode === 2){
