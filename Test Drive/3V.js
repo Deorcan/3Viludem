@@ -57,10 +57,7 @@ var landX
 var landY
 var port = window.matchMedia("(orientation: portrait)")
 var land = window.matchMedia("(orientation: landscape)")
-//var XTouch = event.touches[0].clientX
-//var X2Touch = event.touches[1].clientX
-//var YTouch = event.touches[0].clientY
-//var Y2Touch = event.touches[1].clientY
+var Touches = 0
 
 Image.onmousemove = function() {OnMouse()}
 Image.onmouseout = function() {MouseOff()}
@@ -143,8 +140,6 @@ function gameover(){
 	DPadLeft.style.display = 'none'
 	DPadDown.style.display = 'none'
 	DPadRight.style.display = 'none'
-	//XTouch = event.touches[0].clientX
-	//YTouch = event.touches[0].clientY
 	if(starting === -1){
 		text.style.display = 'none'
 		text2.style.display = 'none'
@@ -200,8 +195,6 @@ function RESTART(){
 	DPadLeft.style.display = 'none'
 	DPadDown.style.display = 'none'
 	DPadRight.style.display = 'none'
-	//XTouch = event.touches[0].clientX
-	//YTouch = event.touches[0].clientY
 	if(IsTouch()){TouchStart.style.display = 'block'}
 	if(starting === -1){
 		isTabletOrMobile()
@@ -322,6 +315,7 @@ function CreateLaser(){
 		var X = parseFloat(window.getComputedStyle(ship).getPropertyValue('left'))
 		var Y = parseFloat(window.getComputedStyle(ship).getPropertyValue('top'))
 		Y = Y - 20
+		Touches = 1
 
 		
 	}
@@ -446,6 +440,8 @@ function movingtouch(){
 	let LEFTwidth = window.getComputedStyle(DPadLeft).getPropertyValue('width')
 	let LEFTright = window.getComputedStyle(DPadRight).getPropertyValue('left')
 	
+	var X = event.touches[Touches].clientX
+	var Y = event.touches[Touches].clientY
 	/*if (XTouch === X2Touch){
 		if (XTouch === event.touches[0].clientX){ XTouch = event.touches[1].clientX}
 		else if (XTouch === event.touches[1].clientX){ XTouch = event.touches[0].clientX}
@@ -574,8 +570,6 @@ Porting = function (){
 			DPadLeft.style.display = 'none'
 			DPadDown.style.display = 'none'
 			DPadRight.style.display = 'none'
-			//XTouch = event.touches[0].clientX
-			//YTouch = event.touches[0].clientY
 			TF = true
 			FT = false
 			let Enemies = document.querySelectorAll(".enemy")
@@ -624,8 +618,6 @@ Landing = function (){
 				DPadLeft.style.display = 'none'
 				DPadDown.style.display = 'none'
 				DPadRight.style.display = 'none'
-				//XTouch = event.touches[0].clientX
-				//YTouch = event.touches[0].clientY
 				}
 			}else { Menu.style.display = 'block'
 			       Menu.style.marginTop = '27%'}
@@ -675,8 +667,6 @@ PlayTouch = function(){
 		DPadLeft.style.display = 'none'
 		DPadDown.style.display = 'none'
 		DPadRight.style.display = 'none'
-		//XTouch = event.touches[0].clientX
-		//YTouch = event.touches[0].clientY
 	}
 	starting = -1
 	TF = false
@@ -918,10 +908,7 @@ function OnTouch(){
 			DPadUp.style.display = 'none'
 			DPadLeft.style.display = 'none'
 			DPadDown.style.display = 'none'
-			DPadRight.style.display = 'none'
-			//XTouch = event.touches[0].clientX
-			//YTouch = event.touches[0].clientY
-			
+			DPadRight.style.display = 'none'	
 			
 		}else if (PauseButton.src.indexOf('Test%20Drive/PauseButton1.png') != -1){
 			PauseButton.src = 'Test%20Drive/PauseButton.png'
@@ -962,8 +949,8 @@ function playgame(){
 			if (Mode === 1){}
 			else if(Mode === 2){
 				Image.ontouchmove = function(){
-					var X = event.touches[0].clientX
-					var Y = event.touches[0].clientY
+					var X = event.touches[Touches].clientX
+					var Y = event.touches[Touches].clientY
 					ship.style.display = 'block'
 					ship.style.left = `${X}px`
 					ship.style.top = `${Y}px`
@@ -978,8 +965,6 @@ function playgame(){
 					DPadLeft.style.display = 'none'
 					DPadDown.style.display = 'none'
 					DPadRight.style.display = 'none'
-					//XTouch = event.touches[1].clientX
-					//YTouch = event.touches[1].clientY
 				}
 			}
 		}
