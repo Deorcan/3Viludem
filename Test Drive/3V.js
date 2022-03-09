@@ -433,6 +433,14 @@ function movingtouch(){
 	event.preventDefault()
 	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
 	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
+	let HEIGHT = window.getComputedStyle(ship).getPropertyValue('height')
+	let WIDTH = window.getComputedStyle(ship).getPropertyValue('width')
+	
+	let TOP1 = window.getComputedStyle(Image).getPropertyValue('top')
+	let LEFT1 = window.getComputedStyle(Image).getPropertyValue('left')
+	let HEIGHT1 = window.getComputedStyle(Image).getPropertyValue('height')
+	let WIDTH1 = window.getComputedStyle(Image).getPropertyValue('width')
+	
 	let TOPup = window.getComputedStyle(DPadUp).getPropertyValue('top')
 	let TOPheight = window.getComputedStyle(DPadUp).getPropertyValue('height')
 	let TOPdown = window.getComputedStyle(DPadDown).getPropertyValue('top')
@@ -445,46 +453,52 @@ function movingtouch(){
 	
 	ship.style.display = 'block'
 	
-	if(Y < parseFloat(TOPup) + parseFloat(TOPheight) - 10){
-		let pos = parseFloat(TOP)
-		pos-=4
-		ship.style.top = `${pos}px`
-		
-		DPadUp.style.display = 'block'
-		DPadDown.style.display = 'none'
-		
-	} else if(Y > parseFloat(TOPdown) - 10){
-		let pos = parseFloat(TOP)
-		pos+=4
-		ship.style.top = `${pos}px`
-		
-		DPadUp.style.display = 'none'
-		DPadDown.style.display = 'block'
+	if((parseFloat(TOP) < parseFloat(TOP1)) || (parseFloat(TOP) + parseFloat(HEIGHT) > parseFloat(TOP1) + parseFloat(HEIGHT1))){ return} else{
 	
-	}else {
-		DPadUp.style.display = 'none'
-		DPadRight.style.display = 'none'
+		if(Y < parseFloat(TOPup) + parseFloat(TOPheight) - 10){
+			let pos = parseFloat(TOP)
+			pos-=2
+			ship.style.top = `${pos}px`
+		
+			DPadUp.style.display = 'block'
+			DPadDown.style.display = 'none'
+		
+		} else if(Y > parseFloat(TOPdown) - 10){
+			let pos = parseFloat(TOP)
+			pos+=2
+			ship.style.top = `${pos}px`
+		
+			DPadUp.style.display = 'none'
+			DPadDown.style.display = 'block'
+	
+		}else {
+			DPadUp.style.display = 'none'
+			DPadRight.style.display = 'none'
+		}
 	}
 	
-	if(X < parseFloat(LEFTleft) + parseFloat(LEFTwidth) - 10){
-		let pos = parseFloat(LEFT)
-		pos-=4
-		ship.style.left = `${pos}px`
-		
-		DPadLeft.style.display = 'block'
-		DPadRight.style.display = 'none'
+	if ((parseFloat(LEFT) < parseFloat(LEFT1)) || (parseFloat(LEFT)+parseFloat(WIDTH) > parseFloat(LEFT1)+parseFloat(WIDTH1))){ return} else{
 	
-	} else if(X > parseFloat(LEFTright) - 10){
-		let pos = parseFloat(LEFT)
-		pos+=4
-		ship.style.left = `${pos}px`
+		if(X < parseFloat(LEFTleft) + parseFloat(LEFTwidth) - 10){
+			let pos = parseFloat(LEFT)
+			pos-=2
+			ship.style.left = `${pos}px`
 		
-		DPadLeft.style.display = 'none'
-		DPadRight.style.display = 'block'
+			DPadLeft.style.display = 'block'
+			DPadRight.style.display = 'none'
+	
+		} else if(X > parseFloat(LEFTright) - 10){
+			let pos = parseFloat(LEFT)
+			pos+=2
+			ship.style.left = `${pos}px`
 		
-	}else {
-		DPadLeft.style.display = 'none'
-		DPadRight.style.display = 'none'
+			DPadLeft.style.display = 'none'
+			DPadRight.style.display = 'block'
+		
+		}else {
+			DPadLeft.style.display = 'none'
+			DPadRight.style.display = 'none'
+		}
 	}
 		
 	setTimeout(function(){ window.scrollTo(0,1), 0})
