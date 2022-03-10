@@ -1007,7 +1007,7 @@ function playgame(){
 			}
 			else if(Mode === 3){
 				DPadButton.style.display = 'block'
-				DPadButton.ontouchmove = function(){movingtouch()}
+				DPadButton.ontouchmove = function(){if (starting === -1){ movingtouch()}}
 				DPadButton.ontouchend = function(){
 					DPadUp.style.display = 'none'
 					DPadLeft.style.display = 'none'
