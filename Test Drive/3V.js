@@ -140,6 +140,12 @@ function gameover(){
 	DPadLeft.style.display = 'none'
 	DPadDown.style.display = 'none'
 	DPadRight.style.display = 'none'
+	DPadButton.ontouchmove = function(){
+	DPadUp.style.display = 'none'
+	DPadLeft.style.display = 'none'
+	DPadDown.style.display = 'none'
+	DPadRight.style.display = 'none'
+	Music.pause()}
 	if(starting === -1){
 		text.style.display = 'none'
 		text2.style.display = 'none'
@@ -1019,7 +1025,7 @@ function playgame(){
 			}
 			else if(Mode === 3){
 				DPadButton.style.display = 'block'
-				DPadButton.ontouchmove = function(){if (starting === -1){ movingtouch()}}
+				DPadButton.ontouchmove = function(){ movingtouch()}
 				DPadButton.ontouchend = function(){
 					DPadUp.style.display = 'none'
 					DPadLeft.style.display = 'none'
