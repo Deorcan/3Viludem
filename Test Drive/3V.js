@@ -390,17 +390,23 @@ function moveEnemy(enemy){
 				DPadDown.style.display = 'none'
 				DPadRight.style.display = 'none'
 				clearInterval(EInterval)
+				clearInterval(interval)
+				Music.pause()
 				let Enemies = document.querySelectorAll(".enemy")
 				Enemies.forEach(e => e.remove())
 				process.exit()
 			}
 			FireButton.ontouchcancel = function (){
 				clearInterval(EInterval)
+				clearInterval(interval)
+				Music.pause()
 				let Enemies = document.querySelectorAll(".enemy")
 				Enemies.forEach(e => e.remove())
 				process.exit()}
 			Image.ontouchcancel = function (){
 				clearInterval(EInterval)
+				clearInterval(interval)
+				Music.pause()
 				let Enemies = document.querySelectorAll(".enemy")
 				Enemies.forEach(e => e.remove())
 				process.exit()}
