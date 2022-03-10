@@ -389,10 +389,21 @@ function moveEnemy(enemy){
 				DPadLeft.style.display = 'none'
 				DPadDown.style.display = 'none'
 				DPadRight.style.display = 'none'
+				clearInterval(interval)
+				let Enemies = document.querySelectorAll(".enemy")
+				Enemies.forEach(e => e.remove())
 				process.exit()
 			}
-			FireButton.ontouchcancel = function (){process.exit()}
-			Image.ontouchcancel = function (){process.exit()}
+			FireButton.ontouchcancel = function (){
+				clearInterval(interval)
+				let Enemies = document.querySelectorAll(".enemy")
+				Enemies.forEach(e => e.remove())
+				process.exit()}
+			Image.ontouchcancel = function (){
+				clearInterval(interval)
+				let Enemies = document.querySelectorAll(".enemy")
+				Enemies.forEach(e => e.remove())
+				process.exit()}
 		}
 	}, z)
 
