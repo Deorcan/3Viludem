@@ -479,53 +479,65 @@ function movingtouch(){
 	
 	ship.style.display = 'block'
 	
-	if((parseFloat(TOP) < parseFloat(TOP1)) || (parseFloat(TOP) + parseFloat(HEIGHT) > parseFloat(TOP1) + parseFloat(HEIGHT1))){ return} else{
 	
-		if(Y < parseFloat(TOPup) + parseFloat(TOPheight) - 10){
+	
+	if(Y < parseFloat(TOPup) + parseFloat(TOPheight) - 10){
+			
+		if(parseFloat(TOP) < parseFloat(TOP1){return}
+		else {
+			
 			let pos = parseFloat(TOP)
 			pos-=2
 			ship.style.top = `${pos}px`
 		
 			DPadUp.style.display = 'block'
 			DPadDown.style.display = 'none'
+		}
 		
-		} else if(Y > parseFloat(TOPdown) - 10){
+	} else if(Y > parseFloat(TOPdown) - 10){
+		if(parseFloat(TOP) + parseFloat(HEIGHT) > parseFloat(TOP1) + parseFloat(HEIGHT1)){ return}
+		else {
 			let pos = parseFloat(TOP)
 			pos+=2
 			ship.style.top = `${pos}px`
 		
 			DPadUp.style.display = 'none'
 			DPadDown.style.display = 'block'
-	
-		}else {
-			DPadUp.style.display = 'none'
-			DPadRight.style.display = 'none'
 		}
+	
+	}else {
+		DPadUp.style.display = 'none'
+		DPadRight.style.display = 'none'
 	}
 	
-	if ((parseFloat(LEFT) < parseFloat(LEFT1)) || (parseFloat(LEFT)+parseFloat(WIDTH) > parseFloat(LEFT1)+parseFloat(WIDTH1))){ return} else{
 	
-		if(X < parseFloat(LEFTleft) + parseFloat(LEFTwidth) - 10){
+	if(X < parseFloat(LEFTleft) + parseFloat(LEFTwidth) - 10){
+		if (parseFloat(LEFT) < parseFloat(LEFT1)){return}
+		else{
 			let pos = parseFloat(LEFT)
 			pos-=2
 			ship.style.left = `${pos}px`
 		
 			DPadLeft.style.display = 'block'
 			DPadRight.style.display = 'none'
+		}
 	
-		} else if(X > parseFloat(LEFTright) - 10){
+	} else if(X > parseFloat(LEFTright) - 10){
+		if (parseFloat(LEFT)+parseFloat(WIDTH) > parseFloat(LEFT1)+parseFloat(WIDTH1)){ return}
+		else{
 			let pos = parseFloat(LEFT)
 			pos+=2
 			ship.style.left = `${pos}px`
 		
 			DPadLeft.style.display = 'none'
 			DPadRight.style.display = 'block'
-		
-		}else {
-			DPadLeft.style.display = 'none'
-			DPadRight.style.display = 'none'
 		}
+		
+	}else {
+		DPadLeft.style.display = 'none'
+		DPadRight.style.display = 'none'
 	}
+	
 		
 	setTimeout(function(){ window.scrollTo(0,1), 0})
 }
