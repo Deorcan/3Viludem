@@ -483,7 +483,7 @@ function movingtouch(){
 	
 	if(Y < parseFloat(TOPup) + parseFloat(TOPheight) - 10){
 			
-		if(parseFloat(TOP) < parseFloat(TOP1){return}
+		if(parseFloat(TOP) < parseFloat(TOP1)){return}
 		else {
 			
 			let pos = parseFloat(TOP)
