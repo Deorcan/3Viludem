@@ -40,14 +40,14 @@ const DPadLeft = document.getElementById("DPadL")
 const DPadDown = document.getElementById("DPadD")
 const DPadRight = document.getElementById("DPadR")
 
-let TF = true
-let FT = true
-let Music = new Audio ('Test%20Drive/sounds-from-space-soundroll-main-version-01-28-1884.mp3')
-let EInterval
-let L = { x: 0, y: 0, width: 0, height: 0}
-let E = { x: 0, y: 0, width: 0, height: 0}
-let Z = 2600
-let z = 30
+var TF = true
+var FT = true
+var Music = new Audio ('Test%20Drive/sounds-from-space-soundroll-main-version-01-28-1884.mp3')
+var EInterval
+var L = { x: 0, y: 0, width: 0, height: 0}
+var E = { x: 0, y: 0, width: 0, height: 0}
+var Z = 2600
+var z = 30
 var Lasers
 let IfMouse = false
 let IfTouch = false
@@ -390,19 +390,19 @@ function moveEnemy(enemy){
 				DPadDown.style.display = 'none'
 				DPadRight.style.display = 'none'
 				clearInterval(interval)
-				let Enemies = document.querySelectorAll(".enemy")
-				Enemies.forEach(e => e.remove())
+				//let Enemies = document.querySelectorAll(".enemy")
+				//Enemies.forEach(e => e.remove())
 				process.exit()
 			}
 			FireButton.ontouchcancel = function (){
 				clearInterval(interval)
-				let Enemies = document.querySelectorAll(".enemy")
-				Enemies.forEach(e => e.remove())
+				//let Enemies = document.querySelectorAll(".enemy")
+				//Enemies.forEach(e => e.remove())
 				process.exit()}
 			Image.ontouchcancel = function (){
 				clearInterval(interval)
-				let Enemies = document.querySelectorAll(".enemy")
-				Enemies.forEach(e => e.remove())
+				//let Enemies = document.querySelectorAll(".enemy")
+				//Enemies.forEach(e => e.remove())
 				process.exit()}
 		}
 	}, z)
