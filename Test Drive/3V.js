@@ -607,6 +607,24 @@ Porting = function (){
 		Lasers.style.display = 'none'
 		clearInterval(EInterval)
 		Music.pause()
+		DPadButton.ontouchend = function (){
+			clearInterval(EInterval)
+			Music.pause()
+			let Enemies = document.querySelectorAll(".enemy")
+			Enemies.forEach(e => e.remove())
+		}
+		FireButton.ontouchend = function (){
+			clearInterval(EInterval)
+			Music.pause()
+			let Enemies = document.querySelectorAll(".enemy")
+			Enemies.forEach(e => e.remove())
+		}
+		Image.ontouchend = function (){
+			clearInterval(EInterval)
+			Music.pause()
+			let Enemies = document.querySelectorAll(".enemy")
+			Enemies.forEach(e => e.remove())
+		}
 		window.removeEventListener("touchstart", fire)
 		window.removeEventListener("keydown", moving)
 		window.removeEventListener("click", fire)	
