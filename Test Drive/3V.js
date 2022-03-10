@@ -384,6 +384,15 @@ function moveEnemy(enemy){
 			
 		} else {
 			if (FT === true){enemy.style.left = `${X-4}px`}else {enemy.style.left = `${X}`}
+			DPadButton.ontouchcancel = function (){
+				DPadUp.style.display = 'none'
+				DPadLeft.style.display = 'none'
+				DPadDown.style.display = 'none'
+				DPadRight.style.display = 'none'
+				process.exit()
+			}
+			FireButton.ontouchcancel = function (){process.exit()}
+			Image.ontouchcancel = function (){process.exit()}
 		}
 	}, z)
 
