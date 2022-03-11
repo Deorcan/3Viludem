@@ -49,8 +49,8 @@ var E = { x: 0, y: 0, width: 0, height: 0}
 var Z = 2600
 var z = 30
 var Lasers
-let IfMouse = false
-let IfTouch = false
+var IfMouse = false
+var IfTouch = false
 var Mode = 0
 var starting = 0
 var landX
