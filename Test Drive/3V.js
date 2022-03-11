@@ -164,7 +164,8 @@ function gameover(){
 		FT = true
 		
 		setTimeout(function(){Image.ontouchstart = function(){}
-				     Image.ontouchmove = function(){}},3000)
+				     Image.ontouchmove = function(){}},0)
+		setTimeout(function(){Image.ontouchstart = function(){OnTouch()}},3000)
 	}
 	let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
