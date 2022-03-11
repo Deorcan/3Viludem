@@ -146,6 +146,7 @@ function gameover(){
 	DPadDown.style.display = 'none'
 	DPadRight.style.display = 'none'
 	Music.pause()}
+	Image.ontouchmove = function(){Music.pause()}
 	if(starting === -1){
 		text.style.display = 'none'
 		text2.style.display = 'none'
@@ -161,6 +162,9 @@ function gameover(){
 		starting = 0
 		TF = false
 		FT = true
+		
+		setTimeout(function(){Image.ontouchstart = function(){}
+				     Image.ontouchmove = function(){}},3000)
 	}
 	let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
