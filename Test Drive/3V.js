@@ -144,6 +144,10 @@ function gameover(){
 	DPadLeft.style.display = 'none'
 	DPadDown.style.display = 'none'
 	DPadRight.style.display = 'none'
+	Pause.style.display = 'none'
+	Start.style.display = 'none'
+	Restart.style.display = 'none'
+	ControlMenu.style.display = 'none'
 	DPadButton.ontouchmove = function(){
 	DPadUp.style.display = 'none'
 	DPadLeft.style.display = 'none'
