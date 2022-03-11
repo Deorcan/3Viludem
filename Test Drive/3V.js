@@ -132,6 +132,10 @@ function gameover(){
 	text.style.display = 'block'
 	text2.style.display = 'block'
 	Para.style.display = 'block'
+	Pause.style.display = 'none'
+	Start.style.display = 'none'
+	Restart.style.display = 'none'
+	ControlMenu.style.display = 'none'
 	GameOver.style.display = 'block'
 	ship.style.display = 'none'
 	FireButton.style.display = 'none'
@@ -165,7 +169,7 @@ function gameover(){
 		
 		setTimeout(function(){Image.ontouchstart = function(){}
 				     Image.ontouchmove = function(){}},0)
-		setTimeout(function(){Image.ontouchstart = function(){OnTouch()}},3000)
+		setTimeout(function(){Image.ontouchstart = function(){OnTouch()}},1000)
 	}
 	let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
