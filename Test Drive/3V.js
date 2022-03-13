@@ -155,7 +155,7 @@ function gameover(){
 	DPadRight.style.display = 'none'
 	Music.pause()}
 	Image.ontouchmove = function(){Music.pause()}
-	let Enemies = document.querySelectorAll(".enemy")
+	var Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
 	Music.pause()
 	if (HighScore.innerText < Score.innerText) {
@@ -167,7 +167,7 @@ function gameover(){
 	Score.innerText = 0
 	Score2.innerText = 0
 	if(starting === -1){
-		let Enemies = document.querySelectorAll(".enemy")
+		//let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
 	Music.pause()
 	if (HighScore.innerText < Score.innerText) {
@@ -197,7 +197,7 @@ function gameover(){
 				     Image.ontouchmove = function(){}},0)
 	setTimeout(function(){Image.ontouchstart = function(){OnTouch()}},1000)
 	}
-	let Enemies = document.querySelectorAll(".enemy")
+	//let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
 	Music.pause()
 	if (HighScore.innerText < Score.innerText) {
