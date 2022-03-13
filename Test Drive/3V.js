@@ -166,7 +166,6 @@ function gameover(){
 	}
 	Score.innerText = 0
 	Score2.innerText = 0
-	//starting = 0
 	if(starting == -1){
 		//let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
