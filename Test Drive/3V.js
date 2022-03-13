@@ -193,8 +193,8 @@ function gameover(){
 		TF = false
 		FT = true
 		
-		setTimeout(function(){Image.ontouchstart = function(){}
-				     Image.ontouchmove = function(){}},0)
+		//setTimeout(function(){Image.ontouchstart = function(){}
+		//		     Image.ontouchmove = function(){}},0)
 	setTimeout(function(){Image.ontouchstart = function(){OnTouch()}},0)
 	}
 	//let Enemies = document.querySelectorAll(".enemy")
