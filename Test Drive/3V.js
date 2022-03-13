@@ -171,9 +171,7 @@ function gameover(){
 		TF = false
 		FT = true
 		
-		setTimeout(function(){Image.ontouchstart = function(){}
-				     Image.ontouchmove = function(){}},0)
-		setTimeout(function(){Image.ontouchstart = function(){OnTouch()}},1000)
+		
 	}
 	let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
@@ -187,6 +185,9 @@ function gameover(){
 	Score.innerText = 0
 	Score2.innerText = 0
 
+	setTimeout(function(){Image.ontouchstart = function(){}
+				     Image.ontouchmove = function(){}},0)
+	setTimeout(function(){Image.ontouchstart = function(){OnTouch()}},1000)
 }
 
 function RESTART(){
