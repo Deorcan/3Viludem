@@ -191,7 +191,7 @@ function gameover(){
 		PlayButton.src = 'Test%20Drive/Playbutton.PNG'
 		starting = 0
 		TF = false
-		//FT = true
+		FT = true
 		
 		setTimeout(function(){Image.ontouchstart = function(){}
 				     Image.ontouchmove = function(){}},0)
