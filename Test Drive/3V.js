@@ -183,7 +183,7 @@ function gameover(){
 		Para.style.display = 'none'
 		isTabletOrMobile()
 		Landing()
-		IfTouch = false
+		//IfTouch = false
 		Pause.style.display = 'none'
 		Start.style.display = 'none'
 		Restart.style.display = 'none'
