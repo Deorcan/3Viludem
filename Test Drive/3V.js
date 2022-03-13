@@ -183,7 +183,7 @@ function gameover(){
 		Para.style.display = 'none'
 		isTabletOrMobile()
 		Landing()
-		//IfTouch = false
+		IfTouch = false
 		Pause.style.display = 'none'
 		Start.style.display = 'none'
 		Restart.style.display = 'none'
@@ -727,7 +727,7 @@ Landing = function (){
 			if (Displaytouch === 'block' || Displaygo === 'block'){Menu.style.display = 'none'}
 			GameOver.style.marginTop = '25%'
 			setTimeout(function(){ window.scrollTo(0,1), 0})
-			let Enemies = document.querySelectorAll(".enemy")
+			var Enemies = document.querySelectorAll(".enemy")
 			Enemies.forEach(e => e.style.display = 'block')
 			Lasers.style.display = 'block'
 		}
