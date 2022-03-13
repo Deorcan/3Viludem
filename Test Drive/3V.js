@@ -155,7 +155,29 @@ function gameover(){
 	DPadRight.style.display = 'none'
 	Music.pause()}
 	Image.ontouchmove = function(){Music.pause()}
+	let Enemies = document.querySelectorAll(".enemy")
+	Enemies.forEach(e => e.remove())
+	Music.pause()
+	if (HighScore.innerText < Score.innerText) {
+		HighScore.innerText = Score.innerText
+	}
+	if (HighScore2.innerText < Score2.innerText) {
+		HighScore2.innerText = Score2.innerText
+	}
+	Score.innerText = 0
+	Score2.innerText = 0
 	if(starting === -1){
+		let Enemies = document.querySelectorAll(".enemy")
+	Enemies.forEach(e => e.remove())
+	Music.pause()
+	if (HighScore.innerText < Score.innerText) {
+		HighScore.innerText = Score.innerText
+	}
+	if (HighScore2.innerText < Score2.innerText) {
+		HighScore2.innerText = Score2.innerText
+	}
+	Score.innerText = 0
+	Score2.innerText = 0
 		text.style.display = 'none'
 		text2.style.display = 'none'
 		Para.style.display = 'none'
@@ -171,7 +193,9 @@ function gameover(){
 		TF = false
 		FT = true
 		
-		
+		setTimeout(function(){Image.ontouchstart = function(){}
+				     Image.ontouchmove = function(){}},0)
+	setTimeout(function(){Image.ontouchstart = function(){OnTouch()}},1000)
 	}
 	let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
@@ -185,9 +209,7 @@ function gameover(){
 	Score.innerText = 0
 	Score2.innerText = 0
 
-	setTimeout(function(){Image.ontouchstart = function(){}
-				     Image.ontouchmove = function(){}},0)
-	setTimeout(function(){Image.ontouchstart = function(){OnTouch()}},1000)
+	
 }
 
 function RESTART(){
