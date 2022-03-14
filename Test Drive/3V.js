@@ -192,7 +192,7 @@ function gameover(){
 		starting = 0
 		TF = false
 		FT = true
-		Image.ontouchstart = function(){OnTouch()}
+		Image.ontouchstart = function(){Menu.style.display = 'block'}
 		//setTimeout(function(){Image.ontouchstart = function(){}
 		//		     Image.ontouchmove = function(){}},0)
 	//setTimeout(function(){Image.ontouchstart = function(){OnTouch()}},0)
