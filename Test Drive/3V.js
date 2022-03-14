@@ -168,16 +168,16 @@ function gameover(){
 	Score2.innerText = 0
 	if(starting == -1){
 		//let Enemies = document.querySelectorAll(".enemy")
-	Enemies.forEach(e => e.remove())
-	Music.pause()
-	if (HighScore.innerText < Score.innerText) {
-		HighScore.innerText = Score.innerText
-	}
-	if (HighScore2.innerText < Score2.innerText) {
-		HighScore2.innerText = Score2.innerText
-	}
-	Score.innerText = 0
-	Score2.innerText = 0
+	//Enemies.forEach(e => e.remove())
+	//Music.pause()
+	//if (HighScore.innerText < Score.innerText) {
+	//	HighScore.innerText = Score.innerText
+	//}
+	//if (HighScore2.innerText < Score2.innerText) {
+	//	HighScore2.innerText = Score2.innerText
+	//}
+	//Score.innerText = 0
+	//Score2.innerText = 0
 		text.style.display = 'none'
 		text2.style.display = 'none'
 		Para.style.display = 'none'
@@ -192,7 +192,7 @@ function gameover(){
 		starting = 0
 		TF = false
 		FT = true
-		
+		Image.ontouchstart = function(){OnTouch()}
 		//setTimeout(function(){Image.ontouchstart = function(){}
 		//		     Image.ontouchmove = function(){}},0)
 	//setTimeout(function(){Image.ontouchstart = function(){OnTouch()}},0)
