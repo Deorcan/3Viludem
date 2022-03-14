@@ -183,8 +183,8 @@ function gameover(){
 		text2.style.display = 'none'
 		Para.style.display = 'none'
 		isTabletOrMobile()
-		Image.ontouchstart = function(){Menu.style.display = 'block'}
 		Landing()
+		Image.ontouchstart = function(){Menu.style.display = 'block'}
 		IfTouch = false
 		Pause.style.display = 'none'
 		Start.style.display = 'none'
