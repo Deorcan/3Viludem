@@ -178,10 +178,11 @@ function gameover(){
 	//}
 	//Score.innerText = 0
 	//Score2.innerText = 0
-		Image.ontouchstart = function(){Menu.style.display = 'block'}
+		
 		text.style.display = 'none'
 		text2.style.display = 'none'
 		Para.style.display = 'none'
+		Image.ontouchstart = function(){Menu.style.display = 'block'}
 		isTabletOrMobile()
 		Landing()
 		IfTouch = false
