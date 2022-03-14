@@ -696,7 +696,7 @@ Landing = function (){
 			Image.style.left = "0vw"
 			Image.style.maxWidth = landX
 			Image.style.maxHeight = landY			
-
+Image.ontouchstart = function(){Menu.style.display = 'block'}
 			PauseButton.style.display = 'block'
 			ScoreT2.style.display = 'block'
 			HighScoreT2.style.display = 'block'
