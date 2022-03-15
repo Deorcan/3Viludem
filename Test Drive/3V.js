@@ -821,7 +821,19 @@ function tiltperms(){
     } else {
       // handle regular non iOS 13+ devices
     }
+	 if (typeof DeviceMotionEvent.requestPermission === 'function') {
+      DeviceMotionEvent.requestPermission()
+        .then(permissionState => {
+          if (permissionState === 'granted') {
+            window.addEventListener('devicemotion', () => {});
+          }
+        })
+        .catch(console.error);
+    } else {
+      // handle regular non iOS 13+ devices
+    }
 }
+
 
 function OnTouch(){
 	event.preventDefault()
