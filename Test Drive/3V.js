@@ -734,8 +734,8 @@ Landing = function (){
 			var Enemies = document.querySelectorAll(".enemy")
 			Enemies.forEach(e => e.style.display = 'block')
 			//Image.ontouchstart = function(){Menu.style.display = 'block'}
-			if(TF === true){
-			Lasers.style.display = 'block'
+			if(!(TF === true && FT === true && starting === -1)){
+				Lasers.style.display = 'block'
 			}
 			
 		}
