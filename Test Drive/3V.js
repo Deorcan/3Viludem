@@ -706,7 +706,7 @@ Landing = function (){
 			Para.style.display = 'none'
 			Menu.style.display = 'none'
 			PauseButton.src = "Test%20Drive/PauseButton1.png"
-			if (starting === -1 && TF === false){
+			if (starting === -1){
 				Pause.style.display = 'block'
 				Start.style.display = 'block'
 				Restart.style.display = 'block'
