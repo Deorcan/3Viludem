@@ -139,52 +139,24 @@ function gameover(){
 	GameOver.style.display = 'block'
 	ship.style.display = 'none'
 	FireButton.style.display = 'none'
-	DPadButton.style.display = 'none'
-	DPadUp.style.display = 'none'
-	DPadLeft.style.display = 'none'
-	DPadDown.style.display = 'none'
-	DPadRight.style.display = 'none'
-	Pause.style.display = 'none'
-	Start.style.display = 'none'
-	Restart.style.display = 'none'
-	ControlMenu.style.display = 'none'
+	DPadButton.style.display = 'none'	
 	DPadButton.ontouchmove = function(){
-	DPadUp.style.display = 'none'
-	DPadLeft.style.display = 'none'
-	DPadDown.style.display = 'none'
-	DPadRight.style.display = 'none'
-	Music.pause()}
+		DPadUp.style.display = 'none'
+		DPadLeft.style.display = 'none'
+		DPadDown.style.display = 'none'
+		DPadRight.style.display = 'none'
+		Music.pause()}
 	Image.ontouchmove = function(){Music.pause()}
-	var Enemies = document.querySelectorAll(".enemy")
-	Enemies.forEach(e => e.remove())
-	Music.pause()
-	if (HighScore.innerText < Score.innerText) {
-		HighScore.innerText = Score.innerText
-	}
-	if (HighScore2.innerText < Score2.innerText) {
-		HighScore2.innerText = Score2.innerText
-	}
-	Score.innerText = 0
-	Score2.innerText = 0
 	if(starting == -1){
-		//let Enemies = document.querySelectorAll(".enemy")
-	//Enemies.forEach(e => e.remove())
-	//Music.pause()
-	//if (HighScore.innerText < Score.innerText) {
-	//	HighScore.innerText = Score.innerText
-	//}
-	//if (HighScore2.innerText < Score2.innerText) {
-	//	HighScore2.innerText = Score2.innerText
-	//}
-	//Score.innerText = 0
-	//Score2.innerText = 0
-		
+		DPadUp.style.display = 'none'
+		DPadLeft.style.display = 'none'
+		DPadDown.style.display = 'none'
+		DPadRight.style.display = 'none'
 		text.style.display = 'none'
 		text2.style.display = 'none'
 		Para.style.display = 'none'
 		isTabletOrMobile()
 		Landing()
-		Image.ontouchstart = function(){Menu.style.display = 'block'}
 		IfTouch = false
 		Pause.style.display = 'none'
 		Start.style.display = 'none'
@@ -195,11 +167,11 @@ function gameover(){
 		TF = false
 		FT = true
 		
-		//setTimeout(function(){Image.ontouchstart = function(){}
-		//		     Image.ontouchmove = function(){}},0)
-	//setTimeout(function(){Image.ontouchstart = function(){OnTouch()}},0)
+		setTimeout(function(){Image.ontouchstart = function(){}
+				     Image.ontouchmove = function(){}},0)
+		setTimeout(function(){Image.ontouchstart = function(){OnTouch()}},0)
 	}
-	//let Enemies = document.querySelectorAll(".enemy")
+	let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
 	Music.pause()
 	if (HighScore.innerText < Score.innerText) {
