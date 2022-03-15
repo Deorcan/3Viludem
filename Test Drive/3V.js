@@ -733,8 +733,10 @@ Landing = function (){
 			setTimeout(function(){ window.scrollTo(0,1), 0})
 			var Enemies = document.querySelectorAll(".enemy")
 			Enemies.forEach(e => e.style.display = 'block')
-			Image.ontouchstart = function(){Menu.style.display = 'block'}
+			//Image.ontouchstart = function(){Menu.style.display = 'block'}
+			if(TF === true){
 			Lasers.style.display = 'block'
+			}
 			
 		}
 	}
