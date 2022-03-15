@@ -724,11 +724,12 @@ Landing = function (){
 				}
 			}else { Menu.style.display = 'block'
 			       Menu.style.marginTop = '27%'}
-			Image.ontouchstart = function(){Menu.style.display = 'block'}
+			
 			var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
 			var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
 			if (Displaytouch === 'block' || Displaygo === 'block'){Menu.style.display = 'none'}
 			GameOver.style.marginTop = '25%'
+			Image.ontouchstart = function(){Menu.style.display = 'block'}
 			setTimeout(function(){ window.scrollTo(0,1), 0})
 			var Enemies = document.querySelectorAll(".enemy")
 			Enemies.forEach(e => e.style.display = 'block')
