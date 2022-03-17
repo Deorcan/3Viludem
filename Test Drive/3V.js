@@ -1028,6 +1028,7 @@ function OnTouch(){
 			Restart.onclick = function(){RESTART()}
 			ControlMenu.onclick = function(){Menu.style.display = 'block'}
 			window.removeEventListener("touchstart", fire)
+			window.removeEventListener("deviceorientation", movingtilt)
 			FireButton.style.display = 'none'
 			DPadButton.style.display = 'none'
 			DPadUp.style.display = 'none'
