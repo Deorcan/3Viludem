@@ -572,29 +572,45 @@ function movingtilt(){
 	var X = event.beta
 	var Y = event.gamma
 	
+	if (X >  90) { X =  90}
+  	if (X < -90) { X = -90};
+	if (Y >  90) { Y =  90};
+  	if (Y < -90) { Y = -90};
+	
 	ship.style.display = 'block'
 	
-	if (parseFloat(TOP) < parseFloat(TOP1)){ return}
-	else {
-		Y-=2
-		ship.style.top = `${Y}px`
-	}
-	if (parseFloat(TOP) + parseFloat(HEIGHT) > parseFloat(TOP1) + parseFloat(HEIGHT1)){ return}
-	else {
-		Y+=2
-		ship.style.top = `${Y}px`
+	if ( Y < 0){
+		if (parseFloat(TOP) < parseFloat(TOP1)){ return}
+		else {
+			let pos = parseFloat(TOP)
+			pos-=2
+			ship.style.top = `${pos}px`
+		}
+		
+	} else if (Y > 0){
+		if (parseFloat(TOP) + parseFloat(HEIGHT) > parseFloat(TOP1) + parseFloat(HEIGHT1)){ return}
+		else {
+			let pos = parseFloat(TOP)
+			pos+=2
+			ship.style.top = `${pos}px`
+		}
 	}
 	
+	if (X < 0){
+		if (parseFloat(LEFT) < parseFloat(LEFT1)){ return}
+		else {
+			let pos = parseFloat(LEFT)
+			pos-=2
+			ship.style.left = `${pos}px`
+		}
 	
-	if (parseFloat(LEFT) < parseFloat(LEFT1)){ return}
-	else {
-		X-=2
-		ship.style.left = `${X}px`
-	}
-	if (parseFloat(LEFT)+parseFloat(WIDTH) > parseFloat(LEFT1)+parseFloat(WIDTH1)){ return}
-	else {
-		X+=2
-		ship.style.left = `${X}px`
+	}else if (X > 0){
+		if (parseFloat(LEFT)+parseFloat(WIDTH) > parseFloat(LEFT1)+parseFloat(WIDTH1)){ return}
+		else {
+			let pos = parseFloat(LEFT)
+			pos+=2
+			ship.style.left = `${pos}px`
+		}
 	}
 	
 	setTimeout(function(){ window.scrollTo(0,1), 0})
