@@ -691,7 +691,6 @@ Porting = function (){
 		FT = false
 		let Enemies = document.querySelectorAll(".enemy")
 		Enemies.forEach(e => e.style.display = 'none')
-		if (DisplayLasers != null){Lasers.style.display = 'none'}
 		clearInterval(EInterval)
 		Music.pause()
 		DPadButton.ontouchend = function (){
@@ -716,6 +715,7 @@ Porting = function (){
 		window.removeEventListener("keydown", moving)
 		window.removeEventListener("click", fire)
 		window.removeEventListener("deviceorientation", movingtilt)
+		Lasers.style.display = 'none'
 	}
 }
 Landing = function (){
