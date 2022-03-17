@@ -579,7 +579,7 @@ function movingtilt(){
 	
 	ship.style.display = 'block'
 	
-	if ( Y < 0){
+	if (Y < 0){
 		if (parseFloat(TOP) < parseFloat(TOP1)){ return}
 		else {
 			let pos = parseFloat(TOP)
@@ -596,7 +596,7 @@ function movingtilt(){
 		}
 	}
 	
-	if (X < 0){
+	if (X > 0){
 		if (parseFloat(LEFT) < parseFloat(LEFT1)){ return}
 		else {
 			let pos = parseFloat(LEFT)
@@ -604,7 +604,7 @@ function movingtilt(){
 			ship.style.left = `${pos}px`
 		}
 	
-	}else if (X > 0){
+	}else if (X < 0){
 		if (parseFloat(LEFT)+parseFloat(WIDTH) > parseFloat(LEFT1)+parseFloat(WIDTH1)){ return}
 		else {
 			let pos = parseFloat(LEFT)
