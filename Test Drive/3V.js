@@ -556,6 +556,49 @@ function movingtouch(){
 	setTimeout(function(){ window.scrollTo(0,1), 0})
 }
 
+function movingtilt(){
+	let TOP = window.getComputedStyle(ship).getPropertyValue('top')
+	let LEFT = window.getComputedStyle(ship).getPropertyValue('left')
+	let HEIGHT = window.getComputedStyle(ship).getPropertyValue('height')
+	let WIDTH = window.getComputedStyle(ship).getPropertyValue('width')
+	
+	let TOP1 = window.getComputedStyle(Image).getPropertyValue('top')
+	let LEFT1 = window.getComputedStyle(Image).getPropertyValue('left')
+	let HEIGHT1 = window.getComputedStyle(Image).getPropertyValue('height')
+	let WIDTH1 = window.getComputedStyle(Image).getPropertyValue('width')
+	
+	var X = event.beta
+	var Y = event.gamma
+	
+	ship.style.display = 'block'
+	
+	let postop = parseFloat(TOP)
+	let posleft = parseFloat(LEFT)
+	
+	if (parseFloat(TOP) < parseFloat(TOP1)){
+		postop+=5
+		ship.style.top = `${postop}px`
+	} 
+	else if (parseFloat(TOP) + parseFloat(HEIGHT) > parseFloat(TOP1) + parseFloat(HEIGHT1)){
+		postop-=5
+		ship.style.top = `${postop}px`
+	}
+	else { ship.style.top = `${postop}px`}
+	
+	
+	if (parseFloat(LEFT) < parseFloat(LEFT1)){
+		posleft+=5
+	    	ship.style.left = `${posleft}px`
+	    }
+	else if (parseFloat(LEFT)+parseFloat(WIDTH) > parseFloat(LEFT1)+parseFloat(WIDTH1)){
+		posleft-=5
+	    	ship.style.left = `${posleft}px`
+	    }
+	else{ ship.style.left = `${posleft}px` }
+	
+	setTimeout(function(){ window.scrollTo(0,1), 0})
+}
+
 function OnMouse(){
 	Image.style.cursor = "url('https://deorcan.github.io/3Viludem/Pictures/Cursor.png'), default"
 	ship.style.display = 'none'
@@ -1026,7 +1069,7 @@ function playgame(){
 			FireButton.style.display = 'block'
 			FireButton.ontouchstart = function(){fire()}
 			FireButton.ontouchend = function (){Touches = 0}
-			if (Mode === 1){}
+			if (Mode === 1){ window.addEventListener("deviceorientation", movingtilt)}
 			else if(Mode === 2){
 				Image.ontouchmove = function(){
 					var X = event.touches[Touches].clientX
