@@ -122,6 +122,7 @@ function gameover(){
 	window.removeEventListener("keydown", moving)
 	window.removeEventListener("click", fire)
 	window.removeEventListener("touchstart", fire)
+	window.removeEventListener("deviceorientation", movingtilt)
 	TF = true
 	IfMouse = false
 	clearInterval(EInterval)
@@ -188,6 +189,7 @@ function RESTART(){
 	window.removeEventListener("keydown", moving)
 	window.removeEventListener("click", fire)
 	window.removeEventListener("touchstart", fire)
+	window.removeEventListener("deviceorientation", movingtilt)
 	TF = true
 	FT = false
 	IfMouse = false
@@ -696,7 +698,8 @@ Porting = function (){
 		}
 		window.removeEventListener("touchstart", fire)
 		window.removeEventListener("keydown", moving)
-		window.removeEventListener("click", fire)	
+		window.removeEventListener("click", fire)
+		window.removeEventListener("deviceorientation", movingtilt)
 	}
 }
 Landing = function (){
