@@ -660,6 +660,7 @@ Porting = function (){
 	if (port.matches){
 		var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
 		var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
+		var DisplayLasers =  window.getComputedStyle(Lasers).getPropertyValue('display')
 		PlsRotate.style.display = 'block'
 		if (Displaytouch === 'block' || Displaygo === 'block'){PlsRotate.style.display = 'none'}
 		
@@ -690,7 +691,7 @@ Porting = function (){
 		FT = false
 		let Enemies = document.querySelectorAll(".enemy")
 		Enemies.forEach(e => e.style.display = 'none')
-		if(!(TF === true && FT === false && starting === -1)){Lasers.style.display = 'none'}
+		if (DisplayLasers === 'block'){Lasers.style.display = 'none'}
 		clearInterval(EInterval)
 		Music.pause()
 		DPadButton.ontouchend = function (){
