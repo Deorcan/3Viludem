@@ -690,7 +690,7 @@ Porting = function (){
 		FT = false
 		let Enemies = document.querySelectorAll(".enemy")
 		Enemies.forEach(e => e.style.display = 'none')
-		if(!(TF === true && FT === true && starting === -1)){Lasers.style.display = 'none'}
+		if(!(TF === true && FT === false && starting === -1)){Lasers.style.display = 'none'}
 		clearInterval(EInterval)
 		Music.pause()
 		DPadButton.ontouchend = function (){
