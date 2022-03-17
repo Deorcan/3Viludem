@@ -691,7 +691,7 @@ Porting = function (){
 		FT = false
 		let Enemies = document.querySelectorAll(".enemy")
 		Enemies.forEach(e => e.style.display = 'none')
-		if (DisplayLasers === 'block'){Lasers.style.display = 'none'}
+		if (DisplayLasers != null){Lasers.style.display = 'none'}
 		clearInterval(EInterval)
 		Music.pause()
 		DPadButton.ontouchend = function (){
