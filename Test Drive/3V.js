@@ -574,33 +574,28 @@ function movingtilt(){
 	
 	ship.style.display = 'block'
 	
-	//let postop = parseFloat(TOP)
-	//let posleft = parseFloat(LEFT)
-	
-	if (parseFloat(TOP) < parseFloat(TOP1)){
-		//Y+=5
-		//ship.style.top = `${Y}px`
-		return
-	} 
-	else if (parseFloat(TOP) + parseFloat(HEIGHT) > parseFloat(TOP1) + parseFloat(HEIGHT1)){
-		//Y-=5
-		//ship.style.top = `${Y}px`
-		return
+	if (parseFloat(TOP) < parseFloat(TOP1)){ return}
+	else {
+		Y-=2
+		ship.style.top = `${Y}px`
 	}
-	else { ship.style.top = `${Y}px`}
+	if (parseFloat(TOP) + parseFloat(HEIGHT) > parseFloat(TOP1) + parseFloat(HEIGHT1)){ return}
+	else {
+		Y+=2
+		ship.style.top = `${Y}px`
+	}
 	
 	
-	if (parseFloat(LEFT) < parseFloat(LEFT1)){
-		//X+=5
-	    	//ship.style.left = `${X}px`
-		return
-	    }
-	else if (parseFloat(LEFT)+parseFloat(WIDTH) > parseFloat(LEFT1)+parseFloat(WIDTH1)){
-		//X-=5
-	    	//ship.style.left = `${X}px`
-		return
-	    }
-	else{ ship.style.left = `${X}px` }
+	if (parseFloat(LEFT) < parseFloat(LEFT1)){ return}
+	else {
+		X-=2
+		ship.style.left = `${X}px`
+	}
+	else if (parseFloat(LEFT)+parseFloat(WIDTH) > parseFloat(LEFT1)+parseFloat(WIDTH1)){ return}
+	else{
+		X+=2
+		ship.style.left = `${X}px`
+	}
 	
 	setTimeout(function(){ window.scrollTo(0,1), 0})
 }
