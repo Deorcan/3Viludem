@@ -591,8 +591,8 @@ function movingtilt(){
 		X-=2
 		ship.style.left = `${X}px`
 	}
-	else if (parseFloat(LEFT)+parseFloat(WIDTH) > parseFloat(LEFT1)+parseFloat(WIDTH1)){ return}
-	else{
+	if (parseFloat(LEFT)+parseFloat(WIDTH) > parseFloat(LEFT1)+parseFloat(WIDTH1)){ return}
+	else {
 		X+=2
 		ship.style.left = `${X}px`
 	}
