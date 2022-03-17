@@ -578,23 +578,27 @@ function movingtilt(){
 	//let posleft = parseFloat(LEFT)
 	
 	if (parseFloat(TOP) < parseFloat(TOP1)){
-		Y+=5
+		//Y+=5
 		//ship.style.top = `${Y}px`
+		return
 	} 
 	else if (parseFloat(TOP) + parseFloat(HEIGHT) > parseFloat(TOP1) + parseFloat(HEIGHT1)){
-		Y-=5
+		//Y-=5
 		//ship.style.top = `${Y}px`
+		return
 	}
 	else { ship.style.top = `${Y}px`}
 	
 	
 	if (parseFloat(LEFT) < parseFloat(LEFT1)){
-		X+=5
+		//X+=5
 	    	//ship.style.left = `${X}px`
+		return
 	    }
 	else if (parseFloat(LEFT)+parseFloat(WIDTH) > parseFloat(LEFT1)+parseFloat(WIDTH1)){
-		X-=5
+		//X-=5
 	    	//ship.style.left = `${X}px`
+		return
 	    }
 	else{ ship.style.left = `${X}px` }
 	
