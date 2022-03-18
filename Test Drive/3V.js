@@ -583,7 +583,7 @@ function movingtilt(){
 		if (parseFloat(TOP) < parseFloat(TOP1)){ return}
 		else {
 			let pos = parseFloat(TOP)
-			pos-=1
+			pos-=2
 			ship.style.top = `${pos}px`
 		}
 		
@@ -591,7 +591,7 @@ function movingtilt(){
 		if (parseFloat(TOP) + parseFloat(HEIGHT) > parseFloat(TOP1) + parseFloat(HEIGHT1)){ return}
 		else {
 			let pos = parseFloat(TOP)
-			pos+=1
+			pos+=2
 			ship.style.top = `${pos}px`
 		}
 	}
@@ -600,7 +600,7 @@ function movingtilt(){
 		if (parseFloat(LEFT) < parseFloat(LEFT1)){ return}
 		else {
 			let pos = parseFloat(LEFT)
-			pos-=1
+			pos-=2
 			ship.style.left = `${pos}px`
 		}
 	
@@ -608,7 +608,7 @@ function movingtilt(){
 		if (parseFloat(LEFT)+parseFloat(WIDTH) > parseFloat(LEFT1)+parseFloat(WIDTH1)){ return}
 		else {
 			let pos = parseFloat(LEFT)
-			pos+=1
+			pos+=2
 			ship.style.left = `${pos}px`
 		}
 	}
