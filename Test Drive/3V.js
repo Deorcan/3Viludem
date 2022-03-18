@@ -660,7 +660,7 @@ Porting = function (){
 	if (port.matches){
 		var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
 		var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
-		var DisplayLasers =  window.getComputedStyle(Lasers).getPropertyValue('display')
+		//var DisplayLasers =  window.getComputedStyle(Lasers).getPropertyValue('display')
 		PlsRotate.style.display = 'block'
 		if (Displaytouch === 'block' || Displaygo === 'block'){PlsRotate.style.display = 'none'}
 		
@@ -715,7 +715,7 @@ Porting = function (){
 		window.removeEventListener("keydown", moving)
 		window.removeEventListener("click", fire)
 		window.removeEventListener("deviceorientation", movingtilt)
-		Lasers.style.display = 'none'
+		//Lasers.style.display = 'none'
 	}
 }
 Landing = function (){
