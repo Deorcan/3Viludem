@@ -583,7 +583,7 @@ function movingtilt(){
 		if (parseFloat(TOP) < parseFloat(TOP1)){ return}
 		else {
 			let pos = parseFloat(TOP)
-			pos-=2
+			pos-=1
 			ship.style.top = `${pos}px`
 		}
 		
@@ -591,7 +591,7 @@ function movingtilt(){
 		if (parseFloat(TOP) + parseFloat(HEIGHT) > parseFloat(TOP1) + parseFloat(HEIGHT1)){ return}
 		else {
 			let pos = parseFloat(TOP)
-			pos+=2
+			pos+=1
 			ship.style.top = `${pos}px`
 		}
 	}
@@ -600,7 +600,7 @@ function movingtilt(){
 		if (parseFloat(LEFT) < parseFloat(LEFT1)){ return}
 		else {
 			let pos = parseFloat(LEFT)
-			pos-=2
+			pos-=1
 			ship.style.left = `${pos}px`
 		}
 	
@@ -608,7 +608,7 @@ function movingtilt(){
 		if (parseFloat(LEFT)+parseFloat(WIDTH) > parseFloat(LEFT1)+parseFloat(WIDTH1)){ return}
 		else {
 			let pos = parseFloat(LEFT)
-			pos+=2
+			pos+=1
 			ship.style.left = `${pos}px`
 		}
 	}
@@ -660,7 +660,6 @@ Porting = function (){
 	if (port.matches){
 		var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
 		var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
-		//var DisplayLasers =  window.getComputedStyle(Lasers).getPropertyValue('display')
 		PlsRotate.style.display = 'block'
 		if (Displaytouch === 'block' || Displaygo === 'block'){PlsRotate.style.display = 'none'}
 		
@@ -764,7 +763,7 @@ Landing = function (){
 			setTimeout(function(){ window.scrollTo(0,1), 0})
 			var Enemies = document.querySelectorAll(".enemy")
 			Enemies.forEach(e => e.style.display = 'block')
-			if(!(TF === true && FT === true && starting === -1)){Lasers.style.display = 'block'}
+			if(Lasers != 0){Lasers.style.display = 'block'}
 		}
 	}
 }
