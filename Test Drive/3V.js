@@ -48,7 +48,7 @@ var L = { x: 0, y: 0, width: 0, height: 0}
 var E = { x: 0, y: 0, width: 0, height: 0}
 var Z = 2600
 var z = 30
-var Lasers
+var Lasers = 0
 var IfMouse = false
 var IfTouch = false
 var Mode = 0
@@ -715,7 +715,7 @@ Porting = function (){
 		window.removeEventListener("keydown", moving)
 		window.removeEventListener("click", fire)
 		window.removeEventListener("deviceorientation", movingtilt)
-		//Lasers.style.display = 'none'
+		if(Lasers != 0){Lasers.style.display = 'none'}
 	}
 }
 Landing = function (){
