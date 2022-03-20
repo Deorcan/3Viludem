@@ -38,6 +38,7 @@
 
 </style>
 <script>
+	
 	var TitleText = document.getElementById("TitleText");
 	var TitlePic = document.getElementById("TitlePic");
 	var TitleText2 = document.getElementById("TitleText2");
@@ -46,6 +47,7 @@
 	var Clickable = document.getElementsByClassName("Clickable");
 	var Pr1 = document.getElementById("Product1");
 	var ComingSoon = document.getElementById("ComingSoon");
+	Pr1.style.width = "200%";
 	
 	var port = window.matchMedia("(orientation: portrait)");
 	var land = window.matchMedia("(orientation: landscape)");
@@ -53,7 +55,7 @@
 	const userAgent = navigator.userAgent.toLowerCase();
 	var isMobile = /iPhone|Android|BlackBerry|BB|Nokia/i.test(navigator.userAgent);
 	const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
-	//isTabletOrMobile();
+	isTabletOrMobile();
 	
 	function isTabletOrMobile(){
 		if (isMobile||isTablet){
