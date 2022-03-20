@@ -53,14 +53,14 @@
 	const userAgent = navigator.userAgent.toLowerCase();
 	var isMobile = /iPhone|Android|BlackBerry|BB|Nokia/i.test(navigator.userAgent);
 	const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
-	isTabletOrMobile();
+	//isTabletOrMobile();
 	
 	function isTabletOrMobile(){
 		if (isMobile||isTablet){
 			//land.addListener(Landing);
 			//port.addListener(Porting);
-			Landing();
-			Porting();
+			//Landing();
+			//Porting();
 			Title.style.marginLeft = "2vw";
 			Products.style.marginLeft = "2vw";
 			Pr1.style.width = "60%";
