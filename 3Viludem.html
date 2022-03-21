@@ -37,65 +37,6 @@
 		}
 
 </style>
-<script>
-	//document.getElementById("Title").style.color = "red";
-	var TitleText = document.getElementById("TitleText");
-	var TitlePic = document.getElementById("TitlePic");
-	var TitleText2 = document.getElementById("TitleText2");
-	var Title = document.getElementById("Title");
-	var Products = document.getElementById("Products");
-	var Clickable = document.getElementsByClassName("Clickable");
-	var Pr1 = document.getElementById("Product1");
-	var ComingSoon = document.getElementById("ComingSoon");
-	
-	
-	var port = window.matchMedia("(orientation: portrait)");
-	var land = window.matchMedia("(orientation: landscape)");
-	
-	const userAgent = navigator.userAgent.toLowerCase();
-	var isMobile = /iPhone|Android|BlackBerry|BB|Nokia/i.test(navigator.userAgent);
-	const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
-	isTabletOrMobile();
-	
-	function isTabletOrMobile(){
-		if (isMobile||isTablet){
-			land.addListener(Landing);
-			port.addListener(Porting);
-			Landing();
-			Porting();
-			Title.style.marginLeft = "2vw";
-			Products.style.marginLeft = "2vw";
-			Pr1.style.width = "60%";
-			Pr1.style.fontSize = "100%";
-			ComingSoon.style.fontSize = "110%";
-		}
-	}
-	function Landing(){
-		if (land.matches){
-			TitleText.style.fontSize = "200%";
-			TitleText2.style.fontSize = "250%";
-			TitlePic.style.height = "100%";
-			TitlePic.style.width = "100%";
-			Clickable.style.maxHeight = "15%";
-			ComingSoon.style.marginTop = "0vh";
-		}
-	}
-	
-	function Porting(){
-		if (port.matches){
-			TitleText.style.fontSize = "160%";
-			TitleText2.style.fontSize = "210%";
-			TitlePic.style.height = "65%";
-			TitlePic.style.width = "-25%";
-			Clickable.style.maxHeight = "10%";
-			ComingSoon.style.marginTop = "10vh";
-		}
-	}
-	
-	
-</script>
-	
-
 <body style="background-color: #0b0b0b;">
 
 <a href="https://deorcan.github.io/main/Home"><img class = "Clickable" style="height: 0.2%; width: 5%;" src="Pictures\\Homepagelink.PNG"></a>
