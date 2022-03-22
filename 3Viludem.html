@@ -102,7 +102,7 @@
 	Body.style.transform = "rotateY(-90deg)";
 	
 	Body.onload = function(){
-		if (ref === ""){}
+		if (ref === ""){Body.style.transform = "rotateY(0deg)";}
 		else if (ref ==="https://deorcan.github.io/3Viludem/3Viludem%20Launch%20Game"){
 			Body.style.transition = "transform 0.8s";
 			Body.style.transformStyle = "preserve-3d";
@@ -114,7 +114,7 @@
 		}
 	};
 	Body.ontouchcancel = function(){
-		if (ref === ""){}
+		if (ref === ""){Body.style.transform = "rotateY(0deg)";}
 		else if (ref ==="https://deorcan.github.io/3Viludem/3Viludem%20Launch%20Game"){
 			Body.style.transition = "transform 0.8s";
 			Body.style.transformStyle = "preserve-3d";
