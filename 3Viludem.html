@@ -76,10 +76,10 @@
 	
 	function isTabletOrMobile(){
 		if (isMobile||isTablet){
-			//land.addListener(Landing);
-			//port.addListener(Porting);
-			//Landing();
-			//Porting();
+			land.addListener(Landing);
+			port.addListener(Porting);
+			Landing();
+			Porting();
 			Title.style.marginLeft = "2vw";
 			Products.style.marginLeft = "2vw";
 			Pr1.style.width = "60%";
