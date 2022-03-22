@@ -90,6 +90,7 @@
 	var Pr1 = document.getElementById("Product1");
 	var ComingSoon = document.getElementById("ComingSoon");
 	var Body = document.getElementsByTagName("BODY")[0];
+	var ref = document.referrer;
 	
 	var port = window.matchMedia("(orientation: portrait)");
 	var land = window.matchMedia("(orientation: landscape)");
@@ -101,14 +102,29 @@
 	Body.style.transform = "rotateY(-90deg)";
 	
 	Body.onload = function(){
-		Body.style.transition = "transform 0.8s";
-		Body.style.transformStyle = "preserve-3d";
-		Body.style.transform = "rotateY(0deg)";
+		if (ref === ""){}
+		else if (ref ==="https://deorcan.github.io/3Viludem/3Viludem%20Launch%20Game"){
+			Body.style.transition = "transform 0.8s";
+			Body.style.transformStyle = "preserve-3d";
+			Body.style.transform = "rotateY(0deg)";
+		}else{
+			Body.style.transition = "transform 0.8s";
+			Body.style.transformStyle = "preserve-3d";
+			Body.style.transform = "rotateY(-0deg)";
+		}
 	};
 	Body.ontouchcancel = function(){
-		Body.style.transition = "transform 0.8s";
-		Body.style.transformStyle = "preserve-3d";
-		Body.style.transform = "rotateY(0deg)";
+		if (ref === ""){}
+		else if (ref ==="https://deorcan.github.io/3Viludem/3Viludem%20Launch%20Game"){
+			Body.style.transition = "transform 0.8s";
+			Body.style.transformStyle = "preserve-3d";
+			Body.style.transform = "rotateY(0deg)";
+		}
+		else{
+			Body.style.transition = "transform 0.8s";
+			Body.style.transformStyle = "preserve-3d";
+			Body.style.transform = "rotateY(-0deg)";
+		}
 	};
 	
 	isTabletOrMobile();
