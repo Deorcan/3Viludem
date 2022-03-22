@@ -7,67 +7,61 @@
 	<title>3Viludem Home</title>
 </HEAD>	
 <style>
-	body{
- 		cursor: url("Pictures\\Cursor.png"), url("Pictures\\Cursor.cur"), default;
- 	}
-	.Clickable {
-		border: solid 2px white;	
-	}
-	.Clickable:hover {
-		border: solid 2px yellow;
+	body{ cursor: url("Pictures\\Cursor.png"), url("Pictures\\Cursor.cur"), default;}
+	
+	.Clickable { border: solid 2px white;}
+	
+	.Clickable:hover { border: solid 2px yellow;}
+	
+	#BSNS{
+		height: 0.2%;
+		width: 5%;
 	}
 	#TitleText {
 		font-size: 500%;
+		color: white;
 	}
 	#TitleText2 {
 		font-size: 550%;
+		color: white;
+	}
+	#TitlePic {
+		height: 100%;
+		width: 100%;
 	}
 	#Title {
 		margin-left: 22vw;
+		pointer-events: none;
+		user-select: none;
+		user-drag: none;
 	}
-	#Products {
-		margin-left: 22vw;
-		}
+	
+	#Products { margin-left: 22vw;}
+	
+	.ProductPic {
+		height: 50%;
+		width: 50%;
+	}
 	#Product1 {
 		width: 50%;
 		font-size: 125%;
+		color: white;
 		}
 	#ComingSoon {
+		margin-top: 0vh;
 		font-size: 130%;
+		color: white;
 		}
 
 </style>
-<body style="background-color: #0b0b0b;">
-
-<a href="https://deorcan.github.io/main/Home"><img class = "Clickable" style="height: 0.2%; width: 5%;" src="Pictures\\Homepagelink.PNG"></a>
-	<table id = "Title" style="pointer-events: none; user-select: none; user-drag: none; ">
-		<tr>
-			
-			<td><p id = "TitleText">Welcome to</p></td>
-			<td><img id = "TitlePic" src="Pictures\\3Viludem3Dbeta1.0.png" style = "height: 100%; width: 100%;"></td>
-			<td><p id = "TitleText2">!</p></td>
-		
-		</tr>
-	</table>
-	
-	
-	<table id = "Products">
-		<tr>
-			
-			<td id = "Product1"><p class = "ProductTitle" style="color:white;">Click to play Launch Game!</p>
-			<a href="https://deorcan.github.io/3Viludem/3Viludem%20Launch%20Game"><img class = "Clickable" style="height: 50%; width: 50%;" src="Test%20Drive/Space.jpg"></a></td>
-			<td><p id = "ComingSoon" style="color:white;">MORE COMING SOON!</p></td>
-		
-		</tr>
-	</table>
-</body>
 <script>
+	var BSNS = document.getElementById("BSNS");
 	var TitleText = document.getElementById("TitleText");
 	var TitlePic = document.getElementById("TitlePic");
 	var TitleText2 = document.getElementById("TitleText2");
 	var Title = document.getElementById("Title");
 	var Products = document.getElementById("Products");
-	var Clickable = document.getElementsByClassName("Clickable");
+	var PrPic = document.getElementsByClassName("ProductPic");
 	var Pr1 = document.getElementById("Product1");
 	var ComingSoon = document.getElementById("ComingSoon");
 	
@@ -99,7 +93,7 @@
 			TitleText2.style.fontSize = "250%";
 			TitlePic.style.height = "100%";
 			TitlePic.style.width = "100%";
-			Clickable.style.height = "15%";
+			PrPic.style.height = "15%";
 			ComingSoon.style.marginTop = "0vh";
 		}
 	}
@@ -108,14 +102,37 @@
 		if (port.matches){
 			TitleText.style.fontSize = "160%";
 			TitleText2.style.fontSize = "210%";
-			TitlePic.style.height = "65%";
-			TitlePic.style.width = "-25%";
-			Clickable.style.height = "10%";
+			TitlePic.style.height = "75%";
+			TitlePic.style.width = "25%";
+			PrPic.style.height = "10%";
 			ComingSoon.style.marginTop = "10vh";
 		}
 	}
 	
 	
 </script>
+<body style="background-color: #0b0b0b;">
+
+<a href="https://deorcan.github.io/main/Home"><img id = "BSNS" class = "Clickable" src="Pictures\\Homepagelink.PNG"></a>
+	<table id = "Title">
+		<tr>
+			
+			<td><p id = "TitleText">Welcome to</p></td>
+			<td><img id = "TitlePic" src="Pictures\\3Viludem3Dbeta1.0.png"></td>
+			<td><p id = "TitleText2">!</p></td>
+		
+		</tr>
+	</table>
 	
+	
+	<table id = "Products">
+		<tr>
+			
+			<td id = "Product1"><p class = "ProductTitle">Click to play Launch Game!</p>
+			<a href="https://deorcan.github.io/3Viludem/3Viludem%20Launch%20Game"><img class = "ProductPic" class = "Clickable" src="Test%20Drive/Space.jpg"></a></td>
+			<td><p id = "ComingSoon">MORE COMING SOON!</p></td>
+		
+		</tr>
+	</table>
+</body>	
 </HTML>
