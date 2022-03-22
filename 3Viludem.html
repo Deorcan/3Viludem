@@ -89,7 +89,7 @@
 	var PrPic = document.getElementsByClassName("ProductPic");
 	var Pr1 = document.getElementById("Product1");
 	var ComingSoon = document.getElementById("ComingSoon");
-	
+	var Body = document.getElementsByTagName("BODY")[0];
 	
 	var port = window.matchMedia("(orientation: portrait)");
 	var land = window.matchMedia("(orientation: landscape)");
@@ -97,6 +97,15 @@
 	const userAgent = navigator.userAgent.toLowerCase();
 	var isMobile = /iPhone|Android|BlackBerry|BB|Nokia/i.test(navigator.userAgent);
 	const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
+	
+	Body.style.transform = "rotateY(90deg)";
+	
+	Body.onload = function(){
+		Body.style.transition = "transform 0.8s";
+		Body.style.transformStyle = "preserve-3d";
+		Body.style.transform = "rotateY(0deg)";
+	};
+	
 	isTabletOrMobile();
 	
 	function isTabletOrMobile(){
@@ -134,8 +143,18 @@
 		}
 	}
 	
-	Business.onclick = function(){location.href = "https://deorcan.github.io/main/Home"};
-	PrPic[0].onclick = function(){location.href = "https://deorcan.github.io/3Viludem/3Viludem%20Launch%20Game"};
+	Business.onclick = function(){
+		Body.style.transition = "transform 0.8s";
+		Body.style.transformStyle = "preserve-3d";
+		Body.style.transform = "rotateY(90deg)";
+		setTimeout(function(){location.href = "https://deorcan.github.io/main/Home"},800);
+	}
+	PrPic[0].onclick = function(){
+		Body.style.transition = "transform 0.8s";
+		Body.style.transformStyle = "preserve-3d";
+		Body.style.transform = "rotateY(90deg)";
+		setTimeout(function(){location.href = "https://deorcan.github.io/3Viludem/3Viludem%20Launch%20Game"},800);
+	}
 	
 	
 </script>
