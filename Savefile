@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Redirect to a Webpage</h2>
+<p>The replace() method replaces the current document with a new one:</p>
+
+<button onclick="myFunction()">Replace document</button>
+
+<script>
+var x = document.getElementsByTagName("BODY")[0];
+x.style.transform = "rotateY(90deg)"
+function myFunction() {
+x.style.transition = "transform 0.8s";
+//x.style.transformStyle = "preserve-3d";
+x.style.transform = "rotateY(180deg) translate(300px,0px)";
+//x.style.transform = "translate(0px,0px)";
+
+//setTimeout(function(){
+//location.replace("https://www.w3schools.com")},800)
+}
+x.onload = function(){x.style.transition = "transform 0.8s";
+x.style.transformStyle = "preserve-3d";
+x.style.transform = "rotateY(0deg)";};
+</script>
+
+</body>
+</html> 
