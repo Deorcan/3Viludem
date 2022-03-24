@@ -29,17 +29,18 @@
 		height: 100%;
 		width: 100%;
 	}
-	#Mission {
-		font-size: 200%;
-		color: white;
-	}
+	
 	#Title {
 		margin-left: 22vw;
 		pointer-events: none;
 		user-select: none;
 		user-drag: none;
 	}
-	
+	#Mission {
+		text-align: center;
+		font-size: 200%;
+		color: white;
+	}
 	#Products { margin-left: 22vw;}
 	
 	.ProductPic {
@@ -67,11 +68,11 @@
 			<td><p id = "TitleText">Welcome to</p></td>
 			<td><img id = "TitlePic" src="Pictures\\3Viludem3Dbeta1.0.png"></td>
 			<td><p id = "TitleText2">!</p></td>
-			<td><p id = "Mission"><br>CHOOSE YOUR MISSION</p></td>
+			
 		
 		</tr>
 	</table>
-	
+	<p id = "Mission">CHOOSE YOUR MISSION</p>
 	
 	<table id = "Products">
 		<tr>
@@ -89,8 +90,8 @@
 	var TitleText = document.getElementById("TitleText");
 	var TitlePic = document.getElementById("TitlePic");
 	var TitleText2 = document.getElementById("TitleText2");
-	var Mission = document.getElementById("Mission");
 	var Title = document.getElementById("Title");
+	var Mission = document.getElementById("Mission");
 	var Products = document.getElementById("Products");
 	var PrPic = document.getElementsByClassName("ProductPic");
 	var Pr1 = document.getElementById("Product1");
