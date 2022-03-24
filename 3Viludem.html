@@ -111,14 +111,14 @@
 	var isMobile = /iPhone|Android|BlackBerry|BB|Nokia/i.test(navigator.userAgent);
 	const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
 	
-	//Body.style.marginLeft = `${-(window.innerWidth+5)}px`;
+	Body.style.marginLeft = `${-(window.innerWidth+5)}px`;
 	//Mission.style.left = Mission.style.left + `${-(window.innerWidth+5)}px`;
 	//Body.style.transform = "rotateY(90deg)";
 	
 	Body.onload = function(){
 		Body.style.transition = "transform 5.8s";
 		Body.style.transformStyle = "preserve-3d";
-		//Body.style.transform = "rotateY(180deg)";
+		Body.style.transform = "rotateY(180deg)";
 	
 	};
 	Body.ontouchcancel = function(){
@@ -136,7 +136,7 @@
 			Landing();
 			Porting();
 			Title.style.marginLeft = "2vw";
-			Mission.style.left = "30%";
+			Mission.style.marginLeft = "30%";
 			Products.style.marginLeft = "2vw";
 			Pr1.style.width = "60%";
 			Pr1.style.fontSize = "100%";
