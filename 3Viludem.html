@@ -111,9 +111,9 @@
 	var isMobile = /iPhone|Android|BlackBerry|BB|Nokia/i.test(navigator.userAgent);
 	const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
 	
+	Body.style.transform = "rotateY(180deg)"
 	Body.style.marginLeft = `${-(window.innerWidth+5)}px`;
 	//Mission.style.left = Mission.style.left + `${-(window.innerWidth+5)}px`;
-	//Body.style.transform = "rotateY(90deg)";
 	
 	Body.onload = function(){
 		Body.style.transition = "transform 5.8s";
