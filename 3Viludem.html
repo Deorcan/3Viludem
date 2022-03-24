@@ -9,6 +9,7 @@
 <style>
 	body{ cursor: url("Pictures\\Cursor.png"), url("Pictures\\Cursor.cur"), default;
 		margin-left: 0px;
+		transform: rotateY(180px);
 	}
 	
 	.Clickable { border: solid 2px white;}
@@ -111,11 +112,12 @@
 	var isMobile = /iPhone|Android|BlackBerry|BB|Nokia/i.test(navigator.userAgent);
 	const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
 	
-	Body.style.transform = "rotateY(180deg)"
+	
 	Body.style.marginLeft = `${-(window.innerWidth+5)}px`;
 	//Mission.style.left = Mission.style.left + `${-(window.innerWidth+5)}px`;
 	
 	Body.onload = function(){
+		
 		Body.style.transition = "transform 5.8s";
 		Body.style.transformStyle = "preserve-3d";
 		Body.style.transform = "rotateY(-180deg)";
