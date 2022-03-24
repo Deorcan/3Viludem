@@ -11,6 +11,9 @@
 		margin-left: 0px;
 		
 	}
+	#Cover {
+		float: left;
+	}
 	#Logo {
 		margin-left: 0px;
 		margin-top: 50%;
@@ -68,8 +71,12 @@
 </style>
 <body style="background-color: #0b0b0b;">
 	
-<img id = "Business" class = "Clickable" src="Pictures\\Homepagelink.PNG">
-<img id = "Logo" src="Pictures\\3Viludem3Dbeta1.0.png">	
+<div id = "Cover">	
+<img id = "Logo" src="Pictures\\3Viludem3Dbeta1.0.png">
+</div>
+	
+<div id = "Inside">
+<img id = "Business" class = "Clickable" src="Pictures\\Homepagelink.PNG">	
 	<table id = "Title">
 		<tr>
 			
@@ -92,6 +99,7 @@
 		
 		</tr>
 	</table>
+</div>
 </body>	
 <script>
 	var Business = document.getElementById("Business");
@@ -105,7 +113,7 @@
 	var Pr1 = document.getElementById("Product1");
 	var ComingSoon = document.getElementById("ComingSoon");
 	var Body = document.getElementsByTagName("BODY")[0];
-	var Logo = document.getElementById("Logo");
+	var Cover = document.getElementById("Cover");
 	
 	
 	
@@ -117,7 +125,7 @@
 	const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
 	
 	
-	Logo.style.marginLeft = `${-(window.innerWidth+5)}px`;
+	Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
 	//Mission.style.left = Mission.style.left + `${-(window.innerWidth+5)}px`;
 	
 	Body.onload = function(){
