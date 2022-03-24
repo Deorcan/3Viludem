@@ -110,18 +110,20 @@
 	var isMobile = /iPhone|Android|BlackBerry|BB|Nokia/i.test(navigator.userAgent);
 	const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
 	
-	Body.style.transform = "rotateY(90deg)";
+	Body.style.left = `${-(window.innerWidth+5)}px`;
+	
+	//Body.style.transform = "rotateY(90deg)";
 	
 	Body.onload = function(){
 		Body.style.transition = "transform 5.8s";
 		Body.style.transformStyle = "preserve-3d";
-		Body.style.transform = "rotateY(360deg)";
+		//Body.style.transform = "rotateY(360deg)";
 	
 	};
 	Body.ontouchcancel = function(){
 		Body.style.transition = "transform 1.8s";
 		Body.style.transformStyle = "preserve-3d";
-		Body.style.transform = "rotateY(0deg)";
+		//Body.style.transform = "rotateY(0deg)";
 	};
 	
 	isTabletOrMobile();
