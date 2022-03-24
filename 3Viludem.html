@@ -39,9 +39,8 @@
 		user-drag: none;
 	}
 	#Mission {
-		position: absolute;
-		left: 40%;
-		top: 40%;
+		margin-left: 40%;
+		margin-top: 40%;
 		font-size: 150%;
 		color: white;
 	}
@@ -112,9 +111,8 @@
 	var isMobile = /iPhone|Android|BlackBerry|BB|Nokia/i.test(navigator.userAgent);
 	const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
 	
-	Body.style.marginLeft = `${-(window.innerWidth+5)}px`;
-	Mission.style.left = "40%";
-	Mission.style.left = Mission.style.left + `${-(window.innerWidth+5)}px`;
+	//Body.style.marginLeft = `${-(window.innerWidth+5)}px`;
+	//Mission.style.left = Mission.style.left + `${-(window.innerWidth+5)}px`;
 	//Body.style.transform = "rotateY(90deg)";
 	
 	Body.onload = function(){
