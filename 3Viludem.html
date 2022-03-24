@@ -114,12 +114,12 @@
 	
 	Body.style.marginLeft = `${-(window.innerWidth+5)}px`;
 	Mission.style.left =  `${-30}%+${-(window.innerWidth+5)}px`;
-	Body.style.transform = "rotateY(90deg)";
+	//Body.style.transform = "rotateY(90deg)";
 	
 	Body.onload = function(){
 		Body.style.transition = "transform 5.8s";
 		Body.style.transformStyle = "preserve-3d";
-		//Body.style.transform = "rotateY(360deg)";
+		Body.style.transform = "rotateY(360deg)";
 	
 	};
 	Body.ontouchcancel = function(){
