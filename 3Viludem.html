@@ -113,7 +113,8 @@
 	const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
 	
 	Body.style.marginLeft = `${-(window.innerWidth+5)}px`;
-	Mission.style.left =  `${30}%+${-(window.innerWidth+5)}px`;
+	Mission.style.left = "40%";
+	Mission.style.left = Mission.style.left + `${-(window.innerWidth+5)}px`;
 	//Body.style.transform = "rotateY(90deg)";
 	
 	Body.onload = function(){
