@@ -9,7 +9,7 @@
 <style>
 	body{ cursor: url("Pictures\\Cursor.png"), url("Pictures\\Cursor.cur"), default;
 		margin-left: 0px;
-		
+		transform: rotateY(180deg);
 	}
 	
 	.Clickable { border: solid 2px white;}
@@ -120,7 +120,7 @@
 		
 		Body.style.transition = "transform 5.8s";
 		Body.style.transformStyle = "preserve-3d";
-		Body.style.transform = "rotateY(-180deg)";
+		Body.style.transform = "rotateY(180deg)";
 	
 	};
 	Body.ontouchcancel = function(){
