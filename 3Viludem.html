@@ -131,14 +131,14 @@
 	
 	Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
 	
-	Page.onload = function(){
+	Body.onload = function(){
 		
 		Page.style.transition = "transform 5.8s";
 		Page.style.transformStyle = "preserve-3d";
 		Page.style.transform = "rotateY(180deg)";
 	
 	};
-	Page.ontouchcancel = function(){
+	Body.ontouchcancel = function(){
 		Page.style.transition = "transform 1.8s";
 		Page.style.transformStyle = "preserve-3d";
 		Page.style.transform = "rotateY(0deg)";
