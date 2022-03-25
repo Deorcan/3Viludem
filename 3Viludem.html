@@ -13,6 +13,7 @@
 	}
 	#Cover {
 		float: left;
+		transform: rotateY(180deg);
 	}
 	#Logo {
 		margin-left: 0px;
@@ -70,7 +71,7 @@
 
 </style>
 <body style="background-color: #0b0b0b;">
-	
+<div id = "Page">	
 <div id = "Cover">	
 <img id = "Logo" src="Pictures\\3Viludem3Dbeta1.0.png">
 </div>
@@ -100,6 +101,7 @@
 		</tr>
 	</table>
 </div>
+</div>
 </body>	
 <script>
 	var Business = document.getElementById("Business");
@@ -114,6 +116,8 @@
 	var ComingSoon = document.getElementById("ComingSoon");
 	var Body = document.getElementsByTagName("BODY")[0];
 	var Cover = document.getElementById("Cover");
+	var Inside = document.getElementById("Inside");
+	var Page = document.getElementById("Page");
 	
 	
 	
@@ -126,19 +130,18 @@
 	
 	
 	Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
-	//Mission.style.left = Mission.style.left + `${-(window.innerWidth+5)}px`;
 	
-	Body.onload = function(){
+	Page.onload = function(){
 		
-		Body.style.transition = "transform 5.8s";
-		Body.style.transformStyle = "preserve-3d";
-		Body.style.transform = "rotateY(180deg)";
+		Page.style.transition = "transform 5.8s";
+		Page.style.transformStyle = "preserve-3d";
+		Page.style.transform = "rotateY(180deg)";
 	
 	};
-	Body.ontouchcancel = function(){
-		Body.style.transition = "transform 1.8s";
-		Body.style.transformStyle = "preserve-3d";
-		Body.style.transform = "rotateY(0deg)";
+	Page.ontouchcancel = function(){
+		Page.style.transition = "transform 1.8s";
+		Page.style.transformStyle = "preserve-3d";
+		Page.style.transform = "rotateY(0deg)";
 	};
 	
 	isTabletOrMobile();
