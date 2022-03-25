@@ -133,20 +133,20 @@
 	const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
 	
 	
-	Cover.style.marginLeft = `${-(window.innerWidth-5)}px`;
+	Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
 	
 	Body.onload = function(){
 		Page.style.transformOrigin = "left";
 		Page.style.transition = "transform 5.8s";
 		Page.style.transformStyle = "preserve-3d";
-		Page.style.transform = "rotateY(180deg)";
+		Page.style.transform = "rotateY(360deg)";
 	
 	};
 	Body.ontouchcancel = function(){
 		Page.style.transition = "transform 1.8s";
 		Page.style.transformStyle = "preserve-3d";
 		Page.style.transformOrigin = "left";
-		Page.style.transform = "rotateY(180deg)";
+		Page.style.transform = "rotateY(360deg)";
 	};
 	
 	isTabletOrMobile();
