@@ -13,7 +13,7 @@
 	}
 	#Cover {
 		float: left;
-		transform: rotateY(-180deg);
+		transform: rotateY(180deg);
 	}
 	#Logo {
 		margin-left: 0px;
@@ -139,14 +139,14 @@
 		Page.style.transformOrigin = "left";
 		Page.style.transition = "transform 5.8s";
 		Page.style.transformStyle = "preserve-3d";
-		Page.style.transform = "rotateY(-180deg)";
+		Page.style.transform = "rotateY(180deg)";
 	
 	};
 	Body.ontouchcancel = function(){
 		Page.style.transition = "transform 1.8s";
 		Page.style.transformStyle = "preserve-3d";
 		Page.style.transformOrigin = "left";
-		Page.style.transform = "rotateY(0deg)";
+		Page.style.transform = "rotateY(180deg)";
 	};
 	
 	isTabletOrMobile();
