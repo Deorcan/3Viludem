@@ -133,7 +133,7 @@
 	const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
 	
 	
-	Cover.style.marginLeft = `${-(window.innerWidth)}px`;
+	Cover.style.marginLeft = `${-(window.innerWidth-5)}px`;
 	
 	Body.onload = function(){
 		Page.style.transformOrigin = "left";
