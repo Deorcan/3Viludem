@@ -16,8 +16,10 @@
 		transform: rotateY(180deg);
 	}
 	#Logo {
-		margin-left: 0px;
+		margin-left: 50%;
 		margin-top: 50%;
+		height: 200%;
+		width: 200%;
 	}
 	#Page {
 		transform: rotateY(180deg);
@@ -137,13 +139,13 @@
 	
 	Body.onload = function(){
 		Page.style.transformOrigin = "left";
-		Page.style.transition = "transform 5.8s";
+		Page.style.transition = "transform 10s";
 		Page.style.transformStyle = "preserve-3d";
 		Page.style.transform = "rotateY(360deg)";
 	
 	};
 	Body.ontouchcancel = function(){
-		Page.style.transition = "transform 1.8s";
+		Page.style.transition = "transform 10s";
 		Page.style.transformStyle = "preserve-3d";
 		Page.style.transformOrigin = "left";
 		Page.style.transform = "rotateY(360deg)";
