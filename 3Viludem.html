@@ -200,9 +200,11 @@
 	}
 	
 	Business.onclick = function(){
-		All.style.transition = "10s";
-		All.style.background = "white";
-		All.style.opacity = "0";
+		for (i = 0; i < All.length; i++){
+			All[i].style.transition = "10s";
+			All[i].style.background = "white";
+			All[i].style.opacity = "0";
+		}
 		setTimeout(function(){location.href = "https://deorcan.github.io/main/Home"},9000);
 	}
 	PrPic[0].onclick = function(){
