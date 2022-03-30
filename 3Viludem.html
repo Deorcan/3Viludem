@@ -132,7 +132,7 @@
 	var Cover = document.getElementById("Cover");
 	var Inside = document.getElementById("Inside");
 	var Page = document.getElementById("Page");
-	
+	var All = document.getElementsByTagName("*");
 	
 	
 	var port = window.matchMedia("(orientation: portrait)");
@@ -200,9 +200,9 @@
 	}
 	
 	Business.onclick = function(){
-		Body.style.transition = "10s";
-		Body.style.background = "white";
-		Body.style.opacity = "0";
+		All.style.transition = "10s";
+		All.style.background = "white";
+		All.style.opacity = "0";
 		setTimeout(function(){location.href = "https://deorcan.github.io/main/Home"},9000);
 	}
 	PrPic[0].onclick = function(){
