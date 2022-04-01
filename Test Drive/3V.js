@@ -1153,5 +1153,5 @@ window.addEventListener("resize", (event) =>{
 	ship.style.top = "28.8vh";
 	let Enemies = document.querySelectorAll(".enemy")
 	Enemies.forEach(e => e.remove())
-	Lasers.remove()
+	if (Lasers != 0){ Lasers.remove()}
 })
