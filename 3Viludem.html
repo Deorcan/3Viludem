@@ -134,6 +134,8 @@
 	var Inside = document.getElementById("Inside");
 	var Page = document.getElementById("Page");
 	var All = document.getElementsByTagName("*");
+	var Logo = document.getElementById("Logo");
+	var Home = document.getElementById("Home");
 	
 	
 	var port = window.matchMedia("(orientation: portrait)");
@@ -147,11 +149,13 @@
 	
 	function isTabletOrMobile(){
 		if (isMobile||isTablet){
-			Cover.style.transform = "rotateY(360deg)";
+			Cover.style.transform = "rotateY(0deg)";
 			Cover.style.float = "none";
 			Cover.style.position = "absolute";
 			Cover.style.zIndex = "1";
-			Page.style.transform = "rotateY(360deg)";
+			Page.style.transform = "rotateY(0deg)";
+			Logo.style.marginLeft = "0%";
+			Home.style.marginLeft = "0%";
 			land.addListener(Landing);
 			port.addListener(Porting);
 			Landing();
@@ -168,7 +172,7 @@
 				Page.style.transformOrigin = "left";
 				Page.style.transition = "transform 10s";
 				Page.style.transformStyle = "preserve-3d";
-				Page.style.transform = "rotateY(360deg)";
+				Page.style.transform = "rotateY(0deg)";
 			}
 		}
 	}
