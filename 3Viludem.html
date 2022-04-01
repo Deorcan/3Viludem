@@ -157,11 +157,13 @@
 			Pr1.style.fontSize = "100%";
 			ComingSoon.style.fontSize = "110%";
 		}else{ 
-			Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
-			Page.style.transformOrigin = "left";
-			Page.style.transition = "transform 10s";
-			Page.style.transformStyle = "preserve-3d";
-			Page.style.transform = "rotateY(360deg)";
+			Body.onload = function(){
+				Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
+				Page.style.transformOrigin = "left";
+				Page.style.transition = "transform 10s";
+				Page.style.transformStyle = "preserve-3d";
+				Page.style.transform = "rotateY(360deg)";
+			}
 		}
 	}
 	function Landing(){
