@@ -15,6 +15,7 @@
 		transform: rotateY(180deg);
 		position: static;
 		z-index: auto;
+		padding: 0;
 	}
 	#Logo {
 		margin-left: -170%;
@@ -156,6 +157,7 @@
 			Page.style.transform = "rotateY(0deg)";
 			Logo.style.marginLeft = "0%";
 			Home.style.marginLeft = "0%";
+			Cover.style.padding = "100%";
 			land.addListener(Landing);
 			port.addListener(Porting);
 			Landing();
