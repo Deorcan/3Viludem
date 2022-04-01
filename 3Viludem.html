@@ -8,12 +8,13 @@
 </HEAD>	
 <style>
 	body{ cursor: url("Pictures\\Cursor.png"), url("Pictures\\Cursor.cur"), default;
-		margin-left: 0px;
-		
+	      margin-left: 0px;
 	}
 	#Cover {
 		float: left;
 		transform: rotateY(180deg);
+		position: static;
+		z-index: auto;
 	}
 	#Logo {
 		margin-left: -170%;
@@ -146,6 +147,11 @@
 	
 	function isTabletOrMobile(){
 		if (isMobile||isTablet){
+			Cover.style.transform = "rotateY(180deg)";
+			Cover.style.float = "none";
+			Cover.style.position = "absolute";
+			Cover.style.zIndex = "1";
+			Page.style.transform = "rotateY(180deg)";
 			land.addListener(Landing);
 			port.addListener(Porting);
 			Landing();
