@@ -30,7 +30,7 @@
 	#Page {
 		background-color: #0b0b0b;
 		transform: rotateY(180deg);
-		transform-origin: left;
+		
 	}
 	.Clickable { border: solid 2px white;}
 	
@@ -142,23 +142,6 @@
 	var isMobile = /iPhone|Android|BlackBerry|BB|Nokia/i.test(navigator.userAgent);
 	const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
 	
-	
-	Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
-	
-	Body.onload = function(){
-		Page.style.transformOrigin = "left";
-		Page.style.transition = "transform 10s";
-		Page.style.transformStyle = "preserve-3d";
-		Page.style.transform = "rotateY(360deg)";
-	
-	};
-	Body.ontouchcancel = function(){
-		Page.style.transition = "transform 10s";
-		Page.style.transformStyle = "preserve-3d";
-		Page.style.transformOrigin = "left";
-		Page.style.transform = "rotateY(360deg)";
-	};
-	
 	isTabletOrMobile();
 	
 	function isTabletOrMobile(){
@@ -173,6 +156,12 @@
 			Pr1.style.width = "60%";
 			Pr1.style.fontSize = "100%";
 			ComingSoon.style.fontSize = "110%";
+		}else{ 
+			Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
+			Page.style.transformOrigin = "left";
+			Page.style.transition = "transform 10s";
+			Page.style.transformStyle = "preserve-3d";
+			Page.style.transform = "rotateY(360deg)";
 		}
 	}
 	function Landing(){
