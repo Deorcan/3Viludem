@@ -151,6 +151,12 @@
 	
 	function isTabletOrMobile(){
 		if (isMobile||isTablet){
+			Body.onload = function(){
+				Cover.style.transition = "10s";
+				Cover.style.left = `${-(window.innerWidth+80)}px`;
+				//if (land.matches){ Cover.style.left = `${-(window.innerWidth+80)}px`;}
+				//if (port.matches){ Cover.style.left = `${-(window.innerHeight+80)}px`;}
+			}
 			Cover.style.transform = "rotateY(0deg)";
 			Cover.style.float = "none";
 			Cover.style.position = "absolute";
@@ -166,12 +172,7 @@
 			Pr1.style.width = "60%";
 			Pr1.style.fontSize = "100%";
 			ComingSoon.style.fontSize = "110%";
-			//Body.onload = function(){
-				Cover.style.transition = "10s";
-				Cover.style.left = `${-(window.innerWidth+80)}px`;
-				//if (land.matches){ Cover.style.left = `${-(window.innerWidth+80)}px`;}
-				//if (port.matches){ Cover.style.left = `${-(window.innerHeight+80)}px`;}
-			//}
+			
 		}else{ 
 			Body.onload = function(){
 				Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
