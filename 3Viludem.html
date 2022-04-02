@@ -17,6 +17,8 @@
 		z-index: auto;
 		padding: 0;
 		background: black;
+		left: 0;
+		top: 0;
 	}
 	#Logo {
 		margin-left: -170%;
@@ -152,11 +154,11 @@
 	Body.onload = function(){
 		if (isMobile||isTablet){
 			if (land.matches){
-				Cover.style.transition = "transform 10s";
+				Cover.style.transition = "10s";
 				Cover.style.left = `${-(window.innerWidth+80)}px`;
 			}
 			if (port.matches){
-				Cover.style.transition = "transform 10s";
+				Cover.style.transition = "10s";
 				Cover.style.top = `${-(window.innerHeight+80)}px`;
 			}
 		
