@@ -177,11 +177,12 @@
 		}
 	}
 	function Landing(){
-		if (land.matches){
-			Body.onload = function(){
+		Body.onload = function(){
 				Cover.style.transition = "10s";
 				Cover.style.left = `${-(window.innerWidth+80)}px`;
 			}
+		if (land.matches){
+			
 			Logo.style.marginLeft = "0%";
 			Logo.style.marginTop = "-50%";
 			Logo.style.height = "110%";
