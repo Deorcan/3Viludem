@@ -151,12 +151,6 @@
 	
 	function isTabletOrMobile(){
 		if (isMobile||isTablet){
-			Body.onload = function(){
-				Cover.style.transition = "10s";
-				Cover.style.left = `${-(window.innerWidth+80)}px`;
-				//if (land.matches){ Cover.style.left = `${-(window.innerWidth+80)}px`;}
-				//if (port.matches){ Cover.style.left = `${-(window.innerHeight+80)}px`;}
-			}
 			Cover.style.transform = "rotateY(0deg)";
 			Cover.style.float = "none";
 			Cover.style.position = "absolute";
@@ -200,6 +194,12 @@
 			Mission.style.fontSize = "120%"
 			for(var i = 0; i < PrPic.length; i++){ PrPic[i].style.height = "15%";}
 			ComingSoon.style.marginTop = "0vh";
+			Body.onload = function(){
+				Cover.style.transition = "10s";
+				Cover.style.left = `${-(window.innerWidth+80)}px`;
+				//if (land.matches){ Cover.style.left = `${-(window.innerWidth+80)}px`;}
+				//if (port.matches){ Cover.style.left = `${-(window.innerHeight+80)}px`;}
+			}
 		}
 	}
 	
