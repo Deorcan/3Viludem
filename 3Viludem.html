@@ -16,8 +16,6 @@
 		position: static;
 		z-index: auto;
 		padding: 0;
-		left: 0;
-		top: 0;
 		background: black;
 	}
 	#Logo {
@@ -158,15 +156,6 @@
 			Cover.style.position = "absolute";
 			Cover.style.zIndex = "1";
 			Page.style.transform = "rotateY(0deg)";
-			Logo.style.marginLeft = "0%";
-			Logo.style.marginTop = "-50%";
-			Logo.style.height = "110%";
-			Logo.style.width = "110%";
-			Home.style.fontSize = "510%";
-			Home.style.marginLeft = "20%";
-			Cover.style.padding = "25%";
-			Cover.style.left = "0%";
-			Cover.style.top = "0%";
 			land.addListener(Landing);
 			port.addListener(Porting);
 			Landing();
@@ -189,6 +178,13 @@
 	}
 	function Landing(){
 		if (land.matches){
+			Logo.style.marginLeft = "0%";
+			Logo.style.marginTop = "-50%";
+			Logo.style.height = "110%";
+			Logo.style.width = "110%";
+			Home.style.fontSize = "510%";
+			Home.style.marginLeft = "20%";
+			Cover.style.padding = "25%";
 			Body.onload = function(){
 				Cover.style.transition = "10s";
 				Cover.style.left = `${-(window.innerWidth+80)}px`;
@@ -205,6 +201,13 @@
 	
 	function Porting(){
 		if (port.matches){
+			//Logo.style.marginLeft = "0%";
+			//Logo.style.marginTop = "-50%";
+			//Logo.style.height = "110%";
+			//Logo.style.width = "110%";
+			//Home.style.fontSize = "510%";
+			//Home.style.marginLeft = "20%";
+			Cover.style.padding = "100%";
 			TitleText.style.fontSize = "160%";
 			TitleText2.style.fontSize = "210%";
 			TitlePic.style.height = "75%";
