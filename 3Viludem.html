@@ -149,6 +149,28 @@
 	
 	isTabletOrMobile();
 	
+	Body.onload = function(){
+		if (isMobile||isTablet){
+			if (land.matches){
+				Cover.style.transition = "transform 10s";
+				Cover.style.left = `${-(window.innerWidth+80)}px`;
+			}
+			if (port.matches){
+				Cover.style.transition = "transform 10s";
+				Cover.style.top = `${-(window.innerHeight+80)}px`;
+			}
+		
+		}else {
+			Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
+			Page.style.transformOrigin = "left";
+			Page.style.transition = "transform 10s";
+			Page.style.transformStyle = "preserve-3d";
+			Page.style.transform = "rotateY(0deg)";
+		}
+	}
+	
+	
+	
 	function isTabletOrMobile(){
 		if (isMobile||isTablet){
 			Cover.style.transform = "rotateY(0deg)";
@@ -167,14 +189,6 @@
 			Pr1.style.fontSize = "100%";
 			ComingSoon.style.fontSize = "110%";
 			
-		}else{ 
-			//Body.onload = function(){
-				Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
-				Page.style.transformOrigin = "left";
-				Page.style.transition = "transform 10s";
-				Page.style.transformStyle = "preserve-3d";
-				Page.style.transform = "rotateY(0deg)";
-			//}
 		}
 	}
 	function Landing(){
@@ -195,8 +209,8 @@
 			for(var i = 0; i < PrPic.length; i++){ PrPic[i].style.height = "15%";}
 			ComingSoon.style.marginTop = "0vh";
 			//Body.onload = function(){
-				Cover.style.transition = "10s";
-				Cover.style.left = `${-(window.innerWidth+80)}px`;
+				//Cover.style.transition = "10s";
+				//Cover.style.left = `${-(window.innerWidth+80)}px`;
 				//if (land.matches){ Cover.style.left = `${-(window.innerWidth+80)}px`;}
 				//if (port.matches){ Cover.style.left = `${-(window.innerHeight+80)}px`;}
 			//}
