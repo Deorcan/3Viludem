@@ -168,13 +168,13 @@
 			ComingSoon.style.fontSize = "110%";
 			
 		}else{ 
-			Body.onload = function(){
+			//Body.onload = function(){
 				Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
 				Page.style.transformOrigin = "left";
 				Page.style.transition = "transform 10s";
 				Page.style.transformStyle = "preserve-3d";
 				Page.style.transform = "rotateY(0deg)";
-			}
+			//}
 		}
 	}
 	function Landing(){
@@ -194,25 +194,25 @@
 			Mission.style.fontSize = "120%"
 			for(var i = 0; i < PrPic.length; i++){ PrPic[i].style.height = "15%";}
 			ComingSoon.style.marginTop = "0vh";
-			Body.onload = function(){
+			//Body.onload = function(){
 				Cover.style.transition = "10s";
 				Cover.style.left = `${-(window.innerWidth+80)}px`;
 				//if (land.matches){ Cover.style.left = `${-(window.innerWidth+80)}px`;}
 				//if (port.matches){ Cover.style.left = `${-(window.innerHeight+80)}px`;}
-			}
+			//}
 		}
 	}
 	
 	function Porting(){
 		if (port.matches){
-			//Logo.style.marginLeft = "-70%";
-			//Logo.style.marginTop = "-50%";
-			//Logo.style.height = "150%";
-			//Logo.style.width = "150%";
-			//Home.syle.marginTop = "0%";
-			//Home.style.fontSize = "310%";
-			//Home.style.marginLeft = "-50%";
-			//Cover.style.padding = "50%";
+			Logo.style.marginLeft = "-70%";
+			Logo.style.marginTop = "-50%";
+			Logo.style.height = "150%";
+			Logo.style.width = "150%";
+			Home.syle.marginTop = "0%";
+			Home.style.fontSize = "310%";
+			Home.style.marginLeft = "-50%";
+			Cover.style.padding = "50%";
 			
 			TitleText.style.fontSize = "160%";
 			TitleText2.style.fontSize = "210%";
