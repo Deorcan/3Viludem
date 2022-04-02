@@ -166,6 +166,11 @@
 			Pr1.style.width = "60%";
 			Pr1.style.fontSize = "100%";
 			ComingSoon.style.fontSize = "110%";
+			Body.onload = function(){
+				Cover.style.transition = "10s";
+				if (land.matches){ Cover.style.left = `${-(window.innerWidth+80)}px`;}
+				if (port.matches){ Cover.style.left = `${-(window.innerHeight+80)}px`;}
+			}
 		}else{ 
 			Body.onload = function(){
 				Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
@@ -177,12 +182,7 @@
 		}
 	}
 	function Landing(){
-		Body.onload = function(){
-				Cover.style.transition = "10s";
-				Cover.style.left = `${-(window.innerWidth+80)}px`;
-			}
 		if (land.matches){
-			
 			Logo.style.marginLeft = "0%";
 			Logo.style.marginTop = "-50%";
 			Logo.style.height = "110%";
@@ -203,10 +203,6 @@
 	
 	function Porting(){
 		if (port.matches){
-			Body.onload = function(){
-				Cover.style.transition = "10s";
-				Cover.style.left = `${-(window.innerHeight+80)}px`;
-			}
 			Logo.style.marginLeft = "-70%";
 			Logo.style.marginTop = "-50%";
 			Logo.style.height = "150%";
