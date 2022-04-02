@@ -189,6 +189,10 @@
 	}
 	function Landing(){
 		if (land.matches){
+			Body.onload = function(){
+				Cover.style.transition = "10s";
+				Cover.style.left = `${-(window.innerWidth+5)}px`;
+			}
 			TitleText.style.fontSize = "200%";
 			TitleText2.style.fontSize = "250%";
 			TitlePic.style.height = "100%";
