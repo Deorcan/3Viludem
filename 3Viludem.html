@@ -151,25 +151,7 @@
 	
 	isTabletOrMobile();
 	
-	Body.onload = function(){
-		if (isMobile||isTablet){
-			if (land.matches){
-				Cover.style.transition = "10s";
-				Cover.style.left = `${-(window.innerWidth+80)}px`;
-			}
-			if (port.matches){
-				Cover.style.transition = "10s";
-				Cover.style.top = `${-(window.innerHeight+80)}px`;
-			}
-		
-		}else {
-			Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
-			Page.style.transformOrigin = "left";
-			Page.style.transition = "transform 10s";
-			Page.style.transformStyle = "preserve-3d";
-			Page.style.transform = "rotateY(0deg)";
-		}
-	}
+	
 	
 	
 	
@@ -191,6 +173,15 @@
 			Pr1.style.fontSize = "100%";
 			ComingSoon.style.fontSize = "110%";
 			
+		}else {
+			Body.onload = function(){
+				Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
+				Page.style.transformOrigin = "left";
+				Page.style.transition = "transform 10s";
+				Page.style.transformStyle = "preserve-3d";
+				Page.style.transform = "rotateY(0deg)";
+			}
+		
 		}
 	}
 	function Landing(){
@@ -202,14 +193,17 @@
 			Home.style.fontSize = "510%";
 			Home.style.marginLeft = "20%";
 			Cover.style.padding = "25%";
-			
+			Body.onload = function(){
+				Cover.style.transition = "10s";
+				Cover.style.left = `${-(window.innerWidth+80)}px`;
+			}
 			TitleText.style.fontSize = "200%";
 			TitleText2.style.fontSize = "250%";
 			TitlePic.style.height = "100%";
 			TitlePic.style.width = "100%";
 			Mission.style.fontSize = "120%"
 			for(var i = 0; i < PrPic.length; i++){ PrPic[i].style.height = "15%";}
-			ComingSoon.style.marginTop = "0vh";
+			ComingSoon.style.marginTop = "0vh";	
 		}
 	}
 	
@@ -223,7 +217,10 @@
 			Home.style.fontSize = "310%";
 			Home.style.marginLeft = "-50%";
 			Cover.style.padding = "50%";
-			
+			Body.onload = function(){
+				Cover.style.transition = "10s";
+				Cover.style.top = `${-(window.innerHeight+80)}px`;
+			}
 			TitleText.style.fontSize = "160%";
 			TitleText2.style.fontSize = "210%";
 			TitlePic.style.height = "75%";
