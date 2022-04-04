@@ -198,7 +198,19 @@
 	top: 0;
 }
 
+#icon {
+	float: left;
+}
+#Title {
+	font-size: 710%;
+	color: white;
+	margin-left: -140%;
+	margin-top: -5%;
+}
+
 #Home {
+	left: 0;
+	top: 0;
 	position: absolute;
 	height: 3%;
 	width: 6%;
