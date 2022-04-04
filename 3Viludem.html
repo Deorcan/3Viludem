@@ -197,6 +197,10 @@
 				Cover.style.transition = "10s";
 				Cover.style.left = `${-(window.innerWidth+80)}px`;
 			}
+			Body.ontouchcancel = function(){
+				Cover.style.transition = "10s";
+				Cover.style.left = `${-(window.innerWidth+80)}px`;
+			}
 			TitleText.style.fontSize = "200%";
 			TitleText2.style.fontSize = "250%";
 			TitlePic.style.height = "100%";
@@ -218,6 +222,10 @@
 			Home.style.marginLeft = "-50%";
 			Cover.style.padding = "50%";
 			Body.onload = function(){
+				Cover.style.transition = "10s";
+				Cover.style.top = `${-(window.innerHeight+80)}px`;
+			}
+			Body.ontouchcancel = function(){
 				Cover.style.transition = "10s";
 				Cover.style.top = `${-(window.innerHeight+80)}px`;
 			}
