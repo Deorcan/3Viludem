@@ -7,7 +7,7 @@
 	<title>3Viludem Home</title>
 </HEAD>	
 <style>
-	* {opacity: 0;}
+	
 	body { cursor: url("Pictures\\Cursor.png"), url("Pictures\\Cursor.cur"), default;
 	      margin-left: 0px;
 	}
@@ -152,7 +152,8 @@
 	
 	Body.onload = function (){
 		for (i = 0; i < All.length; i++){
-			All[i].style.transition = "5s";
+			All[i].style.opacity = "0";
+			All[i].style.transition = "10s";
 			All[i].style.opacity = "1";
 		}
 	
