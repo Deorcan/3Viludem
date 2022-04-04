@@ -199,8 +199,9 @@
 }
 
 #Home {
-	height: 0.2%;
-	width: 5%;
+	position: absolute;
+	height: 3%;
+	width: 6%;
 	border: solid 2px white;
 }
 #Home:hover { border: solid 2px yellow;}
