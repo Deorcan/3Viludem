@@ -41,6 +41,11 @@
 	.Clickable { border: solid 2px white;}
 	
 	.Clickable:hover { border: solid 2px yellow;}
+	#inside {
+		left: 0;
+		top: 0;
+		position: static;
+	}
 	
 	#Business {
 		height: 0.2%;
@@ -248,13 +253,14 @@
 	PrPic[0].onclick = function(){
 		
 		if(isMobile || isTablet){
+			Inside.style.position = "absolute";
 			if (land.matches){
 				Inside.style.transition = "10s";
-				Inside.style.marginLeft = `${-(window.innerWidth+100)}px`;
+				Inside.style.left = `${-(window.innerWidth+100)}px`;
 			}
 			if (port.matches){
 				Inside.style.transition = "10s";
-				Inside.style.marginTop = `${-(window.innerHeight+100)}px`;
+				Inside.style.top = `${-(window.innerHeight+100)}px`;
 			}
 		}
 		else{
