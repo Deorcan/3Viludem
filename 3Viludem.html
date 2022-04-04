@@ -7,7 +7,8 @@
 	<title>3Viludem Home</title>
 </HEAD>	
 <style>
-	body{ cursor: url("Pictures\\Cursor.png"), url("Pictures\\Cursor.cur"), default;
+	* {opacity: 0;}
+	body { cursor: url("Pictures\\Cursor.png"), url("Pictures\\Cursor.cur"), default;
 	      margin-left: 0px;
 	}
 	#Cover {
@@ -149,11 +150,16 @@
 	var isMobile = /iPhone|Android|BlackBerry|BB|Nokia/i.test(navigator.userAgent);
 	const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
 	
+	Body.onload = function (){
+		for (i = 0; i < All.length; i++){
+			All[i].style.transition = "5s";
+			All[i].style.opacity = "1";
+		}
+	
+	}
+	
+	
 	isTabletOrMobile();
-	
-	
-	
-	
 	
 	function isTabletOrMobile(){
 		if (isMobile||isTablet){
