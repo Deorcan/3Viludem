@@ -173,11 +173,11 @@
 			
 		}else {
 			Body.onload = function(){
-				for (i = 0; i < All.length; i++){
-			All[i].style.opacity = "0";
-			All[i].style.transition = "5s";
-			All[i].style.opacity = "1";
-		}
+				
+			Body.style.opacity = "0";
+			Body.style.transition = "5s";
+			Body.style.opacity = "1";
+		
 				Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
 				Page.style.transformOrigin = "left";
 				Page.style.transition = "transform 10s";
