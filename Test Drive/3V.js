@@ -150,6 +150,7 @@ function gameover(){
 	text.style.display = 'block'
 	text2.style.display = 'block'
 	Para.style.display = 'block'
+	Home.style.display = 'block'
 	Pause.style.display = 'none'
 	Start.style.display = 'none'
 	Restart.style.display = 'none'
@@ -173,6 +174,7 @@ function gameover(){
 		text.style.display = 'none'
 		text2.style.display = 'none'
 		Para.style.display = 'none'
+		Home.style.display = 'none'
 		isTabletOrMobile()
 		Landing()
 		IfTouch = false
@@ -218,6 +220,7 @@ function RESTART(){
 	text.style.display = 'block'
 	text2.style.display = 'block'
 	Para.style.display = 'block'
+	Home.style.display = 'block'
 	Pause.style.display = 'none'
 	Start.style.display = 'none'
 	Restart.style.display = 'none'
@@ -242,6 +245,7 @@ function RESTART(){
 		Menu.style.marginTop = '27%'
 		TouchStart.style.top = '60%'
 		Para.style.display = 'none'
+		Home.style.display = 'none'
 		TF = false
 		FT = true
 		
@@ -696,6 +700,7 @@ Porting = function (){
 		text.style.display = 'block'
 		text2.style.display = 'block'
 		Para.style.display = 'block'
+		Home.style.display = 'block'
 		GameOver.style.marginTop = '50%'
 		FireButton.style.display = 'none'
 		DPadButton.style.display = 'none'
@@ -752,6 +757,7 @@ Landing = function (){
 			text.style.display = 'none'
 			text2.style.display = 'none'
 			Para.style.display = 'none'
+			Home.style.display = 'none'
 			Menu.style.display = 'none'
 			PauseButton.src = "Test%20Drive/PauseButton1.png"
 			if (starting === -1){
@@ -1084,6 +1090,7 @@ function playgame(){
 	text.style.display = 'none'
 	text2.style.display = 'none'
 	Para.style.display = 'none'
+	Home.style.display = 'none'
 	Image.style.top = "0vh"
 	Control.style.top = "0vh"
 	GameOver.style.display = 'none'
