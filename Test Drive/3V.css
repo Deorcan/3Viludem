@@ -188,6 +188,30 @@
 	display: none;
 }
 
+#cover {
+	float: left;
+	transform: rotateY(180deg);
+	position: static;
+	z-index: auto;
+	padding: 0;
+	left: 0;
+	top: 0;
+}
+
+#Home {
+	height: 0.2%;
+	width: 5%;
+	border: solid 2px white;
+}
+#Home:hover { border: solid 2px yellow;}
+
+#Page {
+	margin-top: 0;
+	margin-left: 0;
+	background-color: #0b0b0b;
+	transform: rotateY(180deg);		
+}
+
 @media only screen and (orientation: portrait) {
 	#touchstart{
 		top: 70%;
