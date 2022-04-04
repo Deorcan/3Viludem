@@ -34,6 +34,8 @@
 		margin-top: -5%;
 	}
 	#Page {
+		margin-top: 0;
+		margin-left: 0;
 		background-color: #0b0b0b;
 		transform: rotateY(180deg);
 		
@@ -253,14 +255,14 @@
 	PrPic[0].onclick = function(){
 		
 		if(isMobile || isTablet){
-			Inside.style.position = "absolute";
+			
 			if (land.matches){
-				Inside.style.transition = "10s";
-				Inside.style.Left = `${-(window.innerWidth+100)}px`;
+				Page.style.transition = "10s";
+				Page.style.marginLeft = `${-(window.innerWidth+100)}px`;
 			}
 			if (port.matches){
-				Inside.style.transition = "10s";
-				Inside.style.Top = `${-(window.innerHeight+100)}px`;
+				Page.style.transition = "10s";
+				Page.style.marginTop = `${-(window.innerHeight+100)}px`;
 			}
 		}
 		else{
