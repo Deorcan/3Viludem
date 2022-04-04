@@ -246,11 +246,24 @@
 		setTimeout(function(){location.href = "https://deorcan.github.io/main/Home"},3000);
 	}
 	PrPic[0].onclick = function(){
-		Cover.style.display = "none";
-		Page.style.transformOrigin = "left";
-		Page.style.transition = "transform 10s";
-		Page.style.transformStyle = "preserve-3d";
-		Page.style.transform = "rotateY(180deg)";
+		
+		if(isMobile || isTablet){
+			if (land.matches){
+				Inside.style.transition = "10s";
+				Inside.style.left = `${-(window.innerWidth+100)}px`;
+			}
+			if (port.matches){
+				Inside.style.transition = "10s";
+				Inside.style.top = `${-(window.innerHeight+100)}px`;
+			}
+		}
+		else{
+			Cover.style.display = "none";
+			Page.style.transformOrigin = "left";
+			Page.style.transition = "transform 10s";
+			Page.style.transformStyle = "preserve-3d";
+			Page.style.transform = "rotateY(180deg)";
+		}
 		setTimeout(function(){location.replace("https://deorcan.github.io/3Viludem/3Viludem%20Launch%20Game")}, 4000);
 	}
 	
