@@ -213,8 +213,8 @@
 }
 
 #Home {
-	left: 0;
-	top: 0;
+	left: 1;
+	top: 1;
 	position: absolute;
 	height: 3%;
 	width: 6%;
