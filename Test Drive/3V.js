@@ -99,8 +99,8 @@ function isTabletOrMobile(){
 		
 	}else {	
 		Touchscreen.style.marginLeft = "12%"
-		Body1.onload = function(){
-				//Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
+		Body.onload = function(){
+				Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
 				Page.style.transformOrigin = "left";
 				Page.style.transition = "transform 10s";
 				Page.style.transformStyle = "preserve-3d";
