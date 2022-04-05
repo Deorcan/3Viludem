@@ -41,7 +41,7 @@ const DPadDown = document.getElementById("DPadD")
 const DPadRight = document.getElementById("DPadR")
 
 
-	var Body = document.getElementsByTagName("BODY")[0];
+	var body = document.getElementsByTagName("BODY")[0];
 	var Cover = document.getElementById("cover");
 	var Inside = document.getElementById("inside");
 	var Page = document.getElementById("page");
@@ -100,7 +100,7 @@ function isTabletOrMobile(){
 		for (var i = 0; i < Desktop.length; i++) {Desktop[i].style.display = "none"}
 		
 	}else {	Touchscreen.style.marginLeft = "12%"
-	      Body.onload = function(){
+	      body.onload = function(){
 				Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
 				Page.style.transformOrigin = "left";
 				Page.style.transition = "transform 10s";
