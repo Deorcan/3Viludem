@@ -40,14 +40,8 @@ const DPadLeft = document.getElementById("DPadL")
 const DPadDown = document.getElementById("DPadD")
 const DPadRight = document.getElementById("DPadR")
 
-var page = document.getElementById("page")
-var cover = document.getElementById("cover")
-var icon = document.getElementById("icon")
-var Title = document.getElementById("Title")
-var inside = document.getElementById("inside")
-var Home = document.getElementById("Home")
-var Body1 = document.getElementsByTagName("BODY")[0]
 
+var Home = document.getElementById("Home")
 var TF = true
 var FT = true
 var Music = new Audio ('Test%20Drive/sounds-from-space-soundroll-main-version-01-28-1884.mp3')
@@ -97,16 +91,7 @@ function isTabletOrMobile(){
 		text2.style.marginTop = "5vh"
 		for (var i = 0; i < Desktop.length; i++) {Desktop[i].style.display = "none"}
 		
-	}else {	
-		Touchscreen.style.marginLeft = "12%"
-		Body.onload = function(){
-				Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
-				Page.style.transformOrigin = "left";
-				Page.style.transition = "transform 10s";
-				Page.style.transformStyle = "preserve-3d";
-				Page.style.transform = "rotateY(0deg)";
-		}
-	}
+	}else {	Touchscreen.style.marginLeft = "12%"}
 	
 }
 	
