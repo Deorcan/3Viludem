@@ -198,6 +198,40 @@
 }
 #Home:hover { border: solid 2px yellow;}
 
+#cover {
+	float: left;
+	transform: rotateY(180deg);
+	position: static;
+	z-index: auto;
+	padding: 0;
+	left: 0;
+	top: 0;
+}
+#page {
+	margin-top: 0;
+	margin-left: 0;
+	transform: rotateY(180deg);	
+}
+
+#inside {
+	left: 0;
+	top: 0;
+	position: static;
+}
+#icon {
+	margin-left: -170%;
+	margin-top: 40%;
+	height: 100%;
+	width: 100%;
+}
+	
+#Title{
+	font-size: 710%;
+	color: white;
+	margin-left: -190%;
+	margin-top: -5%;
+}
+
 @media only screen and (orientation: portrait) {
 	#touchstart{
 		top: 70%;
