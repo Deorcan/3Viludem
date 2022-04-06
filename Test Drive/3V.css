@@ -219,6 +219,7 @@
 	position: static;
 }
 #icon {
+	float: left;
 	margin-left: -170%;
 	margin-top: 40%;
 	height: 25%;
