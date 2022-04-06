@@ -101,11 +101,11 @@ function isTabletOrMobile(){
 		
 	}else {	Touchscreen.style.marginLeft = "12%"
 	      body.onload = function(){
-				Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
-				body.style.transformOrigin = "left";
-				body.style.transition = "transform 10s";
-				body.style.transformStyle = "preserve-3d";
-				body.style.transform = "rotateY(0deg)";
+				//Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
+				//body.style.transformOrigin = "left";
+				//body.style.transition = "transform 10s";
+				//body.style.transformStyle = "preserve-3d";
+				//body.style.transform = "rotateY(0deg)";
 			}
 	      }
 	
