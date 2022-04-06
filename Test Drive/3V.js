@@ -43,8 +43,8 @@ const DPadRight = document.getElementById("DPadR")
 
 var body = document.getElementsByTagName("BODY")[0];
 var Cover = document.getElementById("cover");
-var Inside = document.getElementById("inside");
-var Page = document.getElementById("page");
+//var Inside = document.getElementById("inside");
+//var Page = document.getElementById("page");
 var All = document.getElementsByTagName("*");
 var Icon = document.getElementById("icon");
 var Title = document.getElementById("Title");
@@ -102,10 +102,10 @@ function isTabletOrMobile(){
 	}else {	Touchscreen.style.marginLeft = "12%"
 	      body.onload = function(){
 				Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
-				Page.style.transformOrigin = "left";
-				Page.style.transition = "transform 10s";
-				Page.style.transformStyle = "preserve-3d";
-				Page.style.transform = "rotateY(0deg)";
+				body.style.transformOrigin = "left";
+				body.style.transition = "transform 10s";
+				body.style.transformStyle = "preserve-3d";
+				body.style.transform = "rotateY(0deg)";
 			}
 	      }
 	
