@@ -197,14 +197,14 @@
 	border: solid 2px white;
 }
 #Home:hover { border: solid 2px yellow;}
-body {
-	
+#page{
+	transform: rotate(180px);
 	margin-left: 0;
 	margin-top: 0;
 }
 #cover {
 	float: left;
-	
+	transform: rotate(180px);
 	position: absolute;
 	z-index: auto;
 	padding: 0;
