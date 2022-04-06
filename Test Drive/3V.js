@@ -766,11 +766,11 @@ Landing = function (){
 		Title.style.fontSize = "510%";
 		Title.style.marginLeft = "20%";
 		Cover.style.padding = "25%";
-		Body.onload = function(){
+		body.onload = function(){
 			Cover.style.transition = "10s";
 			Cover.style.left = `${-(window.innerWidth+100)}px`;
 		}
-		Body.ontouchcancel = function(){
+		body.ontouchcancel = function(){
 			Cover.style.transition = "10s";
 			Cover.style.left = `${-(window.innerWidth+100)}px`;
 		}
