@@ -41,13 +41,13 @@ const DPadDown = document.getElementById("DPadD")
 const DPadRight = document.getElementById("DPadR")
 
 
-	var body = document.getElementsByTagName("BODY")[0];
-	var Cover = document.getElementById("cover");
-	var Inside = document.getElementById("inside");
-	var Page = document.getElementById("page");
-	var All = document.getElementsByTagName("*");
-	var Icon = document.getElementById("icon");
-	var Title = document.getElementById("Title");
+var body = document.getElementsByTagName("BODY")[0];
+var Cover = document.getElementById("cover");
+var Inside = document.getElementById("inside");
+var Page = document.getElementById("page");
+var All = document.getElementsByTagName("*");
+var Icon = document.getElementById("icon");
+var Title = document.getElementById("Title");
 
 var Home = document.getElementById("Home")
 var TF = true
@@ -680,6 +680,23 @@ function MouseOff(){
 
 Porting = function (){
 	if (port.matches){
+		Icon.style.marginLeft = "-70%";
+		Icon.style.marginTop = "-50%";
+		Icon.style.height = "150%";
+		Icon.style.width = "150%";
+		Title.style.marginTop = "0%";
+		Title.style.fontSize = "310%";
+		Title.style.marginLeft = "-50%";
+		Cover.style.padding = "50%";
+		body.onload = function(){
+			Cover.style.transition = "10s";
+			Cover.style.top = `${-(window.innerHeight+100)}px`;
+		}
+		body.ontouchcancel = function(){
+			Cover.style.transition = "10s";
+			Cover.style.top = `${-(window.innerHeight+100)}px`;
+		}
+	
 		var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
 		var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
 		PlsRotate.style.display = 'block'
@@ -742,6 +759,21 @@ Porting = function (){
 }
 Landing = function (){
 	if (land.matches){
+		Icon.style.marginLeft = "0%";
+		Icon.style.marginTop = "-50%";
+		Icon.style.height = "110%";
+		Icon.style.width = "110%";
+		Title.style.fontSize = "510%";
+		Title.style.marginLeft = "20%";
+		Cover.style.padding = "25%";
+		Body.onload = function(){
+			Cover.style.transition = "10s";
+			Cover.style.left = `${-(window.innerWidth+100)}px`;
+		}
+		Body.ontouchcancel = function(){
+			Cover.style.transition = "10s";
+			Cover.style.left = `${-(window.innerWidth+100)}px`;
+		}
 		if (Mode === 0){
 			PlsRotate.style.display = 'none'
 			Menu.style.display = 'block'
