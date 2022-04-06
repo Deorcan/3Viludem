@@ -199,7 +199,7 @@
 #Home:hover { border: solid 2px yellow;}
 
 #cover {
-	float: left;
+	float: right;
 	transform: rotateY(180deg);
 	position: static;
 	z-index: auto;
@@ -220,7 +220,7 @@
 }
 #icon {
 	float: left;
-	margin-left: 170%;
+	margin-left: -170%;
 	margin-top: 40%;
 	height: 15%;
 	width: 15%;
@@ -229,7 +229,7 @@
 #Title{
 	font-size: 710%;
 	color: white;
-	margin-left: 190%;
+	margin-left: -190%;
 	margin-top: -5%;
 }
 
