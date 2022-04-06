@@ -210,9 +210,12 @@
 #page {
 	margin-top: 0;
 	margin-left: 0;
-		
+	transform: rotateY(180deg);	
 }
-
+inside {
+	left: 0;
+	right: 0;
+}
 
 #icon {
 	float: left;
