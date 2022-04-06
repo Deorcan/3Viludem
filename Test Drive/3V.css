@@ -213,11 +213,7 @@
 		
 }
 
-#inside {
-	left: 0;
-	top: 0;
-	position: static;
-}
+
 #icon {
 	float: left;
 	margin-left: -170%;
