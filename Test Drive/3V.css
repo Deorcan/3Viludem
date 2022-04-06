@@ -199,9 +199,9 @@
 #Home:hover { border: solid 2px yellow;}
 
 #cover {
-	float: right;
+	float: left;
 	transform: rotateY(180deg);
-	position: static;
+	position: absolute;
 	z-index: auto;
 	padding: 0;
 	left: 0;
