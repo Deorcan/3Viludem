@@ -198,8 +198,11 @@
 }
 #Home:hover { border: solid 2px yellow;}
 
+body{
+	transform: rotateY(0deg);
+}
 #page{
-	transform: rotateY(-360deg);
+	
 	margin-left: 0;
 	margin-top: 0;
 }
