@@ -1,5 +1,5 @@
 #space {
-	position: absolute;
+	position: static;
 	border: 2px solid white;
 	max-width: 64%;
 	max-hight: 525%;
