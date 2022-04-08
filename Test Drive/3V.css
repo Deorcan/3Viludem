@@ -1,8 +1,8 @@
 #space {
-	position: static;
+	position: absolute;
 	border: 2px solid white;
-	max-width: 64%;
-	max-height: 94%;
+	width: 64%;
+	height: 94%;
 	left: 18vw;
 	top: 15vh;
 	right: 18vw;
