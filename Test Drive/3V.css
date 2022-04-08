@@ -3,9 +3,9 @@
 	border: 2px solid white;
 	max-width: 64%;
 	max-hight: 525%;
-	left: 18vw;
-	top: 15vh;
-	right: 18vw;
+	margin-left: 18vw;
+	margin-top: 15vh;
+	margin-right: 18vw;
 	bottom: 1vh;
 }
 
