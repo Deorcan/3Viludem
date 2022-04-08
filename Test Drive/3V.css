@@ -1,10 +1,10 @@
 #space {
-	position: static;
+	position: absolute;
 	border: 2px solid white;
 	max-width: 64%;
 	max-hight: 525%;
 	margin-left: 18vw;
-	margin-top: 0vh;
+	margin-top: 15vh;
 	margin-right: 18vw;
 	bottom: 1vh;
 }
