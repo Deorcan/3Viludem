@@ -77,7 +77,7 @@ var isMobile = /iPhone|Android|BlackBerry|BB|Nokia/i.test(navigator.userAgent);
 const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
 isTabletOrMobile()
 
-land.addListener(function(l) {if (l.matches) {if (isTablet||isMobile) {Para.style.top = "120vh"}}else {Para.style.top = "120vh"}})
+land.addListener(function(l) {if (l.matches) {if (isTablet||isMobile) {Para.style.top = "120vh"}}else {Para.style.top = "100vh"}})
 if (land.matches) {if (isTablet||isMobile) {Para.style.top = "120vh"}}
 
 function IsTouch() {
@@ -91,7 +91,7 @@ function isTabletOrMobile(){
 	if (isMobile||isTablet){
 		Image.style.left = "1vw"
 		Image.style.right = "1vw"
-		Image.style.top = "25vh"
+		Image.style.top = "20vh"
 		Image.style.width = "94vw"
 		Para.style.left = "3vw"
 		Para.style.right = "3vw"
