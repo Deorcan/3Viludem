@@ -92,7 +92,7 @@ function isTabletOrMobile(){
 		Image.style.left = "3vw"
 		Image.style.right = "3vw"
 		Image.style.top = "25vh"
-		Image.style.maxWidth = "94%"
+		Image.style.width = "94vw"
 		Para.style.left = "3vw"
 		Para.style.right = "3vw"
 		Control.style.display = "none"
@@ -705,8 +705,8 @@ Porting = function (){
 		Menu.style.display = 'none'
 		Image.style.top = "25vh"
 		Image.style.left = "3vw"
-		Image.style.maxWidth = "94%"
-		Image.style.maxHeight = "94%"
+		Image.style.width = "94vw"
+		Image.style.Height = "94vh"
 				
 		PauseButton.style.display = 'none'
 		ScoreT2.style.display = 'none'
@@ -780,8 +780,8 @@ Landing = function (){
 		}else{
 			Image.style.top = "0vh"
 			Image.style.left = "0vw"
-			Image.style.maxWidth = landX
-			Image.style.maxHeight = landY			
+			Image.style.width = landX
+			Image.style.height = landY			
 
 			PauseButton.style.display = 'block'
 			ScoreT2.style.display = 'block'
@@ -829,8 +829,8 @@ PlayTouch = function(){
 	PlayButton.src = 'Test%20Drive/Donebutton.PNG'
 	Image.style.top = "0vh"
 	Image.style.left = "0vw"
-	Image.style.maxWidth = `${window.innerWidth-5}px`
-	Image.style.maxHeight = `${window.innerHeight-5}px`
+	Image.style.width = `${window.innerWidth-5}px`
+	Image.style.height = `${window.innerHeight-5}px`
 	landX = `${window.innerWidth-5}px`
 	landY = `${window.innerHeight-5}px`
 	Pause.style.fontSize = '225%'
@@ -959,7 +959,7 @@ function OnTouch(){
 				Image.style.left = "18vw"
 				Image.style.right = "18vw"
 				Image.style.top = "15vh"
-				Image.style.maxWidth = "64%"
+				Image.style.width = "64vw"
 				Para.style.left = "18vw"
 				Para.style.right = "18vw"
 				Control.style.display = "block"
@@ -989,7 +989,7 @@ function OnTouch(){
 				Image.style.left = "18vw"
 				Image.style.right = "18vw"
 				Image.style.top = "15vh"
-				Image.style.maxWidth = "64%"
+				Image.style.width = "64vw"
 				Para.style.left = "18vw"
 				Para.style.right = "18vw"
 				Control.style.display = "block"
