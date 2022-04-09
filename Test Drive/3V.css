@@ -331,15 +331,15 @@
 	}
 	#fire {
 		position: absolute;
-		width: 10vw;
-		height: 14vh;
+		width: 10%;
+		height: 14%;
 		top: 55vh;
 		left: 85vw;
 	}
 	.DPad {
 		position: absolute;
-		width: 10vw;
-		height: 14vh;
+		width: 10%;
+		height: 14%;
 		top: 55vh;
 		left: 10vw;
 	}
