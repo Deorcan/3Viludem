@@ -192,8 +192,8 @@
 	left: 1%;
 	top: 1%;
 	position: absolute;
-	height: 14%;
-	width: 6%;
+	height: 14vh;
+	width: 6vw;
 	border: solid 2px white;
 }
 #Home:hover { border: solid 2px yellow;}
