@@ -254,6 +254,9 @@
 }
 
 @media only screen and (orientation: landscape) {
+	#touchstart{
+		top: 50vh;
+	}
 	#plsrotate {
 		display: none;
 	}
