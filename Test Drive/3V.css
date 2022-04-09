@@ -310,37 +310,37 @@
 	
 	#pausebutton {
 		position: absolute;
-		left: 85%;
-		top: 5%;
-		max-width: 10%;
-		max-height: 12%;
+		left: 85vw;
+		top: 5vh;
+		max-width: 10vw;
+		max-height: 12vh;
 	}
 	#score2 {
 		position: absolute;
 		color: white;
-		left: 15%;
-		top: 9%;
+		left: 15vw;
+		top: 9vh;
 		transform: translate(-50%, -50%);
 	}
 	#HighScore2 {
 		position: absolute;
 		color: white;
-		left: 65%;
-		top: 9%;
+		left: 65vw;
+		top: 9vh;
 		transform: translate(-50%, -50%);
 	}
 	#fire {
 		position: absolute;
-		max-width: 10%;
-		max-height: 14%;
+		max-width: 10vw;
+		max-height: 14vh;
 		top: 55vh;
-		left: 85%;
+		left: 85vw;
 	}
 	.DPad {
 		position: absolute;
-		max-width: 10%;
-		max-height: 14%;
+		max-width: 10vw;
+		max-height: 14vh;
 		top: 55vh;
-		left: 10%;
+		left: 10vw;
 	}
 }
