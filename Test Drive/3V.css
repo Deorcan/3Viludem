@@ -7,6 +7,7 @@
 	top: 15vh;
 	right: 18vw;
 	bottom: 1vh;
+	transform: scaleY(5);
 }
 
 #player {
@@ -221,6 +222,7 @@
 	width: 5%;
 	top: 1vh;
 	left: 1vw;
+	transform: scaleY(5);
 }
 
 #Home:hover { border: solid 2px yellow;}
