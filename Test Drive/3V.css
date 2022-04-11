@@ -213,6 +213,42 @@
 	}
 }
 
+
+#cover {
+	float: left;
+	transform: rotateY(180deg);
+	position: static;
+	z-index: auto;
+	padding: 0;
+	background: black;
+	left: 0;
+	top: 0;
+}
+#icon {
+	margin-left: -170%;
+	margin-top: 40%;
+	height: 150%;
+	width: 150%;
+}
+#Title{
+	font-size: 710%;
+	color: white;
+	margin-left: -140%;
+	margin-top: -5%;
+}
+#page {
+	margin-top: 0;
+	margin-left: 0;
+	background-color: #0b0b0b;
+	transform: rotateY(180deg);	
+}
+#Home {
+	border: solid 2px white;
+	height: 0.2%;
+	width: 5%;
+}
+#Home:hover { border: solid 2px yellow;}
+
 @media only screen and (orientation: landscape) {
 	#plsrotate {
 		display: none;
