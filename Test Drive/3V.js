@@ -40,16 +40,6 @@ const DPadLeft = document.getElementById("DPadL")
 const DPadDown = document.getElementById("DPadD")
 const DPadRight = document.getElementById("DPadR")
 
-
-var body = document.getElementsByTagName("BODY")[0];
-var Cover = document.getElementById("cover");
-//var Inside = document.getElementById("inside");
-//var Page = document.getElementById("page");
-var All = document.getElementsByTagName("*");
-var Icon = document.getElementById("icon");
-var Title = document.getElementById("Title");
-
-var Home = document.getElementById("Home")
 var TF = true
 var FT = true
 var Music = new Audio ('Test%20Drive/sounds-from-space-soundroll-main-version-01-28-1884.mp3')
@@ -77,7 +67,7 @@ var isMobile = /iPhone|Android|BlackBerry|BB|Nokia/i.test(navigator.userAgent);
 const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
 isTabletOrMobile()
 
-land.addListener(function(l) {if (l.matches) {if (isTablet||isMobile) {Para.style.top = "120vh"}}else {Para.style.top = "100vh"}})
+land.addListener(function(l) {if (l.matches) {if (isTablet||isMobile) {Para.style.top = "120vh"}}else {Para.style.top = "110vh"}})
 if (land.matches) {if (isTablet||isMobile) {Para.style.top = "120vh"}}
 
 function IsTouch() {
@@ -89,25 +79,17 @@ function IsTouch() {
 
 function isTabletOrMobile(){
 	if (isMobile||isTablet){
-		Image.style.left = "1vw"
-		Image.style.right = "1vw"
-		Image.style.top = "20vh"
-		Image.style.width = "94vw"
+		Image.style.left = "3vw"
+		Image.style.right = "3vw"
+		Image.style.top = "25vh"
+		Image.style.maxWidth = "94%"
 		Para.style.left = "3vw"
 		Para.style.right = "3vw"
 		Control.style.display = "none"
 		text2.style.marginTop = "5vh"
 		for (var i = 0; i < Desktop.length; i++) {Desktop[i].style.display = "none"}
 		
-	}else {	Touchscreen.style.marginLeft = "12%"
-	      body.onload = function(){
-				//Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
-				//body.style.transformOrigin = "left";
-				//body.style.transition = "transform 10s";
-				//body.style.transformStyle = "preserve-3d";
-				//body.style.transform = "rotateY(0deg)";
-			}
-	      }
+	}else {	Touchscreen.style.marginLeft = "12%"}
 	
 }
 	
@@ -151,7 +133,6 @@ function gameover(){
 	text.style.display = 'block'
 	text2.style.display = 'block'
 	Para.style.display = 'block'
-	Home.style.display = 'block'
 	Pause.style.display = 'none'
 	Start.style.display = 'none'
 	Restart.style.display = 'none'
@@ -175,7 +156,6 @@ function gameover(){
 		text.style.display = 'none'
 		text2.style.display = 'none'
 		Para.style.display = 'none'
-		Home.style.display = 'none'
 		isTabletOrMobile()
 		Landing()
 		IfTouch = false
@@ -221,7 +201,6 @@ function RESTART(){
 	text.style.display = 'block'
 	text2.style.display = 'block'
 	Para.style.display = 'block'
-	Home.style.display = 'block'
 	Pause.style.display = 'none'
 	Start.style.display = 'none'
 	Restart.style.display = 'none'
@@ -246,7 +225,6 @@ function RESTART(){
 		Menu.style.marginTop = '27%'
 		TouchStart.style.top = '60%'
 		Para.style.display = 'none'
-		Home.style.display = 'none'
 		TF = false
 		FT = true
 		
@@ -680,23 +658,6 @@ function MouseOff(){
 
 Porting = function (){
 	if (port.matches){
-		Icon.style.marginLeft = "-70%";
-		Icon.style.marginTop = "-50%";
-		Icon.style.height = "150%";
-		Icon.style.width = "150%";
-		Title.style.marginTop = "0%";
-		Title.style.fontSize = "310%";
-		Title.style.marginLeft = "-50%";
-		Cover.style.padding = "50%";
-		body.onload = function(){
-			Cover.style.transition = "10s";
-			Cover.style.top = `${-(window.innerHeight+100)}px`;
-		}
-		body.ontouchcancel = function(){
-			Cover.style.transition = "10s";
-			Cover.style.top = `${-(window.innerHeight+100)}px`;
-		}
-	
 		var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
 		var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
 		PlsRotate.style.display = 'block'
@@ -704,9 +665,9 @@ Porting = function (){
 		
 		Menu.style.display = 'none'
 		Image.style.top = "25vh"
-		Image.style.left = "1vw"
-		Image.style.width = "94vw"
-		Image.style.Height = "94vh"
+		Image.style.left = "3vw"
+		Image.style.maxWidth = "94%"
+		Image.style.maxHeight = "94%"
 				
 		PauseButton.style.display = 'none'
 		ScoreT2.style.display = 'none'
@@ -718,8 +679,7 @@ Porting = function (){
 		text.style.display = 'block'
 		text2.style.display = 'block'
 		Para.style.display = 'block'
-		Home.style.display = 'block'
-		GameOver.style.marginTop = '50vh'
+		GameOver.style.marginTop = '50%'
 		FireButton.style.display = 'none'
 		DPadButton.style.display = 'none'
 		DPadUp.style.display = 'none'
@@ -759,29 +719,14 @@ Porting = function (){
 }
 Landing = function (){
 	if (land.matches){
-		Icon.style.marginLeft = "0%";
-		Icon.style.marginTop = "-50%";
-		Icon.style.height = "110%";
-		Icon.style.width = "110%";
-		Title.style.fontSize = "510%";
-		Title.style.marginLeft = "20%";
-		Cover.style.padding = "25%";
-		body.onload = function(){
-			Cover.style.transition = "10s";
-			Cover.style.left = `${-(window.innerWidth+100)}px`;
-		}
-		body.ontouchcancel = function(){
-			Cover.style.transition = "10s";
-			Cover.style.left = `${-(window.innerWidth+100)}px`;
-		}
 		if (Mode === 0){
 			PlsRotate.style.display = 'none'
 			Menu.style.display = 'block'
 		}else{
 			Image.style.top = "0vh"
 			Image.style.left = "0vw"
-			Image.style.width = landX
-			Image.style.height = landY			
+			Image.style.maxWidth = landX
+			Image.style.maxHeight = landY			
 
 			PauseButton.style.display = 'block'
 			ScoreT2.style.display = 'block'
@@ -790,7 +735,6 @@ Landing = function (){
 			text.style.display = 'none'
 			text2.style.display = 'none'
 			Para.style.display = 'none'
-			Home.style.display = 'none'
 			Menu.style.display = 'none'
 			PauseButton.src = "Test%20Drive/PauseButton1.png"
 			if (starting === -1){
@@ -815,7 +759,7 @@ Landing = function (){
 			var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
 			var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
 			if (Displaytouch === 'block' || Displaygo === 'block'){Menu.style.display = 'none'}
-			GameOver.style.marginTop = '25vh'
+			GameOver.style.marginTop = '25%'
 			setTimeout(function(){ window.scrollTo(0,1), 0})
 			var Enemies = document.querySelectorAll(".enemy")
 			Enemies.forEach(e => e.style.display = 'block')
@@ -829,8 +773,8 @@ PlayTouch = function(){
 	PlayButton.src = 'Test%20Drive/Donebutton.PNG'
 	Image.style.top = "0vh"
 	Image.style.left = "0vw"
-	Image.style.width = `${window.innerWidth-5}px`
-	Image.style.height = `${window.innerHeight-5}px`
+	Image.style.maxWidth = `${window.innerWidth-5}px`
+	Image.style.maxHeight = `${window.innerHeight-5}px`
 	landX = `${window.innerWidth-5}px`
 	landY = `${window.innerHeight-5}px`
 	Pause.style.fontSize = '225%'
@@ -959,7 +903,7 @@ function OnTouch(){
 				Image.style.left = "18vw"
 				Image.style.right = "18vw"
 				Image.style.top = "15vh"
-				Image.style.width = "64vw"
+				Image.style.maxWidth = "64%"
 				Para.style.left = "18vw"
 				Para.style.right = "18vw"
 				Control.style.display = "block"
@@ -989,7 +933,7 @@ function OnTouch(){
 				Image.style.left = "18vw"
 				Image.style.right = "18vw"
 				Image.style.top = "15vh"
-				Image.style.width = "64vw"
+				Image.style.maxWidth = "64%"
 				Para.style.left = "18vw"
 				Para.style.right = "18vw"
 				Control.style.display = "block"
@@ -1123,7 +1067,6 @@ function playgame(){
 	text.style.display = 'none'
 	text2.style.display = 'none'
 	Para.style.display = 'none'
-	Home.style.display = 'none'
 	Image.style.top = "0vh"
 	Control.style.top = "0vh"
 	GameOver.style.display = 'none'
