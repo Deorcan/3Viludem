@@ -40,6 +40,14 @@ const DPadLeft = document.getElementById("DPadL")
 const DPadDown = document.getElementById("DPadD")
 const DPadRight = document.getElementById("DPadR")
 
+var body = document.getElementsByTagName("BODY")[0];
+var Cover = document.getElementById("cover");
+var Page = document.getElementById("page");
+var All = document.getElementsByTagName("*");
+var Home = document.getElementById("Home");
+var Icon = document.getElementById("icon");
+var Title = document.getElementById("Title");
+
 var TF = true
 var FT = true
 var Music = new Audio ('Test%20Drive/sounds-from-space-soundroll-main-version-01-28-1884.mp3')
@@ -79,6 +87,11 @@ function IsTouch() {
 
 function isTabletOrMobile(){
 	if (isMobile||isTablet){
+		Cover.style.transform = "rotateY(0deg)";
+		Cover.style.float = "none";
+		Cover.style.position = "absolute";
+		Cover.style.zIndex = "1";
+		Page.style.transform = "rotateY(0deg)";
 		Image.style.left = "3vw"
 		Image.style.right = "3vw"
 		Image.style.top = "25vh"
@@ -89,7 +102,17 @@ function isTabletOrMobile(){
 		text2.style.marginTop = "5vh"
 		for (var i = 0; i < Desktop.length; i++) {Desktop[i].style.display = "none"}
 		
-	}else {	Touchscreen.style.marginLeft = "12%"}
+	}else {	
+		Touchscreen.style.marginLeft = "12%"
+		body.onload = function(){
+			Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
+			Page.style.transformOrigin = "left";
+			Page.style.transition = "transform 10s";
+			Page.style.transformStyle = "preserve-3d";
+			Page.style.transform = "rotateY(0deg)";
+		}
+	      
+	}
 	
 }
 	
@@ -658,6 +681,24 @@ function MouseOff(){
 
 Porting = function (){
 	if (port.matches){
+		
+		Icon.style.marginLeft = "-70%";
+		Icon.style.marginTop = "-50%";
+		Icon.style.height = "150%";
+		Icon.style.width = "150%";
+		Title.style.marginTop = "0%";
+		Title.style.fontSize = "310%";
+		Title.style.marginLeft = "-50%";
+		Cover.style.padding = "50%";
+		body.onload = function(){
+			Cover.style.transition = "10s";
+			Cover.style.top = `${-(window.innerHeight+100)}px`;
+		}
+		body.ontouchcancel = function(){
+			Cover.style.transition = "10s";
+			Cover.style.top = `${-(window.innerHeight+100)}px`;
+		}
+		
 		var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
 		var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
 		PlsRotate.style.display = 'block'
@@ -719,6 +760,23 @@ Porting = function (){
 }
 Landing = function (){
 	if (land.matches){
+		
+		Icon.style.marginLeft = "0%";
+		Icon.style.marginTop = "-50%";
+		Icon.style.height = "110%";
+		Icon.style.width = "110%";
+		Title.style.fontSize = "510%";
+		Title.style.marginLeft = "20%";
+		Cover.style.padding = "25%";
+		body.onload = function(){
+			Cover.style.transition = "10s";
+			Cover.style.left = `${-(window.innerWidth+100)}px`;
+		}
+		body.ontouchcancel = function(){
+			Cover.style.transition = "10s";
+			Cover.style.left = `${-(window.innerWidth+100)}px`;
+		}
+		
 		if (Mode === 0){
 			PlsRotate.style.display = 'none'
 			Menu.style.display = 'block'
