@@ -156,6 +156,7 @@ function gameover(){
 	text.style.display = 'block'
 	text2.style.display = 'block'
 	Para.style.display = 'block'
+	Home.style.display = 'block'
 	Pause.style.display = 'none'
 	Start.style.display = 'none'
 	Restart.style.display = 'none'
@@ -179,6 +180,7 @@ function gameover(){
 		text.style.display = 'none'
 		text2.style.display = 'none'
 		Para.style.display = 'none'
+		Home.style.display = 'none'
 		isTabletOrMobile()
 		Landing()
 		IfTouch = false
@@ -224,6 +226,7 @@ function RESTART(){
 	text.style.display = 'block'
 	text2.style.display = 'block'
 	Para.style.display = 'block'
+	Home.style.display = 'block'
 	Pause.style.display = 'none'
 	Start.style.display = 'none'
 	Restart.style.display = 'none'
@@ -248,6 +251,7 @@ function RESTART(){
 		Menu.style.marginTop = '27%'
 		TouchStart.style.top = '60%'
 		Para.style.display = 'none'
+		Home.style.display = 'none'
 		TF = false
 		FT = true
 		
@@ -1125,6 +1129,7 @@ function playgame(){
 	text.style.display = 'none'
 	text2.style.display = 'none'
 	Para.style.display = 'none'
+	Home.style.display = 'none'
 	Image.style.top = "0vh"
 	Control.style.top = "0vh"
 	GameOver.style.display = 'none'
