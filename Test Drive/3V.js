@@ -724,6 +724,7 @@ Porting = function (){
 		text.style.display = 'block'
 		text2.style.display = 'block'
 		Para.style.display = 'block'
+		Home.style.display = 'block'
 		GameOver.style.marginTop = '50%'
 		FireButton.style.display = 'none'
 		DPadButton.style.display = 'none'
@@ -797,6 +798,7 @@ Landing = function (){
 			text.style.display = 'none'
 			text2.style.display = 'none'
 			Para.style.display = 'none'
+			Home.style.display = 'none'
 			Menu.style.display = 'none'
 			PauseButton.src = "Test%20Drive/PauseButton1.png"
 			if (starting === -1){
