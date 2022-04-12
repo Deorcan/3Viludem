@@ -194,7 +194,7 @@
 
 #cover {
 	float: left;
-	transform: rotateY(180deg);
+	
 	position: static;
 	z-index: auto;
 	padding: 0;
@@ -216,7 +216,7 @@
 #page {
 	margin-top: 0;
 	margin-left: 0;
-	transform: rotateY(180deg);	
+		
 }
 #Home {
 	position: absolute;
