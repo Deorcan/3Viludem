@@ -123,6 +123,7 @@ if (IsTouch()){
 	Image.innerHTML += TouchStart
 	Image.innerHTML += PlsRotate
 	Image.innerHTML += Menu
+	Image.innerHTML += ship
 	TouchStart.style.display = "block"
 	Image.ontouchstart = function() {OnTouch()}
 	
