@@ -3,7 +3,6 @@
 	max-width: 64%;
 	max-height: 94%;
 	margin-left: 18vw;
-	margin-top: 1vh;
 	margin-right: 18vw;
 	margin-bottom: 1vh;	
 }
@@ -66,6 +65,7 @@
  }
 
  #text {
+	position: absolute;
  	text-align: center;
  	color: gold;
   	text-decoration: underline;
@@ -73,9 +73,10 @@
 	 
  }
   #text2 {
+	position: absolute;
  	text-align: center;
  	color: gold;
-	margin-left: 49vw;
+	left: 49vw;
  	transform: translate(-50%, -50%);
 
   	
