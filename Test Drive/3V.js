@@ -106,9 +106,6 @@ function isTabletOrMobile(){
 		Touchscreen.style.marginLeft = "12%"
 		body.onload = function(){
 			Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
-			 var a = document.getElementById("a");
-			
-			 a.innerHTML="devicePixelRatio is : "+window.devicePixelRatio; 
 			Page.style.transformOrigin = "left";
 			Page.style.transition = "transform 10s";
 			Page.style.transformStyle = "preserve-3d";
