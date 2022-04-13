@@ -2,7 +2,7 @@
 	border: 2px solid white;
 	max-width: 64%;
 	max-height: 94%;
-	margin-top: 10vh;
+	margin-top: 9vh;
 	margin-left: 18vw;
 	margin-right: 18vw;
 	margin-bottom: 1vh;	
@@ -69,7 +69,7 @@
 	position: absolute;
  	text-align: center;
  	color: gold;
-	left: 44vw;
+	left: 42vw;
 	top: 1vh;
   	text-decoration: underline;
   
@@ -79,7 +79,7 @@
 	position: absolute;
  	text-align: center;
  	color: gold;
-	left: 49vw;
+	left: 50vw;
 	top: 8vh;
  	transform: translate(-50%, -50%);
 
@@ -90,7 +90,7 @@
 	position: absolute;
 	left: 18vw;
 	right: 18vw;
-	top: 110vh;
+	top: 140vh;
 	color: gold;
 
 }
@@ -107,18 +107,17 @@
 
 #gameover {
 	text-align: center;
-	margin-top: 25%;
+	margin-top: 50%;
 	margin-left: 50%;
 	color: white;
 	font-size: 375%;
 	display: none;
 	transform: translate(-50%, -50%);
-
 }
 #pause {
 	position: absolute;
 	text-align: center;
-	top: 9%;
+	top: 19%;
 	left: 50%;
 	color: white;
 	font-size: 475%;
@@ -135,12 +134,12 @@
 	display: none;
 	transform: translate(-50%, -50%);
 	margin: 0;
-  	top: 60%;
+  	top: 50%;
 }
 
 #start {
 	position: absolute;
-	top: 34%;
+	top: 44%;
 	left: 50%;
 	font-size: 325%;
 	transform: translate(-50%, -50%);
@@ -149,7 +148,7 @@
 }
 #restart {
 	position: absolute;
-	top: 47%;
+	top: 57%;
 	left: 50%;
 	font-size: 275%;
 	transform: translate(-50%, -50%);
@@ -158,7 +157,7 @@
 }
 #controlmenu {
 	position: absolute;
-	top: 60%;
+	top: 70%;
 	left: 50%;
 	font-size: 160%;
 	transform: translate(-50%, -50%);
