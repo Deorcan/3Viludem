@@ -1,16 +1,13 @@
 #space {
-	position: absolute;
-	border-top: 2px solid white;
- 	border-bottom: 2px solid white;
- 	border-left: 10px solid white;
- 	border-right: 10px solid white;
+	
+	border: 2px solid white;
 	max-width: 64%;
 	max-height: 94%;
-	left: 18vw;
-	top: 55vh;
-	right: 18vw;
-	bottom: 1vh;
-	transform: scaleY(5);
+	margin-left: 18vw;
+	margin-top: 15vh;
+	margin-right: 18vw;
+	margin-bottom: 1vh;
+	
 }
 
 #player {
