@@ -1,13 +1,11 @@
 #space {
-	
 	border: 2px solid white;
 	max-width: 64%;
 	max-height: 94%;
 	margin-left: 18vw;
-	margin-top: 15vh;
+	margin-top: 1vh;
 	margin-right: 18vw;
-	margin-bottom: 1vh;
-	
+	margin-bottom: 1vh;	
 }
 
 #player {
@@ -215,14 +213,12 @@
 	margin-left: 0;
 	transform: rotateY(0deg);	
 }
-#Home {
-	position: absolute;
+#Home {	
 	border: solid 2px white;
 	height: 0.2%;
 	width: 5%;
-	top: 1vh;
-	left: 1vw;
-	transform: scaleY(5);
+	margin-top: 1vh;
+	margin-left: 1vw;
 }
 
 #Home:hover { border: solid 2px yellow;}
