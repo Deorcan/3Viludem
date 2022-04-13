@@ -109,10 +109,10 @@ function isTabletOrMobile(){
 			 var a = document.getElementById("a");
 			
 			 a.innerHTML="devicePixelRatio is : "+window.devicePixelRatio; 
-			//Page.style.transformOrigin = "left";
-			//Page.style.transition = "transform 10s";
-			//Page.style.transformStyle = "preserve-3d";
-			//Page.style.transform = "rotateY(0deg)";
+			Page.style.transformOrigin = "left";
+			Page.style.transition = "transform 10s";
+			Page.style.transformStyle = "preserve-3d";
+			Page.style.transform = "rotateY(0deg)";
 		}
 	      
 	}
