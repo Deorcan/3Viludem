@@ -3,11 +3,10 @@
 	border: 2px solid white;
 	max-width: 64%;
 	max-height: 94%;
-	
-	margin-top: 15vh;
-	margin-left: 18vw;
-	margin-right: 18vw;
-	margin-bottom: 1vh;	
+	top: 15vh;
+	left: 18vw;
+	right: 18vw;
+	bottom: 1vh;	
 }
 
 #player {
