@@ -3,7 +3,7 @@
 	border: 2px solid white;
 	max-width: 64%;
 	min-height: 94%;
-	max-height: 1000%;
+	
 	top: 15vh;
 	left: 18vw;
 	right: 18vw;
@@ -92,7 +92,7 @@
 	position: absolute;
 	left: 18vw;
 	right: 18vw;
-	top: 140vh;
+	top: 110vh;
 	color: gold;
 
 }
