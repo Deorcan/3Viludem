@@ -3,7 +3,7 @@
 	border: 2px solid white;
 	max-width: 64%;
 	min-height: 94%;
-	max-height: 94%;
+	max-height: 1000%;
 	top: 15vh;
 	left: 18vw;
 	right: 18vw;
@@ -136,7 +136,7 @@
 	display: none;
 	transform: translate(-50%, -50%);
 	margin: 0;
-  	top: 50%;
+  	top: 60%;
 }
 
 #start {
