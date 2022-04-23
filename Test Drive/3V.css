@@ -202,8 +202,9 @@
 	top: 0;
 }
 #icon {
-	margin-left: -170%;
-	margin-top: 40%;
+	position: relative;
+	left: 1vw;
+	top: 1vh;
 	height: 150%;
 	width: 150%;
 }
