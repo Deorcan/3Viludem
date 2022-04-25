@@ -2,11 +2,11 @@
 	position: absolute;
 	border: 2px solid white;
 	max-width: 64%;
-	min-height: 94%;
+	max-height: 110vh;
 	top: 15vh;
 	left: 18vw;
 	right: 18vw;
-	bottom: 900vh;	
+	bottom: 1vh;	
 }
 
 #player {
