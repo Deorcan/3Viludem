@@ -108,7 +108,7 @@
 
 #gameover {
 	text-align: center;
-	margin-top: 50%;
+	margin-top: 50vh;
 	margin-left: 50%;
 	color: white;
 	font-size: 375%;
@@ -118,7 +118,7 @@
 #pause {
 	position: absolute;
 	text-align: center;
-	top: 19%;
+	top: 19vh;
 	left: 50%;
 	color: white;
 	font-size: 475%;
@@ -135,12 +135,12 @@
 	display: none;
 	transform: translate(-50%, -50%);
 	margin: 0;
-  	top: 60%;
+  	top: 60vh;
 }
 
 #start {
 	position: absolute;
-	top: 44%;
+	top: 44vh;
 	left: 50%;
 	font-size: 325%;
 	transform: translate(-50%, -50%);
@@ -149,7 +149,7 @@
 }
 #restart {
 	position: absolute;
-	top: 57%;
+	top: 57vh;
 	left: 50%;
 	font-size: 275%;
 	transform: translate(-50%, -50%);
