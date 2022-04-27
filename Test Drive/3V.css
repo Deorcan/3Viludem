@@ -205,8 +205,8 @@
 	position: relative;
 	left: 1vw;
 	top: 1vh;
-	height: 120%;
-	width: 120%;
+	height: 100%;
+	width: 100%;
 }
 #Title{
 	font-size: 710%;
