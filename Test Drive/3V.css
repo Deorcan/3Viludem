@@ -207,6 +207,7 @@
 	top: 1vh;
 	height: 15%;
 	width: 15%;
+	float: left;
 }
 #Title{
 	font-size: 710%;
