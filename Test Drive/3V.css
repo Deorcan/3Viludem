@@ -204,7 +204,7 @@
 #icon {
 	position: relative;
 	left: -30vw;
-	top: 45vh;
+	top: 40vh;
 	height: 15%;
 	width: 15%;
 	float: left;
@@ -212,8 +212,8 @@
 #Title{
 	font-size: 710%;
 	color: white;
-	margin-left: -140%;
-	margin-top: -5%;
+	margin-left: -20vw;
+	margin-top: 40vh;
 }
 #page {
 	margin-top: 0;
