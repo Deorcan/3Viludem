@@ -1228,7 +1228,7 @@ Icon.onclick = function(event) {
   var X = event.clientX- Icon.getBoundingClientRect().left;
   var Y = event.clientY-Icon.getBoundingClientRect().top;
 
-  Icon.style.position = 'absolute';
+//  Icon.style.position = 'absolute';
   Icon.style.zIndex = 1000;
   document.body.append(Icon);
 
