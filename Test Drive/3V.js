@@ -1222,19 +1222,19 @@ window.addEventListener("resize", (event) =>{
 	if (Lasers != 0){ Lasers.remove()}
 })
 
-function moveobject(element){
+function moveobject(){
 	var X = event.clientX
 	var Y = event.clientY
 	
-	element.style.left = `${X}px`
-	element.style.top = `${Y}px`
+	Icon.style.left = `${X}px`
+	Icon.style.top = `${Y}px`
 	
 	Score.innerText = `${X}px`
 	HighScore.innerText = `${Y}px`
 
 }
 
-Icon.onmouseover = function(){Icon.onclick = function(){moveobject(Icon)}}
+Icon.onmouseover = function(){Icon.onclick = function(){moveobject()}}
 
-Title.onmouseover = function(){Title.onclick = function(){moveobject(Title)}}
+//Title.onmouseover = function(){Title.onclick = function(){moveobject(Title)}}
 
