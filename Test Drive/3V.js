@@ -1225,8 +1225,8 @@ window.addEventListener("resize", (event) =>{
 
 Icon.onmousedown = function(event) {
 
-  let shiftX = event.clientX - Icon.getBoundingClientRect().left;
-  let shiftY = event.clientY - Icon.getBoundingClientRect().top;
+  var X = event.clientX
+  var Y = event.clientY
 
   Icon.style.position = 'absolute';
   Icon.style.zIndex = 1000;
@@ -1237,8 +1237,8 @@ Icon.onmousedown = function(event) {
   // moves the ball at (pageX, pageY) coordinates
   // taking initial shifts into account
   function moveAt(pageX, pageY) {
-    Icon.style.left = pageX - shiftX + 'px';
-    Icon.style.top = pageY - shiftY + 'px';
+    Icon.style.left = pageX - X + 'px';
+    Icon.style.top = pageY - Y + 'px';
   }
 
   function onMouseMove(event) {
