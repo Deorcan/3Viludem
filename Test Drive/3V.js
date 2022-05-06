@@ -1221,3 +1221,20 @@ window.addEventListener("resize", (event) =>{
 	Enemies.forEach(e => e.remove())
 	if (Lasers != 0){ Lasers.remove()}
 })
+
+function moveobject(element){
+	var X = event.clientX
+	var Y = event.clientY
+	
+	element.style.left = `${X}px`
+	element.style.top = `${Y}px`
+	
+	Score.innerText = `${X}px`
+	HighScore.innerText = `${Y}px`
+
+}
+
+Icon.onmouseover = function(){Icon.onclick = function(){moveobject(Icon)}}
+
+Title.onmouseover = function(){Title.onclick = function(){moveobject(Title)}}
+
