@@ -1222,19 +1222,41 @@ window.addEventListener("resize", (event) =>{
 	if (Lasers != 0){ Lasers.remove()}
 })
 
-function moveobject(){
-	var X = event.clientX
-	var Y = event.clientY
-	
-	Icon.style.left = `${X}px`
-	Icon.style.top = `${Y}px`
-	
-	Score.innerText = `${X}px`
-	HighScore.innerText = `${Y}px`
 
-}
+Icon.onmousedown = function(event) {
 
-Icon.onmouseover = function(){Icon.onclick = function(){moveobject()}}
+  let shiftX = event.clientX - Icon.getBoundingClientRect().left;
+  let shiftY = event.clientY - Icon.getBoundingClientRect().top;
 
-//Title.onmouseover = function(){Title.onclick = function(){moveobject(Title)}}
+  Icon.style.position = 'absolute';
+  Icon.style.zIndex = 1000;
+  document.body.append(Icon);
+
+  moveAt(event.pageX, event.pageY);
+
+  // moves the ball at (pageX, pageY) coordinates
+  // taking initial shifts into account
+  function moveAt(pageX, pageY) {
+    Icon.style.left = pageX - shiftX + 'px';
+    Icon.style.top = pageY - shiftY + 'px';
+  }
+
+  function onMouseMove(event) {
+    moveAt(event.pageX, event.pageY);
+  }
+
+  // move the ball on mousemove
+  document.addEventListener('mousemove', onMouseMove);
+
+  // drop the ball, remove unneeded handlers
+  Icon.onmouseup = function() {
+    document.removeEventListener('mousemove', onMouseMove);
+    Icon.onmouseup = null;
+  };
+
+};
+
+Icon.ondragstart = function() {
+  return false;
+};
 
