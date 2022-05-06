@@ -1223,10 +1223,10 @@ window.addEventListener("resize", (event) =>{
 })
 
 
-Icon.onmousedown = function(event) {
+Icon.onclick = function(event) {
 
-  var X = event.clientX
-  var Y = event.clientY
+  var X = event.clientX- Icon.getBoundingClientRect().left;
+  var Y = event.clientY-Icon.getBoundingClientRect().top;
 
   Icon.style.position = 'absolute';
   Icon.style.zIndex = 1000;
