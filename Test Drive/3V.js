@@ -1249,7 +1249,7 @@ Icon.onclick = function(event) {
   document.addEventListener('mousemove', onMouseMove);
 
   // drop the ball, remove unneeded handlers
-  Icon.onmouseup = function() {
+  Icon.onclick = function() {
     document.removeEventListener('mousemove', onMouseMove);
     Icon.onmouseup = null;
   };
@@ -1257,6 +1257,6 @@ Icon.onclick = function(event) {
 };
 
 Icon.ondragstart = function() {
-  return false;
+  //return false;
 };
 
