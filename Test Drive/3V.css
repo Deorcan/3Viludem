@@ -210,10 +210,11 @@
 	float: left;
 }
 #Title{
+	position: relative;
 	font-size: 710%;
 	color: white;
-	margin-left: 10vw;
-	margin-top: 40vh;
+	left: -30vw;
+	top: 40vh;
 }
 #page {
 	margin-top: 0;
