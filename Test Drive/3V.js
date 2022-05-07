@@ -1252,8 +1252,8 @@ Icon.onclick = function(event) {
   Icon.onclick = function() {
     document.removeEventListener('mousemove', onMouseMove);
     Icon.onmouseup = null;
-	Score.innerText = `${pageX-X}px`
-	HighScore.innerText = `${pageX-X}px`
+	Score.innerText = `${X}px`
+	HighScore.innerText = `$Y}px`
   };
 
 };
