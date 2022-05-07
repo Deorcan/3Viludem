@@ -210,11 +210,11 @@
 	float: left;
 }
 #Title{
-	position: relative;
+	position: absolute;
 	text-align: center;
 	font-size: 710%;
 	color: white;
-	left: -50vw;
+	left: -30vw;
 	top: 40vh;
 }
 #page {
