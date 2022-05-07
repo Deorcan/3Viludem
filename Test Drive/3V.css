@@ -213,8 +213,8 @@
 	
 	font-size: 710%;
 	color: white;
-	left: -20vw;
-	top: 40vh;
+	margin-left: -20vw;
+	margin-top: 40vh;
 }
 #page {
 	margin-top: 0;
