@@ -211,6 +211,9 @@
 }
 #Title{
 	position: absolute;
+	white-space: nowrap;
+        overflow: hidden;
+        text-overflow: clip;
 	text-align: center;
 	font-size: 710%;
 	color: white;
