@@ -217,8 +217,9 @@
 	text-align: center;
 	font-size: 710%;
 	color: white;
-	left: -30vw;
+	
 	top: 40vh;
+	right: -10vw;
 }
 #page {
 	margin-top: 0;
