@@ -1253,7 +1253,7 @@ Icon.onclick = function(event) {
     document.removeEventListener('mousemove', onMouseMove);
     Icon.onmouseup = null;
 	Score.innerText = `${X}px`
-	HighScore.innerText = `$Y}px`
+	HighScore.innerText = `${Y}px`
   };
 
 };
