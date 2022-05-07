@@ -203,7 +203,7 @@
 }
 #icon {
 	position: relative;
-	left: -130vw;
+	right: 18vw;
 	top: 40vh;
 	height: 15%;
 	width: 15%;
@@ -217,9 +217,8 @@
 	text-align: center;
 	font-size: 710%;
 	color: white;
-	
 	top: 40vh;
-	right: 18vw;
+	right: 10vw;
 }
 #page {
 	margin-top: 0;
