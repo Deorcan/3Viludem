@@ -202,13 +202,12 @@
 	top: 0;
 }
 #icon {
-	position: absolute;
-	right: 80vw;
-	top: 50vh;
-	height: 55%;
-	width: 55%;
+	
+	margin-right: 40vw;
+	margin-top: 50vh;
+	height: 15%;
+	width: 15%;
 	float: left;
-	z-index: 1;
 	white-space: nowrap;
         overflow: hidden;
         text-overflow: clip;
