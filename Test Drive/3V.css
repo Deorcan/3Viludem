@@ -203,10 +203,10 @@
 }
 #icon {
 	
-	margin-right: 5vw;
+	margin-right: 0vw;
 	margin-top: 40vh;
-	height: 8%;
-	width: 8%;
+	height: 9%;
+	width: 9%;
 	float: left;
 	white-space: nowrap;
         overflow: hidden;
