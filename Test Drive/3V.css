@@ -202,9 +202,9 @@
 	top: 0;
 }
 #icon {
-	position: relative;
+	position: absolute;
 	right: 80vw;
-	top: 40vh;
+	top: 50vh;
 	height: 55%;
 	width: 55%;
 	float: left;
