@@ -203,10 +203,10 @@
 }
 #icon {
 	position: absolute;
-	left: 180vw;
+	left: -180vw;
 	top: 40vh;
-	height: 15%;
-	width: 15%;
+	height: 55%;
+	width: 55%;
 	float: left;
 	z-index: 1;
 }
