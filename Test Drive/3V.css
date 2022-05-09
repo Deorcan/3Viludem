@@ -203,12 +203,12 @@
 }
 #icon {
 	position: absolute;
-	left: 18vw;
+	left: 180vw;
 	top: 40vh;
 	height: 15%;
 	width: 15%;
 	float: left;
-	z-index: 10;
+	z-index: 1;
 }
 #Title{
 	position: absolute;
