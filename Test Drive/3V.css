@@ -209,6 +209,9 @@
 	width: 55%;
 	float: left;
 	z-index: 1;
+	white-space: nowrap;
+        overflow: hidden;
+        text-overflow: clip;
 }
 #Title{
 	position: absolute;
