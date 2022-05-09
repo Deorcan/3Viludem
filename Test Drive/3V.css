@@ -203,10 +203,10 @@
 }
 #icon {
 	
-	margin-right: 0vw;
+	margin-right: 2vw;
 	margin-top: 42vh;
-	height: 10%;
-	width: 10%;
+	height: 11%;
+	width: 11%;
 	float: left;
 	white-space: nowrap;
         overflow: hidden;
@@ -221,7 +221,7 @@
 	font-size: 710%;
 	color: white;
 	margin-top: 40vh;
-	margin-right: 10vw;
+	margin-right: 12vw;
 }
 #page {
 	margin-top: 0;
