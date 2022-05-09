@@ -202,7 +202,7 @@
 	top: 0;
 }
 #icon {
-	position: absolute;
+	position: relative;
 	left: -180vw;
 	top: 40vh;
 	height: 55%;
