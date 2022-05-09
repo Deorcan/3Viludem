@@ -214,15 +214,15 @@
         text-overflow: clip;
 }
 #Title{
-	position: absolute;
+	
 	white-space: nowrap;
         overflow: hidden;
         text-overflow: clip;
 	text-align: center;
 	font-size: 710%;
 	color: white;
-	top: 40vh;
-	right: 10vw;
+	margin-top: 40vh;
+	margin-right: 10vw;
 }
 #page {
 	margin-top: 0;
