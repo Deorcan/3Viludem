@@ -216,7 +216,7 @@
 	
 	white-space: nowrap;
         overflow: hidden;
-        text-overflow: clip;
+      
 	text-align: center;
 	font-size: 700%;
 	color: white;
