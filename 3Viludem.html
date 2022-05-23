@@ -203,11 +203,15 @@
 			Home.style.marginLeft = "20%";
 			Cover.style.padding = "25%";
 			Body.onload = function(){
-				Cover.style.transition = "10s";
+				Body.style.transition = "10s";
+				Body.style.opacity = 1;
+				Cover.style.transition = "20s";
 				Cover.style.left = `${-(window.innerWidth+100)}px`;
 			}
 			Body.ontouchcancel = function(){
-				Cover.style.transition = "10s";
+				Body.style.transition = "10s";
+				Body.style.opacity = 1;
+				Cover.style.transition = "20s";
 				Cover.style.left = `${-(window.innerWidth+100)}px`;
 			}
 			TitleText.style.fontSize = "200%";
@@ -231,11 +235,15 @@
 			Home.style.marginLeft = "-50%";
 			Cover.style.padding = "50%";
 			Body.onload = function(){
-				Cover.style.transition = "10s";
+				Body.style.transition = "10s";
+				Body.style.opacity = 1;
+				Cover.style.transition = "20s";
 				Cover.style.top = `${-(window.innerHeight+100)}px`;
 			}
 			Body.ontouchcancel = function(){
-				Cover.style.transition = "10s";
+				Body.style.transition = "10s";
+				Body.style.opacity = 1;
+				Cover.style.transition = "20s";
 				Cover.style.top = `${-(window.innerHeight+100)}px`;
 			}
 			TitleText.style.fontSize = "160%";
