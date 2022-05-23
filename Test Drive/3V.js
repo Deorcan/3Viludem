@@ -117,6 +117,7 @@ function isTabletOrMobile(){
 			Page.style.transition = "transform 10s";
 			Page.style.transformStyle = "preserve-3d";
 			Page.style.transform = "rotateY(180deg)";
+			setTimeout(function(){location.replace("https://deorcan.github.io/3Viludem/3Viludem")}, 6000);
 		
 		}
 	      
