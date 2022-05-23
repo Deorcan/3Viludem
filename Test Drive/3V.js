@@ -106,10 +106,10 @@ function isTabletOrMobile(){
 		Touchscreen.style.marginLeft = "12%"
 		body.onload = function(){
 			Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
-			//Page.style.transformOrigin = "left";
-			//Page.style.transition = "transform 10s";
-			//Page.style.transformStyle = "preserve-3d";
-			//Page.style.transform = "rotateY(0deg)";
+			Page.style.transformOrigin = "left";
+			Page.style.transition = "transform 10s";
+			Page.style.transformStyle = "preserve-3d";
+			Page.style.transform = "rotateY(0deg)";
 		}
 	      
 	}
