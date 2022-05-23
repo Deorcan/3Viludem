@@ -105,19 +105,22 @@ function isTabletOrMobile(){
 	}else {	
 		Touchscreen.style.marginLeft = "12%"
 		body.onload = function(){
+			body.style.transition = "10s";
+			body.style.opacity = 1;
 			Cover.style.marginLeft = `${-(window.innerWidth+5)}px`;
 			Page.style.transformOrigin = "left";
-			Page.style.transition = "transform 10s";
+			Page.style.transition = "transform 20s";
 			Page.style.transformStyle = "preserve-3d";
 			Page.style.transform = "rotateY(0deg)";
 		}
 		Home.onclick = function(){
-		
 			Page.style.transformOrigin = "left";
 			Page.style.transition = "transform 10s";
 			Page.style.transformStyle = "preserve-3d";
 			Page.style.transform = "rotateY(180deg)";
-			setTimeout(function(){location.replace("https://deorcan.github.io/3Viludem/3Viludem")}, 6000);
+			body.style.transition = "20s";
+			body.style.opacity = 0;
+			setTimeout(function(){location.replace("https://deorcan.github.io/3Viludem/3Viludem")}, 16000);
 		
 		}
 	      
