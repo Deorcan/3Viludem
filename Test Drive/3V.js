@@ -111,6 +111,14 @@ function isTabletOrMobile(){
 			Page.style.transformStyle = "preserve-3d";
 			Page.style.transform = "rotateY(0deg)";
 		}
+		Home.onclick = function(){
+		
+			Page.style.transformOrigin = "left";
+			Page.style.transition = "transform 10s";
+			Page.style.transformStyle = "preserve-3d";
+			Page.style.transform = "rotateY(180deg)";
+		
+		}
 	      
 	}
 	
