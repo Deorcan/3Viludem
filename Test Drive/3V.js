@@ -703,13 +703,13 @@ function MouseOff(){
 function Porting(){
 	if (port.matches){
 		
-		Icon.style.marginLeft = "-70%";
-		Icon.style.marginTop = "-50%";
+		Icon.style.marginLeft = "2vw";
+		Icon.style.marginTop = "-50vh";
 		Icon.style.height = "11%";
 		Icon.style.width = "11%";
-		Title.style.marginTop = "0%";
+		Title.style.marginTop = "0vh";
 		Title.style.fontSize = "310%";
-		Title.style.marginLeft = "-50%";
+		Title.style.marginLeft = "-50vw";
 		Cover.style.padding = "50%";
 		body.onload = function(){
 			body.style.transition = "10s";
@@ -787,12 +787,12 @@ function Porting(){
 function Landing(){
 	if (land.matches){
 		
-		Icon.style.marginLeft = "0%";
-		Icon.style.marginTop = "-50%";
+		Icon.style.marginLeft = "2vw";
+		Icon.style.marginTop = "-50vh";
 		Icon.style.height = "11%";
 		Icon.style.width = "11%";
 		Title.style.fontSize = "510%";
-		Title.style.marginLeft = "20%";
+		Title.style.marginLeft = "20vw";
 		Cover.style.padding = "25%";
 		body.onload = function(){
 			body.style.transition = "10s";
