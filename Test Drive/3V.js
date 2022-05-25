@@ -708,11 +708,15 @@ Porting = function (){
 		Title.style.marginLeft = "-50%";
 		Cover.style.padding = "50%";
 		body.onload = function(){
-			Cover.style.transition = "10s";
+			body.style.transition = "10s";
+			body.style.opacity = 1;
+			Cover.style.transition = "20s";
 			Cover.style.top = `${-(window.innerHeight+100)}px`;
 		}
 		body.ontouchcancel = function(){
-			Cover.style.transition = "10s";
+			body.style.transition = "10s";
+			body.style.opacity = 1;
+			Cover.style.transition = "20s";
 			Cover.style.top = `${-(window.innerHeight+100)}px`;
 		}
 		
@@ -787,11 +791,15 @@ Landing = function (){
 		Title.style.marginLeft = "20%";
 		Cover.style.padding = "25%";
 		body.onload = function(){
-			Cover.style.transition = "10s";
+			body.style.transition = "10s";
+			body.style.opacity = 1;
+			Cover.style.transition = "20s";
 			Cover.style.left = `${-(window.innerWidth+100)}px`;
 		}
 		body.ontouchcancel = function(){
-			Cover.style.transition = "10s";
+			body.style.transition = "10s";
+			body.style.opacity = 1;
+			Cover.style.transition = "20s";
 			Cover.style.left = `${-(window.innerWidth+100)}px`;
 		}
 		
