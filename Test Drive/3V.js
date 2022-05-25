@@ -707,18 +707,18 @@ Porting = function (){
 		//Title.style.fontSize = "310%";
 		//Title.style.marginLeft = "-50%";
 		//Cover.style.padding = "50%";
-		body.onload = function(){
-			body.style.transition = "10s";
+		//body.onload = function(){
+		//	body.style.transition = "10s";
 			body.style.opacity = 1;
-			Cover.style.transition = "20s";
-			Cover.style.top = `${-(window.innerHeight+100)}px`;
-		}
-		body.ontouchcancel = function(){
-			body.style.transition = "10s";
-			body.style.opacity = 1;
-			Cover.style.transition = "20s";
-			Cover.style.top = `${-(window.innerHeight+100)}px`;
-		}
+		//	Cover.style.transition = "20s";
+		//	Cover.style.top = `${-(window.innerHeight+100)}px`;
+		//}
+		//body.ontouchcancel = function(){
+	//		body.style.transition = "10s";
+	//		body.style.opacity = 1;
+	//		Cover.style.transition = "20s";
+	//		Cover.style.top = `${-(window.innerHeight+100)}px`;
+	//	}
 		
 		var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
 		var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
