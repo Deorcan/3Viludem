@@ -87,11 +87,15 @@ function IsTouch() {
 
 function isTabletOrMobile(){
 	if (isMobile||isTablet){
-		//Cover.style.transform = "rotateY(0deg)";
-		//Cover.style.float = "none";
-		//Cover.style.position = "absolute";
-		//Cover.style.zIndex = "1";
-		//Page.style.transform = "rotateY(0deg)";
+		Cover.style.transform = "rotateY(0deg)";
+		Cover.style.float = "none";
+		Cover.style.position = "absolute";
+		Cover.style.zIndex = "1";
+		Page.style.transform = "rotateY(0deg)";
+		land.addListener(Landing);
+		port.addListener(Porting);
+		Landing();
+		Porting();
 		Image.style.left = "3vw"
 		Image.style.right = "3vw"
 		Image.style.top = "25vh"
@@ -699,26 +703,26 @@ function MouseOff(){
 Porting = function (){
 	if (port.matches){
 		
-		//Icon.style.marginLeft = "-70%";
-		//Icon.style.marginTop = "-50%";
-		//Icon.style.height = "150%";
-		//Icon.style.width = "150%";
-		//Title.style.marginTop = "0%";
-		//Title.style.fontSize = "310%";
-		//Title.style.marginLeft = "-50%";
-		//Cover.style.padding = "50%";
-		//body.onload = function(){
-		//	body.style.transition = "10s";
+		Icon.style.marginLeft = "-70%";
+		Icon.style.marginTop = "-50%";
+		Icon.style.height = "150%";
+		Icon.style.width = "150%";
+		Title.style.marginTop = "0%";
+		Title.style.fontSize = "310%";
+		Title.style.marginLeft = "-50%";
+		Cover.style.padding = "50%";
+		body.onload = function(){
+			body.style.transition = "10s";
 			body.style.opacity = 1;
-		//	Cover.style.transition = "20s";
-		//	Cover.style.top = `${-(window.innerHeight+100)}px`;
-		//}
-		//body.ontouchcancel = function(){
-	//		body.style.transition = "10s";
-	//		body.style.opacity = 1;
-	//		Cover.style.transition = "20s";
-	//		Cover.style.top = `${-(window.innerHeight+100)}px`;
-	//	}
+			Cover.style.transition = "20s";
+			Cover.style.top = `${-(window.innerHeight+100)}px`;
+		}
+		body.ontouchcancel = function(){
+			body.style.transition = "10s";
+			body.style.opacity = 1;
+			Cover.style.transition = "20s";
+			Cover.style.top = `${-(window.innerHeight+100)}px`;
+		}
 		
 		var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
 		var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
@@ -783,13 +787,13 @@ Porting = function (){
 Landing = function (){
 	if (land.matches){
 		
-		//Icon.style.marginLeft = "0%";
-		//Icon.style.marginTop = "-50%";
-		//Icon.style.height = "110%";
-		//Icon.style.width = "110%";
-		//Title.style.fontSize = "510%";
-		//Title.style.marginLeft = "20%";
-		//Cover.style.padding = "25%";
+		Icon.style.marginLeft = "0%";
+		Icon.style.marginTop = "-50%";
+		Icon.style.height = "110%";
+		Icon.style.width = "110%";
+		Title.style.fontSize = "510%";
+		Title.style.marginLeft = "20%";
+		Cover.style.padding = "25%";
 		body.onload = function(){
 			body.style.transition = "10s";
 			body.style.opacity = 1;
