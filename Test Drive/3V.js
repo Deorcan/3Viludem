@@ -700,7 +700,7 @@ function MouseOff(){
 
 }
 
-Porting = function (){
+function Porting(){
 	if (port.matches){
 		
 		/*Icon.style.marginLeft = "-70%";
@@ -784,7 +784,7 @@ Porting = function (){
 		if(Lasers != 0){Lasers.style.display = 'none'}
 	}
 }
-Landing = function (){
+function Landing(){
 	if (land.matches){
 		
 		/*Icon.style.marginLeft = "0%";
