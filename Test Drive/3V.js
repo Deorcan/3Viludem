@@ -705,8 +705,8 @@ function Porting(){
 		
 		Icon.style.marginLeft = "-70%";
 		Icon.style.marginTop = "-50%";
-		Icon.style.height = "150%";
-		Icon.style.width = "150%";
+		Icon.style.height = "11%";
+		Icon.style.width = "11%";
 		Title.style.marginTop = "0%";
 		Title.style.fontSize = "310%";
 		Title.style.marginLeft = "-50%";
@@ -789,8 +789,8 @@ function Landing(){
 		
 		Icon.style.marginLeft = "0%";
 		Icon.style.marginTop = "-50%";
-		Icon.style.height = "110%";
-		Icon.style.width = "110%";
+		Icon.style.height = "11%";
+		Icon.style.width = "11%";
 		Title.style.fontSize = "510%";
 		Title.style.marginLeft = "20%";
 		Cover.style.padding = "25%";
