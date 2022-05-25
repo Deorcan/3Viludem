@@ -87,11 +87,11 @@ function IsTouch() {
 
 function isTabletOrMobile(){
 	if (isMobile||isTablet){
-		//Cover.style.transform = "rotateY(0deg)";
-		//Cover.style.float = "none";
-		//Cover.style.position = "absolute";
-		//Cover.style.zIndex = "1";
-		//Page.style.transform = "rotateY(0deg)";
+		Cover.style.transform = "rotateY(0deg)";
+		Cover.style.float = "none";
+		Cover.style.position = "absolute";
+		Cover.style.zIndex = "1";
+		Page.style.transform = "rotateY(0deg)";
 		land.addListener(Landing);
 		port.addListener(Porting);
 		Landing();
@@ -703,7 +703,7 @@ function MouseOff(){
 function Porting(){
 	if (port.matches){
 		
-		/*Icon.style.marginLeft = "-70%";
+		Icon.style.marginLeft = "-70%";
 		Icon.style.marginTop = "-50%";
 		Icon.style.height = "150%";
 		Icon.style.width = "150%";
@@ -711,7 +711,7 @@ function Porting(){
 		Title.style.fontSize = "310%";
 		Title.style.marginLeft = "-50%";
 		Cover.style.padding = "50%";
-		*/body.onload = function(){
+		body.onload = function(){
 			body.style.transition = "10s";
 			body.style.opacity = 1;
 			Cover.style.transition = "20s";
@@ -787,14 +787,14 @@ function Porting(){
 function Landing(){
 	if (land.matches){
 		
-		/*Icon.style.marginLeft = "0%";
+		Icon.style.marginLeft = "0%";
 		Icon.style.marginTop = "-50%";
 		Icon.style.height = "110%";
 		Icon.style.width = "110%";
 		Title.style.fontSize = "510%";
 		Title.style.marginLeft = "20%";
 		Cover.style.padding = "25%";
-		*/body.onload = function(){
+		body.onload = function(){
 			body.style.transition = "10s";
 			body.style.opacity = 1;
 			Cover.style.transition = "20s";
