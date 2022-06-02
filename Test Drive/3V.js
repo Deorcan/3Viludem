@@ -119,10 +119,10 @@ function isTabletOrMobile(){
 		}
 		Home.onclick = function(){
 			Page.style.transformOrigin = "left";
-			Page.style.transition = "transform 5s";
+			Page.style.transition = "transform 20s";
 			Page.style.transformStyle = "preserve-3d";
 			Page.style.transform = "rotateY(180deg)";
-			body.style.transition = "20s";
+			body.style.transition = "5s";
 			body.style.opacity = 0;
 			setTimeout(function(){location.replace("https://deorcan.github.io/3Viludem/3Viludem")}, 16000);
 		
