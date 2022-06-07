@@ -709,7 +709,7 @@ function Porting(){
 		Icon.style.width = "15%";
 		Title.style.marginTop = "50vh";
 		Title.style.fontSize = "310%";
-		Title.style.marginLeft = "-15vw";
+		Title.style.marginLeft = "20vw";
 		Cover.style.padding = "50%";
 		body.onload = function(){
 			body.style.transition = "5s";
