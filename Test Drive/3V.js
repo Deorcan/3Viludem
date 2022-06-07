@@ -709,19 +709,19 @@ function Porting(){
 		Icon.style.width = "15%";
 		Title.style.marginTop = "50vh";
 		Title.style.fontSize = "310%";
-		Title.style.marginLeft = "-5vw";
+		Title.style.marginLeft = "-15vw";
 		Cover.style.padding = "50%";
 		body.onload = function(){
 			body.style.transition = "5s";
 			body.style.opacity = 1;
 			Cover.style.transition = "20s";
-			Cover.style.top = `${-(window.innerHeight+100)}px`;
+			Cover.style.top = `${-(window.innerHeight+120)}px`;
 		}
 		body.ontouchcancel = function(){
 			body.style.transition = "5s";
 			body.style.opacity = 1;
 			Cover.style.transition = "20s";
-			Cover.style.top = `${-(window.innerHeight+100)}px`;
+			Cover.style.top = `${-(window.innerHeight+120)}px`;
 		}
 		
 		var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
