@@ -715,13 +715,13 @@ function Porting(){
 			body.style.transition = "5s";
 			body.style.opacity = 1;
 			Cover.style.transition = "20s";
-			Cover.style.top = `${-(window.innerHeight+120)}px`;
+			Cover.style.top = `${-(window.innerHeight+150)}px`;
 		}
 		body.ontouchcancel = function(){
 			body.style.transition = "5s";
 			body.style.opacity = 1;
 			Cover.style.transition = "20s";
-			Cover.style.top = `${-(window.innerHeight+120)}px`;
+			Cover.style.top = `${-(window.innerHeight+150)}px`;
 		}
 		
 		var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
