@@ -703,13 +703,13 @@ function MouseOff(){
 function Porting(){
 	if (port.matches){
 		
-		Icon.style.marginLeft = "-50vw";
-		Icon.style.marginTop = "50vh";
+		Icon.style.marginLeft = "-30vw";
+		Icon.style.marginTop = "80vh";
 		Icon.style.height = "15%";
 		Icon.style.width = "15%";
-		Title.style.marginTop = "50vh";
+		Title.style.marginTop = "80vh";
 		Title.style.fontSize = "310%";
-		Title.style.marginLeft = "-55vw";
+		Title.style.marginLeft = "-35vw";
 		Cover.style.padding = "50%";
 		body.onload = function(){
 			body.style.transition = "5s";
