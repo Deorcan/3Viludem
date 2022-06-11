@@ -99,7 +99,7 @@ function isTabletOrMobile(){
 		Image.style.left = "3vw"
 		Image.style.right = "3vw"
 		Image.style.top = "25vh"
-		Image.style.maxWidth = "94%"
+		Image.style.maxWidth = "94vw"
 		Para.style.left = "3vw"
 		Para.style.right = "3vw"
 		Control.style.display = "none"
@@ -732,7 +732,7 @@ function Porting(){
 		Menu.style.display = 'none'
 		Image.style.top = "25vh"
 		Image.style.left = "3vw"
-		Image.style.maxWidth = "94%"
+		Image.style.maxWidth = "94vw"
 		Image.style.maxHeight = "94vh"
 				
 		PauseButton.style.display = 'none'
@@ -746,7 +746,7 @@ function Porting(){
 		text2.style.display = 'block'
 		Para.style.display = 'block'
 		Home.style.display = 'block'
-		GameOver.style.marginTop = '50%'
+		GameOver.style.marginTop = '50vh'
 		FireButton.style.display = 'none'
 		DPadButton.style.display = 'none'
 		DPadUp.style.display = 'none'
@@ -843,12 +843,12 @@ function Landing(){
 				DPadRight.style.display = 'none'
 				}
 			}else { Menu.style.display = 'block'
-			       Menu.style.marginTop = '27%'}
+			       Menu.style.marginTop = '27vh'}
 			
 			var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
 			var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
 			if (Displaytouch === 'block' || Displaygo === 'block'){Menu.style.display = 'none'}
-			GameOver.style.marginTop = '25%'
+			GameOver.style.marginTop = '25vh'
 			setTimeout(function(){ window.scrollTo(0,1), 0})
 			var Enemies = document.querySelectorAll(".enemy")
 			Enemies.forEach(e => e.style.display = 'block')
@@ -988,11 +988,11 @@ function OnTouch(){
 			Descript.innerHTML = "In this mode, you move cursor via arrowkeys and shoot via the spacebar"
 			PlayButton.onclick = function (){
 				Menu.style.display = 'none'
-				Menu.style.marginTop = '18%'
+				Menu.style.marginTop = '18vh'
 				Image.style.left = "18vw"
 				Image.style.right = "18vw"
 				Image.style.top = "15vh"
-				Image.style.maxWidth = "64%"
+				Image.style.maxWidth = "64vw"
 				Para.style.left = "18vw"
 				Para.style.right = "18vw"
 				Control.style.display = "block"
@@ -1018,11 +1018,11 @@ function OnTouch(){
 			Descript.innerHTML = "In this mode, you drag the cursor around screen and shoot via the left button"
 			PlayButton.onclick = function (){
 				Menu.style.display = 'none'
-				Menu.style.marginTop = '18%'
+				Menu.style.marginTop = '18vh'
 				Image.style.left = "18vw"
 				Image.style.right = "18vw"
 				Image.style.top = "15vh"
-				Image.style.maxWidth = "64%"
+				Image.style.maxWidth = "64vw"
 				Para.style.left = "18vw"
 				Para.style.right = "18vw"
 				Control.style.display = "block"
