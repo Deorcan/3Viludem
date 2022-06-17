@@ -97,9 +97,9 @@ function isTabletOrMobile(){
 		port.addListener(Porting);
 		Landing();
 		Porting();
-		Image.style.left = "3vw"
-		Image.style.right = "3vw"
-		Image.style.top = "25vh"
+		Image.style.marginleft = "3vw"
+		Image.style.marginright = "3vw"
+		Image.style.margintop = "25vh"
 		Image.style.maxWidth = "94vw"
 		Para.style.left = "3vw"
 		Para.style.right = "3vw"
@@ -731,8 +731,8 @@ function Porting(){
 		if (Displaytouch === 'block' || Displaygo === 'block'){PlsRotate.style.display = 'none'}
 		
 		Menu.style.display = 'none'
-		Image.style.top = "25vh"
-		Image.style.left = "3vw"
+		Image.style.margintop = "25vh"
+		Image.style.marginleft = "3vw"
 		Image.style.maxWidth = "94vw"
 		Image.style.maxHeight = "94vh"
 				
@@ -812,8 +812,8 @@ function Landing(){
 			PlsRotate.style.display = 'none'
 			Menu.style.display = 'block'
 		}else{
-			Image.style.top = "0vh"
-			Image.style.left = "0vw"
+			Image.style.margintop = "0vh"
+			Image.style.marginleft = "0vw"
 			Image.style.maxWidth = landX
 			Image.style.maxHeight = landY			
 
@@ -861,8 +861,8 @@ PlayTouch = function(){
 	isTabletOrMobile()
 	Menu.style.display = 'none'
 	PlayButton.src = 'Test%20Drive/Donebutton.PNG'
-	Image.style.top = "0vh"
-	Image.style.left = "0vw"
+	Image.style.margintop = "0vh"
+	Image.style.marginleft = "0vw"
 	Image.style.maxWidth = `${window.innerWidth-5}px`
 	Image.style.maxHeight = `${window.innerHeight-5}px`
 	landX = `${window.innerWidth-5}px`
@@ -990,8 +990,8 @@ function OnTouch(){
 			PlayButton.onclick = function (){
 				Menu.style.display = 'none'
 				Menu.style.marginTop = '18vh'
-				Image.style.left = "18vw"
-				Image.style.right = "18vw"
+				Image.style.marginleft = "18vw"
+				Image.style.marginright = "18vw"
 				Image.style.top = "15vh"
 				Image.style.maxWidth = "64vw"
 				Para.style.left = "18vw"
@@ -1020,8 +1020,8 @@ function OnTouch(){
 			PlayButton.onclick = function (){
 				Menu.style.display = 'none'
 				Menu.style.marginTop = '18vh'
-				Image.style.left = "18vw"
-				Image.style.right = "18vw"
+				Image.style.marginleft = "18vw"
+				Image.style.marginright = "18vw"
 				Image.style.top = "15vh"
 				Image.style.maxWidth = "64vw"
 				Para.style.left = "18vw"
