@@ -249,15 +249,15 @@ body { opacity: 0;}
 
 @media only screen and (orientation: portrait) {
 	#touchstart{
-		top: 70vh;
+		top: 70%;
 	}
 	#plsrotate {
 		position: absolute;
 		display: none;
 		background-color: white;
 		opacity: 0.5;
-		left: 50vw;
-		top: 70vh;
+		left: 50%;
+		top: 70%;
 		transform: translate(-50%, -50%);
 		border-radius: 15px;
 	}
