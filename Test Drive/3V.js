@@ -87,6 +87,8 @@ function IsTouch() {
 
 function isTabletOrMobile(){
 	if (isMobile||isTablet){
+		text.style.position = "static";
+		text2.style.position = "static";
 		Image.style.position = "static";
 		Cover.style.transform = "rotateY(0deg)";
 		Cover.style.float = "none";
