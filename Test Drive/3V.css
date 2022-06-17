@@ -200,6 +200,7 @@ body { opacity: 0;}
 }
 
 #cover {
+	display: none;
 	float: left;
 	transform: rotateY(180deg);
 	position: static;
