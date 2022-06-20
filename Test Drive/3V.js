@@ -102,7 +102,7 @@ function isTabletOrMobile(){
 		Image.style.marginleft = "3vw"
 		Image.style.marginright = "3vw"
 		Image.style.margintop = "25vh"
-		Image.style.maxWidth = "94vw"
+		Image.style.maxWidth = "94%"
 		Para.style.left = "3vw"
 		Para.style.right = "3vw"
 		Control.style.display = "none"
@@ -735,8 +735,8 @@ function Porting(){
 		Menu.style.display = 'none'
 		Image.style.margintop = "25vh"
 		Image.style.marginleft = "3vw"
-		Image.style.maxWidth = "94vw"
-		Image.style.maxHeight = "94vh"
+		Image.style.maxWidth = "94%"
+		Image.style.maxHeight = "94%"
 				
 		PauseButton.style.display = 'none'
 		ScoreT2.style.display = 'none'
@@ -995,7 +995,7 @@ function OnTouch(){
 				Image.style.marginleft = "18vw"
 				Image.style.marginright = "18vw"
 				Image.style.top = "15vh"
-				Image.style.maxWidth = "64vw"
+				Image.style.maxWidth = "64%"
 				Para.style.left = "18vw"
 				Para.style.right = "18vw"
 				Control.style.display = "block"
@@ -1025,7 +1025,7 @@ function OnTouch(){
 				Image.style.marginleft = "18vw"
 				Image.style.marginright = "18vw"
 				Image.style.top = "15vh"
-				Image.style.maxWidth = "64vw"
+				Image.style.maxWidth = "64%"
 				Para.style.left = "18vw"
 				Para.style.right = "18vw"
 				Control.style.display = "block"
