@@ -75,7 +75,7 @@ var isMobile = /iPhone|Android|BlackBerry|BB|Nokia/i.test(navigator.userAgent);
 const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
 isTabletOrMobile()
 
-land.addListener(function(l) {if (l.matches) {if (isTablet||isMobile) {Para.style.top = "120vh"}}else {Para.style.top = "100vh"}})
+land.addListener(function(l) {if (l.matches) {if (isTablet||isMobile) {Para.style.top = "120vh"}}else {Para.style.top = "110vh"}})
 if (land.matches) {if (isTablet||isMobile) {Para.style.top = "120vh"}}
 
 function IsTouch() {
@@ -749,7 +749,7 @@ function Porting(){
 		text2.style.display = 'block'
 		Para.style.display = 'block'
 		Home.style.display = 'block'
-		GameOver.style.marginTop = '50vh'
+		GameOver.style.marginTop = '50%'
 		FireButton.style.display = 'none'
 		DPadButton.style.display = 'none'
 		DPadUp.style.display = 'none'
@@ -851,7 +851,7 @@ function Landing(){
 			var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
 			var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
 			if (Displaytouch === 'block' || Displaygo === 'block'){Menu.style.display = 'none'}
-			GameOver.style.marginTop = '25vh'
+			GameOver.style.marginTop = '25%'
 			setTimeout(function(){ window.scrollTo(0,1), 0})
 			var Enemies = document.querySelectorAll(".enemy")
 			Enemies.forEach(e => e.style.display = 'block')
