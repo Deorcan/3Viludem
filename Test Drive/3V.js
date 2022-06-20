@@ -87,9 +87,6 @@ function IsTouch() {
 
 function isTabletOrMobile(){
 	if (isMobile||isTablet){
-		text.style.position = "static";
-		text2.style.position = "static";
-		Image.style.position = "static";
 		Cover.style.transform = "rotateY(0deg)";
 		Cover.style.float = "none";
 		Cover.style.position = "absolute";
@@ -99,9 +96,9 @@ function isTabletOrMobile(){
 		port.addListener(Porting);
 		Landing();
 		Porting();
-		Image.style.marginleft = "3vw"
-		Image.style.marginright = "3vw"
-		Image.style.margintop = "25vh"
+		Image.style.left = "3vw"
+		Image.style.right = "3vw"
+		Image.style.top = "25vh"
 		Image.style.maxWidth = "94%"
 		Para.style.left = "3vw"
 		Para.style.right = "3vw"
@@ -733,8 +730,8 @@ function Porting(){
 		if (Displaytouch === 'block' || Displaygo === 'block'){PlsRotate.style.display = 'none'}
 		
 		Menu.style.display = 'none'
-		Image.style.margintop = "25vh"
-		Image.style.marginleft = "3vw"
+		Image.style.top = "25vh"
+		Image.style.left = "3vw"
 		Image.style.maxWidth = "94%"
 		Image.style.maxHeight = "94%"
 				
@@ -814,8 +811,8 @@ function Landing(){
 			PlsRotate.style.display = 'none'
 			Menu.style.display = 'block'
 		}else{
-			Image.style.margintop = "0vh"
-			Image.style.marginleft = "0vw"
+			Image.style.top = "0vh"
+			Image.style.left = "0vw"
 			Image.style.maxWidth = landX
 			Image.style.maxHeight = landY			
 
@@ -846,7 +843,7 @@ function Landing(){
 				DPadRight.style.display = 'none'
 				}
 			}else { Menu.style.display = 'block'
-			       Menu.style.marginTop = '27vh'}
+			       Menu.style.marginTop = '27%'}
 			
 			var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
 			var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
@@ -863,8 +860,8 @@ PlayTouch = function(){
 	isTabletOrMobile()
 	Menu.style.display = 'none'
 	PlayButton.src = 'Test%20Drive/Donebutton.PNG'
-	Image.style.margintop = "0vh"
-	Image.style.marginleft = "0vw"
+	Image.style.top = "0vh"
+	Image.style.left = "0vw"
 	Image.style.maxWidth = `${window.innerWidth-5}px`
 	Image.style.maxHeight = `${window.innerHeight-5}px`
 	landX = `${window.innerWidth-5}px`
@@ -991,10 +988,10 @@ function OnTouch(){
 			Descript.innerHTML = "In this mode, you move cursor via arrowkeys and shoot via the spacebar"
 			PlayButton.onclick = function (){
 				Menu.style.display = 'none'
-				Menu.style.marginTop = '18vh'
-				Image.style.marginleft = "18vw"
-				Image.style.marginright = "18vw"
-				Image.style.top = "15vh"
+				Menu.style.marginTop = '18%'
+				Image.style.left = "18vw"
+				Image.style.right = "18vw"
+				Image.style.top = "15%"
 				Image.style.maxWidth = "64%"
 				Para.style.left = "18vw"
 				Para.style.right = "18vw"
@@ -1021,10 +1018,10 @@ function OnTouch(){
 			Descript.innerHTML = "In this mode, you drag the cursor around screen and shoot via the left button"
 			PlayButton.onclick = function (){
 				Menu.style.display = 'none'
-				Menu.style.marginTop = '18vh'
-				Image.style.marginleft = "18vw"
-				Image.style.marginright = "18vw"
-				Image.style.top = "15vh"
+				Menu.style.marginTop = '18%'
+				Image.style.left = "18vw"
+				Image.style.right = "18vw"
+				Image.style.top = "15%"
 				Image.style.maxWidth = "64%"
 				Para.style.left = "18vw"
 				Para.style.right = "18vw"
