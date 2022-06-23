@@ -120,7 +120,7 @@ body { opacity: 0;}
 #pause {
 	position: absolute;
 	text-align: center;
-	top: 19vh;
+	top: 19%;
 	left: 50%;
 	color: white;
 	font-size: 475%;
@@ -137,12 +137,12 @@ body { opacity: 0;}
 	display: none;
 	transform: translate(-50%, -50%);
 	margin: 0;
-  	top: 60vh;
+  	top: 60%;
 }
 
 #start {
 	position: absolute;
-	top: 44vh;
+	top: 44%;
 	left: 50%;
 	font-size: 325%;
 	transform: translate(-50%, -50%);
@@ -153,7 +153,7 @@ body { opacity: 0;}
 }
 #restart {
 	position: absolute;
-	top: 57vh;
+	top: 57%;
 	left: 50%;
 	font-size: 275%;
 	transform: translate(-50%, -50%);
