@@ -120,7 +120,7 @@ body { opacity: 0;}
 #pause {
 	position: absolute;
 	text-align: center;
-	top: 19%;
+	top: 9%;
 	left: 50%;
 	color: white;
 	font-size: 475%;
@@ -137,12 +137,12 @@ body { opacity: 0;}
 	display: none;
 	transform: translate(-50%, -50%);
 	margin: 0;
-  	top: 60%;
+  	top: 50%;
 }
 
 #start {
 	position: absolute;
-	top: 44%;
+	top: 34%;
 	left: 50%;
 	font-size: 325%;
 	transform: translate(-50%, -50%);
@@ -153,7 +153,7 @@ body { opacity: 0;}
 }
 #restart {
 	position: absolute;
-	top: 57%;
+	top: 47%;
 	left: 50%;
 	font-size: 275%;
 	transform: translate(-50%, -50%);
@@ -164,7 +164,7 @@ body { opacity: 0;}
 }
 #controlmenu {
 	position: absolute;
-	top: 70%;
+	top: 60%;
 	left: 50%;
 	font-size: 160%;
 	transform: translate(-50%, -50%);
