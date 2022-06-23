@@ -249,7 +249,7 @@ body { opacity: 0;}
 
 @media only screen and (orientation: portrait) {
 	#touchstart{
-		top: 70%;
+		top: 70vh;
 	}
 	#plsrotate {
 		position: absolute;
@@ -257,7 +257,7 @@ body { opacity: 0;}
 		background-color: white;
 		opacity: 0.5;
 		left: 50%;
-		top: 70%;
+		top: 70vh;
 		transform: translate(-50%, -50%);
 		border-radius: 15px;
 	}
@@ -326,37 +326,37 @@ body { opacity: 0;}
 	
 	#pausebutton {
 		position: absolute;
-		left: 85vw;
-		top: 5vh;
-		max-width: 10vw;
-		max-height: 12vh;
+		left: 85%;
+		top: 5%;
+		max-width: 10%;
+		max-height: 12%;
 	}
 	#score2 {
 		position: absolute;
 		color: white;
-		left: 15vw;
-		top: 9vh;
+		left: 15%;
+		top: 9%;
 		transform: translate(-50%, -50%);
 	}
 	#HighScore2 {
 		position: absolute;
 		color: white;
-		left: 65vw;
-		top: 9vh;
+		left: 65%;
+		top: 9%;
 		transform: translate(-50%, -50%);
 	}
 	#fire {
 		position: absolute;
-		max-width: 10vw;
-		max-height: 14vh;
+		max-width: 10%;
+		max-height: 14%;
 		top: 55vh;
-		left: 85vw;
+		left: 85%;
 	}
 	.DPad {
 		position: absolute;
-		max-width: 10vw;
-		max-height: 14vh;
+		max-width: 10%;
+		max-height: 14%;
 		top: 55vh;
-		left: 10vw;
+		left: 10%;
 	}
 }
