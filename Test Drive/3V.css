@@ -290,15 +290,15 @@ body { opacity: 0;}
 		opacity: 1.0;
 	}
 	#tilt, #pen, #d-pad, #touch, #keyboard, #mouse {
-		max-width: 70vw;
-		max-height: 70vh;
+		max-width: 70%;
+		max-height: 70%;
 		opacity: 1.0;
 		margin-left: auto;
 		margin-right: auto;
 	}
 	#play {
-		max-width: 45vw;
-		max-height: 45vh;
+		max-width: 45%;
+		max-height: 45%;
 		opacity: 1.0;
 		text-align: center;
 	}
@@ -319,8 +319,8 @@ body { opacity: 0;}
 		opacity: 1.0;
 		left: 85vw;
 		top: 5vh;
-		max-width: 10vw;
-		max-height: 10vh;
+		max-width: 10%;
+		max-height: 10%;
 		
 	}
 	
