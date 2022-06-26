@@ -90,6 +90,10 @@ function isTabletOrMobile(){
 		Cover.style.transform = "rotateY(0deg)";
 		Cover.style.float = "none";
 		Cover.style.position = "absolute";
+		text.style.position = "static";
+		text2.style.position = "static";
+		text2.style.marginLeft = "49vw"
+		text2.style.margintop = "49vh"
 		Cover.style.zIndex = "1";
 		Page.style.transform = "rotateY(0deg)";
 		land.addListener(Landing);
