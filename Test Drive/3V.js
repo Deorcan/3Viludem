@@ -995,7 +995,7 @@ function OnTouch(){
 				Menu.style.marginTop = '18%'
 				Image.style.left = "18vw"
 				Image.style.right = "18vw"
-				Image.style.top = "15%"
+				Image.style.top = "15vh"
 				Image.style.maxWidth = "64%"
 				Para.style.left = "18vw"
 				Para.style.right = "18vw"
@@ -1025,7 +1025,7 @@ function OnTouch(){
 				Menu.style.marginTop = '18%'
 				Image.style.left = "18vw"
 				Image.style.right = "18vw"
-				Image.style.top = "15%"
+				Image.style.top = "15vh"
 				Image.style.maxWidth = "64%"
 				Para.style.left = "18vw"
 				Para.style.right = "18vw"
