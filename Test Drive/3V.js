@@ -103,16 +103,14 @@ function isTabletOrMobile(){
 		Image.style.right = "3vw"
 		Image.style.top = "25vh"
 		Image.style.maxWidth = "94%"
-		Image.style.maxHeight = "94%"
 		Para.style.left = "3vw"
 		Para.style.right = "3vw"
 		Control.style.display = "none"
 		text2.style.marginTop = "5vh"
-		GameOver.style.marginTop = "25%"
 		Pause.style.top ="9%"
 		TouchStart.style.top = "60%"
 		Start.style.top = "34%"
-		restart.style.top = "47%"
+		Restart.style.top = "47%"
 		ControlMenu.style.top = "60%"
 		
 		for (var i = 0; i < Desktop.length; i++) {Desktop[i].style.display = "none"}
