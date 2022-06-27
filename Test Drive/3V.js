@@ -66,6 +66,7 @@ var landY
 var port = window.matchMedia("(orientation: portrait)")
 var land = window.matchMedia("(orientation: landscape)")
 var Touches = 0
+var N = 0
 
 Image.onmousemove = function() {OnMouse()}
 Image.onmouseout = function() {MouseOff()}
@@ -99,6 +100,7 @@ function isTabletOrMobile(){
 		port.addListener(Porting);
 		Landing();
 		Porting();
+		N = 1
 		Image.style.left = "3vw"
 		Image.style.right = "3vw"
 		Image.style.top = "25vh"
@@ -735,7 +737,7 @@ function Porting(){
 		
 		var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
 		var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
-		PlsRotate.style.display = 'block'
+		if (N === 1){PlsRotate.style.display = 'block'}
 		if (Displaytouch === 'block' || Displaygo === 'block'){PlsRotate.style.display = 'none'}
 		
 		Menu.style.display = 'none'
@@ -816,7 +818,7 @@ function Landing(){
 			Cover.style.left = `${-(window.innerWidth+100)}px`;
 		}
 		
-		if (Mode === 0){
+		if (Mode === 0 && N === 1){
 			PlsRotate.style.display = 'none'
 			Menu.style.display = 'block'
 		}else{
