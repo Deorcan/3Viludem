@@ -100,7 +100,6 @@ function isTabletOrMobile(){
 		port.addListener(Porting);
 		Landing();
 		Porting();
-		N = 1
 		Image.style.left = "3vw"
 		Image.style.right = "3vw"
 		Image.style.top = "25vh"
@@ -218,6 +217,7 @@ function gameover(){
 		ControlMenu.style.display = 'none'
 		PlayButton.src = 'Test%20Drive/Playbutton.PNG'
 		starting = 0
+		N = 0
 		TF = false
 		FT = true
 		
@@ -275,6 +275,7 @@ function RESTART(){
 		Restart.style.display = 'none'
 		ControlMenu.style.display = 'none'
 		starting = 0
+		N = 0
 		PlayButton.src = 'Test%20Drive/Playbutton.PNG'
 		Menu.style.marginTop = '27%'
 		TouchStart.style.top = '60%'
@@ -969,6 +970,7 @@ Buttons = function(){
 
 function OnTouch(){
 	event.preventDefault()
+	N = 1
 	TouchStart.style.display = "none"
 	GameOver.style.display = 'none'
 	IfTouch = true
