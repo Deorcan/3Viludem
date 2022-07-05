@@ -818,53 +818,54 @@ function Landing(){
 			Cover.style.transition = "20s";
 			Cover.style.left = `${-(window.innerWidth+100)}px`;
 		}
-		
-		if (Mode === 0 && N === 1){
-			PlsRotate.style.display = 'none'
-			Menu.style.display = 'block'
-		}else{
-			Image.style.top = "0vh"
-			Image.style.left = "0vw"
-			Image.style.maxWidth = landX
-			Image.style.maxHeight = landY			
-
-			PauseButton.style.display = 'block'
-			ScoreT2.style.display = 'block'
-			HighScoreT2.style.display = 'block'
-			PlsRotate.style.display = 'none'
-			text.style.display = 'none'
-			text2.style.display = 'none'
-			Para.style.display = 'none'
-			Home.style.display = 'none'
-			Menu.style.display = 'none'
-			PauseButton.src = "Test%20Drive/PauseButton1.png"
-			if (starting === -1){
-				Pause.style.display = 'block'
-				Start.style.display = 'block'
-				Restart.style.display = 'block'
-				ControlMenu.style.display = 'block'
-				Start.onclick = function(){START()}
-				Restart.onclick = function(){RESTART()}
-				ControlMenu.onclick = function(){
+		if(N === 1){	
+			if (Mode === 0){
+				PlsRotate.style.display = 'none'
 				Menu.style.display = 'block'
-				FireButton.style.display = 'none'
-				DPadButton.style.display = 'none'
-				DPadUp.style.display = 'none'
-				DPadLeft.style.display = 'none'
-				DPadDown.style.display = 'none'
-				DPadRight.style.display = 'none'
-				}
-			}else { Menu.style.display = 'block'
-			       Menu.style.marginTop = '27%'}
+			}else{
+				Image.style.top = "0vh"
+				Image.style.left = "0vw"
+				Image.style.maxWidth = landX
+				Image.style.maxHeight = landY			
+
+				PauseButton.style.display = 'block'
+				ScoreT2.style.display = 'block'
+				HighScoreT2.style.display = 'block'
+				PlsRotate.style.display = 'none'
+				text.style.display = 'none'
+				text2.style.display = 'none'
+				Para.style.display = 'none'
+				Home.style.display = 'none'
+				Menu.style.display = 'none'
+				PauseButton.src = "Test%20Drive/PauseButton1.png"
+				if (starting === -1){
+					Pause.style.display = 'block'
+					Start.style.display = 'block'
+					Restart.style.display = 'block'
+					ControlMenu.style.display = 'block'
+					Start.onclick = function(){START()}
+					Restart.onclick = function(){RESTART()}
+					ControlMenu.onclick = function(){
+					Menu.style.display = 'block'
+					FireButton.style.display = 'none'
+					DPadButton.style.display = 'none'
+					DPadUp.style.display = 'none'
+					DPadLeft.style.display = 'none'
+					DPadDown.style.display = 'none'
+					DPadRight.style.display = 'none'
+					}
+				}else { Menu.style.display = 'block'
+			       		Menu.style.marginTop = '27%'}
 			
-			var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
-			var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
-			if (Displaytouch === 'block' || Displaygo === 'block'){Menu.style.display = 'none'}
-			GameOver.style.marginTop = '25%'
-			setTimeout(function(){ window.scrollTo(0,1), 0})
-			var Enemies = document.querySelectorAll(".enemy")
-			Enemies.forEach(e => e.style.display = 'block')
-			if(Lasers != 0){Lasers.style.display = 'block'}
+				var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
+				var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
+				if (Displaytouch === 'block' || Displaygo === 'block'){Menu.style.display = 'none'}
+				GameOver.style.marginTop = '25%'
+				setTimeout(function(){ window.scrollTo(0,1), 0})
+				var Enemies = document.querySelectorAll(".enemy")
+				Enemies.forEach(e => e.style.display = 'block')
+				if(Lasers != 0){Lasers.style.display = 'block'}
+			}
 		}
 	}
 }
