@@ -249,7 +249,7 @@ body { opacity: 0;}
 
 @media only screen and (orientation: portrait) {
 	#touchstart{
-		top: 70%;
+		top: 70vh;
 	}
 	#plsrotate {
 		position: absolute;
@@ -257,7 +257,7 @@ body { opacity: 0;}
 		background-color: white;
 		opacity: 0.5;
 		left: 50%;
-		top: 70%;
+		top: 70vh;
 		transform: translate(-50%, -50%);
 		border-radius: 15px;
 	}
@@ -270,6 +270,7 @@ body { opacity: 0;}
 	#menu, #fire, .DPad {
 		display: none;
 	}
+	#paragraph { top: 70vh;}
 }
 
 @media only screen and (orientation: landscape) {
