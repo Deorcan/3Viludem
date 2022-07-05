@@ -735,65 +735,66 @@ function Porting(){
 			Cover.style.transition = "20s";
 			Cover.style.top = `${-(window.innerHeight+150)}px`;
 		}
+		if (N === 1){
+			var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
+			var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
+			PlsRotate.style.display = 'block'
+			if (Displaytouch === 'block' || Displaygo === 'block'){PlsRotate.style.display = 'none'}
 		
-		var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
-		var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
-		if (N === 1){PlsRotate.style.display = 'block'}
-		if (Displaytouch === 'block' || Displaygo === 'block'){PlsRotate.style.display = 'none'}
-		
-		Menu.style.display = 'none'
-		Image.style.top = "25vh"
-		Image.style.left = "3vw"
-		Image.style.maxWidth = "94%"
-		Image.style.maxHeight = "94vh"
+			Menu.style.display = 'none'
+			Image.style.top = "25vh"
+			Image.style.left = "3vw"
+			Image.style.maxWidth = "94%"
+			Image.style.maxHeight = "94vh"
 				
-		PauseButton.style.display = 'none'
-		ScoreT2.style.display = 'none'
-		HighScoreT2.style.display = 'none'
-		Pause.style.display = 'none'
-		Start.style.display = 'none'
-		Restart.style.display = 'none'
-		ControlMenu.style.display = 'none'
-		text.style.display = 'block'
-		text2.style.display = 'block'
-		Para.style.display = 'block'
-		Home.style.display = 'block'
-		GameOver.style.marginTop = '50%'
-		FireButton.style.display = 'none'
-		DPadButton.style.display = 'none'
-		DPadUp.style.display = 'none'
-		DPadLeft.style.display = 'none'
-		DPadDown.style.display = 'none'
-		DPadRight.style.display = 'none'
-		TF = true
-		FT = false
-		let Enemies = document.querySelectorAll(".enemy")
-		Enemies.forEach(e => e.style.display = 'none')
-		clearInterval(EInterval)
-		Music.pause()
-		DPadButton.ontouchend = function (){
+			PauseButton.style.display = 'none'
+			ScoreT2.style.display = 'none'
+			HighScoreT2.style.display = 'none'
+			Pause.style.display = 'none'
+			Start.style.display = 'none'
+			Restart.style.display = 'none'
+			ControlMenu.style.display = 'none'
+			text.style.display = 'block'
+			text2.style.display = 'block'
+			Para.style.display = 'block'
+			Home.style.display = 'block'
+			GameOver.style.marginTop = '50%'
+			FireButton.style.display = 'none'
+			DPadButton.style.display = 'none'
+			DPadUp.style.display = 'none'
+			DPadLeft.style.display = 'none'
+			DPadDown.style.display = 'none'
+			DPadRight.style.display = 'none'
+			TF = true
+			FT = false
+			let Enemies = document.querySelectorAll(".enemy")
+			Enemies.forEach(e => e.style.display = 'none')
 			clearInterval(EInterval)
 			Music.pause()
-			let Enemies = document.querySelectorAll(".enemy")
-			Enemies.forEach(e => e.remove())
+			DPadButton.ontouchend = function (){
+				clearInterval(EInterval)
+				Music.pause()
+				let Enemies = document.querySelectorAll(".enemy")
+				Enemies.forEach(e => e.remove())
+			}	
+			FireButton.ontouchend = function (){
+				clearInterval(EInterval)
+				Music.pause()
+				let Enemies = document.querySelectorAll(".enemy")
+				Enemies.forEach(e => e.remove())
+			}
+			Image.ontouchend = function (){
+				clearInterval(EInterval)
+				Music.pause()
+				let Enemies = document.querySelectorAll(".enemy")
+				Enemies.forEach(e => e.remove())
+			}
+			window.removeEventListener("touchstart", fire)
+			window.removeEventListener("keydown", moving)
+			window.removeEventListener("click", fire)
+			window.removeEventListener("deviceorientation", movingtilt)
+			if(Lasers != 0){Lasers.style.display = 'none'}
 		}
-		FireButton.ontouchend = function (){
-			clearInterval(EInterval)
-			Music.pause()
-			let Enemies = document.querySelectorAll(".enemy")
-			Enemies.forEach(e => e.remove())
-		}
-		Image.ontouchend = function (){
-			clearInterval(EInterval)
-			Music.pause()
-			let Enemies = document.querySelectorAll(".enemy")
-			Enemies.forEach(e => e.remove())
-		}
-		window.removeEventListener("touchstart", fire)
-		window.removeEventListener("keydown", moving)
-		window.removeEventListener("click", fire)
-		window.removeEventListener("deviceorientation", movingtilt)
-		if(Lasers != 0){Lasers.style.display = 'none'}
 	}
 }
 function Landing(){
