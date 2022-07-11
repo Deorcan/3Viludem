@@ -745,7 +745,7 @@ function Porting(){
 			Image.style.top = "25vh"
 			Image.style.left = "3vw"
 			Image.style.maxWidth = "94%"
-			Image.style.maxHeight = "94vh"
+			Image.style.maxHeight = "96vh"
 				
 			PauseButton.style.display = 'none'
 			ScoreT2.style.display = 'none'
