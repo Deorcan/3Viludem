@@ -272,7 +272,7 @@ body { opacity: 0;}
 	}
 	#paragraph { top: 70vh;}
 	
-	#space { max-height: 100vh;}
+	
 }
 
 @media only screen and (orientation: landscape) {
@@ -362,5 +362,5 @@ body { opacity: 0;}
 		top: 55%;
 		left: 10%;
 	}
-	#space { max-height: 94vh;}
+	
 }
