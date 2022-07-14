@@ -748,6 +748,7 @@ function Porting(){
 			Image.style.maxHeight = "96vh"
 				
 			PauseButton.style.display = 'none'
+			TouchStart.style.top = "50vh"
 			ScoreT2.style.display = 'none'
 			HighScoreT2.style.display = 'none'
 			Pause.style.display = 'none'
@@ -830,6 +831,7 @@ function Landing(){
 				Image.style.maxHeight = landY			
 
 				PauseButton.style.display = 'block'
+				TouchStart.style.top = "55vh"
 				ScoreT2.style.display = 'block'
 				HighScoreT2.style.display = 'block'
 				PlsRotate.style.display = 'none'
