@@ -254,9 +254,7 @@ body { opacity: 0;}
 #Home:hover { border: solid 2px yellow;}
 
 @media only screen and (orientation: portrait) {
-	#touchstart{
-		top: 50vh;
-	}
+	#touchstart{ top: 30vh;}
 	#plsrotate {
 		position: absolute;
 		display: none;
