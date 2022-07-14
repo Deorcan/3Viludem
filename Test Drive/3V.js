@@ -76,7 +76,7 @@ var isMobile = /iPhone|Android|BlackBerry|BB|Nokia/i.test(navigator.userAgent);
 const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
 isTabletOrMobile()
 
-land.addListener(function(l) {if (l.matches) {if (isTablet||isMobile) {Para.style.top = "120vh"}}else {Para.style.top = "90vh"}})
+land.addListener(function(l) {if (l.matches) {if (isTablet||isMobile) {Para.style.top = "10vh"}}else {Para.style.top = "90vh"}})
 if (land.matches) {if (isTablet||isMobile) {Para.style.top = "120vh"}}
 
 function IsTouch() {
