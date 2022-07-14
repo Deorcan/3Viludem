@@ -820,6 +820,7 @@ function Landing(){
 			Cover.style.transition = "20s";
 			Cover.style.left = `${-(window.innerWidth+100)}px`;
 		}
+		TouchStart.style.top = "70vh"
 		if(N === 1){	
 			if (Mode === 0){
 				PlsRotate.style.display = 'none'
@@ -831,7 +832,7 @@ function Landing(){
 				Image.style.maxHeight = landY			
 
 				PauseButton.style.display = 'block'
-				TouchStart.style.top = "70vh"
+				
 				ScoreT2.style.display = 'block'
 				HighScoreT2.style.display = 'block'
 				PlsRotate.style.display = 'none'
