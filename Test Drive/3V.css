@@ -274,9 +274,6 @@ body { opacity: 0;}
 	#menu, #fire, .DPad {
 		display: none;
 	}
-	#paragraph { top: 110vh;}
-	
-	
 }
 
 @media only screen and (orientation: landscape) {
