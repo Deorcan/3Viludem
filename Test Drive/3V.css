@@ -143,7 +143,7 @@ body { opacity: 0;}
 	display: none;
 	transform: translate(-50%, -50%);
 	margin: 0;
-  	
+  	top: 60vh;
 }
 
 #start {
