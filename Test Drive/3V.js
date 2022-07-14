@@ -831,7 +831,7 @@ function Landing(){
 				Image.style.maxHeight = landY			
 
 				PauseButton.style.display = 'block'
-				TouchStart.style.top = "55vh"
+				TouchStart.style.top = "70vh"
 				ScoreT2.style.display = 'block'
 				HighScoreT2.style.display = 'block'
 				PlsRotate.style.display = 'none'
