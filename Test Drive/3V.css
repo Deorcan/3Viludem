@@ -116,14 +116,17 @@ body { opacity: 0;}
 	font-size: 2em;
 	font-size: 375%;
 	display: none;
+	font-weight: bold;
 	transform: translate(-50%, -50%);
 }
 #pause {
 	position: absolute;
 	text-align: center;
+	font-weight: bold;
 	top: 19vh;
 	left: 50%;
 	color: white;
+	font-size: 2em;
 	font-size: 475%;
 	display: none;
 	transform: translate(-50%, -50%);
