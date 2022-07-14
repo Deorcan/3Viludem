@@ -109,7 +109,7 @@ function isTabletOrMobile(){
 		Control.style.display = "none"
 		text2.style.marginTop = "5vh"
 		Pause.style.top ="9%"
-		TouchStart.style.top = "60vh"
+		//TouchStart.style.top = "60vh"
 		Start.style.top = "34%"
 		Restart.style.top = "47%"
 		ControlMenu.style.top = "60%"
