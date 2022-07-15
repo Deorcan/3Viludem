@@ -735,6 +735,7 @@ function Porting(){
 			Cover.style.transition = "20s";
 			Cover.style.top = `${-(window.innerHeight+150)}px`;
 		}
+		TouchStart.style.top = "50vh"
 		if (N === 1){
 			var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
 			var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
@@ -748,7 +749,6 @@ function Porting(){
 			Image.style.maxHeight = "96vh"
 				
 			PauseButton.style.display = 'none'
-			//TouchStart.style.top = "50vh"
 			ScoreT2.style.display = 'none'
 			HighScoreT2.style.display = 'none'
 			Pause.style.display = 'none'
