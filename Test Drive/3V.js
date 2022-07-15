@@ -759,7 +759,7 @@ function Porting(){
 			text2.style.display = 'block'
 			Para.style.display = 'block'
 			Home.style.display = 'block'
-			GameOver.style.marginTop = '50%'
+			GameOver.style.top = '50vh'
 			FireButton.style.display = 'none'
 			DPadButton.style.display = 'none'
 			DPadUp.style.display = 'none'
@@ -864,7 +864,7 @@ function Landing(){
 				var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
 				var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
 				if (Displaytouch === 'block' || Displaygo === 'block'){Menu.style.display = 'none'}
-				GameOver.style.marginTop = '25vh'
+				GameOver.style.top = '25vh'
 				setTimeout(function(){ window.scrollTo(0,1), 0})
 				var Enemies = document.querySelectorAll(".enemy")
 				Enemies.forEach(e => e.style.display = 'block')
