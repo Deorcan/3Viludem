@@ -334,7 +334,8 @@ body { opacity: 0;}
 		left: 85%;
 		top: 5vh;
 		max-width: 10%;
-		height: 14vh;
+		height: 16vh;
+		max-height: 16vh;
 	}
 	#score2 {
 		position: absolute;
@@ -354,6 +355,7 @@ body { opacity: 0;}
 		position: absolute;
 		max-width: 10%;
 		height: 18vh;
+		max-height: 20vh;
 		top: 55vh;
 		left: 85%;
 	}
@@ -361,6 +363,7 @@ body { opacity: 0;}
 		position: absolute;
 		max-width: 10%;
 		height: 18vh;
+		max-height: 20vh;
 		top: 55vh;
 		left: 10%;
 	}
