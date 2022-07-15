@@ -334,7 +334,7 @@ body { opacity: 0;}
 		left: 85%;
 		top: 5vh;
 		max-width: 10%;
-		max-height: 16vh;
+		height: 14vh;
 	}
 	#score2 {
 		position: absolute;
@@ -353,14 +353,14 @@ body { opacity: 0;}
 	#fire {
 		position: absolute;
 		max-width: 10%;
-		max-height: 18vh;
+		height: 18vh;
 		top: 55vh;
 		left: 85%;
 	}
 	.DPad {
 		position: absolute;
 		max-width: 10%;
-		max-height: 18vh;
+		height: 18vh;
 		top: 55vh;
 		left: 10%;
 	}
