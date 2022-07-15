@@ -112,7 +112,7 @@ function isTabletOrMobile(){
 		//TouchStart.style.top = "60vh"
 		Start.style.top = "34%"
 		Restart.style.top = "47%"
-		ControlMenu.style.top = "60%"
+		//ControlMenu.style.top = "60%"
 		
 		for (var i = 0; i < Desktop.length; i++) {Desktop[i].style.display = "none"}
 		
