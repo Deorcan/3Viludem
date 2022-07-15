@@ -108,11 +108,11 @@ function isTabletOrMobile(){
 		Para.style.right = "3vw"
 		Control.style.display = "none"
 		text2.style.marginTop = "5vh"
-		Pause.style.top ="9%"
+		Pause.style.top ="9vh"
 		//TouchStart.style.top = "60vh"
-		Start.style.top = "34%"
-		Restart.style.top = "47%"
-		//ControlMenu.style.top = "60%"
+		Start.style.top = "34vh"
+		Restart.style.top = "47vh"
+		ControlMenu.style.top = "60vh"
 		
 		for (var i = 0; i < Desktop.length; i++) {Desktop[i].style.display = "none"}
 		
