@@ -277,8 +277,8 @@ function RESTART(){
 		starting = 0
 		N = 0
 		PlayButton.src = 'Test%20Drive/Playbutton.PNG'
-		Menu.style.marginTop = '27%'
-		TouchStart.style.top = '60%'
+		Menu.style.marginTop = '25vh'
+		TouchStart.style.top = '25vh'
 		Para.style.display = 'none'
 		Home.style.display = 'none'
 		TF = false
@@ -859,7 +859,7 @@ function Landing(){
 					DPadRight.style.display = 'none'
 					}
 				}else { Menu.style.display = 'block'
-			       		Menu.style.marginTop = '27%'}
+			       		Menu.style.marginTop = '25vh'}
 			
 				var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
 				var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
