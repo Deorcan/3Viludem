@@ -859,7 +859,8 @@ function Landing(){
 					DPadRight.style.display = 'none'
 					}
 				}else { Menu.style.display = 'block'
-			       		Menu.style.marginTop = '70vh' // `${window.getComputedStyle(Pause).getPropertyValue('top')}vh`}
+			       		Menu.style.marginTop = '70vh' // `${window.getComputedStyle(Pause).getPropertyValue('top')}vh`
+				      }
 			
 				var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
 				var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
