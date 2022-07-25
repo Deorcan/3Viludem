@@ -277,8 +277,8 @@ function RESTART(){
 		starting = 0
 		N = 0
 		PlayButton.src = 'Test%20Drive/Playbutton.PNG'
-		Menu.style.marginTop =  `${window.getComputedStyle(Pause).getPropertyValue('top')}vh`
-		TouchStart.style.top =  `${window.getComputedStyle(Pause).getPropertyValue('top')}vh`
+		Menu.style.marginTop = '70vh' //`${window.getComputedStyle(Pause).getPropertyValue('top')}vh`
+		TouchStart.style.top = '70vh' //`${window.getComputedStyle(Pause).getPropertyValue('top')}vh`
 		Para.style.display = 'none'
 		Home.style.display = 'none'
 		TF = false
@@ -820,7 +820,7 @@ function Landing(){
 			Cover.style.transition = "20s";
 			Cover.style.left = `${-(window.innerWidth+100)}px`;
 		}
-		TouchStart.style.top = `${window.getComputedStyle(Pause).getPropertyValue('top')}vh`
+		TouchStart.style.top = '70vh' //`${window.getComputedStyle(Pause).getPropertyValue('top')}vh`
 		if(N === 1){	
 			if (Mode === 0){
 				PlsRotate.style.display = 'none'
@@ -859,7 +859,7 @@ function Landing(){
 					DPadRight.style.display = 'none'
 					}
 				}else { Menu.style.display = 'block'
-			       		Menu.style.marginTop = `${window.getComputedStyle(Pause).getPropertyValue('top')}vh`}
+			       		Menu.style.marginTop = '70vh' // `${window.getComputedStyle(Pause).getPropertyValue('top')}vh`}
 			
 				var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
 				var Displaytouch =  window.getComputedStyle(TouchStart).getPropertyValue('display')
