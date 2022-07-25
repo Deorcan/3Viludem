@@ -819,7 +819,7 @@ function Landing(){
 			Cover.style.transition = "20s";
 			Cover.style.left = `${-(window.innerWidth+100)}px`;
 		}
-		TouchStart.style.top = '50vh' //`${window.getComputedStyle(Pause).getPropertyValue('top')}vh`
+		TouchStart.style.top = '60vh' //`${window.getComputedStyle(Pause).getPropertyValue('top')}vh`
 		if(N === 1){	
 			if (Mode === 0){
 				PlsRotate.style.display = 'none'
@@ -858,7 +858,7 @@ function Landing(){
 					DPadRight.style.display = 'none'
 					}
 				}else { Menu.style.display = 'block'
-			       		Menu.style.marginTop = '60vh' // `${window.getComputedStyle(Pause).getPropertyValue('top')}vh`
+			       		Menu.style.marginTop = '50vh' // `${window.getComputedStyle(Pause).getPropertyValue('top')}vh`
 				      }
 			
 				var Displaygo =  window.getComputedStyle(GameOver).getPropertyValue('display')
