@@ -334,8 +334,8 @@ body { opacity: 0;}
 		left: 85%;
 		top: 5vh;
 		max-width: 10%;
-		height: 16vh;
-		max-height: 16vh;
+		min-height: 14vh;
+		max-height: 14vh;
 	}
 	#score2 {
 		position: absolute;
