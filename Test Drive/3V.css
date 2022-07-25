@@ -354,16 +354,16 @@ body { opacity: 0;}
 	#fire {
 		position: absolute;
 		max-width: 10%;
-		min-height: 18vh;
-		max-height: 18vh;
+		min-height: 14vh;
+		max-height: 14vh;
 		top: 55vh;
 		left: 85%;
 	}
 	.DPad {
 		position: absolute;
 		max-width: 10%;
-		min-height: 18vh;
-		max-height: 18vh;
+		min-height: 14vh;
+		max-height: 14vh;
 		top: 55vh;
 		left: 10%;
 	}
