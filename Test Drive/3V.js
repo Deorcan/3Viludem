@@ -109,7 +109,6 @@ function isTabletOrMobile(){
 		Control.style.display = "none"
 		text2.style.marginTop = "5vh"
 		Pause.style.top ="19vh"
-		//TouchStart.style.top = "60vh"
 		Start.style.top = "45vh"
 		Restart.style.top = "57vh"
 		ControlMenu.style.top = "70vh"
@@ -277,7 +276,7 @@ function RESTART(){
 		starting = 0
 		N = 0
 		PlayButton.src = 'Test%20Drive/Playbutton.PNG'
-		Menu.style.marginTop = '60vh' //`${window.getComputedStyle(Pause).getPropertyValue('top')}vh`
+		Menu.style.marginTop = '50vh' //`${window.getComputedStyle(Pause).getPropertyValue('top')}vh`
 		TouchStart.style.top = '60vh' //`${window.getComputedStyle(Pause).getPropertyValue('top')}vh`
 		Para.style.display = 'none'
 		Home.style.display = 'none'
@@ -820,7 +819,7 @@ function Landing(){
 			Cover.style.transition = "20s";
 			Cover.style.left = `${-(window.innerWidth+100)}px`;
 		}
-		TouchStart.style.top = '60vh' //`${window.getComputedStyle(Pause).getPropertyValue('top')}vh`
+		TouchStart.style.top = '50vh' //`${window.getComputedStyle(Pause).getPropertyValue('top')}vh`
 		if(N === 1){	
 			if (Mode === 0){
 				PlsRotate.style.display = 'none'
