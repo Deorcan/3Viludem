@@ -719,7 +719,7 @@ function Porting(){
 		Icon.style.height = "20%";
 		Icon.style.width = "20%";
 		Title.style.marginTop = "30vh";
-		Title.style.fontSize = "100%";
+		Title.style.fontSize = "200%";
 		Title.style.marginLeft = "-45vw";
 		Cover.style.padding = "50%";
 		body.onload = function(){
