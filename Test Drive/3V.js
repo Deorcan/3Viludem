@@ -722,6 +722,7 @@ function Porting(){
 		Title.style.fontSize = "200%";
 		Title.style.marginLeft = "-45vw";
 		Cover.style.padding = "50%";
+		Cover.style.paddingRight = "10%"
 		body.onload = function(){
 			body.style.transition = "5s";
 			body.style.opacity = 1;
