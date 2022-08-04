@@ -714,13 +714,13 @@ function MouseOff(){
 function Porting(){
 	if (port.matches){
 		
-		Icon.style.marginLeft = "-50%";
-		Icon.style.marginTop = "50%";
+		Icon.style.marginLeft = "-40vw";
+		Icon.style.marginTop = "30vh";
 		Icon.style.height = "20%";
 		Icon.style.width = "20%";
-		Title.style.marginTop = "50%";
+		Title.style.marginTop = "30vh";
 		Title.style.fontSize = "200%";
-		Title.style.marginLeft = "-55%";
+		Title.style.marginLeft = "-45vw";
 		Cover.style.padding = "50%";
 		body.onload = function(){
 			body.style.transition = "5s";
