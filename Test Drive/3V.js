@@ -724,7 +724,7 @@ function Porting(){
 		Cover.style.paddingTop = "50%";
 		Cover.style.paddingRight = "10%"
 		Cover.style.paddingBottom = "50%";
-		Cover.style.paddingLeft = "10%"
+		Cover.style.paddingLeft = "50%"
 		body.onload = function(){
 			body.style.transition = "5s";
 			body.style.opacity = 1;
