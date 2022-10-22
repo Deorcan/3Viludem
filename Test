@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<HTML>
+
+    <BODY>
+      
+      <p >write something: <span>See</span></p> 
+      
+   
+    
+    <script>
+      const Text = document.querySelector('p span');
+      var body = document.getElementsByTagName("BODY")[0];
+     
+      
+    //  while (1){
+      body.addEventListener("keydown", (event) => {
+      
+        if (event.which === 27){Text.innerText = "";}
+        else if (event.which === 8){ 
+        Text.innerHTML = Text.innerText.slice(0,-1);}
+       else if (event.which === 13){Text.innerText = Text.innerText + "\n";}
+    else if( event.key === "Space"){Text.innerText =Text.innerText + " "}
+        else {Text.innerText = Text.innerText + event.key;}
+         
+       })
+      
+      
+      
+    </script> 
+    </BODY>
+    </HTML>
