@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+	<META charset="UTF-8">
+	<META name = "viewport" content = "width=device-width, initial-scale=1.0">
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<link rel="icon" href="Test%20Drive/3Vbeta1.0.PNG">
+	<link rel = "stylesheet" href = "Test%20Drive/3V.css">
+	<TITLE>Writing Test</TITLE>
+</HEAD>
+    
+    <BODY style = "background: white";>
+      
+      <p>write something: <span> </span></p> 
+      
+    </BODY>
+    
+    <script>
+      const Text = document.querySelector('p span');
+      
+      var key = 8;
+      
+      While (1){
+      
+        if (key == 27){Text.innerText = "";}
+        else if (key == 8){Text.innerText = Text.innerText[:-1];}
+        else if (key == 13){Text.innerText = Text.innerText + "\n";}
+        else {Text.innerText = Text.innerText + event.key;}
+        
+        //if (key == -1){key = 0;}
+      
+      }
+      
+      
+    </script>
+    </HTML>
